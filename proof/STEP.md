@@ -1,11 +1,11 @@
-# Step 06: Recreate Other Stack
+# Step 07: Parity Proof
 
 Repository: `topogram-proof-content-approval-brownfield-v3`
 CLI baseline: `@topogram/cli@0.3.99`
 
 ## Claim
 
-Generate a cross-stack recreation beside maintained source.
+Compare maintained and recreated stacks through contracts and verification summaries.
 
 ## Verification
 

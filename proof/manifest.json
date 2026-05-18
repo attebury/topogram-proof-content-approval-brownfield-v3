@@ -9,7 +9,8 @@
     "proof-03-adopt-app-map",
     "proof-04-feature-from-slice",
     "proof-05-refresh-drift",
-    "proof-06-recreate-other-stack"
+    "proof-06-recreate-other-stack",
+    "proof-07-parity-proof"
   ],
   "requiresCanonicalTopo": true,
   "requiresSdlc": true,
@@ -121,6 +122,28 @@
     },
     {
       "path": "proof/artifacts/step-06-recreated-app-compile.txt",
+      "contains": [
+        "Compile checks passed"
+      ]
+    },
+    {
+      "path": "proof/reports/parity-report.md",
+      "contains": [
+        "Current Proof Limits"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-07-widget-conformance-report.json",
+      "json": true,
+      "type": "widget_conformance_report"
+    },
+    {
+      "path": "proof/artifacts/step-07-bulk-approve-context-slice.json",
+      "json": true,
+      "type": "context_slice"
+    },
+    {
+      "path": "proof/artifacts/step-07-recreated-app-compile.txt",
       "contains": [
         "Compile checks passed"
       ]

@@ -1,0 +1,6 @@
+acceptance_criterion ac_parity_proof {
+  name "Parity Proof"
+  description "Given a maintained app and generated recreation exist, when Topogram contracts and verification summaries are compared, then the proof report states matching behavior, intentional differences, and current Topogram proof limits."
+  requirement req_parity_proof
+  status approved
+}

@@ -1,0 +1,14 @@
+task task_parity_proof {
+  name "Parity Proof"
+  description "Emit contract/query artifacts and write the maintained-versus-recreated parity report."
+  satisfies [req_parity_proof]
+  acceptance_refs [ac_parity_proof]
+  verification_refs [verification_parity_proof]
+  affects [cap_list_submissions, cap_get_submission, cap_submit_content, cap_approve_submission, cap_request_changes, cap_bulk_approve_submissions]
+  blocked_by []
+  disposition active
+  priority medium
+  work_type implementation
+  claimed_by [actor_operator]
+  status done
+}
