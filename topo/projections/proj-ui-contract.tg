@@ -3,7 +3,7 @@ projection proj_ui_contract {
   description "Platform-neutral UI semantics for content submission review."
   type ui_contract
 
-  realizes [cap_list_submissions, cap_get_submission, cap_submit_content, cap_approve_submission, cap_request_changes]
+  realizes [cap_list_submissions, cap_get_submission, cap_submit_content, cap_approve_submission, cap_request_changes, cap_bulk_approve_submissions]
   outputs [ui_contract]
 
   app_shell {
@@ -45,6 +45,7 @@ projection proj_ui_contract {
 
   screen_actions {
     screen submission_queue action cap_submit_content prominence primary placement toolbar
+    screen submission_queue action cap_bulk_approve_submissions prominence secondary placement toolbar
     screen submission_detail action cap_approve_submission prominence primary placement toolbar
     screen submission_detail action cap_request_changes prominence secondary placement toolbar
     screen submission_create action cap_submit_content prominence primary placement footer
@@ -66,7 +67,7 @@ projection proj_ui_contract {
 
   widget_bindings {
     screen submission_queue region hero widget widget_submission_summary data rows from cap_list_submissions
-    screen submission_queue region results widget widget_submission_queue data rows from cap_list_submissions event row_select navigate submission_detail
+    screen submission_queue region results widget widget_submission_queue data rows from cap_list_submissions event row_select navigate submission_detail event approve_selected action cap_bulk_approve_submissions
     screen submission_detail region summary widget widget_review_actions data submission from cap_get_submission event approve action cap_approve_submission event request_changes action cap_request_changes
     screen submission_create region summary widget widget_submission_form event submit action cap_submit_content
   }

@@ -1,0 +1,55 @@
+{
+  "changedFiles": [
+    "proof/STEP.md",
+    "src/api/app.js",
+    "src/api/repository.js",
+    "src/check.js",
+    "src/ui/screens/SubmissionQueue.jsx",
+    "src/ui/styles.css",
+    "topo/projections/proj-api.tg",
+    "topo/projections/proj-ui-contract.tg",
+    "topo/projections/proj-web-surface.tg",
+    "topo/sdlc/.topogram-sdlc-history.json",
+    "topo/widgets/widget-submission-queue.tg",
+    "proof/artifacts/step-04-check.json",
+    "proof/artifacts/step-04-npm-verify.txt",
+    "proof/artifacts/step-04-sdlc-check.txt",
+    "proof/artifacts/step-04-sdlc-complete-task-maintained-bulk-approve.json",
+    "proof/artifacts/step-04-sdlc-start-task-maintained-bulk-approve.json",
+    "proof/artifacts/step-04-single-agent-plan.json",
+    "proof/artifacts/step-04-task-slice.json",
+    "topo/capabilities/cap-bulk-approve-submissions.tg",
+    "topo/sdlc/acceptance_criteria/maintained-bulk-approve.tg",
+    "topo/sdlc/requirements/maintained-bulk-approve.tg",
+    "topo/sdlc/tasks/maintained-bulk-approve.tg",
+    "topo/shapes/shape-input-bulk-review.tg",
+    "topo/verifications/maintained-bulk-approve.tg"
+  ],
+  "changedTasks": [
+    {
+      "disposition": "active",
+      "explicitDisposition": true,
+      "file": "topo/sdlc/tasks/maintained-bulk-approve.tg",
+      "id": "task_maintained_bulk_approve",
+      "priority": "medium",
+      "requiresDisposition": false,
+      "status": "done"
+    }
+  ],
+  "errors": [],
+  "nextCommands": [
+    "topogram sdlc explain <task-id> --json",
+    "topogram query slice ./topo --task <task-id> --json",
+    "topogram sdlc gate . --base <ref> --head <ref> --require-adopted"
+  ],
+  "ok": true,
+  "openTasks": [],
+  "projectRoot": "<repo>",
+  "taskFiles": [
+    "topo/sdlc/tasks/maintained-bulk-approve.tg"
+  ],
+  "topogramRoot": "<repo>/topo",
+  "type": "sdlc_commit_prep",
+  "version": "1",
+  "warnings": []
+}

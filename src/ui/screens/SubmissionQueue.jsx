@@ -1,3 +1,4 @@
+import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
 const submissions = [
@@ -20,18 +21,45 @@ const submissions = [
 ];
 
 export function SubmissionQueueScreen() {
+  const [selectedIds, setSelectedIds] = useState([]);
+  const selectedCount = selectedIds.length;
+  const selectedLabel = useMemo(
+    () => selectedCount === 1 ? "1 selected" : `${selectedCount} selected`,
+    [selectedCount],
+  );
+
+  function toggleSelection(id) {
+    setSelectedIds((current) =>
+      current.includes(id) ? current.filter((selectedId) => selectedId !== id) : [...current, id],
+    );
+  }
+
   return (
     <section className="screen queue-screen">
       <div className="screen-heading">
         <div>
           <p className="eyebrow">Review queue</p>
           <h1>Submissions awaiting decision</h1>
+          <p>{selectedLabel}</p>
         </div>
-        <Link className="button" to="/submissions/new">New submission</Link>
+        <div className="action-row">
+          <button type="button" disabled={selectedCount === 0}>
+            Approve selected
+          </button>
+          <Link className="button" to="/submissions/new">New submission</Link>
+        </div>
       </div>
       <div className="submission-grid" data-testid="submission-grid">
         {submissions.map((submission) => (
           <article className="submission-card" key={submission.id}>
+            <label className="select-row">
+              <input
+                checked={selectedIds.includes(submission.id)}
+                onChange={() => toggleSelection(submission.id)}
+                type="checkbox"
+              />
+              Select
+            </label>
             <div>
               <p className="status">{submission.status}</p>
               <h2>{submission.title}</h2>

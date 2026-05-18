@@ -76,6 +76,13 @@ export function approveSubmission(id, input = {}) {
   return serialize(submission);
 }
 
+export function bulkApproveSubmissions(input = {}) {
+  const ids = Array.isArray(input.submission_ids) ? input.submission_ids : [];
+  return ids
+    .map((id) => approveSubmission(id, { reviewer_note: input.reviewer_note }))
+    .filter(Boolean);
+}
+
 export function requestChanges(id, input = {}) {
   const submission = submissions.get(id);
   if (!submission) return null;

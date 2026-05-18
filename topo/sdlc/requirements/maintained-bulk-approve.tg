@@ -1,0 +1,9 @@
+requirement req_maintained_bulk_approve {
+  name "Maintained Bulk Approve"
+  description "The brownfield app must add bulk approval behavior from the adopted Topogram widget and API contract without regenerating the maintained source."
+  affects [cap_list_submissions, cap_bulk_approve_submissions]
+  introduces_rules []
+  respects_rules []
+  priority medium
+  status approved
+}

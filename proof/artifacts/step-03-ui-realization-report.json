@@ -142,6 +142,14 @@
             },
             "placement": "toolbar",
             "prominence": "primary"
+          },
+          {
+            "capability": {
+              "id": "cap_bulk_approve_submissions",
+              "kind": "capability"
+            },
+            "placement": "toolbar",
+            "prominence": "secondary"
           }
         ],
         "secondary": null,
@@ -441,7 +449,8 @@
               ],
               "directives": {
                 "emits": "row_select",
-                "mode": "single"
+                "mode": "multi",
+                "state": "selected_ids"
               },
               "effects": [
                 {
@@ -481,7 +490,13 @@
               ],
               "kind": "selection",
               "source": "structured",
-              "state": null,
+              "state": {
+                "bound": false,
+                "defaultValue": [],
+                "prop": "selected_ids",
+                "requiredness": "optional",
+                "source": null
+              },
               "status": "realized"
             },
             {
@@ -556,6 +571,96 @@
               "kind": "pagination",
               "source": "structured",
               "state": null,
+              "status": "realized"
+            },
+            {
+              "actions": [
+                {
+                  "bindings": [
+                    {
+                      "action": "action",
+                      "event": "approve_selected",
+                      "target": {
+                        "id": "cap_bulk_approve_submissions",
+                        "kind": "capability"
+                      }
+                    }
+                  ],
+                  "bound": true,
+                  "effects": [
+                    {
+                      "capability": {
+                        "id": "cap_bulk_approve_submissions",
+                        "kind": "capability"
+                      },
+                      "event": "approve_selected",
+                      "type": "command"
+                    }
+                  ],
+                  "event": "approve_selected"
+                }
+              ],
+              "dataDependencies": [
+                {
+                  "prop": "rows",
+                  "source": {
+                    "id": "cap_list_submissions",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "directives": {
+                "actions": [
+                  "approve_selected"
+                ],
+                "emits": "approve_selected",
+                "state": "selected_ids"
+              },
+              "effects": [
+                {
+                  "capability": {
+                    "id": "cap_bulk_approve_submissions",
+                    "kind": "capability"
+                  },
+                  "event": "approve_selected",
+                  "type": "command"
+                }
+              ],
+              "emits": [
+                {
+                  "bindings": [
+                    {
+                      "action": "action",
+                      "event": "approve_selected",
+                      "target": {
+                        "id": "cap_bulk_approve_submissions",
+                        "kind": "capability"
+                      }
+                    }
+                  ],
+                  "bound": true,
+                  "effects": [
+                    {
+                      "capability": {
+                        "id": "cap_bulk_approve_submissions",
+                        "kind": "capability"
+                      },
+                      "event": "approve_selected",
+                      "type": "command"
+                    }
+                  ],
+                  "event": "approve_selected"
+                }
+              ],
+              "kind": "bulk_action",
+              "source": "structured",
+              "state": {
+                "bound": false,
+                "defaultValue": [],
+                "prop": "selected_ids",
+                "requiredness": "optional",
+                "source": null
+              },
               "status": "realized"
             }
           ],
@@ -1664,7 +1769,8 @@
           ],
           "directives": {
             "emits": "row_select",
-            "mode": "single"
+            "mode": "multi",
+            "state": "selected_ids"
           },
           "effects": [
             {
@@ -1704,7 +1810,13 @@
           ],
           "kind": "selection",
           "source": "structured",
-          "state": null,
+          "state": {
+            "bound": false,
+            "defaultValue": [],
+            "prop": "selected_ids",
+            "requiredness": "optional",
+            "source": null
+          },
           "status": "realized"
         },
         {
@@ -1779,6 +1891,96 @@
           "kind": "pagination",
           "source": "structured",
           "state": null,
+          "status": "realized"
+        },
+        {
+          "actions": [
+            {
+              "bindings": [
+                {
+                  "action": "action",
+                  "event": "approve_selected",
+                  "target": {
+                    "id": "cap_bulk_approve_submissions",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "bound": true,
+              "effects": [
+                {
+                  "capability": {
+                    "id": "cap_bulk_approve_submissions",
+                    "kind": "capability"
+                  },
+                  "event": "approve_selected",
+                  "type": "command"
+                }
+              ],
+              "event": "approve_selected"
+            }
+          ],
+          "dataDependencies": [
+            {
+              "prop": "rows",
+              "source": {
+                "id": "cap_list_submissions",
+                "kind": "capability"
+              }
+            }
+          ],
+          "directives": {
+            "actions": [
+              "approve_selected"
+            ],
+            "emits": "approve_selected",
+            "state": "selected_ids"
+          },
+          "effects": [
+            {
+              "capability": {
+                "id": "cap_bulk_approve_submissions",
+                "kind": "capability"
+              },
+              "event": "approve_selected",
+              "type": "command"
+            }
+          ],
+          "emits": [
+            {
+              "bindings": [
+                {
+                  "action": "action",
+                  "event": "approve_selected",
+                  "target": {
+                    "id": "cap_bulk_approve_submissions",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "bound": true,
+              "effects": [
+                {
+                  "capability": {
+                    "id": "cap_bulk_approve_submissions",
+                    "kind": "capability"
+                  },
+                  "event": "approve_selected",
+                  "type": "command"
+                }
+              ],
+              "event": "approve_selected"
+            }
+          ],
+          "kind": "bulk_action",
+          "source": "structured",
+          "state": {
+            "bound": false,
+            "defaultValue": [],
+            "prop": "selected_ids",
+            "requiredness": "optional",
+            "source": null
+          },
           "status": "realized"
         }
       ],

@@ -3,7 +3,7 @@ projection proj_api {
   description "HTTP API contract for content submission review."
   type api_contract
 
-  realizes [cap_submit_content, cap_get_submission, cap_list_submissions, cap_approve_submission, cap_request_changes]
+  realizes [cap_submit_content, cap_get_submission, cap_list_submissions, cap_approve_submission, cap_request_changes, cap_bulk_approve_submissions]
   outputs [database_schema, entity_models, request_contracts, response_contracts, endpoints]
 
   endpoints {
@@ -11,6 +11,7 @@ projection proj_api {
     cap_get_submission method GET path /submissions/:id success 200 auth none request path
     cap_list_submissions method GET path /submissions success 200 auth none request query
     cap_approve_submission method POST path /submissions/:id/approve success 200 auth none request body
+    cap_bulk_approve_submissions method POST path /submissions/bulk-approve success 200 auth none request body
     cap_request_changes method POST path /submissions/:id/request-changes success 200 auth none request body
   }
 

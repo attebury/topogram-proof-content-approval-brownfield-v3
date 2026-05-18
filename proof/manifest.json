@@ -6,7 +6,8 @@
   "expectedTags": [
     "proof-01-brownfield-baseline",
     "proof-02-extract-with-packages",
-    "proof-03-adopt-app-map"
+    "proof-03-adopt-app-map",
+    "proof-04-feature-from-slice"
   ],
   "requiresCanonicalTopo": true,
   "requiresSdlc": true,
@@ -83,6 +84,17 @@
       "json": true,
       "keys": [
         "adoption"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-04-single-agent-plan.json",
+      "json": true,
+      "type": "single_agent_plan"
+    },
+    {
+      "path": "proof/artifacts/step-04-npm-verify.txt",
+      "contains": [
+        "verified"
       ]
     }
   ]

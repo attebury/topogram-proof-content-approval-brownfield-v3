@@ -1,0 +1,42 @@
+{
+  "dryRun": false,
+  "link": {
+    "after": [
+      "verification_maintained_bulk_approve"
+    ],
+    "before": [
+      "verification_maintained_bulk_approve"
+    ],
+    "dryRun": false,
+    "field": "verification_refs",
+    "file": "<repo>/topo/sdlc/tasks/maintained-bulk-approve.tg",
+    "from": {
+      "id": "task_maintained_bulk_approve",
+      "kind": "task"
+    },
+    "ok": true,
+    "to": {
+      "id": "verification_maintained_bulk_approve",
+      "kind": "verification"
+    },
+    "written": true
+  },
+  "ok": true,
+  "taskId": "task_maintained_bulk_approve",
+  "transition": {
+    "archivable": true,
+    "dod": {
+      "errors": [],
+      "satisfied": true,
+      "warnings": []
+    },
+    "dryRun": false,
+    "file": "<repo>/topo/sdlc/tasks/maintained-bulk-approve.tg",
+    "from": "in-progress",
+    "id": "task_maintained_bulk_approve",
+    "kind": "task",
+    "ok": true,
+    "to": "done"
+  },
+  "verificationId": "verification_maintained_bulk_approve"
+}

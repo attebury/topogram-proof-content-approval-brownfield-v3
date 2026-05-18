@@ -1,6 +1,7 @@
 import express from "express";
 import {
   approveSubmission,
+  bulkApproveSubmissions,
   createSubmission,
   getSubmission,
   listSubmissions,
@@ -35,6 +36,11 @@ export function createContentApprovalApp() {
       return;
     }
     res.status(201).json(createSubmission(req.body));
+  });
+
+  app.post("/submissions/bulk-approve", (req, res) => {
+    const approved = bulkApproveSubmissions(req.body);
+    res.json({ items: approved, count: approved.length });
   });
 
   app.post("/submissions/:submissionId/approve", (req, res) => {

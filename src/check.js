@@ -57,6 +57,17 @@ try {
   assert.equal(changes.response.status, 200);
   assert.equal(changes.body.status, "changes_requested");
 
+  const bulk = await request("/submissions/bulk-approve", {
+    method: "POST",
+    body: JSON.stringify({
+      submission_ids: ["sub_100", "sub_101"],
+      reviewer_note: "Approved in bulk.",
+    }),
+  });
+  assert.equal(bulk.response.status, 200);
+  assert.equal(bulk.body.count, 2);
+  assert.ok(bulk.body.items.every((item) => item.status === "approved"));
+
   console.log("Brownfield baseline API behavior verified.");
 } finally {
   await new Promise((resolve) => server.close(resolve));

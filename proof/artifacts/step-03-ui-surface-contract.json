@@ -116,6 +116,7 @@
     {
       "accessibility": [],
       "actionSurfaceHints": {
+        "cap_bulk_approve_submissions": {},
         "cap_submit_content": {
           "placement": "toolbar",
           "present": "button"
@@ -135,6 +136,14 @@
             },
             "placement": "toolbar",
             "prominence": "primary"
+          },
+          {
+            "capability": {
+              "id": "cap_bulk_approve_submissions",
+              "kind": "capability"
+            },
+            "placement": "toolbar",
+            "prominence": "secondary"
           }
         ],
         "secondary": null,
@@ -572,7 +581,8 @@
               ],
               "directives": {
                 "emits": "row_select",
-                "mode": "single"
+                "mode": "multi",
+                "state": "selected_ids"
               },
               "effects": [
                 {
@@ -612,7 +622,13 @@
               ],
               "kind": "selection",
               "source": "structured",
-              "state": null,
+              "state": {
+                "bound": false,
+                "defaultValue": [],
+                "prop": "selected_ids",
+                "requiredness": "optional",
+                "source": null
+              },
               "status": "realized"
             },
             {
@@ -687,6 +703,96 @@
               "kind": "pagination",
               "source": "structured",
               "state": null,
+              "status": "realized"
+            },
+            {
+              "actions": [
+                {
+                  "bindings": [
+                    {
+                      "action": "action",
+                      "event": "approve_selected",
+                      "target": {
+                        "id": "cap_bulk_approve_submissions",
+                        "kind": "capability"
+                      }
+                    }
+                  ],
+                  "bound": true,
+                  "effects": [
+                    {
+                      "capability": {
+                        "id": "cap_bulk_approve_submissions",
+                        "kind": "capability"
+                      },
+                      "event": "approve_selected",
+                      "type": "command"
+                    }
+                  ],
+                  "event": "approve_selected"
+                }
+              ],
+              "dataDependencies": [
+                {
+                  "prop": "rows",
+                  "source": {
+                    "id": "cap_list_submissions",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "directives": {
+                "actions": [
+                  "approve_selected"
+                ],
+                "emits": "approve_selected",
+                "state": "selected_ids"
+              },
+              "effects": [
+                {
+                  "capability": {
+                    "id": "cap_bulk_approve_submissions",
+                    "kind": "capability"
+                  },
+                  "event": "approve_selected",
+                  "type": "command"
+                }
+              ],
+              "emits": [
+                {
+                  "bindings": [
+                    {
+                      "action": "action",
+                      "event": "approve_selected",
+                      "target": {
+                        "id": "cap_bulk_approve_submissions",
+                        "kind": "capability"
+                      }
+                    }
+                  ],
+                  "bound": true,
+                  "effects": [
+                    {
+                      "capability": {
+                        "id": "cap_bulk_approve_submissions",
+                        "kind": "capability"
+                      },
+                      "event": "approve_selected",
+                      "type": "command"
+                    }
+                  ],
+                  "event": "approve_selected"
+                }
+              ],
+              "kind": "bulk_action",
+              "source": "structured",
+              "state": {
+                "bound": false,
+                "defaultValue": [],
+                "prop": "selected_ids",
+                "requiredness": "optional",
+                "source": null
+              },
               "status": "realized"
             }
           ],
@@ -850,6 +956,14 @@
                 "id": "submission_detail",
                 "kind": "screen"
               }
+            },
+            {
+              "action": "action",
+              "event": "approve_selected",
+              "target": {
+                "id": "cap_bulk_approve_submissions",
+                "kind": "capability"
+              }
             }
           ],
           "messages": [],
@@ -862,7 +976,7 @@
             "category": "collection",
             "id": "widget_submission_queue",
             "name": "Submission Queue",
-            "version": "1.0"
+            "version": "1.1"
           }
         }
       ]
@@ -2011,13 +2125,15 @@
         "selection",
         "sorting",
         "filtering",
-        "pagination"
+        "pagination",
+        "bulk_action"
       ],
       "behaviors": [
         {
           "directives": {
             "emits": "row_select",
-            "mode": "single"
+            "mode": "multi",
+            "state": "selected_ids"
           },
           "kind": "selection",
           "source": "structured"
@@ -2053,6 +2169,17 @@
           },
           "kind": "pagination",
           "source": "structured"
+        },
+        {
+          "directives": {
+            "actions": [
+              "approve_selected"
+            ],
+            "emits": "approve_selected",
+            "state": "selected_ids"
+          },
+          "kind": "bulk_action",
+          "source": "structured"
         }
       ],
       "category": "collection",
@@ -2063,6 +2190,13 @@
           "id": "row_select",
           "shape": {
             "id": "shape_output_submission_card",
+            "kind": "shape"
+          }
+        },
+        {
+          "id": "approve_selected",
+          "shape": {
+            "id": "shape_input_bulk_review",
             "kind": "shape"
           }
         }
@@ -2079,6 +2213,12 @@
           "defaultValue": null,
           "name": "rows",
           "requiredness": "required",
+          "type": "array"
+        },
+        {
+          "defaultValue": [],
+          "name": "selected_ids",
+          "requiredness": "optional",
           "type": "array"
         },
         {
@@ -2103,7 +2243,7 @@
       ],
       "status": "active",
       "type": "ui_widget_contract",
-      "version": "1.0"
+      "version": "1.1"
     },
     "widget_submission_summary": {
       "approvals": [],

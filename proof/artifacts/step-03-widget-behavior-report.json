@@ -66,7 +66,8 @@
       "behavior": {
         "directives": {
           "emits": "row_select",
-          "mode": "single"
+          "mode": "multi",
+          "state": "selected_ids"
         },
         "kind": "selection",
         "source": "structured",
@@ -152,7 +153,7 @@
         "name": "Submission Queue",
         "source_path": "<workspace>/widgets/widget-submission-queue.tg",
         "status": "active",
-        "version": "1.0"
+        "version": "1.1"
       }
     },
     {
@@ -219,7 +220,7 @@
         "name": "Submission Queue",
         "source_path": "<workspace>/widgets/widget-submission-queue.tg",
         "status": "active",
-        "version": "1.0"
+        "version": "1.1"
       }
     },
     {
@@ -280,7 +281,7 @@
         "name": "Submission Queue",
         "source_path": "<workspace>/widgets/widget-submission-queue.tg",
         "status": "active",
-        "version": "1.0"
+        "version": "1.1"
       }
     },
     {
@@ -340,7 +341,130 @@
         "name": "Submission Queue",
         "source_path": "<workspace>/widgets/widget-submission-queue.tg",
         "status": "active",
-        "version": "1.0"
+        "version": "1.1"
+      }
+    },
+    {
+      "actions": [
+        {
+          "bindings": [
+            {
+              "action": "action",
+              "event": "approve_selected",
+              "target": {
+                "id": "cap_bulk_approve_submissions",
+                "kind": "capability"
+              }
+            }
+          ],
+          "bound": true,
+          "effects": [
+            {
+              "capability": {
+                "id": "cap_bulk_approve_submissions",
+                "kind": "capability"
+              },
+              "event": "approve_selected",
+              "type": "command"
+            }
+          ],
+          "event": "approve_selected"
+        }
+      ],
+      "behavior": {
+        "directives": {
+          "actions": [
+            "approve_selected"
+          ],
+          "emits": "approve_selected",
+          "state": "selected_ids"
+        },
+        "kind": "bulk_action",
+        "source": "structured",
+        "status": "realized"
+      },
+      "capabilities": [
+        "cap_bulk_approve_submissions",
+        "cap_list_submissions"
+      ],
+      "check_codes": [],
+      "data_dependencies": [
+        {
+          "prop": "rows",
+          "source": {
+            "id": "cap_list_submissions",
+            "kind": "capability"
+          }
+        }
+      ],
+      "diagnostics": [],
+      "effect_types": [
+        "command"
+      ],
+      "effects": [
+        {
+          "capability": {
+            "id": "cap_bulk_approve_submissions",
+            "kind": "capability"
+          },
+          "event": "approve_selected",
+          "type": "command"
+        }
+      ],
+      "emits": [
+        {
+          "bindings": [
+            {
+              "action": "action",
+              "event": "approve_selected",
+              "target": {
+                "id": "cap_bulk_approve_submissions",
+                "kind": "capability"
+              }
+            }
+          ],
+          "bound": true,
+          "effects": [
+            {
+              "capability": {
+                "id": "cap_bulk_approve_submissions",
+                "kind": "capability"
+              },
+              "event": "approve_selected",
+              "type": "command"
+            }
+          ],
+          "event": "approve_selected"
+        }
+      ],
+      "key": "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:bulk_action:4",
+      "projection": {
+        "id": "proj_web_surface",
+        "name": "Content Approval Web UI",
+        "source_path": "<workspace>/projections/proj-web-surface.tg",
+        "status": "active",
+        "type": "web_surface"
+      },
+      "region": "results",
+      "screen": {
+        "id": "submission_queue",
+        "kind": "list",
+        "title": "Review Queue"
+      },
+      "source_projection": {
+        "id": "proj_ui_contract",
+        "name": "Content Approval UI Contract",
+        "source_path": "<workspace>/projections/proj-ui-contract.tg",
+        "status": "active",
+        "type": "ui_contract"
+      },
+      "widget": {
+        "category": "collection",
+        "id": "widget_submission_queue",
+        "name": "Submission Queue",
+        "source_path": "<workspace>/widgets/widget-submission-queue.tg",
+        "status": "active",
+        "version": "1.1"
       }
     },
     {
@@ -709,6 +833,16 @@
       },
       {
         "behaviors": [
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:bulk_action:4"
+        ],
+        "declared": 0,
+        "id": "cap_bulk_approve_submissions",
+        "partial": 0,
+        "realized": 1,
+        "total_behaviors": 1
+      },
+      {
+        "behaviors": [
           "proj_web_surface:proj_ui_contract:submission_detail:summary:widget_review_actions:2:keyboard_navigation:1",
           "proj_web_surface:proj_ui_contract:submission_detail:summary:widget_review_actions:2:optimistic_update:0"
         ],
@@ -721,6 +855,7 @@
       {
         "behaviors": [
           "proj_web_surface:proj_ui_contract:submission_queue:hero:widget_submission_summary:0:grouping:0",
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:bulk_action:4",
           "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:filtering:2",
           "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:pagination:3",
           "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:selection:0",
@@ -729,8 +864,8 @@
         "declared": 0,
         "id": "cap_list_submissions",
         "partial": 0,
-        "realized": 5,
-        "total_behaviors": 5
+        "realized": 6,
+        "total_behaviors": 6
       },
       {
         "behaviors": [
@@ -757,13 +892,14 @@
       {
         "behaviors": [
           "proj_web_surface:proj_ui_contract:submission_create:summary:widget_submission_form:3:optimistic_update:0",
-          "proj_web_surface:proj_ui_contract:submission_detail:summary:widget_review_actions:2:optimistic_update:0"
+          "proj_web_surface:proj_ui_contract:submission_detail:summary:widget_review_actions:2:optimistic_update:0",
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:bulk_action:4"
         ],
         "declared": 0,
         "id": "command",
         "partial": 0,
-        "realized": 2,
-        "total_behaviors": 2
+        "realized": 3,
+        "total_behaviors": 3
       },
       {
         "behaviors": [
@@ -817,6 +953,7 @@
       {
         "behaviors": [
           "proj_web_surface:proj_ui_contract:submission_queue:hero:widget_submission_summary:0:grouping:0",
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:bulk_action:4",
           "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:filtering:2",
           "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:pagination:3",
           "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:selection:0",
@@ -825,8 +962,8 @@
         "declared": 0,
         "id": "submission_queue",
         "partial": 0,
-        "realized": 5,
-        "total_behaviors": 5
+        "realized": 6,
+        "total_behaviors": 6
       }
     ],
     "widgets": [
@@ -854,6 +991,7 @@
       },
       {
         "behaviors": [
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:bulk_action:4",
           "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:filtering:2",
           "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:pagination:3",
           "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:selection:0",
@@ -862,8 +1000,8 @@
         "declared": 0,
         "id": "widget_submission_queue",
         "partial": 0,
-        "realized": 4,
-        "total_behaviors": 4
+        "realized": 5,
+        "total_behaviors": 5
       },
       {
         "behaviors": [
@@ -881,6 +1019,7 @@
   "impact": {
     "capabilities": [
       "cap_approve_submission",
+      "cap_bulk_approve_submissions",
       "cap_get_submission",
       "cap_list_submissions",
       "cap_request_changes",
@@ -900,6 +1039,7 @@
   "summary": {
     "affected_capabilities": [
       "cap_approve_submission",
+      "cap_bulk_approve_submissions",
       "cap_get_submission",
       "cap_list_submissions",
       "cap_request_changes",
@@ -918,8 +1058,8 @@
     "declared": 0,
     "errors": 0,
     "partial": 0,
-    "realized": 9,
-    "total_behaviors": 9,
+    "realized": 10,
+    "total_behaviors": 10,
     "total_usages": 4,
     "warnings": 0
   },

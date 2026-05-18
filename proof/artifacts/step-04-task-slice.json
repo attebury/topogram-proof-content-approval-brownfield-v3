@@ -1,0 +1,350 @@
+{
+  "depends_on": {
+    "acceptance_refs": [
+      "ac_maintained_bulk_approve"
+    ],
+    "affects": [
+      "cap_bulk_approve_submissions",
+      "cap_list_submissions"
+    ],
+    "blocked_by": [],
+    "blocks": [],
+    "plans": [],
+    "satisfies": [
+      "req_maintained_bulk_approve"
+    ],
+    "verification_refs": [
+      "verification_maintained_bulk_approve"
+    ],
+    "verifications": [
+      "verification_adopt_brownfield_spec",
+      "verification_maintained_bulk_approve"
+    ]
+  },
+  "focus": {
+    "id": "task_maintained_bulk_approve",
+    "kind": "task"
+  },
+  "ownership_boundary": {
+    "canonical_topogram": {
+      "agent_mode": "propose_review_adopt",
+      "owner": "human"
+    },
+    "generated_artifacts": {
+      "agent_mode": "regenerate_or_compare",
+      "owner": "engine"
+    },
+    "maintained_code": {
+      "agent_mode": "bounded_edit_only",
+      "owner": "human"
+    },
+    "proposal_surfaces": {
+      "agent_mode": "stage_map_customize_reject",
+      "owner": "human"
+    }
+  },
+  "related": {
+    "acceptance_refs": [
+      {
+        "description": "Given the brownfield app has an adopted Topogram spec, when bulk approval is added to the API, queue UI, widgets, and projections, then Topogram check, SDLC check, and app verification pass without generated source writes.",
+        "id": "ac_maintained_bulk_approve",
+        "kind": "acceptance_criterion",
+        "name": "Maintained Bulk Approve",
+        "ownership_boundary": {
+          "canonical_topogram": {
+            "agent_mode": "propose_review_adopt",
+            "owner": "human"
+          },
+          "generated_artifacts": {
+            "agent_mode": "regenerate_or_compare",
+            "owner": "engine"
+          },
+          "maintained_code": {
+            "agent_mode": "bounded_edit_only",
+            "owner": "human"
+          },
+          "proposal_surfaces": {
+            "agent_mode": "stage_map_customize_reject",
+            "owner": "human"
+          }
+        }
+      }
+    ],
+    "affects": [
+      {
+        "actors": [
+          "actor_operator"
+        ],
+        "creates": [],
+        "deletes": [],
+        "description": "Approves multiple selected content submissions.",
+        "id": "cap_bulk_approve_submissions",
+        "input": [
+          "shape_input_bulk_review"
+        ],
+        "kind": "capability",
+        "name": "Bulk Approve Submissions",
+        "output": [
+          "shape_output_submission_card"
+        ],
+        "ownership_boundary": {
+          "canonical_topogram": {
+            "agent_mode": "propose_review_adopt",
+            "owner": "human"
+          },
+          "generated_artifacts": {
+            "agent_mode": "regenerate_or_compare",
+            "owner": "engine"
+          },
+          "maintained_code": {
+            "agent_mode": "bounded_edit_only",
+            "owner": "human"
+          },
+          "proposal_surfaces": {
+            "agent_mode": "stage_map_customize_reject",
+            "owner": "human"
+          }
+        },
+        "reads": [
+          "entity_content_submission"
+        ],
+        "reviewBoundary": {
+          "automation_class": "review_required",
+          "reasons": [
+            "writes_modeled_state"
+          ]
+        },
+        "roles": [],
+        "updates": [
+          "entity_content_submission"
+        ]
+      },
+      {
+        "actors": [
+          "actor_operator"
+        ],
+        "creates": [],
+        "deletes": [],
+        "description": "Lists submitted content in review order.",
+        "id": "cap_list_submissions",
+        "input": [
+          "shape_input_list_submissions"
+        ],
+        "kind": "capability",
+        "name": "List Submissions",
+        "output": [
+          "shape_output_submission_card"
+        ],
+        "ownership_boundary": {
+          "canonical_topogram": {
+            "agent_mode": "propose_review_adopt",
+            "owner": "human"
+          },
+          "generated_artifacts": {
+            "agent_mode": "regenerate_or_compare",
+            "owner": "engine"
+          },
+          "maintained_code": {
+            "agent_mode": "bounded_edit_only",
+            "owner": "human"
+          },
+          "proposal_surfaces": {
+            "agent_mode": "stage_map_customize_reject",
+            "owner": "human"
+          }
+        },
+        "reads": [
+          "entity_content_submission"
+        ],
+        "reviewBoundary": {
+          "automation_class": "safe",
+          "reasons": [
+            "read_only_surface"
+          ]
+        },
+        "roles": [],
+        "updates": []
+      }
+    ],
+    "blocked_by": [],
+    "plans": [],
+    "satisfies": [
+      {
+        "description": "The brownfield app must add bulk approval behavior from the adopted Topogram widget and API contract without regenerating the maintained source.",
+        "id": "req_maintained_bulk_approve",
+        "kind": "requirement",
+        "name": "Maintained Bulk Approve",
+        "ownership_boundary": {
+          "canonical_topogram": {
+            "agent_mode": "propose_review_adopt",
+            "owner": "human"
+          },
+          "generated_artifacts": {
+            "agent_mode": "regenerate_or_compare",
+            "owner": "engine"
+          },
+          "maintained_code": {
+            "agent_mode": "bounded_edit_only",
+            "owner": "human"
+          },
+          "proposal_surfaces": {
+            "agent_mode": "stage_map_customize_reject",
+            "owner": "human"
+          }
+        }
+      }
+    ],
+    "verification_refs": [
+      {
+        "description": "Runs Topogram check, SDLC check, maintained app API behavior verification, and React build verification for the bulk approve checkpoint.",
+        "id": "verification_maintained_bulk_approve",
+        "kind": "verification",
+        "method": "runtime",
+        "name": "Maintained Bulk Approve Verification",
+        "ownership_boundary": {
+          "canonical_topogram": {
+            "agent_mode": "propose_review_adopt",
+            "owner": "human"
+          },
+          "generated_artifacts": {
+            "agent_mode": "regenerate_or_compare",
+            "owner": "engine"
+          },
+          "maintained_code": {
+            "agent_mode": "bounded_edit_only",
+            "owner": "human"
+          },
+          "proposal_surfaces": {
+            "agent_mode": "stage_map_customize_reject",
+            "owner": "human"
+          }
+        },
+        "scenarios": [
+          "brownfield_bulk_approve_api_ui_compile"
+        ],
+        "validates": [
+          "cap_bulk_approve_submissions",
+          "cap_list_submissions"
+        ]
+      }
+    ]
+  },
+  "review_boundary": {
+    "automation_class": "review_required",
+    "reasons": [
+      "task_scope"
+    ]
+  },
+  "summary": {
+    "claimed_by": [
+      "actor_operator"
+    ],
+    "disposition": "active",
+    "domain": null,
+    "id": "task_maintained_bulk_approve",
+    "name": "Maintained Bulk Approve",
+    "priority": "medium",
+    "status": "in-progress",
+    "work_type": "implementation"
+  },
+  "type": "context_slice",
+  "verification": [
+    {
+      "description": "Runs Topogram check, SDLC check, agent brief, focused query packets, adoption receipts, and maintained app verification for the adopted brownfield spec checkpoint.",
+      "id": "verification_adopt_brownfield_spec",
+      "kind": "verification",
+      "method": "runtime",
+      "name": "Adopt Brownfield Spec Verification",
+      "ownership_boundary": {
+        "canonical_topogram": {
+          "agent_mode": "propose_review_adopt",
+          "owner": "human"
+        },
+        "generated_artifacts": {
+          "agent_mode": "regenerate_or_compare",
+          "owner": "engine"
+        },
+        "maintained_code": {
+          "agent_mode": "bounded_edit_only",
+          "owner": "human"
+        },
+        "proposal_surfaces": {
+          "agent_mode": "stage_map_customize_reject",
+          "owner": "human"
+        }
+      },
+      "scenarios": [
+        "brownfield_adoption_topogram_check_sdlc_check_app_verify"
+      ],
+      "validates": [
+        "cap_approve_submission",
+        "cap_get_submission",
+        "cap_list_submissions",
+        "cap_request_changes",
+        "cap_submit_content"
+      ]
+    },
+    {
+      "description": "Runs Topogram check, SDLC check, maintained app API behavior verification, and React build verification for the bulk approve checkpoint.",
+      "id": "verification_maintained_bulk_approve",
+      "kind": "verification",
+      "method": "runtime",
+      "name": "Maintained Bulk Approve Verification",
+      "ownership_boundary": {
+        "canonical_topogram": {
+          "agent_mode": "propose_review_adopt",
+          "owner": "human"
+        },
+        "generated_artifacts": {
+          "agent_mode": "regenerate_or_compare",
+          "owner": "engine"
+        },
+        "maintained_code": {
+          "agent_mode": "bounded_edit_only",
+          "owner": "human"
+        },
+        "proposal_surfaces": {
+          "agent_mode": "stage_map_customize_reject",
+          "owner": "human"
+        }
+      },
+      "scenarios": [
+        "brownfield_bulk_approve_api_ui_compile"
+      ],
+      "validates": [
+        "cap_bulk_approve_submissions",
+        "cap_list_submissions"
+      ]
+    }
+  ],
+  "verification_targets": {
+    "generated_checks": [
+      "compile-check",
+      "runtime-check"
+    ],
+    "maintained_app_checks": [],
+    "rationale": "Task slice points at verification covering the surfaces this task touches.",
+    "verification_ids": [
+      "verification_adopt_brownfield_spec",
+      "verification_maintained_bulk_approve"
+    ]
+  },
+  "version": 1,
+  "write_scope": {
+    "generator_owned": [
+      "artifacts/**",
+      "apps/**"
+    ],
+    "human_owned_review_required": [
+      "examples/maintained/proof-app/**"
+    ],
+    "out_of_bounds": [
+      ".git/**",
+      "node_modules/**"
+    ],
+    "safe_to_edit": [
+      "topo/**",
+      "candidates/**"
+    ]
+  }
+}

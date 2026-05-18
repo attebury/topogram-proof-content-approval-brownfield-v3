@@ -100,7 +100,8 @@
           ],
           "directives": {
             "emits": "row_select",
-            "mode": "single"
+            "mode": "multi",
+            "state": "selected_ids"
           },
           "effects": [
             {
@@ -140,7 +141,13 @@
           ],
           "kind": "selection",
           "source": "structured",
-          "state": null,
+          "state": {
+            "bound": false,
+            "defaultValue": [],
+            "prop": "selected_ids",
+            "requiredness": "optional",
+            "source": null
+          },
           "status": "realized"
         },
         {
@@ -216,6 +223,96 @@
           "source": "structured",
           "state": null,
           "status": "realized"
+        },
+        {
+          "actions": [
+            {
+              "bindings": [
+                {
+                  "action": "action",
+                  "event": "approve_selected",
+                  "target": {
+                    "id": "cap_bulk_approve_submissions",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "bound": true,
+              "effects": [
+                {
+                  "capability": {
+                    "id": "cap_bulk_approve_submissions",
+                    "kind": "capability"
+                  },
+                  "event": "approve_selected",
+                  "type": "command"
+                }
+              ],
+              "event": "approve_selected"
+            }
+          ],
+          "dataDependencies": [
+            {
+              "prop": "rows",
+              "source": {
+                "id": "cap_list_submissions",
+                "kind": "capability"
+              }
+            }
+          ],
+          "directives": {
+            "actions": [
+              "approve_selected"
+            ],
+            "emits": "approve_selected",
+            "state": "selected_ids"
+          },
+          "effects": [
+            {
+              "capability": {
+                "id": "cap_bulk_approve_submissions",
+                "kind": "capability"
+              },
+              "event": "approve_selected",
+              "type": "command"
+            }
+          ],
+          "emits": [
+            {
+              "bindings": [
+                {
+                  "action": "action",
+                  "event": "approve_selected",
+                  "target": {
+                    "id": "cap_bulk_approve_submissions",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "bound": true,
+              "effects": [
+                {
+                  "capability": {
+                    "id": "cap_bulk_approve_submissions",
+                    "kind": "capability"
+                  },
+                  "event": "approve_selected",
+                  "type": "command"
+                }
+              ],
+              "event": "approve_selected"
+            }
+          ],
+          "kind": "bulk_action",
+          "source": "structured",
+          "state": {
+            "bound": false,
+            "defaultValue": [],
+            "prop": "selected_ids",
+            "requiredness": "optional",
+            "source": null
+          },
+          "status": "realized"
         }
       ],
       "check_codes": [],
@@ -235,6 +332,14 @@
           "target": {
             "id": "submission_detail",
             "kind": "screen"
+          }
+        },
+        {
+          "action": "action",
+          "event": "approve_selected",
+          "target": {
+            "id": "cap_bulk_approve_submissions",
+            "kind": "capability"
           }
         }
       ],
@@ -266,7 +371,7 @@
         "name": "Submission Queue",
         "source_path": "<workspace>/widgets/widget-submission-queue.tg",
         "status": "active",
-        "version": "1.0"
+        "version": "1.1"
       }
     },
     {
@@ -713,13 +818,15 @@
         "selection",
         "sorting",
         "filtering",
-        "pagination"
+        "pagination",
+        "bulk_action"
       ],
       "behaviors": [
         {
           "directives": {
             "emits": "row_select",
-            "mode": "single"
+            "mode": "multi",
+            "state": "selected_ids"
           },
           "kind": "selection",
           "source": "structured"
@@ -755,6 +862,17 @@
           },
           "kind": "pagination",
           "source": "structured"
+        },
+        {
+          "directives": {
+            "actions": [
+              "approve_selected"
+            ],
+            "emits": "approve_selected",
+            "state": "selected_ids"
+          },
+          "kind": "bulk_action",
+          "source": "structured"
         }
       ],
       "category": "collection",
@@ -764,6 +882,13 @@
           "id": "row_select",
           "shape": {
             "id": "shape_output_submission_card",
+            "kind": "shape"
+          }
+        },
+        {
+          "id": "approve_selected",
+          "shape": {
+            "id": "shape_input_bulk_review",
             "kind": "shape"
           }
         }
@@ -778,6 +903,12 @@
           "type": "array"
         },
         {
+          "defaultValue": [],
+          "name": "selected_ids",
+          "requiredness": "optional",
+          "type": "array"
+        },
+        {
           "defaultValue": false,
           "name": "loading",
           "requiredness": "optional",
@@ -786,7 +917,7 @@
       ],
       "source_path": "<workspace>/widgets/widget-submission-queue.tg",
       "status": "active",
-      "version": "1.0"
+      "version": "1.1"
     },
     {
       "approvals": [],

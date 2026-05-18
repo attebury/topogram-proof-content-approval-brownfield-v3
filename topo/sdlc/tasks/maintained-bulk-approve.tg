@@ -1,0 +1,14 @@
+task task_maintained_bulk_approve {
+  name "Maintained Bulk Approve"
+  description "Add bulk approval to the maintained brownfield app using Topogram query packets as implementation context."
+  satisfies [req_maintained_bulk_approve]
+  acceptance_refs [ac_maintained_bulk_approve]
+  verification_refs [verification_maintained_bulk_approve]
+  affects [cap_list_submissions, cap_bulk_approve_submissions]
+  blocked_by []
+  disposition active
+  priority medium
+  work_type implementation
+  claimed_by [actor_operator]
+  status done
+}

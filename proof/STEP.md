@@ -1,11 +1,11 @@
-# Step 03: Adopt App Map
+# Step 04: Feature From Slice
 
 Repository: `topogram-proof-content-approval-brownfield-v3`
 CLI baseline: `@topogram/cli@0.3.99`
 
 ## Claim
 
-Promote reviewed candidates into canonical topo source and enable SDLC.
+Implement a maintained feature from agent-safe slice context.
 
 ## Verification
 

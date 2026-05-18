@@ -98,10 +98,22 @@ button.secondary {
   background: #475467;
 }
 
+button:disabled {
+  background: #98a2b3;
+  cursor: not-allowed;
+}
+
 .action-row {
   display: flex;
   gap: 12px;
   margin: 20px 0;
+}
+
+.select-row {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
 }
 
 .submission-form {
