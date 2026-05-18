@@ -3,12 +3,27 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "check": "npm run check:api && npm run check:web",
+    "check:api": "node ./src/check.js",
+    "check:web": "vite build",
+    "dev:api": "node ./src/api/server.js",
+    "dev:web": "vite --host 127.0.0.1",
     "verify": "node ./scripts/verify-proof.mjs",
     "proof:check-paths": "node ./scripts/check-no-local-paths.mjs",
     "proof:audit": "node ./scripts/proof-audit.mjs",
-    "proof:clean": "node ./scripts/check-clean-worktree.mjs"
+    "proof:clean": "node ./scripts/check-clean-worktree.mjs",
+    "recreated:compile": "test ! -f ./recreated-app/package.json || npm --prefix ./recreated-app run compile"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "express": "^4.19.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
-    "@topogram/cli": "0.3.99"
+    "@topogram/cli": "0.3.99",
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.11"
   }
 }

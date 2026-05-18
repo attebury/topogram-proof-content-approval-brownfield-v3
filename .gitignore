@@ -1,6 +1,14 @@
 node_modules/
 dist/
-build/
-.svelte-kit/
-coverage/
+.env
 .DS_Store
+npm-debug.log*
+topo/candidates/
+**/node_modules/
+**/.svelte-kit/
+**/.vite/
+**/.cache/
+**/dist/
+**/build/
+.env.*
+!.env.example

@@ -1,68 +1,32 @@
 {
-  "type": "proof_manifest",
   "version": 3,
   "repository": "topogram-proof-content-approval-brownfield-v3",
-  "topogramCliVersion": "0.3.99",
   "story": "real-ish brownfield app, package-backed extractors, reviewable adoption, agent-safe maintained change, drift refresh, and cross-stack recreation",
-  "expectedTags": [],
-  "plannedSteps": [
-    {
-      "step": 1,
-      "branch": "step/01-brownfield-baseline",
-      "tag": "proof-01-brownfield-baseline",
-      "claim": "Create a real-ish maintained app with no Topogram workspace."
-    },
-    {
-      "step": 2,
-      "branch": "step/02-extract-with-packages",
-      "tag": "proof-02-extract-with-packages",
-      "claim": "Use package-backed extractors to emit review-only candidates and provenance."
-    },
-    {
-      "step": 3,
-      "branch": "step/03-adopt-app-map",
-      "tag": "proof-03-adopt-app-map",
-      "claim": "Promote reviewed candidates into canonical topo source and enable SDLC."
-    },
-    {
-      "step": 4,
-      "branch": "step/04-feature-from-slice",
-      "tag": "proof-04-feature-from-slice",
-      "claim": "Implement a maintained feature from agent-safe slice context."
-    },
-    {
-      "step": 5,
-      "branch": "step/05-refresh-drift",
-      "tag": "proof-05-refresh-drift",
-      "claim": "Refresh extraction and review source/spec drift explicitly."
-    },
-    {
-      "step": 6,
-      "branch": "step/06-recreate-other-stack",
-      "tag": "proof-06-recreate-other-stack",
-      "claim": "Generate a cross-stack recreation beside maintained source."
-    },
-    {
-      "step": 7,
-      "branch": "step/07-parity-proof",
-      "tag": "proof-07-parity-proof",
-      "claim": "Compare maintained and recreated stacks through contracts and verification summaries."
-    }
+  "topogramCliVersion": "0.3.99",
+  "expectedTags": [
+    "proof-01-brownfield-baseline"
   ],
+  "requiresCanonicalTopo": false,
+  "requiresSdlc": false,
+  "forbidsCanonicalTopo": true,
+  "requiresRecreatedCompile": false,
+  "appCheckScript": "check",
   "requiredArtifacts": [
+    {
+      "path": "proof/artifacts/path-hygiene-audit.json",
+      "json": true,
+      "type": "proof_path_hygiene_audit"
+    },
     {
       "path": "proof/STEP.md",
       "contains": [
-        "Scaffold checkpoint"
+        "Step"
       ]
     },
     {
-      "path": "proof/artifacts/path-hygiene-audit.json",
-      "type": "proof_path_hygiene_audit",
-      "keys": [
-        "repository",
-        "topogramCliVersion",
-        "checks"
+      "path": "proof/artifacts/step-01-npm-verify.txt",
+      "contains": [
+        "verified"
       ]
     }
   ]

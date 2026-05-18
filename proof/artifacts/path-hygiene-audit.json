@@ -4,11 +4,11 @@
   "topogramCliVersion": "0.3.99",
   "checks": [
     {
-      "id": "no_machine_local_paths",
+      "id": "no_local_absolute_paths",
       "status": "passed"
     },
     {
-      "id": "portable_public_artifacts",
+      "id": "public_artifacts_portable_paths",
       "status": "passed"
     }
   ]
