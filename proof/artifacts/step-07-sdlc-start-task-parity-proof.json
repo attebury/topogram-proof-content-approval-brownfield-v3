@@ -1,0 +1,131 @@
+{
+  "acceptance_criteria": [
+    {
+      "id": "ac_parity_proof",
+      "kind": "acceptance_criterion",
+      "name": "Parity Proof",
+      "status": "approved"
+    }
+  ],
+  "actor": "actor_operator",
+  "blockers": [],
+  "can_start": true,
+  "decisions": [],
+  "dryRun": false,
+  "next_commands": [
+    "topogram query slice ./topo --task task_parity_proof --json",
+    "topogram query single-agent-plan ./topo --mode implementation --task task_parity_proof --json",
+    "topogram query sdlc-proof-gaps ./topo --task task_parity_proof --json",
+    "topogram query verification-targets ./topo --task task_parity_proof --json",
+    "topogram sdlc complete task_parity_proof . --verification <verification-id> --actor actor_operator --write"
+  ],
+  "ok": true,
+  "plans": [],
+  "proof_gaps": {
+    "errors": [],
+    "missing": {
+      "acceptance_refs": false,
+      "satisfies": false,
+      "verification_refs": false
+    },
+    "ready_for_done": true,
+    "task": {
+      "acceptance_refs": [
+        "ac_parity_proof"
+      ],
+      "blocked_by": [],
+      "claimed_by": [
+        "actor_operator"
+      ],
+      "disposition": "active",
+      "id": "task_parity_proof",
+      "kind": "task",
+      "name": "Parity Proof",
+      "priority": "medium",
+      "satisfies": [
+        "req_parity_proof"
+      ],
+      "status": "in-progress",
+      "verification_refs": [
+        "verification_parity_proof"
+      ],
+      "work_type": "implementation"
+    },
+    "warnings": []
+  },
+  "refusal_reasons": [],
+  "requirements": [
+    {
+      "id": "req_parity_proof",
+      "kind": "requirement",
+      "name": "Parity Proof",
+      "status": "approved"
+    }
+  ],
+  "rules": [],
+  "task": {
+    "acceptance_refs": [
+      "ac_parity_proof"
+    ],
+    "blocked_by": [],
+    "claimed_by": [
+      "actor_operator"
+    ],
+    "disposition": "active",
+    "id": "task_parity_proof",
+    "kind": "task",
+    "name": "Parity Proof",
+    "priority": "medium",
+    "satisfies": [
+      "req_parity_proof"
+    ],
+    "status": "in-progress",
+    "verification_refs": [
+      "verification_parity_proof"
+    ],
+    "work_type": "implementation"
+  },
+  "transitions": [
+    {
+      "archivable": false,
+      "dod": {
+        "errors": [],
+        "satisfied": true,
+        "warnings": []
+      },
+      "dryRun": false,
+      "file": "<repo>/topo/sdlc/tasks/parity-proof.tg",
+      "from": "unclaimed",
+      "id": "task_parity_proof",
+      "kind": "task",
+      "ok": true,
+      "to": "claimed"
+    },
+    {
+      "archivable": false,
+      "dod": {
+        "errors": [],
+        "satisfied": true,
+        "warnings": []
+      },
+      "dryRun": false,
+      "file": "<repo>/topo/sdlc/tasks/parity-proof.tg",
+      "from": "claimed",
+      "id": "task_parity_proof",
+      "kind": "task",
+      "ok": true,
+      "to": "in-progress"
+    }
+  ],
+  "type": "sdlc_start_packet",
+  "verifications": [
+    {
+      "id": "verification_parity_proof",
+      "kind": "verification",
+      "name": "Parity Proof Verification",
+      "status": "active"
+    }
+  ],
+  "version": 1,
+  "written": true
+}

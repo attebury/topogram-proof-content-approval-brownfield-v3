@@ -1,0 +1,18 @@
+widget widget_submission_summary {
+  name "Submission Summary"
+  description "Reusable summary widget for submission counts and field coverage."
+  category display
+
+  props {
+    rows array required
+  }
+
+  behavior [grouping]
+  behaviors {
+    grouping fields [status]
+  }
+  patterns [summary_stats]
+  regions [hero, summary]
+  version "1.0"
+  status active
+}

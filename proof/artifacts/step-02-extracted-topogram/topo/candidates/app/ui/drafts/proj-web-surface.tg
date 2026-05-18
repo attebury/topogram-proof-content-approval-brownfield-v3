@@ -1,0 +1,39 @@
+projection proj_web_surface_imported_topogram_proof_content_approval_brownfield {
+  name "Imported Web Surface Draft"
+  description "Drafted from imported UI candidates. Review and adapt before adoption."
+
+  type web_surface
+  realizes [
+    proj_ui_contract_imported_topogram_proof_content_approval_brownfield,
+    cap_create_submissions,
+    cap_get_submission,
+    cap_list_health,
+    cap_list_submissions,
+    cap_res,
+    cap_update_submissions
+  ]
+  outputs [ui_contract, web_app]
+
+  screen_routes {
+    screen home_dashboard path /
+    screen submissions_list path /submissions
+    screen submissions_detail path /submissions/:submissionId
+    screen submissions_create path /submissions/new
+  }
+
+  web_hints {
+    screen submissions_list shell topbar
+    screen submissions_list collection list
+    action cap_create_submissions present button
+    action cap_update_submissions present button
+    action cap_create_submissions present button
+  }
+
+  generator_defaults {
+    profile react
+    language typescript
+    styling css
+  }
+
+  status proposed
+}

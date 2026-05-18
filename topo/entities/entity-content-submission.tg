@@ -1,0 +1,33 @@
+entity entity_content_submission {
+  name "Content Submission"
+  description "A submitted piece of content moving through editorial approval."
+
+  fields {
+    id uuid required
+    title text required
+    body text required
+    status text required
+    review_priority text optional
+    assigned_reviewer text optional
+    author_name text required
+    created_at datetime required
+    submitted_at datetime required
+    reviewed_at datetime optional
+    reviewer_note text optional
+  }
+
+  keys {
+    primary [id]
+    index [status]
+    index [review_priority]
+    index [assigned_reviewer]
+    index [submitted_at]
+  }
+
+  invariants {
+    title length <= 120
+    body length <= 4000
+  }
+
+  status active
+}

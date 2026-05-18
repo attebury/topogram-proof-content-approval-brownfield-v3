@@ -1,0 +1,6 @@
+acceptance_criterion ac_refresh_drift {
+  name "Refresh Drift"
+  description "Given the maintained source app changes after adoption, when extraction refresh and diff are run, then drift is visible in review artifacts and canonical topo remains unchanged unless explicitly adopted."
+  requirement req_refresh_drift
+  status approved
+}

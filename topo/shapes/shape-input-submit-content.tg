@@ -1,0 +1,12 @@
+shape shape_input_submit_content {
+  name "Submit Content Input"
+  description "Fields required to submit content for review."
+
+  fields {
+    title text required
+    body text required
+    author_name text required
+  }
+
+  status active
+}

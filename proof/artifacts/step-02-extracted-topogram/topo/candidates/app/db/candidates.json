@@ -1,0 +1,429 @@
+{
+  "entities": [
+    {
+      "kind": "entity",
+      "id_hint": "entity_contentsubmission",
+      "label": "ContentSubmission",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "prisma/schema.prisma"
+      ],
+      "track": "db",
+      "table_name": "contentsubmission",
+      "fields": [
+        {
+          "name": "id",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": true
+        },
+        {
+          "name": "title",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "body",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "status",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "review_priority",
+          "field_type": "string",
+          "required": false,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "assigned_reviewer",
+          "field_type": "string",
+          "required": false,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "author_name",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "created_at",
+          "field_type": "datetime",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "submitted_at",
+          "field_type": "datetime",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "reviewed_at",
+          "field_type": "datetime",
+          "required": false,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "reviewer_note",
+          "field_type": "string",
+          "required": false,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        }
+      ]
+    },
+    {
+      "source": "prisma",
+      "id_hint": "entity_content_submission",
+      "name": "ContentSubmission",
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "required": true,
+          "unique": false,
+          "primary": true,
+          "evidence": [
+            "field ContentSubmission.id"
+          ]
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "required": true,
+          "unique": false,
+          "primary": false,
+          "evidence": [
+            "field ContentSubmission.title"
+          ]
+        },
+        {
+          "name": "body",
+          "type": "string",
+          "required": true,
+          "unique": false,
+          "primary": false,
+          "evidence": [
+            "field ContentSubmission.body"
+          ]
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "required": true,
+          "unique": false,
+          "primary": false,
+          "evidence": [
+            "field ContentSubmission.status"
+          ]
+        },
+        {
+          "name": "review_priority",
+          "type": "string",
+          "required": false,
+          "unique": false,
+          "primary": false,
+          "evidence": [
+            "field ContentSubmission.review_priority"
+          ]
+        },
+        {
+          "name": "assigned_reviewer",
+          "type": "string",
+          "required": false,
+          "unique": false,
+          "primary": false,
+          "evidence": [
+            "field ContentSubmission.assigned_reviewer"
+          ]
+        },
+        {
+          "name": "author_name",
+          "type": "string",
+          "required": true,
+          "unique": false,
+          "primary": false,
+          "evidence": [
+            "field ContentSubmission.author_name"
+          ]
+        },
+        {
+          "name": "created_at",
+          "type": "datetime",
+          "required": true,
+          "unique": false,
+          "primary": false,
+          "evidence": [
+            "field ContentSubmission.created_at"
+          ]
+        },
+        {
+          "name": "submitted_at",
+          "type": "datetime",
+          "required": true,
+          "unique": false,
+          "primary": false,
+          "evidence": [
+            "field ContentSubmission.submitted_at"
+          ]
+        },
+        {
+          "name": "reviewed_at",
+          "type": "datetime",
+          "required": false,
+          "unique": false,
+          "primary": false,
+          "evidence": [
+            "field ContentSubmission.reviewed_at"
+          ]
+        },
+        {
+          "name": "reviewer_note",
+          "type": "string",
+          "required": false,
+          "unique": false,
+          "primary": false,
+          "evidence": [
+            "field ContentSubmission.reviewer_note"
+          ]
+        }
+      ],
+      "evidence": [
+        "prisma model ContentSubmission"
+      ],
+      "confidence": 0.9,
+      "provenance": []
+    }
+  ],
+  "enums": [],
+  "relations": [],
+  "indexes": [
+    {
+      "kind": "index",
+      "id_hint": "index_contentsubmission-status",
+      "label": "Contentsubmission Status",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "prisma/schema.prisma"
+      ],
+      "track": "db",
+      "entity": "entity_contentsubmission",
+      "fields": [
+        "status"
+      ],
+      "unique": false
+    },
+    {
+      "kind": "index",
+      "id_hint": "index_contentsubmission-review-priority",
+      "label": "Contentsubmission Review Priority",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "prisma/schema.prisma"
+      ],
+      "track": "db",
+      "entity": "entity_contentsubmission",
+      "fields": [
+        "review_priority"
+      ],
+      "unique": false
+    },
+    {
+      "kind": "index",
+      "id_hint": "index_contentsubmission-assigned-reviewer",
+      "label": "Contentsubmission Assigned Reviewer",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "prisma/schema.prisma"
+      ],
+      "track": "db",
+      "entity": "entity_contentsubmission",
+      "fields": [
+        "assigned_reviewer"
+      ],
+      "unique": false
+    },
+    {
+      "kind": "index",
+      "id_hint": "index_contentsubmission-submitted-at",
+      "label": "Contentsubmission Submitted At",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "prisma/schema.prisma"
+      ],
+      "track": "db",
+      "entity": "entity_contentsubmission",
+      "fields": [
+        "submitted_at"
+      ],
+      "unique": false
+    },
+    {
+      "source": "package:@topogram/extractor-prisma-db",
+      "id_hint": "index_content_submission_status",
+      "entity": "entity_content_submission",
+      "fields": [
+        "status"
+      ],
+      "unique": false,
+      "evidence": [
+        "@@index ContentSubmission(status)"
+      ],
+      "confidence": 0.85,
+      "provenance": []
+    },
+    {
+      "source": "package:@topogram/extractor-prisma-db",
+      "id_hint": "index_content_submission_review_priority",
+      "entity": "entity_content_submission",
+      "fields": [
+        "review_priority"
+      ],
+      "unique": false,
+      "evidence": [
+        "@@index ContentSubmission(review_priority)"
+      ],
+      "confidence": 0.85,
+      "provenance": []
+    },
+    {
+      "source": "package:@topogram/extractor-prisma-db",
+      "id_hint": "index_content_submission_assigned_reviewer",
+      "entity": "entity_content_submission",
+      "fields": [
+        "assigned_reviewer"
+      ],
+      "unique": false,
+      "evidence": [
+        "@@index ContentSubmission(assigned_reviewer)"
+      ],
+      "confidence": 0.85,
+      "provenance": []
+    },
+    {
+      "source": "package:@topogram/extractor-prisma-db",
+      "id_hint": "index_content_submission_submitted_at",
+      "entity": "entity_content_submission",
+      "fields": [
+        "submitted_at"
+      ],
+      "unique": false,
+      "evidence": [
+        "@@index ContentSubmission(submitted_at)"
+      ],
+      "confidence": 0.85,
+      "provenance": []
+    }
+  ],
+  "maintained_seams": [
+    {
+      "kind": "maintained_db_migration_seam",
+      "id_hint": "seam_prisma_db_migrations",
+      "label": "PRISMA maintained database migrations",
+      "confidence": "high",
+      "source_kind": "migration_strategy_inference",
+      "source_of_truth": "candidate",
+      "provenance": [
+        "prisma/schema.prisma",
+        "prisma/migrations/20260515010101_init/migration.sql"
+      ],
+      "track": "db",
+      "seam_id": "seam_prisma_db_migrations",
+      "output_id": "maintained_app",
+      "ownership_class": "human_owned",
+      "status": "review_required",
+      "tool": "prisma",
+      "ownership": "maintained",
+      "apply": "never",
+      "schemaPath": "prisma/schema.prisma",
+      "migrationsPath": "prisma/migrations",
+      "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+      "runtime_id_hint": "app_db",
+      "projection_id_hint": "proj_db",
+      "evidence": [
+        "prisma/schema.prisma",
+        "prisma/migrations/20260515010101_init/migration.sql"
+      ],
+      "match_reasons": [
+        "found Prisma schema",
+        "found Prisma migrations directory"
+      ],
+      "missing_decisions": [],
+      "proposed_runtime_migration": {
+        "ownership": "maintained",
+        "tool": "prisma",
+        "apply": "never",
+        "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+        "schemaPath": "prisma/schema.prisma",
+        "migrationsPath": "prisma/migrations"
+      },
+      "manual_next_steps": [
+        "Review evidence, match_reasons, and missing_decisions before accepting this seam.",
+        "Confirm database runtime 'app_db' and projection 'proj_db' are the right topology targets for the maintained app.",
+        "If accepted, copy proposed_runtime_migration into the matching database runtime's migration block in topogram.project.json.",
+        "Keep ownership 'maintained' and apply 'never'; import must not apply migrations or patch maintained app files.",
+        "After editing topogram.project.json, run topogram check . --json and the maintained app's migration verification."
+      ],
+      "project_config_target": {
+        "file": "topogram.project.json",
+        "path": "topology.runtimes[id=app_db].migration",
+        "runtime_id": "app_db",
+        "projection_id": "proj_db"
+      },
+      "maintained_modules": [
+        "prisma/schema.prisma",
+        "prisma/migrations"
+      ],
+      "emitted_dependencies": [
+        "topo/state/db/app_db/current.snapshot.json",
+        "proj_db"
+      ],
+      "allowed_change_classes": [
+        "proposal_only"
+      ],
+      "drift_signals": [
+        "schema_or_migration_changed",
+        "migration_directory_changed"
+      ]
+    }
+  ]
+}

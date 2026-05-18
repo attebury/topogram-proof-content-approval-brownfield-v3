@@ -1,0 +1,10 @@
+shape shape_event_submissions_row_select {
+  # Import metadata: confidence medium; source ui_widget_event.
+  # Missing decisions: confirm selected row identity fields; confirm event payload shape name.
+  name "SubmissionQueueScreen results row_select payload"
+  description "Candidate event payload shape inferred from imported UI interaction evidence."
+  fields {
+    submissionid string required
+  }
+  status proposed
+}

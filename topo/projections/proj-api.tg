@@ -1,0 +1,34 @@
+projection proj_api {
+  name "Content Approval API"
+  description "HTTP API contract for content submission review."
+  type api_contract
+
+  realizes [cap_submit_content, cap_get_submission, cap_list_submissions, cap_approve_submission, cap_request_changes, cap_bulk_approve_submissions]
+  outputs [database_schema, entity_models, request_contracts, response_contracts, endpoints]
+
+  endpoints {
+    cap_submit_content method POST path /submissions success 201 auth none request body
+    cap_get_submission method GET path /submissions/:id success 200 auth none request path
+    cap_list_submissions method GET path /submissions success 200 auth none request query
+    cap_approve_submission method POST path /submissions/:id/approve success 200 auth none request body
+    cap_bulk_approve_submissions method POST path /submissions/bulk-approve success 200 auth none request body
+    cap_request_changes method POST path /submissions/:id/request-changes success 200 auth none request body
+  }
+
+  wire_fields {
+    cap_get_submission input submission_id in path as id
+    cap_approve_submission input submission_id in path as id
+    cap_approve_submission input reviewer_note in body
+    cap_request_changes input submission_id in path as id
+    cap_request_changes input reviewer_note in body
+    cap_list_submissions input status in query
+    cap_list_submissions input after in query
+    cap_list_submissions input limit in query
+  }
+
+  responses {
+    cap_list_submissions mode cursor item shape_output_submission_detail cursor request_after after response_next next_cursor limit field limit default 25 max 100 sort by submitted_at direction desc total included false
+  }
+
+  status active
+}

@@ -1,0 +1,43 @@
+[
+  {
+    "kind": "react_router_routes",
+    "routes": [
+      {
+        "path": "/",
+        "components": [
+          "SubmissionQueueScreen"
+        ],
+        "files": [
+          "src/ui/App.jsx"
+        ]
+      },
+      {
+        "path": "/submissions",
+        "components": [
+          "SubmissionQueueScreen"
+        ],
+        "files": [
+          "src/ui/App.jsx"
+        ]
+      },
+      {
+        "path": "/submissions/:submissionId",
+        "components": [
+          "SubmissionDetailScreen"
+        ],
+        "files": [
+          "src/ui/App.jsx"
+        ]
+      },
+      {
+        "path": "/submissions/new",
+        "components": [
+          "NewSubmissionScreen"
+        ],
+        "files": [
+          "src/ui/App.jsx"
+        ]
+      }
+    ]
+  }
+]

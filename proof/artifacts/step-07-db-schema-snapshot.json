@@ -1,0 +1,174 @@
+{
+  "engine": "postgres",
+  "enums": [],
+  "generatorDefaults": {
+    "language": "sql",
+    "profile": "postgres_sql"
+  },
+  "profile": "postgres_sql",
+  "projection": {
+    "id": "proj_db_postgres",
+    "name": "Content Approval Postgres DB",
+    "type": "db_contract"
+  },
+  "tables": [
+    {
+      "columns": [
+        {
+          "dbType": "text",
+          "defaultSql": null,
+          "defaultValue": null,
+          "fieldType": "text",
+          "name": "assigned_reviewer",
+          "required": false,
+          "requiredness": "optional",
+          "sourceField": "assigned_reviewer"
+        },
+        {
+          "dbType": "text",
+          "defaultSql": null,
+          "defaultValue": null,
+          "fieldType": "text",
+          "name": "author_name",
+          "required": true,
+          "requiredness": "required",
+          "sourceField": "author_name"
+        },
+        {
+          "dbType": "text",
+          "defaultSql": null,
+          "defaultValue": null,
+          "fieldType": "text",
+          "name": "body",
+          "required": true,
+          "requiredness": "required",
+          "sourceField": "body"
+        },
+        {
+          "dbType": "timestamptz",
+          "defaultSql": null,
+          "defaultValue": null,
+          "fieldType": "datetime",
+          "name": "created_at",
+          "required": true,
+          "requiredness": "required",
+          "sourceField": "created_at"
+        },
+        {
+          "dbType": "uuid",
+          "defaultSql": null,
+          "defaultValue": null,
+          "fieldType": "uuid",
+          "name": "id",
+          "required": true,
+          "requiredness": "required",
+          "sourceField": "id"
+        },
+        {
+          "dbType": "text",
+          "defaultSql": null,
+          "defaultValue": null,
+          "fieldType": "text",
+          "name": "review_priority",
+          "required": false,
+          "requiredness": "optional",
+          "sourceField": "review_priority"
+        },
+        {
+          "dbType": "timestamptz",
+          "defaultSql": null,
+          "defaultValue": null,
+          "fieldType": "datetime",
+          "name": "reviewed_at",
+          "required": false,
+          "requiredness": "optional",
+          "sourceField": "reviewed_at"
+        },
+        {
+          "dbType": "text",
+          "defaultSql": null,
+          "defaultValue": null,
+          "fieldType": "text",
+          "name": "reviewer_note",
+          "required": false,
+          "requiredness": "optional",
+          "sourceField": "reviewer_note"
+        },
+        {
+          "dbType": "text",
+          "defaultSql": null,
+          "defaultValue": null,
+          "fieldType": "text",
+          "name": "status",
+          "required": true,
+          "requiredness": "required",
+          "sourceField": "status"
+        },
+        {
+          "dbType": "timestamptz",
+          "defaultSql": null,
+          "defaultValue": null,
+          "fieldType": "datetime",
+          "name": "submitted_at",
+          "required": true,
+          "requiredness": "required",
+          "sourceField": "submitted_at"
+        },
+        {
+          "dbType": "text",
+          "defaultSql": null,
+          "defaultValue": null,
+          "fieldType": "text",
+          "name": "title",
+          "required": true,
+          "requiredness": "required",
+          "sourceField": "title"
+        }
+      ],
+      "entity": {
+        "id": "entity_content_submission",
+        "name": "Content Submission"
+      },
+      "indexes": [
+        {
+          "fields": [
+            "assigned_reviewer"
+          ],
+          "type": "index"
+        },
+        {
+          "fields": [
+            "review_priority"
+          ],
+          "type": "index"
+        },
+        {
+          "fields": [
+            "status"
+          ],
+          "type": "index"
+        },
+        {
+          "fields": [
+            "submitted_at"
+          ],
+          "type": "index"
+        }
+      ],
+      "lifecycle": {
+        "softDelete": null,
+        "timestamps": {
+          "createdAt": "created_at",
+          "updatedAt": "reviewed_at"
+        }
+      },
+      "primaryKey": [
+        "id"
+      ],
+      "relations": [],
+      "table": "content_submissions",
+      "uniques": []
+    }
+  ],
+  "type": "db_schema_snapshot"
+}

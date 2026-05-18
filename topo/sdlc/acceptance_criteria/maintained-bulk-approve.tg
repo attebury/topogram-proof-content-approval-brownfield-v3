@@ -1,0 +1,6 @@
+acceptance_criterion ac_maintained_bulk_approve {
+  name "Maintained Bulk Approve"
+  description "Given the brownfield app has an adopted Topogram spec, when bulk approval is added to the API, queue UI, widgets, and projections, then Topogram check, SDLC check, and app verification pass without generated source writes."
+  requirement req_maintained_bulk_approve
+  status approved
+}

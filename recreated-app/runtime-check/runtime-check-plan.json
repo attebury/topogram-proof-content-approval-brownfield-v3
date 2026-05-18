@@ -1,0 +1,236 @@
+{
+  "type": "runtime_check_plan",
+  "name": "Content Approval Runtime Check Plan",
+  "projections": {
+    "api": "proj_api",
+    "ui": "proj_web_surface",
+    "db": "proj_db_postgres"
+  },
+  "topology": {
+    "runtimes": [
+      {
+        "id": "recreated_api",
+        "kind": "api_service",
+        "projection": "proj_api",
+        "generator": {
+          "id": "@topogram/generator-hono-api",
+          "package": "@topogram/generator-hono-api",
+          "version": "1"
+        }
+      },
+      {
+        "id": "recreated_web",
+        "kind": "web_surface",
+        "projection": "proj_web_surface",
+        "generator": {
+          "id": "@topogram/generator-sveltekit-web",
+          "package": "@topogram/generator-sveltekit-web",
+          "version": "1"
+        }
+      },
+      {
+        "id": "recreated_postgres",
+        "kind": "database",
+        "projection": "proj_db_postgres",
+        "generator": {
+          "id": "@topogram/generator-postgres-db",
+          "package": "@topogram/generator-postgres-db",
+          "version": "1"
+        }
+      }
+    ]
+  },
+  "verification": {
+    "methods": [
+      "runtime"
+    ],
+    "sources": [
+      {
+        "id": "verification_adopt_brownfield_spec",
+        "name": "Adopt Brownfield Spec Verification",
+        "method": "runtime",
+        "validates": [
+          "cap_list_submissions",
+          "cap_get_submission",
+          "cap_submit_content",
+          "cap_approve_submission",
+          "cap_request_changes"
+        ]
+      },
+      {
+        "id": "verification_maintained_bulk_approve",
+        "name": "Maintained Bulk Approve Verification",
+        "method": "runtime",
+        "validates": [
+          "cap_list_submissions",
+          "cap_bulk_approve_submissions"
+        ]
+      },
+      {
+        "id": "verification_recreate_other_stack",
+        "name": "Recreate Other Stack Verification",
+        "method": "runtime",
+        "validates": [
+          "cap_list_submissions",
+          "cap_get_submission",
+          "cap_submit_content",
+          "cap_approve_submission",
+          "cap_request_changes",
+          "cap_bulk_approve_submissions"
+        ]
+      },
+      {
+        "id": "verification_refresh_drift",
+        "name": "Refresh Drift Verification",
+        "method": "runtime",
+        "validates": [
+          "cap_list_submissions"
+        ]
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "brownfield_adoption_topogram_check_sdlc_check_app_verify",
+        "label": "brownfield adoption topogram check sdlc check app verify"
+      },
+      {
+        "id": "brownfield_bulk_approve_api_ui_compile",
+        "label": "brownfield bulk approve api ui compile"
+      },
+      {
+        "id": "brownfield_generated_recreation_compile_maintained_source_preserved",
+        "label": "brownfield generated recreation compile maintained source preserved"
+      },
+      {
+        "id": "brownfield_extract_refresh_drift_visible",
+        "label": "brownfield extract refresh drift visible"
+      }
+    ]
+  },
+  "env": {
+    "required": [
+      "TOPOGRAM_API_BASE_URL",
+      "TOPOGRAM_WEB_BASE_URL",
+      "TOPOGRAM_DEMO_PRIMARY_ID"
+    ],
+    "apiBase": "TOPOGRAM_API_BASE_URL",
+    "webBase": "TOPOGRAM_WEB_BASE_URL",
+    "demoContainerId": "TOPOGRAM_DEMO_BODY",
+    "demoPrimaryId": "TOPOGRAM_DEMO_PRIMARY_ID",
+    "demoUserId": "TOPOGRAM_DEMO_USER_ID"
+  },
+  "report": {
+    "outputPath": "state/runtime-check-report.json"
+  },
+  "stages": [
+    {
+      "id": "environment",
+      "name": "Environment Readiness",
+      "failFast": true,
+      "checks": [
+        {
+          "id": "required_env",
+          "kind": "env_required",
+          "mandatory": true,
+          "mutating": false
+        },
+        {
+          "id": "web_home_ready",
+          "kind": "web_contract",
+          "path": "/",
+          "expectStatus": 200,
+          "expectText": "Topogram Starter",
+          "mandatory": true,
+          "mutating": false
+        },
+        {
+          "id": "api_health_ready",
+          "kind": "api_health",
+          "path": "/health",
+          "expectStatus": 200,
+          "expectOk": true,
+          "mandatory": true,
+          "mutating": false
+        },
+        {
+          "id": "api_ready",
+          "kind": "api_ready",
+          "path": "/ready",
+          "expectStatus": 200,
+          "expectReady": true,
+          "mandatory": true,
+          "mutating": false
+        },
+        {
+          "id": "api_seed_submission_ready",
+          "kind": "api_contract",
+          "capabilityId": "cap_get_submission",
+          "pathParams": {
+            "submission_id": "$env:TOPOGRAM_DEMO_PRIMARY_ID"
+          },
+          "mandatory": true,
+          "mutating": false
+        }
+      ]
+    },
+    {
+      "id": "api",
+      "name": "API Contract Checks",
+      "checks": [
+        {
+          "id": "submit_content",
+          "kind": "api_contract",
+          "capabilityId": "cap_submit_content",
+          "mutating": true,
+          "mandatory": true
+        },
+        {
+          "id": "get_created_submission",
+          "kind": "api_contract",
+          "capabilityId": "cap_get_submission",
+          "mutating": false,
+          "mandatory": true
+        },
+        {
+          "id": "list_submissions",
+          "kind": "api_contract",
+          "capabilityId": "cap_list_submissions",
+          "mutating": false,
+          "mandatory": true
+        },
+        {
+          "id": "approve_submission",
+          "kind": "api_contract",
+          "capabilityId": "cap_approve_submission",
+          "mutating": true,
+          "mandatory": true
+        },
+        {
+          "id": "request_changes",
+          "kind": "api_contract",
+          "capabilityId": "cap_request_changes",
+          "mutating": true,
+          "mandatory": true
+        },
+        {
+          "id": "invalid_submit_returns_4xx",
+          "kind": "api_negative",
+          "capabilityId": "cap_submit_content",
+          "expectStatusClass": 4,
+          "expectErrorCode": "cap_submit_content_invalid_request",
+          "mutating": false,
+          "mandatory": true
+        },
+        {
+          "id": "get_unknown_submission_not_found",
+          "kind": "api_negative",
+          "capabilityId": "cap_get_submission",
+          "expectStatus": 404,
+          "expectErrorCode": "cap_get_submission_not_found",
+          "mutating": false,
+          "mandatory": true
+        }
+      ]
+    }
+  ]
+}

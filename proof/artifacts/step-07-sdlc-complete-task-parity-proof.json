@@ -1,0 +1,42 @@
+{
+  "dryRun": false,
+  "link": {
+    "after": [
+      "verification_parity_proof"
+    ],
+    "before": [
+      "verification_parity_proof"
+    ],
+    "dryRun": false,
+    "field": "verification_refs",
+    "file": "<repo>/topo/sdlc/tasks/parity-proof.tg",
+    "from": {
+      "id": "task_parity_proof",
+      "kind": "task"
+    },
+    "ok": true,
+    "to": {
+      "id": "verification_parity_proof",
+      "kind": "verification"
+    },
+    "written": true
+  },
+  "ok": true,
+  "taskId": "task_parity_proof",
+  "transition": {
+    "archivable": true,
+    "dod": {
+      "errors": [],
+      "satisfied": true,
+      "warnings": []
+    },
+    "dryRun": false,
+    "file": "<repo>/topo/sdlc/tasks/parity-proof.tg",
+    "from": "in-progress",
+    "id": "task_parity_proof",
+    "kind": "task",
+    "ok": true,
+    "to": "done"
+  },
+  "verificationId": "verification_parity_proof"
+}

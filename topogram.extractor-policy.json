@@ -1,0 +1,19 @@
+{
+  "allowedPackageScopes": [],
+  "allowedPackages": [
+    "@topogram/extractor-prisma-db",
+    "@topogram/extractor-express-api",
+    "@topogram/extractor-react-router"
+  ],
+  "enabledPackages": [
+    "@topogram/extractor-prisma-db",
+    "@topogram/extractor-express-api",
+    "@topogram/extractor-react-router"
+  ],
+  "pinnedVersions": {
+    "@topogram/extractor-express-api": "1",
+    "@topogram/extractor-prisma-db": "1",
+    "@topogram/extractor-react-router": "1"
+  },
+  "version": "0.1"
+}

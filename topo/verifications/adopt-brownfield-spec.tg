@@ -1,0 +1,8 @@
+verification verification_adopt_brownfield_spec {
+  name "Adopt Brownfield Spec Verification"
+  description "Runs Topogram check, SDLC check, agent brief, focused query packets, adoption receipts, and maintained app verification for the adopted brownfield spec checkpoint."
+  validates [cap_list_submissions, cap_get_submission, cap_submit_content, cap_approve_submission, cap_request_changes]
+  method runtime
+  scenarios [brownfield_adoption_topogram_check_sdlc_check_app_verify]
+  status active
+}

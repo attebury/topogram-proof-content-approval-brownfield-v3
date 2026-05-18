@@ -1,0 +1,64 @@
+{
+  "changedFiles": [
+    "proof/STEP.md",
+    "recreated-app/compile/web/recreated_web/.svelte-kit/generated/server/internal.js",
+    "recreated-app/compile/web/recreated_web/.svelte-kit/output/client/.vite/manifest.json",
+    "recreated-app/compile/web/recreated_web/.svelte-kit/output/client/_app/immutable/chunks/rUp1KXuV.js",
+    "recreated-app/compile/web/recreated_web/.svelte-kit/output/client/_app/immutable/entry/app.XsOFeP9O.js",
+    "recreated-app/compile/web/recreated_web/.svelte-kit/output/client/_app/immutable/entry/start.CYXcmbGZ.js",
+    "recreated-app/compile/web/recreated_web/.svelte-kit/output/client/_app/immutable/nodes/1.CDpY9gc8.js",
+    "recreated-app/compile/web/recreated_web/.svelte-kit/output/client/_app/version.json",
+    "recreated-app/compile/web/recreated_web/.svelte-kit/output/server/chunks/internal.js",
+    "recreated-app/compile/web/recreated_web/.svelte-kit/output/server/manifest-full.js",
+    "recreated-app/compile/web/recreated_web/.svelte-kit/output/server/manifest.js",
+    "recreated-app/compile/web/recreated_web/.svelte-kit/output/server/nodes/1.js",
+    "topo/sdlc/.topogram-sdlc-history.json",
+    "proof/artifacts/step-07-bulk-approve-context-slice.json",
+    "proof/artifacts/step-07-check.json",
+    "proof/artifacts/step-07-db-schema-snapshot.json",
+    "proof/artifacts/step-07-maintained-app-verify.txt",
+    "proof/artifacts/step-07-recreated-app-compile.txt",
+    "proof/artifacts/step-07-sdlc-check.txt",
+    "proof/artifacts/step-07-sdlc-complete-task-parity-proof.json",
+    "proof/artifacts/step-07-sdlc-start-task-parity-proof.json",
+    "proof/artifacts/step-07-submission-queue-widget-contract.json",
+    "proof/artifacts/step-07-widget-behavior-report.json",
+    "proof/artifacts/step-07-widget-conformance-report.json",
+    "proof/reports/parity-report.md",
+    "recreated-app/compile/web/recreated_web/.svelte-kit/output/client/_app/immutable/chunks/qyBkDoxt.js",
+    "recreated-app/compile/web/recreated_web/.svelte-kit/output/client/_app/immutable/entry/app.DsmY1VCV.js",
+    "recreated-app/compile/web/recreated_web/.svelte-kit/output/client/_app/immutable/entry/start.DhtKqUBd.js",
+    "recreated-app/compile/web/recreated_web/.svelte-kit/output/client/_app/immutable/nodes/1.FpsUvyll.js",
+    "topo/sdlc/acceptance_criteria/parity-proof.tg",
+    "topo/sdlc/requirements/parity-proof.tg",
+    "topo/sdlc/tasks/parity-proof.tg",
+    "topo/verifications/parity-proof.tg"
+  ],
+  "changedTasks": [
+    {
+      "disposition": "active",
+      "explicitDisposition": true,
+      "file": "topo/sdlc/tasks/parity-proof.tg",
+      "id": "task_parity_proof",
+      "priority": "medium",
+      "requiresDisposition": false,
+      "status": "done"
+    }
+  ],
+  "errors": [],
+  "nextCommands": [
+    "topogram sdlc explain <task-id> --json",
+    "topogram query slice ./topo --task <task-id> --json",
+    "topogram sdlc gate . --base <ref> --head <ref> --require-adopted"
+  ],
+  "ok": true,
+  "openTasks": [],
+  "projectRoot": "<repo>",
+  "taskFiles": [
+    "topo/sdlc/tasks/parity-proof.tg"
+  ],
+  "topogramRoot": "<repo>/topo",
+  "type": "sdlc_commit_prep",
+  "version": "1",
+  "warnings": []
+}

@@ -1,0 +1,7 @@
+$ npx topogram generate --out ./recreated-app
+exit_code=0
+
+## stdout
+Wrote 172 file(s) to <repo>/recreated-app
+
+## stderr

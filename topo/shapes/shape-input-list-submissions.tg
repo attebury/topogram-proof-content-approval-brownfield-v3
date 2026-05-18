@@ -1,0 +1,12 @@
+shape shape_input_list_submissions {
+  name "List Submissions Input"
+  description "Optional filters for the review queue."
+
+  fields {
+    status text optional
+    after text optional
+    limit number optional
+  }
+
+  status active
+}

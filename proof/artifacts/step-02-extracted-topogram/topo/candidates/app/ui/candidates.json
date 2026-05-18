@@ -1,0 +1,370 @@
+{
+  "screens": [
+    {
+      "id_hint": "home_dashboard",
+      "label": "SubmissionQueueScreen",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "candidate",
+      "provenance": [
+        "src/ui/App.jsx#/"
+      ],
+      "track": "ui",
+      "kind": "screen",
+      "entity_id": null,
+      "concept_id": null,
+      "screen_kind": "dashboard",
+      "route_path": "/",
+      "component_names": [
+        "SubmissionQueueScreen"
+      ],
+      "capability_hints": {
+        "load": null,
+        "submit": null,
+        "primary_action": null
+      }
+    },
+    {
+      "id_hint": "submissions_list",
+      "label": "SubmissionQueueScreen",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "candidate",
+      "provenance": [
+        "src/ui/App.jsx#/submissions"
+      ],
+      "track": "ui",
+      "kind": "screen",
+      "entity_id": "entity_submissions",
+      "concept_id": "entity_submissions",
+      "screen_kind": "list",
+      "route_path": "/submissions",
+      "component_names": [
+        "SubmissionQueueScreen"
+      ],
+      "capability_hints": {
+        "load": "cap_list_submissionss",
+        "submit": null,
+        "primary_action": "cap_create_submissions"
+      }
+    },
+    {
+      "id_hint": "submissions_detail",
+      "label": "SubmissionDetailScreen",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "candidate",
+      "provenance": [
+        "src/ui/App.jsx#/submissions/:submissionId"
+      ],
+      "track": "ui",
+      "kind": "screen",
+      "entity_id": "entity_submissions",
+      "concept_id": "entity_submissions",
+      "screen_kind": "detail",
+      "route_path": "/submissions/:submissionId",
+      "component_names": [
+        "SubmissionDetailScreen"
+      ],
+      "capability_hints": {
+        "load": "cap_get_submissions",
+        "submit": null,
+        "primary_action": "cap_update_submissions"
+      }
+    },
+    {
+      "id_hint": "submissions_create",
+      "label": "NewSubmissionScreen",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "candidate",
+      "provenance": [
+        "src/ui/App.jsx#/submissions/new"
+      ],
+      "track": "ui",
+      "kind": "screen",
+      "entity_id": "entity_submissions",
+      "concept_id": "entity_submissions",
+      "screen_kind": "form",
+      "route_path": "/submissions/new",
+      "component_names": [
+        "NewSubmissionScreen"
+      ],
+      "capability_hints": {
+        "load": null,
+        "submit": "cap_create_submissions",
+        "primary_action": "cap_create_submissions"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id_hint": "home_dashboard_route",
+      "label": "/",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "candidate",
+      "provenance": [
+        "src/ui/App.jsx#/"
+      ],
+      "track": "ui",
+      "kind": "ui_route",
+      "screen_id": "home_dashboard",
+      "entity_id": null,
+      "concept_id": null,
+      "path": "/"
+    },
+    {
+      "id_hint": "submissions_list_route",
+      "label": "/submissions",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "candidate",
+      "provenance": [
+        "src/ui/App.jsx#/submissions"
+      ],
+      "track": "ui",
+      "kind": "ui_route",
+      "screen_id": "submissions_list",
+      "entity_id": "entity_submissions",
+      "concept_id": "entity_submissions",
+      "path": "/submissions"
+    },
+    {
+      "id_hint": "submissions_detail_route",
+      "label": "/submissions/:submissionId",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "candidate",
+      "provenance": [
+        "src/ui/App.jsx#/submissions/:submissionId"
+      ],
+      "track": "ui",
+      "kind": "ui_route",
+      "screen_id": "submissions_detail",
+      "entity_id": "entity_submissions",
+      "concept_id": "entity_submissions",
+      "path": "/submissions/:submissionId"
+    },
+    {
+      "id_hint": "submissions_create_route",
+      "label": "/submissions/new",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "candidate",
+      "provenance": [
+        "src/ui/App.jsx#/submissions/new"
+      ],
+      "track": "ui",
+      "kind": "ui_route",
+      "screen_id": "submissions_create",
+      "entity_id": "entity_submissions",
+      "concept_id": "entity_submissions",
+      "path": "/submissions/new"
+    }
+  ],
+  "actions": [
+    {
+      "id_hint": "submissions_list_cap_create_submissions",
+      "label": "cap_create_submissions",
+      "confidence": "low",
+      "source_kind": "route_code",
+      "source_of_truth": "candidate",
+      "provenance": [
+        "src/ui/App.jsx#/submissions"
+      ],
+      "track": "ui",
+      "kind": "ui_action",
+      "screen_id": "submissions_list",
+      "entity_id": "entity_submissions",
+      "capability_hint": "cap_create_submissions",
+      "prominence": "primary"
+    },
+    {
+      "id_hint": "submissions_detail_cap_update_submissions",
+      "label": "cap_update_submissions",
+      "confidence": "low",
+      "source_kind": "route_code",
+      "source_of_truth": "candidate",
+      "provenance": [
+        "src/ui/App.jsx#/submissions/:submissionId"
+      ],
+      "track": "ui",
+      "kind": "ui_action",
+      "screen_id": "submissions_detail",
+      "entity_id": "entity_submissions",
+      "capability_hint": "cap_update_submissions",
+      "prominence": "secondary"
+    },
+    {
+      "id_hint": "submissions_create_cap_create_submissions",
+      "label": "cap_create_submissions",
+      "confidence": "low",
+      "source_kind": "route_code",
+      "source_of_truth": "candidate",
+      "provenance": [
+        "src/ui/App.jsx#/submissions/new"
+      ],
+      "track": "ui",
+      "kind": "ui_action",
+      "screen_id": "submissions_create",
+      "entity_id": "entity_submissions",
+      "capability_hint": "cap_create_submissions",
+      "prominence": "secondary"
+    }
+  ],
+  "flows": [],
+  "widgets": [
+    {
+      "kind": "widget",
+      "id_hint": "widget_home_dashboard_results",
+      "label": "SubmissionQueueScreen results",
+      "confidence": "low",
+      "source_kind": "ui_projection_inference",
+      "source_of_truth": "candidate",
+      "provenance": [
+        "src/ui/App.jsx#/"
+      ],
+      "track": "ui",
+      "screen_id": "home_dashboard",
+      "region": "results",
+      "pattern": "search_results",
+      "data_prop": "rows",
+      "data_source": "cap_get_submission",
+      "inferred_props": [
+        {
+          "name": "rows",
+          "type": "array",
+          "required": true,
+          "source": "cap_get_submission"
+        }
+      ],
+      "inferred_events": [],
+      "inferred_region": "results",
+      "inferred_pattern": "search_results",
+      "evidence": [
+        "src/ui/App.jsx#/"
+      ],
+      "missing_decisions": [
+        "confirm widget reuse boundary",
+        "confirm prop names and data source",
+        "confirm events and behavior",
+        "confirm supported regions and patterns"
+      ],
+      "notes": [
+        "Imported widget candidates are review-only.",
+        "Confirm props, behavior, events, and reuse before adoption."
+      ]
+    },
+    {
+      "kind": "widget",
+      "id_hint": "widget_submissions_list_results",
+      "label": "SubmissionQueueScreen results",
+      "confidence": "low",
+      "source_kind": "ui_projection_inference",
+      "source_of_truth": "candidate",
+      "provenance": [
+        "src/ui/App.jsx#/submissions"
+      ],
+      "track": "ui",
+      "screen_id": "submissions_list",
+      "region": "results",
+      "pattern": "search_results",
+      "data_prop": "rows",
+      "data_source": "cap_list_submissions",
+      "inferred_props": [
+        {
+          "name": "rows",
+          "type": "array",
+          "required": true,
+          "source": "cap_list_submissions"
+        }
+      ],
+      "inferred_events": [
+        {
+          "name": "row_select",
+          "kind": "selection",
+          "action": "navigate",
+          "target_screen": "submissions_detail",
+          "payload_shape": "shape_event_submissions_row_select",
+          "confidence": "medium",
+          "evidence": [
+            "src/ui/App.jsx#/submissions/:submissionId"
+          ],
+          "payload_fields": [
+            {
+              "name": "submissionid",
+              "field_type": "string",
+              "required": true
+            }
+          ],
+          "requires_payload_shape_review": true
+        }
+      ],
+      "inferred_region": "results",
+      "inferred_pattern": "search_results",
+      "evidence": [
+        "src/ui/App.jsx#/submissions",
+        "src/ui/App.jsx#/submissions/:submissionId"
+      ],
+      "missing_decisions": [
+        "confirm widget reuse boundary",
+        "confirm prop names and data source",
+        "confirm events and behavior",
+        "confirm supported regions and patterns"
+      ],
+      "notes": [
+        "Imported widget candidates are review-only.",
+        "Confirm props, behavior, events, and reuse before adoption."
+      ]
+    }
+  ],
+  "shapes": [
+    {
+      "kind": "shape",
+      "id_hint": "shape_event_submissions_row_select",
+      "label": "SubmissionQueueScreen results row_select payload",
+      "confidence": "medium",
+      "source_kind": "ui_widget_event",
+      "source_of_truth": "candidate",
+      "provenance": [
+        "src/ui/App.jsx#/submissions",
+        "src/ui/App.jsx#/submissions/:submissionId"
+      ],
+      "track": "ui",
+      "widget_id": "widget_submissions_list_results",
+      "event_name": "row_select",
+      "fields": [
+        {
+          "name": "submissionid",
+          "field_type": "string",
+          "required": true
+        }
+      ],
+      "missing_decisions": [
+        "confirm selected row identity fields",
+        "confirm event payload shape name"
+      ],
+      "notes": [
+        "Imported widget event payload shapes are review-only.",
+        "Adopt with the widget when the event binding is accepted."
+      ]
+    }
+  ],
+  "stacks": [
+    {
+      "id_hint": "stack_react_router",
+      "label": "React Router",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "candidate",
+      "provenance": [
+        "src/ui/App.jsx"
+      ],
+      "track": "ui",
+      "kind": "ui_stack",
+      "framework": "react_router",
+      "runtime": "web"
+    }
+  ]
+}

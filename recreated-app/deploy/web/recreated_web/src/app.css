@@ -1,0 +1,71 @@
+/* Topogram semantic design intent. Generators map normalized UI tokens to stack CSS here. */
+:root {
+  --topogram-design-density: compact;
+  --topogram-design-tone: operational;
+  --topogram-design-radius-scale: medium;
+  --topogram-design-color-danger: critical;
+  --topogram-design-color-primary: accent;
+  --topogram-design-typography-body: readable;
+  --topogram-design-typography-heading: prominent;
+  --topogram-design-action-destructive: danger;
+  --topogram-design-action-primary: prominent;
+  --topogram-design-accessibility-contrast: aa;
+  --topogram-design-accessibility-focus: visible;
+  --topogram-space-unit: 0.75rem;
+  --topogram-page-padding: 1.5rem 1rem 3rem;
+  --topogram-control-padding: 0.55rem 0.75rem;
+  --topogram-radius-card: 14px;
+  --topogram-radius-control: 12px;
+  --topogram-radius-pill: 999px;
+  --topogram-text-color: #182026;
+  --topogram-muted-color: #607284;
+  --topogram-surface-background: linear-gradient(180deg, #f5f7fb 0%, #edf2f7 100%);
+  --topogram-surface-card: #ffffff;
+  --topogram-surface-subtle: #fbfcfe;
+  --topogram-border-color: #d7e1ec;
+  --topogram-action-primary-background: #0f5cc0;
+  --topogram-action-primary-color: #ffffff;
+  --topogram-action-danger-background: #b42318;
+  --topogram-focus-outline: 3px solid #0f5cc0;
+}
+
+
+:root { font-family: system-ui, sans-serif; color: var(--topogram-text-color); background: var(--topogram-surface-background); }
+body { margin: 0; }
+a { color: var(--topogram-action-primary-background); text-decoration: none; }
+a:hover { text-decoration: underline; }
+main { max-width: 72rem; margin: 0 auto; padding: var(--topogram-page-padding); }
+.app-shell { min-height: 100vh; }
+.app-nav { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 1.25rem; border-bottom: 1px solid rgba(24, 32, 38, 0.08); background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); }
+.app-nav-links, .app-nav nav { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.brand { font-weight: 700; }
+.card { background: var(--topogram-surface-card); border-radius: var(--topogram-radius-card); padding: 1.25rem; box-shadow: 0 12px 30px rgba(24, 32, 38, 0.08); }
+.hero, .stack, .grid { display: grid; gap: var(--topogram-space-unit); }
+.grid.two { grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+.filters { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); margin: 1rem 0 1.25rem; }
+label { display: grid; gap: 0.35rem; font-size: 0.95rem; }
+input, textarea, button, select { font: inherit; }
+input, textarea, select { width: 100%; box-sizing: border-box; border: 1px solid #c9d4e2; border-radius: 12px; padding: 0.7rem 0.85rem; background: white; }
+button, .button-link { display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; border: none; border-radius: 999px; padding: 0.7rem 1rem; background: #0f5cc0; color: white; font-weight: 600; cursor: pointer; }
+.button-link.secondary { background: #e9eef6; color: #182026; }
+.button-row { display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; }
+.task-list, .resource-list { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: 0.75rem; }
+.task-list li, .resource-list li { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; padding: 1rem; border: 1px solid #e0e8f1; border-radius: 14px; background: #fbfcfe; }
+.resource-meta, .task-meta, .definition-list { display: grid; gap: 0.5rem; }
+.table-wrap, .widget-table-wrap { margin-top: 1rem; overflow-x: auto; border: 1px solid #d7e1ec; border-radius: 14px; background: white; }
+.resource-table { width: 100%; border-collapse: collapse; min-width: 42rem; }
+.resource-table th, .resource-table td { padding: 0.85rem 1rem; text-align: left; border-bottom: 1px solid #e7edf5; vertical-align: top; }
+.resource-table th { font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; color: #516173; background: #f8fbff; }
+.data-grid { min-width: 64rem; font-size: 0.95rem; }
+.badge { display: inline-flex; align-items: center; padding: 0.25rem 0.6rem; border-radius: 999px; background: #eef4ff; color: #0f5cc0; font-size: 0.85rem; font-weight: 600; }
+.muted { color: var(--topogram-muted-color); }
+.empty-state { padding: 1rem 0; }
+.widget-card { border: 1px solid #d7e1ec; border-radius: 14px; background: #fbfcfe; padding: 1rem; margin-top: 1rem; }
+.widget-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.widget-eyebrow { margin: 0 0 0.25rem; color: #607284; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.summary-grid, .board-grid, .calendar-list { display: grid; gap: 0.75rem; margin-top: 1rem; }
+.summary-grid { grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr)); }
+.board-grid { grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); }
+.summary-grid div, .board-column, .board-card, .calendar-card { border: 1px solid #e0e8f1; border-radius: 12px; background: white; padding: 0.85rem; }
+small.route-hint { display: block; color: #607284; margin-top: 0.25rem; }
+@media (max-width: 640px) { .task-list li, .resource-list li { flex-direction: column; } .app-nav { flex-wrap: wrap; } }

@@ -1,68 +1,151 @@
 {
-  "type": "proof_manifest",
   "version": 3,
   "repository": "topogram-proof-content-approval-brownfield-v3",
-  "topogramCliVersion": "0.3.99",
   "story": "real-ish brownfield app, package-backed extractors, reviewable adoption, agent-safe maintained change, drift refresh, and cross-stack recreation",
-  "expectedTags": [],
-  "plannedSteps": [
-    {
-      "step": 1,
-      "branch": "step/01-brownfield-baseline",
-      "tag": "proof-01-brownfield-baseline",
-      "claim": "Create a real-ish maintained app with no Topogram workspace."
-    },
-    {
-      "step": 2,
-      "branch": "step/02-extract-with-packages",
-      "tag": "proof-02-extract-with-packages",
-      "claim": "Use package-backed extractors to emit review-only candidates and provenance."
-    },
-    {
-      "step": 3,
-      "branch": "step/03-adopt-app-map",
-      "tag": "proof-03-adopt-app-map",
-      "claim": "Promote reviewed candidates into canonical topo source and enable SDLC."
-    },
-    {
-      "step": 4,
-      "branch": "step/04-feature-from-slice",
-      "tag": "proof-04-feature-from-slice",
-      "claim": "Implement a maintained feature from agent-safe slice context."
-    },
-    {
-      "step": 5,
-      "branch": "step/05-refresh-drift",
-      "tag": "proof-05-refresh-drift",
-      "claim": "Refresh extraction and review source/spec drift explicitly."
-    },
-    {
-      "step": 6,
-      "branch": "step/06-recreate-other-stack",
-      "tag": "proof-06-recreate-other-stack",
-      "claim": "Generate a cross-stack recreation beside maintained source."
-    },
-    {
-      "step": 7,
-      "branch": "step/07-parity-proof",
-      "tag": "proof-07-parity-proof",
-      "claim": "Compare maintained and recreated stacks through contracts and verification summaries."
-    }
+  "topogramCliVersion": "0.3.99",
+  "expectedTags": [
+    "proof-01-brownfield-baseline",
+    "proof-02-extract-with-packages",
+    "proof-03-adopt-app-map",
+    "proof-04-feature-from-slice",
+    "proof-05-refresh-drift",
+    "proof-06-recreate-other-stack",
+    "proof-07-parity-proof"
   ],
+  "requiresCanonicalTopo": true,
+  "requiresSdlc": true,
+  "forbidsCanonicalTopo": false,
+  "requiresRecreatedCompile": true,
+  "appCheckScript": "check",
   "requiredArtifacts": [
+    {
+      "path": "proof/artifacts/path-hygiene-audit.json",
+      "json": true,
+      "type": "proof_path_hygiene_audit"
+    },
     {
       "path": "proof/STEP.md",
       "contains": [
-        "Scaffold checkpoint"
+        "Step"
       ]
     },
     {
-      "path": "proof/artifacts/path-hygiene-audit.json",
-      "type": "proof_path_hygiene_audit",
+      "path": "proof/artifacts/step-01-npm-verify.txt",
+      "contains": [
+        "verified"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-02-extracted-topogram/proof/artifacts/step-02-extract.json",
+      "json": true,
       "keys": [
-        "repository",
-        "topogramCliVersion",
-        "checks"
+        "candidateCounts"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-02-extracted-topogram/proof/artifacts/step-02-extract-plan.json",
+      "json": true,
+      "keys": [
+        "commands"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-02-extracted-topogram/proof/artifacts/step-02-extractor-list.json",
+      "json": true,
+      "keys": [
+        "extractors"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-02-extracted-topogram/proof/artifacts/step-02-extractor-policy-status.json",
+      "json": true,
+      "keys": [
+        "policy"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-03-agent-brief.json",
+      "json": true,
+      "type": "agent_brief"
+    },
+    {
+      "path": "proof/artifacts/step-03-check.json",
+      "json": true,
+      "keys": [
+        "ok"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-03-adopt-list.json",
+      "json": true,
+      "keys": [
+        "broadSelectors"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-03-adopt-write.json",
+      "json": true,
+      "keys": [
+        "adoption"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-04-single-agent-plan.json",
+      "json": true,
+      "type": "single_agent_plan"
+    },
+    {
+      "path": "proof/artifacts/step-04-npm-verify.txt",
+      "contains": [
+        "verified"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-05-extract-diff.json",
+      "json": true,
+      "keys": [
+        "candidateCountDeltas"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-05-extract-refresh.json",
+      "json": true,
+      "keys": [
+        "candidateCounts"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-06-generate.txt",
+      "contains": [
+        "Wrote"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-06-recreated-app-compile.txt",
+      "contains": [
+        "Compile checks passed"
+      ]
+    },
+    {
+      "path": "proof/reports/parity-report.md",
+      "contains": [
+        "Current Proof Limits"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-07-widget-conformance-report.json",
+      "json": true,
+      "type": "widget_conformance_report"
+    },
+    {
+      "path": "proof/artifacts/step-07-bulk-approve-context-slice.json",
+      "json": true,
+      "type": "context_slice"
+    },
+    {
+      "path": "proof/artifacts/step-07-recreated-app-compile.txt",
+      "contains": [
+        "Compile checks passed"
       ]
     }
   ]

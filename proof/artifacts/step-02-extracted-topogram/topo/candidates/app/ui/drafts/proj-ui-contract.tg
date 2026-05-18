@@ -1,0 +1,72 @@
+projection proj_ui_contract_imported_topogram_proof_content_approval_brownfield {
+  name "Imported UI Contract Draft"
+  description "Drafted from imported UI candidates. Review and adapt before adoption."
+
+  type ui_contract
+  realizes [
+    cap_create_submissions,
+    cap_get_submission,
+    cap_list_health,
+    cap_list_submissions,
+    cap_res,
+    cap_update_submissions
+  ]
+  outputs [ui_contract]
+
+  app_shell {
+    brand "Imported topogram proof content approval brownfield"
+    shell topbar
+  }
+
+  design_tokens {
+    density comfortable
+    tone operational
+    radius_scale medium
+    color_role primary accent
+    color_role danger critical
+    typography_role body readable
+    typography_role heading prominent
+    action_role primary prominent
+    action_role destructive danger
+    accessibility contrast aa
+    accessibility focus visible
+  }
+
+  screens {
+    screen home_dashboard kind dashboard title "SubmissionQueueScreen"
+    screen submissions_list kind list title "SubmissionQueueScreen"
+    screen submissions_detail kind detail title "SubmissionDetailScreen"
+    screen submissions_create kind form title "NewSubmissionScreen"
+  }
+
+  collection_views {
+    screen submissions_list view list
+  }
+
+  screen_actions {
+    screen submissions_list action cap_create_submissions prominence primary
+    screen submissions_detail action cap_update_submissions prominence secondary
+    screen submissions_create action cap_create_submissions prominence secondary
+  }
+
+  navigation {
+    group workspace label "Workspace" placement primary
+    screen home_dashboard group workspace label "SubmissionQueueScreen" visible false
+    screen submissions_list group workspace label "SubmissionQueueScreen" default true visible true
+    screen submissions_detail group workspace label "SubmissionDetailScreen" visible false breadcrumb submissions_list sitemap exclude
+    screen submissions_create group workspace label "NewSubmissionScreen" visible false
+  }
+
+  screen_regions {
+    screen submissions_list region toolbar pattern action_bar placement primary
+    screen submissions_list region results pattern search_results placement primary
+    screen submissions_detail region summary pattern detail_panel placement primary
+  }
+
+  widget_bindings {
+    screen home_dashboard region results widget widget_home_dashboard_results data rows from cap_get_submission
+    screen submissions_list region results widget widget_submissions_list_results data rows from cap_list_submissions event row_select navigate submissions_detail
+  }
+
+  status proposed
+}

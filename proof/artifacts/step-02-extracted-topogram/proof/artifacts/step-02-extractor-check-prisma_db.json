@@ -1,0 +1,156 @@
+{
+  "checks": [
+    {
+      "message": "<repo>/node_modules/@topogram/extractor-prisma-db/topogram-extractor.json",
+      "name": "manifest-load",
+      "ok": true
+    },
+    {
+      "message": "Adapter export loaded.",
+      "name": "adapter-load",
+      "ok": true
+    },
+    {
+      "message": "Adapter shape is valid.",
+      "name": "adapter-shape",
+      "ok": true
+    },
+    {
+      "message": "Ran 1 extractor smoke check(s).",
+      "name": "smoke-extract",
+      "ok": true
+    }
+  ],
+  "compatibleCliRange": "^0.3.80",
+  "errors": [],
+  "executesPackageCode": true,
+  "manifest": {
+    "candidateKinds": [
+      "entity",
+      "enum",
+      "relation",
+      "index",
+      "maintained_db_migration_seam"
+    ],
+    "capabilities": {
+      "maintainedDbSeams": true,
+      "migrations": true,
+      "schema": true
+    },
+    "evidenceTypes": [
+      "runtime_source",
+      "parser_config"
+    ],
+    "extractors": [
+      "db.prisma-package"
+    ],
+    "id": "@topogram/extractor-prisma-db",
+    "package": "@topogram/extractor-prisma-db",
+    "source": "package",
+    "stack": {
+      "database": "relational",
+      "orm": "prisma"
+    },
+    "tracks": [
+      "db"
+    ],
+    "version": "1"
+  },
+  "manifestPath": "<repo>/node_modules/@topogram/extractor-prisma-db/topogram-extractor.json",
+  "ok": true,
+  "packageName": "@topogram/extractor-prisma-db",
+  "packageRoot": "<repo>/node_modules/@topogram/extractor-prisma-db",
+  "packageVersion": "0.1.0",
+  "reviewWorkflow": {
+    "packageCodeExecution": {
+      "check": true,
+      "extract": true,
+      "list": false,
+      "policy": false,
+      "show": false
+    },
+    "safetyNotes": [
+      "topogram extractor list/show/policy do not load package adapter code.",
+      "topogram extractor check and topogram extract load package adapter code.",
+      "Extractor packages emit review-only candidates; core owns persistence, reconcile, adoption, and canonical topo writes.",
+      "Run dry-run adoption before --write."
+    ],
+    "steps": [
+      {
+        "command": "topogram extractor list",
+        "id": "discover",
+        "packageCodeExecution": false,
+        "purpose": "Find bundled and first-party package-backed extractors by track."
+      },
+      {
+        "command": "topogram extractor show @topogram/extractor-prisma-db",
+        "id": "inspect",
+        "packageCodeExecution": false,
+        "purpose": "Read manifest purpose, tracks, install command, policy pin command, and extract command."
+      },
+      {
+        "command": "npm install -D @topogram/extractor-prisma-db",
+        "id": "install",
+        "packageCodeExecution": false,
+        "purpose": "Install the extractor package explicitly; Topogram does not install it during extraction."
+      },
+      {
+        "command": "npm install -D @topogram/extractor-prisma-db@latest",
+        "id": "upgrade",
+        "packageCodeExecution": false,
+        "purpose": "Upgrade the package if its installed npm package version or compatible CLI range is stale."
+      },
+      {
+        "command": "topogram extractor policy pin @topogram/extractor-prisma-db@1",
+        "id": "pin_policy",
+        "packageCodeExecution": false,
+        "purpose": "Allow and pin the extractor manifest version before execution."
+      },
+      {
+        "command": "topogram extractor check @topogram/extractor-prisma-db",
+        "id": "check",
+        "packageCodeExecution": true,
+        "purpose": "Load the adapter and run a minimal smoke extraction against a synthetic fixture."
+      },
+      {
+        "command": "topogram extract ./prisma-app --out ./imported-topogram --from db --extractor @topogram/extractor-prisma-db",
+        "id": "extract",
+        "packageCodeExecution": true,
+        "purpose": "Read brownfield source and write review-only candidates plus extraction provenance."
+      },
+      {
+        "command": "topogram extract plan ./imported-topogram",
+        "id": "review_plan",
+        "packageCodeExecution": false,
+        "purpose": "Review bundles, extractor provenance, candidate counts, and safety notes."
+      },
+      {
+        "command": "topogram adopt --list ./imported-topogram",
+        "id": "list_selectors",
+        "packageCodeExecution": false,
+        "purpose": "Choose an explicit adoption selector."
+      },
+      {
+        "command": "topogram adopt <selector> ./imported-topogram --dry-run",
+        "id": "dry_run_adoption",
+        "packageCodeExecution": false,
+        "purpose": "Preview canonical topo writes before changing project-owned records."
+      },
+      {
+        "command": "topogram adopt <selector> ./imported-topogram --write",
+        "id": "write_reviewed_adoption",
+        "packageCodeExecution": false,
+        "purpose": "Write only reviewed canonical records; extractor packages never own adoption semantics."
+      }
+    ],
+    "type": "extractor_review_workflow"
+  },
+  "smoke": {
+    "candidateKeys": 5,
+    "diagnostics": 0,
+    "extractors": 1,
+    "findings": 0
+  },
+  "source": "package",
+  "sourceSpec": "@topogram/extractor-prisma-db"
+}

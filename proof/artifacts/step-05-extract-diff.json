@@ -1,0 +1,601 @@
+{
+  "adoptionPlanDeltas": {
+    "added": [],
+    "byBundle": {
+      "changed": [],
+      "deltas": {
+        "content-submission": {
+          "delta": 0,
+          "next": 1,
+          "previous": 1
+        },
+        "contentsubmission": {
+          "delta": 0,
+          "next": 1,
+          "previous": 1
+        },
+        "database": {
+          "delta": 0,
+          "next": 1,
+          "previous": 1
+        },
+        "health": {
+          "delta": 0,
+          "next": 3,
+          "previous": 3
+        },
+        "home-dashboard": {
+          "delta": 0,
+          "next": 3,
+          "previous": 3
+        },
+        "submission": {
+          "delta": 0,
+          "next": 6,
+          "previous": 6
+        },
+        "submissions": {
+          "delta": 0,
+          "next": 4,
+          "previous": 4
+        }
+      },
+      "next": {
+        "content-submission": 1,
+        "contentsubmission": 1,
+        "database": 1,
+        "health": 3,
+        "home-dashboard": 3,
+        "submission": 6,
+        "submissions": 4
+      },
+      "previous": {
+        "content-submission": 1,
+        "contentsubmission": 1,
+        "database": 1,
+        "health": 3,
+        "home-dashboard": 3,
+        "submission": 6,
+        "submissions": 4
+      }
+    },
+    "changed": [],
+    "removed": []
+  },
+  "candidateCountDeltas": {
+    "changed": [],
+    "deltas": {
+      "apiCapabilities": {
+        "delta": 0,
+        "next": 5,
+        "previous": 5
+      },
+      "apiRoutes": {
+        "delta": 0,
+        "next": 16,
+        "previous": 16
+      },
+      "cliCapabilities": {
+        "delta": 0,
+        "next": 0,
+        "previous": 0
+      },
+      "cliCommands": {
+        "delta": 0,
+        "next": 0,
+        "previous": 0
+      },
+      "cliSurfaces": {
+        "delta": 0,
+        "next": 0,
+        "previous": 0
+      },
+      "dbEntities": {
+        "delta": 0,
+        "next": 2,
+        "previous": 2
+      },
+      "dbEnums": {
+        "delta": 0,
+        "next": 0,
+        "previous": 0
+      },
+      "dbMaintainedSeams": {
+        "delta": 0,
+        "next": 1,
+        "previous": 1
+      },
+      "uiFlows": {
+        "delta": 0,
+        "next": 0,
+        "previous": 0
+      },
+      "uiRoutes": {
+        "delta": 0,
+        "next": 4,
+        "previous": 4
+      },
+      "uiScreens": {
+        "delta": 0,
+        "next": 4,
+        "previous": 4
+      },
+      "uiShapes": {
+        "delta": 0,
+        "next": 1,
+        "previous": 1
+      },
+      "uiWidgets": {
+        "delta": 0,
+        "next": 2,
+        "previous": 2
+      },
+      "verifications": {
+        "delta": 0,
+        "next": 0,
+        "previous": 0
+      },
+      "workflows": {
+        "delta": 0,
+        "next": 0,
+        "previous": 0
+      }
+    },
+    "next": {
+      "apiCapabilities": 5,
+      "apiRoutes": 16,
+      "cliCapabilities": 0,
+      "cliCommands": 0,
+      "cliSurfaces": 0,
+      "dbEntities": 2,
+      "dbEnums": 0,
+      "dbMaintainedSeams": 1,
+      "uiFlows": 0,
+      "uiRoutes": 4,
+      "uiScreens": 4,
+      "uiShapes": 1,
+      "uiWidgets": 2,
+      "verifications": 0,
+      "workflows": 0
+    },
+    "previous": {
+      "apiCapabilities": 5,
+      "apiRoutes": 16,
+      "cliCapabilities": 0,
+      "cliCommands": 0,
+      "cliSurfaces": 0,
+      "dbEntities": 2,
+      "dbEnums": 0,
+      "dbMaintainedSeams": 1,
+      "uiFlows": 0,
+      "uiRoutes": 4,
+      "uiScreens": 4,
+      "uiShapes": 1,
+      "uiWidgets": 2,
+      "verifications": 0,
+      "workflows": 0
+    }
+  },
+  "candidateCounts": {
+    "apiCapabilities": 5,
+    "apiRoutes": 16,
+    "cliCapabilities": 0,
+    "cliCommands": 0,
+    "cliSurfaces": 0,
+    "dbEntities": 2,
+    "dbEnums": 0,
+    "dbMaintainedSeams": 1,
+    "uiFlows": 0,
+    "uiRoutes": 4,
+    "uiScreens": 4,
+    "uiShapes": 1,
+    "uiWidgets": 2,
+    "verifications": 0,
+    "workflows": 0
+  },
+  "extractStatus": "clean",
+  "nextCommands": [
+    "topogram extract refresh proof/artifacts/step-02-extracted-topogram --dry-run",
+    "topogram extract refresh proof/artifacts/step-02-extracted-topogram",
+    "topogram extract plan proof/artifacts/step-02-extracted-topogram"
+  ],
+  "ok": true,
+  "plannedFiles": [
+    ".topogram-extract.json",
+    "topo/candidates/app/api/candidates.json",
+    "topo/candidates/app/api/findings.json",
+    "topo/candidates/app/api/report.md",
+    "topo/candidates/app/candidates.json",
+    "topo/candidates/app/db/candidates.json",
+    "topo/candidates/app/db/findings.json",
+    "topo/candidates/app/db/report.md",
+    "topo/candidates/app/findings.json",
+    "topo/candidates/app/report.md",
+    "topo/candidates/app/ui/candidates.json",
+    "topo/candidates/app/ui/drafts/proj-ui-contract.tg",
+    "topo/candidates/app/ui/drafts/proj-web-surface.tg",
+    "topo/candidates/app/ui/drafts/README.md",
+    "topo/candidates/app/ui/drafts/shapes/shape-event-submissions-row-select.tg",
+    "topo/candidates/app/ui/drafts/widgets/widget-home-dashboard-results.tg",
+    "topo/candidates/app/ui/drafts/widgets/widget-submissions-list-results.tg",
+    "topo/candidates/app/ui/findings.json",
+    "topo/candidates/app/ui/report.md",
+    "topo/candidates/reconcile/adoption-plan.agent.json",
+    "topo/candidates/reconcile/adoption-plan.json",
+    "topo/candidates/reconcile/adoption-status.json",
+    "topo/candidates/reconcile/adoption-status.md",
+    "topo/candidates/reconcile/model/bundles/content-submission/entities/entity_content_submission.tg",
+    "topo/candidates/reconcile/model/bundles/content-submission/README.md",
+    "topo/candidates/reconcile/model/bundles/contentsubmission/entities/entity_contentsubmission.tg",
+    "topo/candidates/reconcile/model/bundles/contentsubmission/README.md",
+    "topo/candidates/reconcile/model/bundles/database/README.md",
+    "topo/candidates/reconcile/model/bundles/health/capabilities/cap_list_health.tg",
+    "topo/candidates/reconcile/model/bundles/health/capabilities/cap_res.tg",
+    "topo/candidates/reconcile/model/bundles/health/docs/journeys/health_journey.md",
+    "topo/candidates/reconcile/model/bundles/health/README.md",
+    "topo/candidates/reconcile/model/bundles/home-dashboard/docs/journeys/home_dashboard_journey.md",
+    "topo/candidates/reconcile/model/bundles/home-dashboard/docs/reports/ui-home_dashboard.md",
+    "topo/candidates/reconcile/model/bundles/home-dashboard/README.md",
+    "topo/candidates/reconcile/model/bundles/home-dashboard/widgets/widget_home_dashboard_results.tg",
+    "topo/candidates/reconcile/model/bundles/submission/capabilities/cap_create_submissions.tg",
+    "topo/candidates/reconcile/model/bundles/submission/capabilities/cap_get_submission.tg",
+    "topo/candidates/reconcile/model/bundles/submission/capabilities/cap_list_submissions.tg",
+    "topo/candidates/reconcile/model/bundles/submission/docs/journeys/submission_journey.md",
+    "topo/candidates/reconcile/model/bundles/submission/README.md",
+    "topo/candidates/reconcile/model/bundles/submission/shapes/shape_event_submissions_row_select.tg",
+    "topo/candidates/reconcile/model/bundles/submission/widgets/widget_submissions_list_results.tg",
+    "topo/candidates/reconcile/model/bundles/submissions/docs/journeys/submissions_journey.md",
+    "topo/candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_create.md",
+    "topo/candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_detail.md",
+    "topo/candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_list.md",
+    "topo/candidates/reconcile/model/bundles/submissions/README.md",
+    "topo/candidates/reconcile/report.json",
+    "topo/candidates/reconcile/report.md"
+  ],
+  "projectRoot": "<repo>/proof/artifacts/step-02-extracted-topogram",
+  "provenancePath": "<repo>/proof/artifacts/step-02-extracted-topogram/.topogram-extract.json",
+  "receiptVerification": {
+    "auditOnly": true,
+    "files": [
+      {
+        "currentSha256": "8a2afebe2c07d9f28f5aae35128d242af9a924236f25a796960a56431e891828",
+        "currentSize": 45336,
+        "expectedSha256": "8a2afebe2c07d9f28f5aae35128d242af9a924236f25a796960a56431e891828",
+        "expectedSize": 45336,
+        "path": "candidates/reconcile/adoption-plan.agent.json",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "87f64ed8a38e4473a1300348531e013b7398562e49def963e67eb047ee5ac1a6",
+        "currentSize": 23029,
+        "expectedSha256": "87f64ed8a38e4473a1300348531e013b7398562e49def963e67eb047ee5ac1a6",
+        "expectedSize": 23029,
+        "path": "candidates/reconcile/adoption-plan.json",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "7103f9cfd1582d089185cfe683328c9797606b0e4ed5633096c4326892fac1c2",
+        "currentSize": 20321,
+        "expectedSha256": "76470ce98a6c611756e57ca83bdf82a89f4b36932da8285c44bd26fcf41ad431",
+        "expectedSize": 28998,
+        "path": "candidates/reconcile/adoption-status.json",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "changed"
+      },
+      {
+        "currentSha256": "97e37e7c1ce4c02c5054d765e8030df39449e9a1d6f2c59555c49a6f7c34d255",
+        "currentSize": 957,
+        "expectedSha256": "d767db9fbdcaa8092e540e6f5273d658ef0fbd924785bd50355df1ce454798f4",
+        "expectedSize": 3769,
+        "path": "candidates/reconcile/adoption-status.md",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "changed"
+      },
+      {
+        "currentSha256": "ecd84f28de771c846d07309c443e39362b550a51c6500770cdbd6d375303ba55",
+        "currentSize": 2647,
+        "expectedSha256": "ecd84f28de771c846d07309c443e39362b550a51c6500770cdbd6d375303ba55",
+        "expectedSize": 2647,
+        "path": "candidates/reconcile/model/bundles/content-submission/README.md",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "786b560fc89465a19040c0ad7aca8c9a6101d24902bfd8134df3cf0d13e610aa",
+        "currentSize": 2660,
+        "expectedSha256": "786b560fc89465a19040c0ad7aca8c9a6101d24902bfd8134df3cf0d13e610aa",
+        "expectedSize": 2660,
+        "path": "candidates/reconcile/model/bundles/contentsubmission/README.md",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "8b5c2fd4972779b2804c9bb317549387c6fcaf7b800b809ff25a589781be83b1",
+        "currentSize": 2446,
+        "expectedSha256": "8b5c2fd4972779b2804c9bb317549387c6fcaf7b800b809ff25a589781be83b1",
+        "expectedSize": 2446,
+        "path": "candidates/reconcile/model/bundles/database/README.md",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "0609bdc2476e26b023735e53a52b8e1ed3dcab4cf30fd4013538e18f92a1f9f6",
+        "currentSize": 1482,
+        "expectedSha256": "0609bdc2476e26b023735e53a52b8e1ed3dcab4cf30fd4013538e18f92a1f9f6",
+        "expectedSize": 1482,
+        "path": "candidates/reconcile/model/bundles/health/README.md",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "daf76c36525cb53e09e9047f68fb66aa531c7197eebdae623acfccfc5d3aa97f",
+        "currentSize": 1474,
+        "expectedSha256": "daf76c36525cb53e09e9047f68fb66aa531c7197eebdae623acfccfc5d3aa97f",
+        "expectedSize": 1474,
+        "path": "candidates/reconcile/model/bundles/home-dashboard/README.md",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "fe5f1d42e597231fa5ba7062d3f555bc69d118d4fb272607e2072318fce47773",
+        "currentSize": 1873,
+        "expectedSha256": "fe5f1d42e597231fa5ba7062d3f555bc69d118d4fb272607e2072318fce47773",
+        "expectedSize": 1873,
+        "path": "candidates/reconcile/model/bundles/submission/README.md",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "07d0c55d946af029eacdc579ea0b314cbc64a7ce8c0aa81e429319001000ea5e",
+        "currentSize": 1749,
+        "expectedSha256": "07d0c55d946af029eacdc579ea0b314cbc64a7ce8c0aa81e429319001000ea5e",
+        "expectedSize": 1749,
+        "path": "candidates/reconcile/model/bundles/submissions/README.md",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "9755ef91af652b12957858e4b67bc47fd3bb235fba09782d16d3efb1950f364c",
+        "currentSize": 103476,
+        "expectedSha256": "61d893ce271b8e75026ee359687e32364ffa9842c895aad1b3b774c3826c3013",
+        "expectedSize": 111308,
+        "path": "candidates/reconcile/report.json",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "changed"
+      },
+      {
+        "currentSha256": "3d19c15464667ca82c724e05a01a66c9c938331d1916fbc7565922c161efe188",
+        "currentSize": 9186,
+        "expectedSha256": "799edea7f59a5a28d71fc37b56a4020609e59ae276c23fb544b93955ae3e5133",
+        "expectedSize": 11575,
+        "path": "candidates/reconcile/report.md",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "changed"
+      },
+      {
+        "currentSha256": "d6f1dbced0543c1a5b91b097010686039189eb48051fb414ac885c1d044c25f0",
+        "currentSize": 240,
+        "expectedSha256": "d6f1dbced0543c1a5b91b097010686039189eb48051fb414ac885c1d044c25f0",
+        "expectedSize": 240,
+        "path": "capabilities/cap-create-submissions.tg",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "0290656b90a53e24cfa384e021d7354e138dcda37cdf73d69c94d8fc6d855bb9",
+        "currentSize": 234,
+        "expectedSha256": "0290656b90a53e24cfa384e021d7354e138dcda37cdf73d69c94d8fc6d855bb9",
+        "expectedSize": 234,
+        "path": "capabilities/cap-get-submission.tg",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "80de53f557b88e4a5a718fd55bd0a7f132eed13548000f7e69f7b494c4067fce",
+        "currentSize": 227,
+        "expectedSha256": "80de53f557b88e4a5a718fd55bd0a7f132eed13548000f7e69f7b494c4067fce",
+        "expectedSize": 227,
+        "path": "capabilities/cap-list-health.tg",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "9c73f191a7c1a2d59f8412e0ca2678c96eb397ff8ce5251ef6b96efd95e8edec",
+        "currentSize": 236,
+        "expectedSha256": "9c73f191a7c1a2d59f8412e0ca2678c96eb397ff8ce5251ef6b96efd95e8edec",
+        "expectedSize": 236,
+        "path": "capabilities/cap-list-submissions.tg",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "aff35bf8da74d9cc11a8fb623a0fa54fb8a32bf75c01f043d2f401ee443f3473",
+        "currentSize": 430,
+        "expectedSha256": "aff35bf8da74d9cc11a8fb623a0fa54fb8a32bf75c01f043d2f401ee443f3473",
+        "expectedSize": 430,
+        "path": "capabilities/cap-res.tg",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "42b6402ca9f836a80f6463c89b389f504e7841ba67a33c322863f13b1938cd45",
+        "currentSize": 2225,
+        "expectedSha256": "42b6402ca9f836a80f6463c89b389f504e7841ba67a33c322863f13b1938cd45",
+        "expectedSize": 2225,
+        "path": "docs/journeys/health_journey.md",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "4abd10395b3a4d13b41f5de81bdb707ec8fd1e224e3a257e2042db0af36eeae0",
+        "currentSize": 1982,
+        "expectedSha256": "4abd10395b3a4d13b41f5de81bdb707ec8fd1e224e3a257e2042db0af36eeae0",
+        "expectedSize": 1982,
+        "path": "docs/journeys/home_dashboard_journey.md",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "370fc9de52217c50750313878254f7992819bf5d07044b77393cb9d479320667",
+        "currentSize": 2107,
+        "expectedSha256": "370fc9de52217c50750313878254f7992819bf5d07044b77393cb9d479320667",
+        "expectedSize": 2107,
+        "path": "docs/journeys/submission_journey.md",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "8eedb464e55de878c2c53796cf858ec48511a68eef8aa3887768c38f7d7c6efe",
+        "currentSize": 2352,
+        "expectedSha256": "8eedb464e55de878c2c53796cf858ec48511a68eef8aa3887768c38f7d7c6efe",
+        "expectedSize": 2352,
+        "path": "docs/journeys/submissions_journey.md",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "896fc8f0be776f5b055d9a96e630c8ab8d8c31cb8a0c1c9293964c6a994dd642",
+        "currentSize": 429,
+        "expectedSha256": "896fc8f0be776f5b055d9a96e630c8ab8d8c31cb8a0c1c9293964c6a994dd642",
+        "expectedSize": 429,
+        "path": "docs/reports/ui-home_dashboard.md",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "f4aa3ab183578ba12e0c11d1025b0ef3695a7da9fd50670fd3d2d47d9ddca95c",
+        "currentSize": 516,
+        "expectedSha256": "f4aa3ab183578ba12e0c11d1025b0ef3695a7da9fd50670fd3d2d47d9ddca95c",
+        "expectedSize": 516,
+        "path": "docs/reports/ui-submissions_create.md",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "0e792c226ef304f4f84432a67d29cb8e5363e350d9ac25f3c119e99fb226a9bc",
+        "currentSize": 541,
+        "expectedSha256": "0e792c226ef304f4f84432a67d29cb8e5363e350d9ac25f3c119e99fb226a9bc",
+        "expectedSize": 541,
+        "path": "docs/reports/ui-submissions_detail.md",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "8331769cd25edcfa266aedff17be6a59a409831ba99655210e756645fdadbd75",
+        "currentSize": 506,
+        "expectedSha256": "8331769cd25edcfa266aedff17be6a59a409831ba99655210e756645fdadbd75",
+        "expectedSize": 506,
+        "path": "docs/reports/ui-submissions_list.md",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "6ceac0fda59d95a1d39d0b665f481f92523527b4832abd8ef304ae9673676d8c",
+        "currentSize": 581,
+        "expectedSha256": "6ceac0fda59d95a1d39d0b665f481f92523527b4832abd8ef304ae9673676d8c",
+        "expectedSize": 581,
+        "path": "entities/entity-content-submission.tg",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "4d9c779929c5b3dbd2308ca061751ad3bc85ca3b8c07ae0d61a50feffd634043",
+        "currentSize": 647,
+        "expectedSha256": "4d9c779929c5b3dbd2308ca061751ad3bc85ca3b8c07ae0d61a50feffd634043",
+        "expectedSize": 647,
+        "path": "entities/entity-contentsubmission.tg",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "8002cf73843b9e6db701d79ace2a2ddc8695c9b80b2595a745565497b3fc0826",
+        "currentSize": 264,
+        "expectedSha256": "8002cf73843b9e6db701d79ace2a2ddc8695c9b80b2595a745565497b3fc0826",
+        "expectedSize": 264,
+        "path": "shapes/shape-event-submissions-row-select.tg",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "11710c5f4fc5f31b2183a2967e0d8b46a966002cedbd936bd18b2780bdc32ad2",
+        "currentSize": 343,
+        "expectedSha256": "11710c5f4fc5f31b2183a2967e0d8b46a966002cedbd936bd18b2780bdc32ad2",
+        "expectedSize": 343,
+        "path": "widgets/widget-home-dashboard-results.tg",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      },
+      {
+        "currentSha256": "0390dc2cacd48c550d9589a9d3d1c6c8b5a46e2ddbfd8b33124151179414ee6c",
+        "currentSize": 554,
+        "expectedSha256": "0390dc2cacd48c550d9589a9d3d1c6c8b5a46e2ddbfd8b33124151179414ee6c",
+        "expectedSize": 554,
+        "path": "widgets/widget-submissions-list-results.tg",
+        "receiptTimestamp": "2026-05-15T07:26:25.109Z",
+        "selector": "from-plan",
+        "status": "matched"
+      }
+    ],
+    "note": "History verification is audit-only. Extracted/adopted Topogram files are project-owned, and edits do not make the workspace invalid.",
+    "status": "changed",
+    "summary": {
+      "changedFileCount": 4,
+      "checkedFileCount": 31,
+      "matchedFileCount": 27,
+      "removedFileCount": 0,
+      "unverifiableFileCount": 0
+    }
+  },
+  "sourceDiff": {
+    "added": [],
+    "changed": [],
+    "counts": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0
+    },
+    "removed": [],
+    "status": "clean"
+  },
+  "sourceFiles": 80,
+  "sourcePath": "<repo>",
+  "topogramRoot": "<repo>/proof/artifacts/step-02-extracted-topogram/topo",
+  "tracks": [
+    "db",
+    "api",
+    "ui"
+  ],
+  "workspaceRoot": "<repo>/proof/artifacts/step-02-extracted-topogram/topo"
+}

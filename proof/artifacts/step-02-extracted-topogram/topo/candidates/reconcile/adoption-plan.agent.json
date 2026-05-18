@@ -1,0 +1,1397 @@
+{
+  "accepted_items": [
+    "content-submission:entity:entity_content_submission",
+    "contentsubmission:entity:entity_contentsubmission",
+    "health:capability:cap_list_health",
+    "health:capability:cap_res",
+    "health:doc:health_journey",
+    "home-dashboard:doc:home_dashboard_journey",
+    "home-dashboard:ui:ui_home_dashboard",
+    "home-dashboard:widget:widget_home_dashboard_results",
+    "submission:capability:cap_create_submissions",
+    "submission:capability:cap_get_submission",
+    "submission:capability:cap_list_submissions",
+    "submission:doc:submission_journey",
+    "submission:shape:shape_event_submissions_row_select",
+    "submission:widget:widget_submissions_list_results",
+    "submissions:doc:submissions_journey",
+    "submissions:ui:ui_submissions_create",
+    "submissions:ui:ui_submissions_detail",
+    "submissions:ui:ui_submissions_list"
+  ],
+  "adoption_state_vocabulary": [
+    "accept",
+    "map",
+    "customize",
+    "stage",
+    "reject"
+  ],
+  "approved_review_groups": [],
+  "imported_maintained_db_seam_candidates": [
+    {
+      "allowed_change_classes": [
+        "proposal_only"
+      ],
+      "apply": "never",
+      "confidence": "high",
+      "drift_signals": [
+        "schema_or_migration_changed",
+        "migration_directory_changed"
+      ],
+      "emitted_dependencies": [
+        "topo/state/db/app_db/current.snapshot.json",
+        "proj_db"
+      ],
+      "evidence": [
+        "prisma/schema.prisma",
+        "prisma/migrations/20260515010101_init/migration.sql"
+      ],
+      "id_hint": "seam_prisma_db_migrations",
+      "kind": "maintained_db_migration_seam",
+      "label": "PRISMA maintained database migrations",
+      "maintained_modules": [
+        "prisma/schema.prisma",
+        "prisma/migrations"
+      ],
+      "manual_next_steps": [
+        "Review evidence, match_reasons, and missing_decisions before accepting this seam.",
+        "Confirm database runtime 'app_db' and projection 'proj_db' are the right topology targets for the maintained app.",
+        "If accepted, copy proposed_runtime_migration into the matching database runtime's migration block in topogram.project.json.",
+        "Keep ownership 'maintained' and apply 'never'; import must not apply migrations or patch maintained app files.",
+        "After editing topogram.project.json, run topogram check . --json and the maintained app's migration verification."
+      ],
+      "match_reasons": [
+        "found Prisma schema",
+        "found Prisma migrations directory"
+      ],
+      "migrationsPath": "prisma/migrations",
+      "missing_decisions": [],
+      "output_id": "maintained_app",
+      "ownership": "maintained",
+      "ownership_class": "human_owned",
+      "project_config_target": {
+        "file": "topogram.project.json",
+        "path": "topology.runtimes[id=app_db].migration",
+        "projection_id": "proj_db",
+        "runtime_id": "app_db"
+      },
+      "projection_id_hint": "proj_db",
+      "proposed_runtime_migration": {
+        "apply": "never",
+        "migrationsPath": "prisma/migrations",
+        "ownership": "maintained",
+        "schemaPath": "prisma/schema.prisma",
+        "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+        "tool": "prisma"
+      },
+      "provenance": [
+        "prisma/schema.prisma",
+        "prisma/migrations/20260515010101_init/migration.sql"
+      ],
+      "runtime_id_hint": "app_db",
+      "schemaPath": "prisma/schema.prisma",
+      "seam_id": "seam_prisma_db_migrations",
+      "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+      "source_kind": "migration_strategy_inference",
+      "source_of_truth": "candidate",
+      "status": "review_required",
+      "tool": "prisma",
+      "track": "db"
+    }
+  ],
+  "imported_proposal_surfaces": [
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "content-submission",
+      "canonical_rel_path": "entities/entity-content-submission.tg",
+      "current_state": "accept",
+      "event_name": null,
+      "human_review_required": false,
+      "id": "content-submission:entity:entity_content_submission",
+      "item": "entity_content_submission",
+      "kind": "entity",
+      "maintained_seam_candidates": [
+        {
+          "allowed_change_classes": [
+            "proposal_only"
+          ],
+          "apply": "never",
+          "confidence": "high",
+          "drift_signals": [
+            "schema_or_migration_changed",
+            "migration_directory_changed"
+          ],
+          "emitted_dependencies": [
+            "topo/state/db/app_db/current.snapshot.json",
+            "proj_db"
+          ],
+          "evidence": [
+            "prisma/schema.prisma",
+            "prisma/migrations/20260515010101_init/migration.sql"
+          ],
+          "id_hint": "seam_prisma_db_migrations",
+          "kind": "maintained_db_migration_seam",
+          "label": "PRISMA maintained database migrations",
+          "maintained_modules": [
+            "prisma/schema.prisma",
+            "prisma/migrations"
+          ],
+          "manual_next_steps": [
+            "Review evidence, match_reasons, and missing_decisions before accepting this seam.",
+            "Confirm database runtime 'app_db' and projection 'proj_db' are the right topology targets for the maintained app.",
+            "If accepted, copy proposed_runtime_migration into the matching database runtime's migration block in topogram.project.json.",
+            "Keep ownership 'maintained' and apply 'never'; import must not apply migrations or patch maintained app files.",
+            "After editing topogram.project.json, run topogram check . --json and the maintained app's migration verification."
+          ],
+          "match_reasons": [
+            "found Prisma schema",
+            "found Prisma migrations directory"
+          ],
+          "migrationsPath": "prisma/migrations",
+          "missing_decisions": [],
+          "output_id": "maintained_app",
+          "ownership": "maintained",
+          "ownership_class": "human_owned",
+          "project_config_target": {
+            "file": "topogram.project.json",
+            "path": "topology.runtimes[id=app_db].migration",
+            "projection_id": "proj_db",
+            "runtime_id": "app_db"
+          },
+          "projection_id_hint": "proj_db",
+          "proposed_runtime_migration": {
+            "apply": "never",
+            "migrationsPath": "prisma/migrations",
+            "ownership": "maintained",
+            "schemaPath": "prisma/schema.prisma",
+            "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+            "tool": "prisma"
+          },
+          "provenance": [
+            "prisma/schema.prisma",
+            "prisma/migrations/20260515010101_init/migration.sql"
+          ],
+          "runtime_id_hint": "app_db",
+          "schemaPath": "prisma/schema.prisma",
+          "seam_id": "seam_prisma_db_migrations",
+          "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+          "source_kind": "migration_strategy_inference",
+          "source_of_truth": "candidate",
+          "status": "review_required",
+          "tool": "prisma",
+          "track": "db"
+        }
+      ],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "content-submission",
+        "canonical_rel_path": "entities/entity-content-submission.tg",
+        "source_path": "candidates/reconcile/model/bundles/content-submission/entities/entity_content_submission.tg"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/content-submission/entities/entity_content_submission.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "entity",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "contentsubmission",
+      "canonical_rel_path": "entities/entity-contentsubmission.tg",
+      "current_state": "accept",
+      "event_name": null,
+      "human_review_required": false,
+      "id": "contentsubmission:entity:entity_contentsubmission",
+      "item": "entity_contentsubmission",
+      "kind": "entity",
+      "maintained_seam_candidates": [
+        {
+          "allowed_change_classes": [
+            "proposal_only"
+          ],
+          "apply": "never",
+          "confidence": "high",
+          "drift_signals": [
+            "schema_or_migration_changed",
+            "migration_directory_changed"
+          ],
+          "emitted_dependencies": [
+            "topo/state/db/app_db/current.snapshot.json",
+            "proj_db"
+          ],
+          "evidence": [
+            "prisma/schema.prisma",
+            "prisma/migrations/20260515010101_init/migration.sql"
+          ],
+          "id_hint": "seam_prisma_db_migrations",
+          "kind": "maintained_db_migration_seam",
+          "label": "PRISMA maintained database migrations",
+          "maintained_modules": [
+            "prisma/schema.prisma",
+            "prisma/migrations"
+          ],
+          "manual_next_steps": [
+            "Review evidence, match_reasons, and missing_decisions before accepting this seam.",
+            "Confirm database runtime 'app_db' and projection 'proj_db' are the right topology targets for the maintained app.",
+            "If accepted, copy proposed_runtime_migration into the matching database runtime's migration block in topogram.project.json.",
+            "Keep ownership 'maintained' and apply 'never'; import must not apply migrations or patch maintained app files.",
+            "After editing topogram.project.json, run topogram check . --json and the maintained app's migration verification."
+          ],
+          "match_reasons": [
+            "found Prisma schema",
+            "found Prisma migrations directory"
+          ],
+          "migrationsPath": "prisma/migrations",
+          "missing_decisions": [],
+          "output_id": "maintained_app",
+          "ownership": "maintained",
+          "ownership_class": "human_owned",
+          "project_config_target": {
+            "file": "topogram.project.json",
+            "path": "topology.runtimes[id=app_db].migration",
+            "projection_id": "proj_db",
+            "runtime_id": "app_db"
+          },
+          "projection_id_hint": "proj_db",
+          "proposed_runtime_migration": {
+            "apply": "never",
+            "migrationsPath": "prisma/migrations",
+            "ownership": "maintained",
+            "schemaPath": "prisma/schema.prisma",
+            "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+            "tool": "prisma"
+          },
+          "provenance": [
+            "prisma/schema.prisma",
+            "prisma/migrations/20260515010101_init/migration.sql"
+          ],
+          "runtime_id_hint": "app_db",
+          "schemaPath": "prisma/schema.prisma",
+          "seam_id": "seam_prisma_db_migrations",
+          "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+          "source_kind": "migration_strategy_inference",
+          "source_of_truth": "candidate",
+          "status": "review_required",
+          "tool": "prisma",
+          "track": "db"
+        }
+      ],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "contentsubmission",
+        "canonical_rel_path": "entities/entity-contentsubmission.tg",
+        "source_path": "candidates/reconcile/model/bundles/contentsubmission/entities/entity_contentsubmission.tg"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/contentsubmission/entities/entity_contentsubmission.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "entity",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "health",
+      "canonical_rel_path": "capabilities/cap-list-health.tg",
+      "current_state": "accept",
+      "event_name": null,
+      "human_review_required": false,
+      "id": "health:capability:cap_list_health",
+      "item": "cap_list_health",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "health",
+        "canonical_rel_path": "capabilities/cap-list-health.tg",
+        "source_path": "candidates/reconcile/model/bundles/health/capabilities/cap_list_health.tg"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/health/capabilities/cap_list_health.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "health",
+      "canonical_rel_path": "capabilities/cap-res.tg",
+      "current_state": "accept",
+      "event_name": null,
+      "human_review_required": false,
+      "id": "health:capability:cap_res",
+      "item": "cap_res",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "health",
+        "canonical_rel_path": "capabilities/cap-res.tg",
+        "source_path": "candidates/reconcile/model/bundles/health/capabilities/cap_res.tg"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/health/capabilities/cap_res.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "health",
+      "canonical_rel_path": "docs/journeys/health_journey.md",
+      "current_state": "accept",
+      "event_name": null,
+      "human_review_required": false,
+      "id": "health:doc:health_journey",
+      "item": "health_journey",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "health",
+        "canonical_rel_path": "docs/journeys/health_journey.md",
+        "source_path": "candidates/reconcile/model/bundles/health/docs/journeys/health_journey.md"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_doc_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/health/docs/journeys/health_journey.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "docs",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "home-dashboard",
+      "canonical_rel_path": "docs/journeys/home_dashboard_journey.md",
+      "current_state": "accept",
+      "event_name": null,
+      "human_review_required": false,
+      "id": "home-dashboard:doc:home_dashboard_journey",
+      "item": "home_dashboard_journey",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "home-dashboard",
+        "canonical_rel_path": "docs/journeys/home_dashboard_journey.md",
+        "source_path": "candidates/reconcile/model/bundles/home-dashboard/docs/journeys/home_dashboard_journey.md"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_doc_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/home-dashboard/docs/journeys/home_dashboard_journey.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "docs",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "home-dashboard",
+      "canonical_rel_path": "docs/reports/ui-home_dashboard.md",
+      "current_state": "accept",
+      "event_name": null,
+      "human_review_required": false,
+      "id": "home-dashboard:ui:ui_home_dashboard",
+      "item": "ui_home_dashboard",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "home-dashboard",
+        "canonical_rel_path": "docs/reports/ui-home_dashboard.md",
+        "source_path": "candidates/reconcile/model/bundles/home-dashboard/docs/reports/ui-home_dashboard.md"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/home-dashboard/docs/reports/ui-home_dashboard.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "home-dashboard",
+      "canonical_rel_path": "widgets/widget-home-dashboard-results.tg",
+      "current_state": "accept",
+      "event_name": null,
+      "human_review_required": false,
+      "id": "home-dashboard:widget:widget_home_dashboard_results",
+      "item": "widget_home_dashboard_results",
+      "kind": "widget",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "home-dashboard",
+        "canonical_rel_path": "widgets/widget-home-dashboard-results.tg",
+        "source_path": "candidates/reconcile/model/bundles/home-dashboard/widgets/widget_home_dashboard_results.tg"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [
+          "cap_get_submission"
+        ],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/home-dashboard/widgets/widget_home_dashboard_results.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "widget",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "submission",
+      "canonical_rel_path": "capabilities/cap-create-submissions.tg",
+      "current_state": "accept",
+      "event_name": null,
+      "human_review_required": false,
+      "id": "submission:capability:cap_create_submissions",
+      "item": "cap_create_submissions",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "submission",
+        "canonical_rel_path": "capabilities/cap-create-submissions.tg",
+        "source_path": "candidates/reconcile/model/bundles/submission/capabilities/cap_create_submissions.tg"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/submission/capabilities/cap_create_submissions.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "submission",
+      "canonical_rel_path": "capabilities/cap-get-submission.tg",
+      "current_state": "accept",
+      "event_name": null,
+      "human_review_required": false,
+      "id": "submission:capability:cap_get_submission",
+      "item": "cap_get_submission",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "submission",
+        "canonical_rel_path": "capabilities/cap-get-submission.tg",
+        "source_path": "candidates/reconcile/model/bundles/submission/capabilities/cap_get_submission.tg"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/submission/capabilities/cap_get_submission.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "submission",
+      "canonical_rel_path": "capabilities/cap-list-submissions.tg",
+      "current_state": "accept",
+      "event_name": null,
+      "human_review_required": false,
+      "id": "submission:capability:cap_list_submissions",
+      "item": "cap_list_submissions",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "submission",
+        "canonical_rel_path": "capabilities/cap-list-submissions.tg",
+        "source_path": "candidates/reconcile/model/bundles/submission/capabilities/cap_list_submissions.tg"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/submission/capabilities/cap_list_submissions.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "submission",
+      "canonical_rel_path": "docs/journeys/submission_journey.md",
+      "current_state": "accept",
+      "event_name": null,
+      "human_review_required": false,
+      "id": "submission:doc:submission_journey",
+      "item": "submission_journey",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "submission",
+        "canonical_rel_path": "docs/journeys/submission_journey.md",
+        "source_path": "candidates/reconcile/model/bundles/submission/docs/journeys/submission_journey.md"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_doc_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/submission/docs/journeys/submission_journey.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "docs",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "submission",
+      "canonical_rel_path": "shapes/shape-event-submissions-row-select.tg",
+      "current_state": "accept",
+      "event_name": "row_select",
+      "human_review_required": false,
+      "id": "submission:shape:shape_event_submissions_row_select",
+      "item": "shape_event_submissions_row_select",
+      "kind": "shape",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "submission",
+        "canonical_rel_path": "shapes/shape-event-submissions-row-select.tg",
+        "source_path": "candidates/reconcile/model/bundles/submission/shapes/shape_event_submissions_row_select.tg"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_kind": "ui_widget_event",
+      "source_path": "candidates/reconcile/model/bundles/submission/shapes/shape_event_submissions_row_select.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "shape",
+      "ui_impacts": [],
+      "widget_id": "widget_submissions_list_results",
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "submission",
+      "canonical_rel_path": "widgets/widget-submissions-list-results.tg",
+      "current_state": "accept",
+      "event_name": null,
+      "human_review_required": false,
+      "id": "submission:widget:widget_submissions_list_results",
+      "item": "widget_submissions_list_results",
+      "kind": "widget",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "submission",
+        "canonical_rel_path": "widgets/widget-submissions-list-results.tg",
+        "source_path": "candidates/reconcile/model/bundles/submission/widgets/widget_submissions_list_results.tg"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [
+        "shape_event_submissions_row_select"
+      ],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [
+          "cap_list_submissions"
+        ],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [
+          "shape_event_submissions_row_select"
+        ],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/submission/widgets/widget_submissions_list_results.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "widget",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "submissions",
+      "canonical_rel_path": "docs/journeys/submissions_journey.md",
+      "current_state": "accept",
+      "event_name": null,
+      "human_review_required": false,
+      "id": "submissions:doc:submissions_journey",
+      "item": "submissions_journey",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "submissions",
+        "canonical_rel_path": "docs/journeys/submissions_journey.md",
+        "source_path": "candidates/reconcile/model/bundles/submissions/docs/journeys/submissions_journey.md"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_doc_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/submissions/docs/journeys/submissions_journey.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "docs",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "submissions",
+      "canonical_rel_path": "docs/reports/ui-submissions_create.md",
+      "current_state": "accept",
+      "event_name": null,
+      "human_review_required": false,
+      "id": "submissions:ui:ui_submissions_create",
+      "item": "ui_submissions_create",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "submissions",
+        "canonical_rel_path": "docs/reports/ui-submissions_create.md",
+        "source_path": "candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_create.md"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_create.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "submissions",
+      "canonical_rel_path": "docs/reports/ui-submissions_detail.md",
+      "current_state": "accept",
+      "event_name": null,
+      "human_review_required": false,
+      "id": "submissions:ui:ui_submissions_detail",
+      "item": "ui_submissions_detail",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "submissions",
+        "canonical_rel_path": "docs/reports/ui-submissions_detail.md",
+        "source_path": "candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_detail.md"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_detail.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "submissions",
+      "canonical_rel_path": "docs/reports/ui-submissions_list.md",
+      "current_state": "accept",
+      "event_name": null,
+      "human_review_required": false,
+      "id": "submissions:ui:ui_submissions_list",
+      "item": "ui_submissions_list",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "submissions",
+        "canonical_rel_path": "docs/reports/ui-submissions_list.md",
+        "source_path": "candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_list.md"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_list.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "database",
+      "canonical_rel_path": null,
+      "current_state": "stage",
+      "human_review_required": true,
+      "id": "seam_prisma_db_migrations",
+      "item": "seam_prisma_db_migrations",
+      "kind": "maintained_db_migration_seam",
+      "maintained_seam_candidates": [
+        {
+          "allowed_change_classes": [
+            "proposal_only"
+          ],
+          "apply": "never",
+          "confidence": "high",
+          "drift_signals": [
+            "schema_or_migration_changed",
+            "migration_directory_changed"
+          ],
+          "emitted_dependencies": [
+            "topo/state/db/app_db/current.snapshot.json",
+            "proj_db"
+          ],
+          "evidence": [
+            "prisma/schema.prisma",
+            "prisma/migrations/20260515010101_init/migration.sql"
+          ],
+          "id_hint": "seam_prisma_db_migrations",
+          "kind": "maintained_db_migration_seam",
+          "label": "PRISMA maintained database migrations",
+          "maintained_modules": [
+            "prisma/schema.prisma",
+            "prisma/migrations"
+          ],
+          "manual_next_steps": [
+            "Review evidence, match_reasons, and missing_decisions before accepting this seam.",
+            "Confirm database runtime 'app_db' and projection 'proj_db' are the right topology targets for the maintained app.",
+            "If accepted, copy proposed_runtime_migration into the matching database runtime's migration block in topogram.project.json.",
+            "Keep ownership 'maintained' and apply 'never'; import must not apply migrations or patch maintained app files.",
+            "After editing topogram.project.json, run topogram check . --json and the maintained app's migration verification."
+          ],
+          "match_reasons": [
+            "found Prisma schema",
+            "found Prisma migrations directory"
+          ],
+          "migrationsPath": "prisma/migrations",
+          "missing_decisions": [],
+          "output_id": "maintained_app",
+          "ownership": "maintained",
+          "ownership_class": "human_owned",
+          "project_config_target": {
+            "file": "topogram.project.json",
+            "path": "topology.runtimes[id=app_db].migration",
+            "projection_id": "proj_db",
+            "runtime_id": "app_db"
+          },
+          "projection_id_hint": "proj_db",
+          "proposed_runtime_migration": {
+            "apply": "never",
+            "migrationsPath": "prisma/migrations",
+            "ownership": "maintained",
+            "schemaPath": "prisma/schema.prisma",
+            "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+            "tool": "prisma"
+          },
+          "provenance": [
+            "prisma/schema.prisma",
+            "prisma/migrations/20260515010101_init/migration.sql"
+          ],
+          "runtime_id_hint": "app_db",
+          "schemaPath": "prisma/schema.prisma",
+          "seam_id": "seam_prisma_db_migrations",
+          "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+          "source_kind": "migration_strategy_inference",
+          "source_of_truth": "candidate",
+          "status": "review_required",
+          "tool": "prisma",
+          "track": "db"
+        }
+      ],
+      "mapping_suggestions": [
+        {
+          "evidence": [
+            "prisma/schema.prisma",
+            "prisma/migrations/20260515010101_init/migration.sql"
+          ],
+          "id": "seam_prisma_db_migrations",
+          "manual_next_steps": [
+            "Review evidence, match_reasons, and missing_decisions before accepting this seam.",
+            "Confirm database runtime 'app_db' and projection 'proj_db' are the right topology targets for the maintained app.",
+            "If accepted, copy proposed_runtime_migration into the matching database runtime's migration block in topogram.project.json.",
+            "Keep ownership 'maintained' and apply 'never'; import must not apply migrations or patch maintained app files.",
+            "After editing topogram.project.json, run topogram check . --json and the maintained app's migration verification."
+          ],
+          "missing_decisions": [],
+          "project_config_target": {
+            "file": "topogram.project.json",
+            "path": "topology.runtimes[id=app_db].migration",
+            "projection_id": "proj_db",
+            "runtime_id": "app_db"
+          },
+          "proposed_runtime_migration": {
+            "apply": "never",
+            "migrationsPath": "prisma/migrations",
+            "ownership": "maintained",
+            "schemaPath": "prisma/schema.prisma",
+            "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+            "tool": "prisma"
+          },
+          "reason": "Review the inferred database migration strategy before editing topogram.project.json.",
+          "type": "manual_project_config_review"
+        }
+      ],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "database",
+        "canonical_rel_path": null,
+        "source_path": "candidates/app/db/candidates.json"
+      },
+      "recommended_state": "customize",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "manual_project_config_review",
+          "proposal_only_maintained_db_migration_seam"
+        ]
+      },
+      "source_kind": "migration_strategy_inference",
+      "source_path": "candidates/app/db/candidates.json",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "db",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    }
+  ],
+  "rejected_items": [],
+  "requires_human_review": [
+    "seam_prisma_db_migrations"
+  ],
+  "source_plan_type": "reconcile_adoption_plan",
+  "staged_items": [
+    "seam_prisma_db_migrations"
+  ],
+  "terminology": {
+    "candidate_workspace_term": "candidate",
+    "non_canonical_adoption_state": "stage"
+  },
+  "type": "agent_adoption_plan",
+  "version": 1,
+  "workspace": "<repo>/proof/artifacts/step-02-extracted-topogram/topo"
+}

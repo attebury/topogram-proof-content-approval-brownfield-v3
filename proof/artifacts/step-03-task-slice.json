@@ -1,0 +1,462 @@
+{
+  "depends_on": {
+    "acceptance_refs": [
+      "ac_adopt_brownfield_spec"
+    ],
+    "affects": [
+      "cap_approve_submission",
+      "cap_get_submission",
+      "cap_list_submissions",
+      "cap_request_changes",
+      "cap_submit_content"
+    ],
+    "blocked_by": [],
+    "blocks": [],
+    "plans": [],
+    "satisfies": [
+      "req_adopt_brownfield_spec"
+    ],
+    "verification_refs": [
+      "verification_adopt_brownfield_spec"
+    ],
+    "verifications": [
+      "verification_adopt_brownfield_spec"
+    ]
+  },
+  "focus": {
+    "id": "task_adopt_brownfield_spec",
+    "kind": "task"
+  },
+  "ownership_boundary": {
+    "canonical_topogram": {
+      "agent_mode": "propose_review_adopt",
+      "owner": "human"
+    },
+    "generated_artifacts": {
+      "agent_mode": "regenerate_or_compare",
+      "owner": "engine"
+    },
+    "maintained_code": {
+      "agent_mode": "bounded_edit_only",
+      "owner": "human"
+    },
+    "proposal_surfaces": {
+      "agent_mode": "stage_map_customize_reject",
+      "owner": "human"
+    }
+  },
+  "related": {
+    "acceptance_refs": [
+      {
+        "description": "Given package-backed extraction produced reviewable candidates, when selected candidates are adopted and curated into canonical topo source, then Topogram check, SDLC check, and app verification pass without regenerating or mutating maintained source code.",
+        "id": "ac_adopt_brownfield_spec",
+        "kind": "acceptance_criterion",
+        "name": "Adopt Brownfield Spec",
+        "ownership_boundary": {
+          "canonical_topogram": {
+            "agent_mode": "propose_review_adopt",
+            "owner": "human"
+          },
+          "generated_artifacts": {
+            "agent_mode": "regenerate_or_compare",
+            "owner": "engine"
+          },
+          "maintained_code": {
+            "agent_mode": "bounded_edit_only",
+            "owner": "human"
+          },
+          "proposal_surfaces": {
+            "agent_mode": "stage_map_customize_reject",
+            "owner": "human"
+          }
+        }
+      }
+    ],
+    "affects": [
+      {
+        "actors": [
+          "actor_operator"
+        ],
+        "creates": [],
+        "deletes": [],
+        "description": "Approves a content submission.",
+        "id": "cap_approve_submission",
+        "input": [
+          "shape_input_approve_submission"
+        ],
+        "kind": "capability",
+        "name": "Approve Submission",
+        "output": [
+          "shape_output_submission_detail"
+        ],
+        "ownership_boundary": {
+          "canonical_topogram": {
+            "agent_mode": "propose_review_adopt",
+            "owner": "human"
+          },
+          "generated_artifacts": {
+            "agent_mode": "regenerate_or_compare",
+            "owner": "engine"
+          },
+          "maintained_code": {
+            "agent_mode": "bounded_edit_only",
+            "owner": "human"
+          },
+          "proposal_surfaces": {
+            "agent_mode": "stage_map_customize_reject",
+            "owner": "human"
+          }
+        },
+        "reads": [
+          "entity_content_submission"
+        ],
+        "reviewBoundary": {
+          "automation_class": "review_required",
+          "reasons": [
+            "writes_modeled_state"
+          ]
+        },
+        "roles": [],
+        "updates": [
+          "entity_content_submission"
+        ]
+      },
+      {
+        "actors": [
+          "actor_operator"
+        ],
+        "creates": [],
+        "deletes": [],
+        "description": "Fetches one content submission for review.",
+        "id": "cap_get_submission",
+        "input": [
+          "shape_input_get_submission"
+        ],
+        "kind": "capability",
+        "name": "Get Submission",
+        "output": [
+          "shape_output_submission_detail"
+        ],
+        "ownership_boundary": {
+          "canonical_topogram": {
+            "agent_mode": "propose_review_adopt",
+            "owner": "human"
+          },
+          "generated_artifacts": {
+            "agent_mode": "regenerate_or_compare",
+            "owner": "engine"
+          },
+          "maintained_code": {
+            "agent_mode": "bounded_edit_only",
+            "owner": "human"
+          },
+          "proposal_surfaces": {
+            "agent_mode": "stage_map_customize_reject",
+            "owner": "human"
+          }
+        },
+        "reads": [
+          "entity_content_submission"
+        ],
+        "reviewBoundary": {
+          "automation_class": "safe",
+          "reasons": [
+            "read_only_surface"
+          ]
+        },
+        "roles": [],
+        "updates": []
+      },
+      {
+        "actors": [
+          "actor_operator"
+        ],
+        "creates": [],
+        "deletes": [],
+        "description": "Lists submitted content in review order.",
+        "id": "cap_list_submissions",
+        "input": [
+          "shape_input_list_submissions"
+        ],
+        "kind": "capability",
+        "name": "List Submissions",
+        "output": [
+          "shape_output_submission_card"
+        ],
+        "ownership_boundary": {
+          "canonical_topogram": {
+            "agent_mode": "propose_review_adopt",
+            "owner": "human"
+          },
+          "generated_artifacts": {
+            "agent_mode": "regenerate_or_compare",
+            "owner": "engine"
+          },
+          "maintained_code": {
+            "agent_mode": "bounded_edit_only",
+            "owner": "human"
+          },
+          "proposal_surfaces": {
+            "agent_mode": "stage_map_customize_reject",
+            "owner": "human"
+          }
+        },
+        "reads": [
+          "entity_content_submission"
+        ],
+        "reviewBoundary": {
+          "automation_class": "safe",
+          "reasons": [
+            "read_only_surface"
+          ]
+        },
+        "roles": [],
+        "updates": []
+      },
+      {
+        "actors": [
+          "actor_operator"
+        ],
+        "creates": [],
+        "deletes": [],
+        "description": "Returns a content submission to the author with review notes.",
+        "id": "cap_request_changes",
+        "input": [
+          "shape_input_request_changes"
+        ],
+        "kind": "capability",
+        "name": "Request Changes",
+        "output": [
+          "shape_output_submission_detail"
+        ],
+        "ownership_boundary": {
+          "canonical_topogram": {
+            "agent_mode": "propose_review_adopt",
+            "owner": "human"
+          },
+          "generated_artifacts": {
+            "agent_mode": "regenerate_or_compare",
+            "owner": "engine"
+          },
+          "maintained_code": {
+            "agent_mode": "bounded_edit_only",
+            "owner": "human"
+          },
+          "proposal_surfaces": {
+            "agent_mode": "stage_map_customize_reject",
+            "owner": "human"
+          }
+        },
+        "reads": [
+          "entity_content_submission"
+        ],
+        "reviewBoundary": {
+          "automation_class": "review_required",
+          "reasons": [
+            "writes_modeled_state"
+          ]
+        },
+        "roles": [],
+        "updates": [
+          "entity_content_submission"
+        ]
+      },
+      {
+        "actors": [
+          "actor_operator"
+        ],
+        "creates": [
+          "entity_content_submission"
+        ],
+        "deletes": [],
+        "description": "Submits new content for editorial review.",
+        "id": "cap_submit_content",
+        "input": [
+          "shape_input_submit_content"
+        ],
+        "kind": "capability",
+        "name": "Submit Content",
+        "output": [
+          "shape_output_submission_detail"
+        ],
+        "ownership_boundary": {
+          "canonical_topogram": {
+            "agent_mode": "propose_review_adopt",
+            "owner": "human"
+          },
+          "generated_artifacts": {
+            "agent_mode": "regenerate_or_compare",
+            "owner": "engine"
+          },
+          "maintained_code": {
+            "agent_mode": "bounded_edit_only",
+            "owner": "human"
+          },
+          "proposal_surfaces": {
+            "agent_mode": "stage_map_customize_reject",
+            "owner": "human"
+          }
+        },
+        "reads": [],
+        "reviewBoundary": {
+          "automation_class": "review_required",
+          "reasons": [
+            "writes_modeled_state"
+          ]
+        },
+        "roles": [],
+        "updates": []
+      }
+    ],
+    "blocked_by": [],
+    "plans": [],
+    "satisfies": [
+      {
+        "description": "The brownfield proof must promote reviewed extraction candidates into canonical Topogram source and enable SDLC for follow-on maintained work.",
+        "id": "req_adopt_brownfield_spec",
+        "kind": "requirement",
+        "name": "Adopt Brownfield Spec",
+        "ownership_boundary": {
+          "canonical_topogram": {
+            "agent_mode": "propose_review_adopt",
+            "owner": "human"
+          },
+          "generated_artifacts": {
+            "agent_mode": "regenerate_or_compare",
+            "owner": "engine"
+          },
+          "maintained_code": {
+            "agent_mode": "bounded_edit_only",
+            "owner": "human"
+          },
+          "proposal_surfaces": {
+            "agent_mode": "stage_map_customize_reject",
+            "owner": "human"
+          }
+        }
+      }
+    ],
+    "verification_refs": [
+      {
+        "description": "Runs Topogram check, SDLC check, agent brief, focused query packets, adoption receipts, and maintained app verification for the adopted brownfield spec checkpoint.",
+        "id": "verification_adopt_brownfield_spec",
+        "kind": "verification",
+        "method": "runtime",
+        "name": "Adopt Brownfield Spec Verification",
+        "ownership_boundary": {
+          "canonical_topogram": {
+            "agent_mode": "propose_review_adopt",
+            "owner": "human"
+          },
+          "generated_artifacts": {
+            "agent_mode": "regenerate_or_compare",
+            "owner": "engine"
+          },
+          "maintained_code": {
+            "agent_mode": "bounded_edit_only",
+            "owner": "human"
+          },
+          "proposal_surfaces": {
+            "agent_mode": "stage_map_customize_reject",
+            "owner": "human"
+          }
+        },
+        "scenarios": [
+          "brownfield_adoption_topogram_check_sdlc_check_app_verify"
+        ],
+        "validates": [
+          "cap_approve_submission",
+          "cap_get_submission",
+          "cap_list_submissions",
+          "cap_request_changes",
+          "cap_submit_content"
+        ]
+      }
+    ]
+  },
+  "review_boundary": {
+    "automation_class": "review_required",
+    "reasons": [
+      "task_scope"
+    ]
+  },
+  "summary": {
+    "claimed_by": [
+      "actor_operator"
+    ],
+    "disposition": "active",
+    "domain": null,
+    "id": "task_adopt_brownfield_spec",
+    "name": "Adopt Brownfield Spec",
+    "priority": "high",
+    "status": "in-progress",
+    "work_type": "implementation"
+  },
+  "type": "context_slice",
+  "verification": [
+    {
+      "description": "Runs Topogram check, SDLC check, agent brief, focused query packets, adoption receipts, and maintained app verification for the adopted brownfield spec checkpoint.",
+      "id": "verification_adopt_brownfield_spec",
+      "kind": "verification",
+      "method": "runtime",
+      "name": "Adopt Brownfield Spec Verification",
+      "ownership_boundary": {
+        "canonical_topogram": {
+          "agent_mode": "propose_review_adopt",
+          "owner": "human"
+        },
+        "generated_artifacts": {
+          "agent_mode": "regenerate_or_compare",
+          "owner": "engine"
+        },
+        "maintained_code": {
+          "agent_mode": "bounded_edit_only",
+          "owner": "human"
+        },
+        "proposal_surfaces": {
+          "agent_mode": "stage_map_customize_reject",
+          "owner": "human"
+        }
+      },
+      "scenarios": [
+        "brownfield_adoption_topogram_check_sdlc_check_app_verify"
+      ],
+      "validates": [
+        "cap_approve_submission",
+        "cap_get_submission",
+        "cap_list_submissions",
+        "cap_request_changes",
+        "cap_submit_content"
+      ]
+    }
+  ],
+  "verification_targets": {
+    "generated_checks": [
+      "compile-check",
+      "runtime-check"
+    ],
+    "maintained_app_checks": [],
+    "rationale": "Task slice points at verification covering the surfaces this task touches.",
+    "verification_ids": [
+      "verification_adopt_brownfield_spec"
+    ]
+  },
+  "version": 1,
+  "write_scope": {
+    "generator_owned": [
+      "artifacts/**",
+      "apps/**"
+    ],
+    "human_owned_review_required": [
+      "examples/maintained/proof-app/**"
+    ],
+    "out_of_bounds": [
+      ".git/**",
+      "node_modules/**"
+    ],
+    "safe_to_edit": [
+      "topo/**",
+      "candidates/**"
+    ]
+  }
+}

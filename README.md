@@ -1,34 +1,30 @@
-# Topogram Brownfield Proof Content Approval V3
+# Topogram Proof: Content Approval Brownfield
 
-> Brownfield extract/adopt proof for the current Topogram beta story.
+> This v2 proof uses hardened verification: `npm run verify` validates proof metadata, portable public artifacts, Topogram contracts when adopted, SDLC state when adopted, app compile checks, recreated-stack compile checks when present, and a clean working tree.
 
-Status: current scaffold
-Audience: Topogram evaluators, maintainers, and coding agents
-Use when: you want the v3 beta proof story and branch/tag plan before the full checkpoints are populated.
+This repository demonstrates brownfield Topogram workflows against a real-ish
+Content Approval app.
 
-This v3 proof repo exists because the Topogram demo story changed, not because every CLI patch requires proof history churn. It is pinned to `@topogram/cli@0.3.99`.
+The proof uses branch and tag checkpoints. It also uses Topogram SDLC after
+adoption so human and agent work is auditable. SDLC is not required to use
+Topogram; for smaller projects, use `topogram extract`, `topogram adopt`,
+`topogram check`, and `topogram emit` directly.
 
-## Story
+See [`proof/README.md`](proof/README.md) for the checkpoint map.
 
-This repo will prove real-ish brownfield app, package-backed extractors, reviewable adoption, agent-safe maintained change, drift refresh, and cross-stack recreation.
+## Baseline Stack
 
-## Planned Checkpoints
-
-| Step | Branch | Tag | Claim |
-| --- | --- | --- | --- |
-| 01 | `step/01-brownfield-baseline` | `proof-01-brownfield-baseline` | Create a real-ish maintained app with no Topogram workspace. |
-| 02 | `step/02-extract-with-packages` | `proof-02-extract-with-packages` | Use package-backed extractors to emit review-only candidates and provenance. |
-| 03 | `step/03-adopt-app-map` | `proof-03-adopt-app-map` | Promote reviewed candidates into canonical topo source and enable SDLC. |
-| 04 | `step/04-feature-from-slice` | `proof-04-feature-from-slice` | Implement a maintained feature from agent-safe slice context. |
-| 05 | `step/05-refresh-drift` | `proof-05-refresh-drift` | Refresh extraction and review source/spec drift explicitly. |
-| 06 | `step/06-recreate-other-stack` | `proof-06-recreate-other-stack` | Generate a cross-stack recreation beside maintained source. |
-| 07 | `step/07-parity-proof` | `proof-07-parity-proof` | Compare maintained and recreated stacks through contracts and verification summaries. |
+- React Router UI with queue, detail, and new-submission screens.
+- Express API with list, detail, create, approve, and request-changes routes.
+- Prisma schema plus SQL migration evidence.
+- No `topo/` workspace at Step 01.
 
 ## Verify
 
 ```bash
-npm ci
 npm run verify
 ```
 
-The initial scaffold verifies package pinning, proof manifest shape, path hygiene, and clean worktree behavior. Later step branches add app-specific Topogram and runtime checks.
+## V3 checkpoint story
+
+This repository is refreshed only when the Topogram demo story changes. It is pinned to `@topogram/cli@0.3.99` and each checkpoint must pass `npm run verify`.

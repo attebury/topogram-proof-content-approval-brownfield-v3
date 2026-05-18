@@ -1,0 +1,1323 @@
+{
+  "type": "ui_surface_contract",
+  "projection": {
+    "id": "proj_web_surface",
+    "name": "Content Approval Web UI",
+    "type": "web_surface"
+  },
+  "uiContract": {
+    "id": "proj_ui_contract",
+    "name": "Content Approval UI Contract",
+    "type": "ui_contract"
+  },
+  "generatorDefaults": {
+    "profile": "sveltekit",
+    "language": "typescript",
+    "styling": "css"
+  },
+  "outputs": [
+    "ui_contract",
+    "web_app"
+  ],
+  "widgets": {
+    "widget_review_actions": {
+      "type": "ui_widget_contract",
+      "id": "widget_review_actions",
+      "name": "Review Actions",
+      "description": "Reusable review action widget for approving or requesting changes.",
+      "category": "feedback",
+      "version": "1.0",
+      "status": "active",
+      "props": [
+        {
+          "name": "submission",
+          "type": "object",
+          "requiredness": "optional",
+          "defaultValue": null
+        }
+      ],
+      "events": [
+        {
+          "id": "approve",
+          "shape": {
+            "id": "shape_input_approve_submission",
+            "kind": "shape"
+          }
+        },
+        {
+          "id": "request_changes",
+          "shape": {
+            "id": "shape_input_request_changes",
+            "kind": "shape"
+          }
+        }
+      ],
+      "slots": [],
+      "behavior": [
+        "optimistic_update",
+        "keyboard_navigation"
+      ],
+      "behaviors": [
+        {
+          "kind": "optimistic_update",
+          "directives": {
+            "actions": [
+              "cap_approve_submission",
+              "cap_request_changes"
+            ],
+            "rollback": "manual"
+          },
+          "source": "structured"
+        },
+        {
+          "kind": "keyboard_navigation",
+          "directives": {
+            "scope": "widget",
+            "shortcuts": [
+              "approve",
+              "request_changes"
+            ]
+          },
+          "source": "structured"
+        }
+      ],
+      "patterns": [
+        "summary_stats"
+      ],
+      "regions": [
+        "summary",
+        "footer_actions"
+      ],
+      "approvals": [],
+      "lookups": [],
+      "dependencies": []
+    },
+    "widget_submission_form": {
+      "type": "ui_widget_contract",
+      "id": "widget_submission_form",
+      "name": "Submission Form",
+      "description": "Reusable form widget for creating content submissions.",
+      "category": "form",
+      "version": "1.0",
+      "status": "active",
+      "props": [
+        {
+          "name": "draft",
+          "type": "object",
+          "requiredness": "optional",
+          "defaultValue": null
+        }
+      ],
+      "events": [
+        {
+          "id": "submit",
+          "shape": {
+            "id": "shape_input_submit_content",
+            "kind": "shape"
+          }
+        }
+      ],
+      "slots": [],
+      "behavior": [
+        "optimistic_update",
+        "keyboard_navigation"
+      ],
+      "behaviors": [
+        {
+          "kind": "optimistic_update",
+          "directives": {
+            "actions": [
+              "cap_submit_content"
+            ],
+            "rollback": "manual"
+          },
+          "source": "structured"
+        },
+        {
+          "kind": "keyboard_navigation",
+          "directives": {
+            "scope": "form",
+            "shortcuts": [
+              "submit"
+            ]
+          },
+          "source": "structured"
+        }
+      ],
+      "patterns": [
+        "summary_stats"
+      ],
+      "regions": [
+        "summary"
+      ],
+      "approvals": [],
+      "lookups": [],
+      "dependencies": []
+    },
+    "widget_submission_queue": {
+      "type": "ui_widget_contract",
+      "id": "widget_submission_queue",
+      "name": "Submission Queue",
+      "description": "Reusable review queue widget for content submissions.",
+      "category": "collection",
+      "version": "1.1",
+      "status": "active",
+      "props": [
+        {
+          "name": "rows",
+          "type": "array",
+          "requiredness": "required",
+          "defaultValue": null
+        },
+        {
+          "name": "selected_ids",
+          "type": "array",
+          "requiredness": "optional",
+          "defaultValue": []
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "requiredness": "optional",
+          "defaultValue": false
+        }
+      ],
+      "events": [
+        {
+          "id": "row_select",
+          "shape": {
+            "id": "shape_output_submission_card",
+            "kind": "shape"
+          }
+        },
+        {
+          "id": "approve_selected",
+          "shape": {
+            "id": "shape_input_bulk_review",
+            "kind": "shape"
+          }
+        }
+      ],
+      "slots": [
+        {
+          "id": "toolbar",
+          "description": "Review queue actions and filters"
+        },
+        {
+          "id": "empty_state",
+          "description": "Empty queue messaging"
+        }
+      ],
+      "behavior": [
+        "selection",
+        "sorting",
+        "filtering",
+        "pagination",
+        "bulk_action"
+      ],
+      "behaviors": [
+        {
+          "kind": "selection",
+          "directives": {
+            "mode": "multi",
+            "state": "selected_ids",
+            "emits": "row_select"
+          },
+          "source": "structured"
+        },
+        {
+          "kind": "sorting",
+          "directives": {
+            "fields": [
+              "submitted_at",
+              "status",
+              "title"
+            ],
+            "default": [
+              "submitted_at",
+              "desc"
+            ]
+          },
+          "source": "structured"
+        },
+        {
+          "kind": "filtering",
+          "directives": {
+            "fields": [
+              "status"
+            ]
+          },
+          "source": "structured"
+        },
+        {
+          "kind": "pagination",
+          "directives": {
+            "mode": "cursor",
+            "page_size": 25
+          },
+          "source": "structured"
+        },
+        {
+          "kind": "bulk_action",
+          "directives": {
+            "actions": [
+              "approve_selected"
+            ],
+            "state": "selected_ids",
+            "emits": "approve_selected"
+          },
+          "source": "structured"
+        }
+      ],
+      "patterns": [
+        "resource_table",
+        "data_grid_view"
+      ],
+      "regions": [
+        "results"
+      ],
+      "approvals": [],
+      "lookups": [],
+      "dependencies": []
+    },
+    "widget_submission_summary": {
+      "type": "ui_widget_contract",
+      "id": "widget_submission_summary",
+      "name": "Submission Summary",
+      "description": "Reusable summary widget for submission counts and field coverage.",
+      "category": "display",
+      "version": "1.0",
+      "status": "active",
+      "props": [
+        {
+          "name": "rows",
+          "type": "array",
+          "requiredness": "required",
+          "defaultValue": null
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "behavior": [
+        "grouping"
+      ],
+      "behaviors": [
+        {
+          "kind": "grouping",
+          "directives": {
+            "fields": [
+              "status"
+            ]
+          },
+          "source": "structured"
+        }
+      ],
+      "patterns": [
+        "summary_stats"
+      ],
+      "regions": [
+        "hero",
+        "summary"
+      ],
+      "approvals": [],
+      "lookups": [],
+      "dependencies": []
+    }
+  },
+  "designTokens": {
+    "density": "compact",
+    "tone": "operational",
+    "radiusScale": "medium",
+    "colorRoles": {
+      "primary": "accent",
+      "danger": "critical"
+    },
+    "typographyRoles": {
+      "body": "readable",
+      "heading": "prominent"
+    },
+    "actionRoles": {
+      "primary": "prominent",
+      "destructive": "danger"
+    },
+    "accessibility": {
+      "contrast": "aa",
+      "focus": "visible"
+    }
+  },
+  "appShell": {
+    "brand": "Content Approval",
+    "shell": "topbar",
+    "primaryNav": "primary",
+    "secondaryNav": "secondary",
+    "utilityNav": "utility",
+    "footer": "none",
+    "globalSearch": false,
+    "notifications": false,
+    "accountMenu": false,
+    "workspaceSwitcher": false,
+    "windowing": "single_window"
+  },
+  "navigation": {
+    "groups": [
+      {
+        "id": "review",
+        "label": "Review",
+        "placement": "primary",
+        "pattern": "primary",
+        "icon": null,
+        "order": null
+      }
+    ],
+    "patterns": [
+      "primary",
+      "stack_navigation"
+    ],
+    "defaultScreenId": "submission_queue",
+    "items": [
+      {
+        "screenId": "submission_queue",
+        "route": "/submissions",
+        "label": "Queue",
+        "groupId": "review",
+        "placement": "primary",
+        "pattern": "primary",
+        "visible": true,
+        "default": true,
+        "breadcrumb": null,
+        "sitemap": "include",
+        "order": "10"
+      },
+      {
+        "screenId": "submission_detail",
+        "route": "/submissions/:id",
+        "label": "Submission Details",
+        "groupId": "review",
+        "placement": "primary",
+        "pattern": "stack_navigation",
+        "visible": false,
+        "default": false,
+        "breadcrumb": "submission_queue",
+        "sitemap": "exclude",
+        "order": null
+      },
+      {
+        "screenId": "submission_create",
+        "route": "/submissions/new",
+        "label": "Submit",
+        "groupId": "review",
+        "placement": "primary",
+        "pattern": "primary",
+        "visible": true,
+        "default": false,
+        "breadcrumb": null,
+        "sitemap": "include",
+        "order": "20"
+      }
+    ]
+  },
+  "screens": [
+    {
+      "type": "ui_screen_contract",
+      "id": "submission_queue",
+      "kind": "list",
+      "title": "Review Queue",
+      "loadCapability": {
+        "id": "cap_list_submissions",
+        "kind": "capability"
+      },
+      "submitCapability": null,
+      "detailCapability": {
+        "id": "cap_get_submission",
+        "kind": "capability"
+      },
+      "inputShape": null,
+      "viewShape": null,
+      "itemShape": {
+        "id": "shape_output_submission_card",
+        "kind": "shape"
+      },
+      "emptyState": {
+        "title": "No submissions waiting",
+        "body": "Submit content to start the approval workflow"
+      },
+      "navigation": {
+        "successNavigate": null,
+        "successRefresh": null
+      },
+      "states": {
+        "loading": "skeleton",
+        "empty": "empty_state_panel",
+        "error": "inline",
+        "unauthorized": "auto",
+        "notFound": "auto",
+        "success": "auto"
+      },
+      "actions": {
+        "primary": {
+          "id": "cap_submit_content",
+          "kind": "capability"
+        },
+        "secondary": null,
+        "destructive": null,
+        "terminal": null,
+        "screen": [
+          {
+            "capability": {
+              "id": "cap_submit_content",
+              "kind": "capability"
+            },
+            "prominence": "primary",
+            "placement": "toolbar"
+          },
+          {
+            "capability": {
+              "id": "cap_bulk_approve_submissions",
+              "kind": "capability"
+            },
+            "prominence": "secondary",
+            "placement": "toolbar"
+          }
+        ]
+      },
+      "collection": {
+        "filters": [
+          "status"
+        ],
+        "search": [],
+        "pagination": null,
+        "views": [
+          "table"
+        ],
+        "refresh": "manual",
+        "groupBy": [],
+        "sort": [
+          {
+            "field": "submitted_at",
+            "direction": "desc"
+          }
+        ]
+      },
+      "visibility": [],
+      "lookups": [],
+      "regions": [
+        {
+          "region": "hero",
+          "pattern": "summary_stats",
+          "placement": "primary",
+          "title": null,
+          "state": null,
+          "variant": null
+        },
+        {
+          "region": "results",
+          "pattern": "resource_table",
+          "placement": "primary",
+          "title": null,
+          "state": null,
+          "variant": null
+        }
+      ],
+      "widgets": [
+        {
+          "type": "ui_widget_usage",
+          "region": "hero",
+          "pattern": "summary_stats",
+          "placement": "primary",
+          "widget": {
+            "id": "widget_submission_summary",
+            "name": "Submission Summary",
+            "category": "display",
+            "version": "1.0"
+          },
+          "dataBindings": [
+            {
+              "prop": "rows",
+              "source": {
+                "id": "cap_list_submissions",
+                "kind": "capability"
+              }
+            }
+          ],
+          "eventBindings": [],
+          "behaviorRealizations": [
+            {
+              "kind": "grouping",
+              "source": "structured",
+              "directives": {
+                "fields": [
+                  "status"
+                ]
+              },
+              "state": null,
+              "emits": [],
+              "actions": [],
+              "dataDependencies": [
+                {
+                  "prop": "rows",
+                  "source": {
+                    "id": "cap_list_submissions",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "effects": [],
+              "status": "realized"
+            }
+          ]
+        },
+        {
+          "type": "ui_widget_usage",
+          "region": "results",
+          "pattern": "resource_table",
+          "placement": "primary",
+          "widget": {
+            "id": "widget_submission_queue",
+            "name": "Submission Queue",
+            "category": "collection",
+            "version": "1.1"
+          },
+          "dataBindings": [
+            {
+              "prop": "rows",
+              "source": {
+                "id": "cap_list_submissions",
+                "kind": "capability"
+              }
+            }
+          ],
+          "eventBindings": [
+            {
+              "event": "row_select",
+              "action": "navigate",
+              "target": {
+                "id": "submission_detail",
+                "kind": "screen"
+              }
+            },
+            {
+              "event": "approve_selected",
+              "action": "action",
+              "target": {
+                "id": "cap_bulk_approve_submissions",
+                "kind": "capability"
+              }
+            }
+          ],
+          "behaviorRealizations": [
+            {
+              "kind": "selection",
+              "source": "structured",
+              "directives": {
+                "mode": "multi",
+                "state": "selected_ids",
+                "emits": "row_select"
+              },
+              "state": {
+                "prop": "selected_ids",
+                "requiredness": "optional",
+                "bound": false,
+                "source": null,
+                "defaultValue": []
+              },
+              "emits": [
+                {
+                  "event": "row_select",
+                  "bound": true,
+                  "bindings": [
+                    {
+                      "event": "row_select",
+                      "action": "navigate",
+                      "target": {
+                        "id": "submission_detail",
+                        "kind": "screen"
+                      }
+                    }
+                  ],
+                  "effects": [
+                    {
+                      "type": "navigation",
+                      "event": "row_select",
+                      "target": {
+                        "id": "submission_detail",
+                        "kind": "screen"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "actions": [],
+              "dataDependencies": [
+                {
+                  "prop": "rows",
+                  "source": {
+                    "id": "cap_list_submissions",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "effects": [
+                {
+                  "type": "navigation",
+                  "event": "row_select",
+                  "target": {
+                    "id": "submission_detail",
+                    "kind": "screen"
+                  }
+                }
+              ],
+              "status": "realized"
+            },
+            {
+              "kind": "sorting",
+              "source": "structured",
+              "directives": {
+                "fields": [
+                  "submitted_at",
+                  "status",
+                  "title"
+                ],
+                "default": [
+                  "submitted_at",
+                  "desc"
+                ]
+              },
+              "state": null,
+              "emits": [],
+              "actions": [],
+              "dataDependencies": [
+                {
+                  "prop": "rows",
+                  "source": {
+                    "id": "cap_list_submissions",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "effects": [],
+              "status": "realized"
+            },
+            {
+              "kind": "filtering",
+              "source": "structured",
+              "directives": {
+                "fields": [
+                  "status"
+                ]
+              },
+              "state": null,
+              "emits": [],
+              "actions": [],
+              "dataDependencies": [
+                {
+                  "prop": "rows",
+                  "source": {
+                    "id": "cap_list_submissions",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "effects": [],
+              "status": "realized"
+            },
+            {
+              "kind": "pagination",
+              "source": "structured",
+              "directives": {
+                "mode": "cursor",
+                "page_size": 25
+              },
+              "state": null,
+              "emits": [],
+              "actions": [],
+              "dataDependencies": [
+                {
+                  "prop": "rows",
+                  "source": {
+                    "id": "cap_list_submissions",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "effects": [],
+              "status": "realized"
+            },
+            {
+              "kind": "bulk_action",
+              "source": "structured",
+              "directives": {
+                "actions": [
+                  "approve_selected"
+                ],
+                "state": "selected_ids",
+                "emits": "approve_selected"
+              },
+              "state": {
+                "prop": "selected_ids",
+                "requiredness": "optional",
+                "bound": false,
+                "source": null,
+                "defaultValue": []
+              },
+              "emits": [
+                {
+                  "event": "approve_selected",
+                  "bound": true,
+                  "bindings": [
+                    {
+                      "event": "approve_selected",
+                      "action": "action",
+                      "target": {
+                        "id": "cap_bulk_approve_submissions",
+                        "kind": "capability"
+                      }
+                    }
+                  ],
+                  "effects": [
+                    {
+                      "type": "command",
+                      "event": "approve_selected",
+                      "capability": {
+                        "id": "cap_bulk_approve_submissions",
+                        "kind": "capability"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "event": "approve_selected",
+                  "bound": true,
+                  "bindings": [
+                    {
+                      "event": "approve_selected",
+                      "action": "action",
+                      "target": {
+                        "id": "cap_bulk_approve_submissions",
+                        "kind": "capability"
+                      }
+                    }
+                  ],
+                  "effects": [
+                    {
+                      "type": "command",
+                      "event": "approve_selected",
+                      "capability": {
+                        "id": "cap_bulk_approve_submissions",
+                        "kind": "capability"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "dataDependencies": [
+                {
+                  "prop": "rows",
+                  "source": {
+                    "id": "cap_list_submissions",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "effects": [
+                {
+                  "type": "command",
+                  "event": "approve_selected",
+                  "capability": {
+                    "id": "cap_bulk_approve_submissions",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "status": "realized"
+            }
+          ]
+        }
+      ],
+      "patterns": [
+        "summary_stats",
+        "resource_table"
+      ],
+      "route": "/submissions",
+      "surfaceHints": {
+        "shell": "topbar",
+        "layout": "responsive_collection",
+        "desktop_variant": "table",
+        "mobile_variant": "cards",
+        "collection": "table"
+      },
+      "actionSurfaceHints": {
+        "cap_submit_content": {
+          "present": "button",
+          "placement": "toolbar"
+        },
+        "cap_bulk_approve_submissions": {}
+      }
+    },
+    {
+      "type": "ui_screen_contract",
+      "id": "submission_detail",
+      "kind": "detail",
+      "title": "Submission Details",
+      "loadCapability": {
+        "id": "cap_get_submission",
+        "kind": "capability"
+      },
+      "submitCapability": null,
+      "detailCapability": null,
+      "inputShape": null,
+      "viewShape": {
+        "id": "shape_output_submission_detail",
+        "kind": "shape"
+      },
+      "itemShape": null,
+      "emptyState": null,
+      "navigation": {
+        "successNavigate": null,
+        "successRefresh": null
+      },
+      "states": {
+        "loading": "skeleton",
+        "empty": "auto",
+        "error": "auto",
+        "unauthorized": "auto",
+        "notFound": "auto",
+        "success": "auto"
+      },
+      "actions": {
+        "primary": {
+          "id": "cap_approve_submission",
+          "kind": "capability"
+        },
+        "secondary": {
+          "id": "cap_request_changes",
+          "kind": "capability"
+        },
+        "destructive": null,
+        "terminal": null,
+        "screen": [
+          {
+            "capability": {
+              "id": "cap_approve_submission",
+              "kind": "capability"
+            },
+            "prominence": "primary",
+            "placement": "toolbar"
+          },
+          {
+            "capability": {
+              "id": "cap_request_changes",
+              "kind": "capability"
+            },
+            "prominence": "secondary",
+            "placement": "toolbar"
+          }
+        ]
+      },
+      "collection": {
+        "filters": [],
+        "search": [],
+        "pagination": null,
+        "views": [],
+        "refresh": "manual",
+        "groupBy": [],
+        "sort": []
+      },
+      "visibility": [],
+      "lookups": [],
+      "regions": [
+        {
+          "region": "summary",
+          "pattern": "summary_stats",
+          "placement": "primary",
+          "title": null,
+          "state": null,
+          "variant": null
+        }
+      ],
+      "widgets": [
+        {
+          "type": "ui_widget_usage",
+          "region": "summary",
+          "pattern": "summary_stats",
+          "placement": "primary",
+          "widget": {
+            "id": "widget_review_actions",
+            "name": "Review Actions",
+            "category": "feedback",
+            "version": "1.0"
+          },
+          "dataBindings": [
+            {
+              "prop": "submission",
+              "source": {
+                "id": "cap_get_submission",
+                "kind": "capability"
+              }
+            }
+          ],
+          "eventBindings": [
+            {
+              "event": "approve",
+              "action": "action",
+              "target": {
+                "id": "cap_approve_submission",
+                "kind": "capability"
+              }
+            },
+            {
+              "event": "request_changes",
+              "action": "action",
+              "target": {
+                "id": "cap_request_changes",
+                "kind": "capability"
+              }
+            }
+          ],
+          "behaviorRealizations": [
+            {
+              "kind": "optimistic_update",
+              "source": "structured",
+              "directives": {
+                "actions": [
+                  "cap_approve_submission",
+                  "cap_request_changes"
+                ],
+                "rollback": "manual"
+              },
+              "state": null,
+              "emits": [],
+              "actions": [
+                {
+                  "event": null,
+                  "capability": {
+                    "id": "cap_approve_submission",
+                    "kind": "capability"
+                  },
+                  "bound": true,
+                  "bindings": [
+                    {
+                      "event": "approve",
+                      "action": "action",
+                      "target": {
+                        "id": "cap_approve_submission",
+                        "kind": "capability"
+                      }
+                    }
+                  ],
+                  "effects": [
+                    {
+                      "type": "command",
+                      "event": "approve",
+                      "capability": {
+                        "id": "cap_approve_submission",
+                        "kind": "capability"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "event": null,
+                  "capability": {
+                    "id": "cap_request_changes",
+                    "kind": "capability"
+                  },
+                  "bound": true,
+                  "bindings": [
+                    {
+                      "event": "request_changes",
+                      "action": "action",
+                      "target": {
+                        "id": "cap_request_changes",
+                        "kind": "capability"
+                      }
+                    }
+                  ],
+                  "effects": [
+                    {
+                      "type": "command",
+                      "event": "request_changes",
+                      "capability": {
+                        "id": "cap_request_changes",
+                        "kind": "capability"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "dataDependencies": [
+                {
+                  "prop": "submission",
+                  "source": {
+                    "id": "cap_get_submission",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "effects": [
+                {
+                  "type": "command",
+                  "event": "approve",
+                  "capability": {
+                    "id": "cap_approve_submission",
+                    "kind": "capability"
+                  }
+                },
+                {
+                  "type": "command",
+                  "event": "request_changes",
+                  "capability": {
+                    "id": "cap_request_changes",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "status": "realized"
+            },
+            {
+              "kind": "keyboard_navigation",
+              "source": "structured",
+              "directives": {
+                "scope": "widget",
+                "shortcuts": [
+                  "approve",
+                  "request_changes"
+                ]
+              },
+              "state": null,
+              "emits": [],
+              "actions": [],
+              "dataDependencies": [
+                {
+                  "prop": "submission",
+                  "source": {
+                    "id": "cap_get_submission",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "effects": [],
+              "status": "realized"
+            }
+          ]
+        }
+      ],
+      "patterns": [
+        "summary_stats",
+        "detail_panel"
+      ],
+      "route": "/submissions/:id",
+      "surfaceHints": {
+        "layout": "detail_page"
+      },
+      "actionSurfaceHints": {
+        "cap_approve_submission": {
+          "present": "button"
+        },
+        "cap_request_changes": {
+          "present": "button"
+        }
+      }
+    },
+    {
+      "type": "ui_screen_contract",
+      "id": "submission_create",
+      "kind": "form",
+      "title": "Submit Content",
+      "loadCapability": null,
+      "submitCapability": {
+        "id": "cap_submit_content",
+        "kind": "capability"
+      },
+      "detailCapability": null,
+      "inputShape": {
+        "id": "shape_input_submit_content",
+        "kind": "shape"
+      },
+      "viewShape": null,
+      "itemShape": null,
+      "emptyState": null,
+      "navigation": {
+        "successNavigate": "submission_detail",
+        "successRefresh": null
+      },
+      "states": {
+        "loading": "auto",
+        "empty": "auto",
+        "error": "auto",
+        "unauthorized": "auto",
+        "notFound": "auto",
+        "success": "banner"
+      },
+      "actions": {
+        "primary": null,
+        "secondary": null,
+        "destructive": null,
+        "terminal": null,
+        "screen": [
+          {
+            "capability": {
+              "id": "cap_submit_content",
+              "kind": "capability"
+            },
+            "prominence": "primary",
+            "placement": "footer"
+          }
+        ]
+      },
+      "collection": {
+        "filters": [],
+        "search": [],
+        "pagination": null,
+        "views": [],
+        "refresh": "manual",
+        "groupBy": [],
+        "sort": []
+      },
+      "visibility": [],
+      "lookups": [],
+      "regions": [
+        {
+          "region": "summary",
+          "pattern": "summary_stats",
+          "placement": "primary",
+          "title": null,
+          "state": null,
+          "variant": null
+        }
+      ],
+      "widgets": [
+        {
+          "type": "ui_widget_usage",
+          "region": "summary",
+          "pattern": "summary_stats",
+          "placement": "primary",
+          "widget": {
+            "id": "widget_submission_form",
+            "name": "Submission Form",
+            "category": "form",
+            "version": "1.0"
+          },
+          "dataBindings": [],
+          "eventBindings": [
+            {
+              "event": "submit",
+              "action": "action",
+              "target": {
+                "id": "cap_submit_content",
+                "kind": "capability"
+              }
+            }
+          ],
+          "behaviorRealizations": [
+            {
+              "kind": "optimistic_update",
+              "source": "structured",
+              "directives": {
+                "actions": [
+                  "cap_submit_content"
+                ],
+                "rollback": "manual"
+              },
+              "state": null,
+              "emits": [],
+              "actions": [
+                {
+                  "event": null,
+                  "capability": {
+                    "id": "cap_submit_content",
+                    "kind": "capability"
+                  },
+                  "bound": true,
+                  "bindings": [
+                    {
+                      "event": "submit",
+                      "action": "action",
+                      "target": {
+                        "id": "cap_submit_content",
+                        "kind": "capability"
+                      }
+                    }
+                  ],
+                  "effects": [
+                    {
+                      "type": "command",
+                      "event": "submit",
+                      "capability": {
+                        "id": "cap_submit_content",
+                        "kind": "capability"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "dataDependencies": [],
+              "effects": [
+                {
+                  "type": "command",
+                  "event": "submit",
+                  "capability": {
+                    "id": "cap_submit_content",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "status": "realized"
+            },
+            {
+              "kind": "keyboard_navigation",
+              "source": "structured",
+              "directives": {
+                "scope": "form",
+                "shortcuts": [
+                  "submit"
+                ]
+              },
+              "state": null,
+              "emits": [],
+              "actions": [],
+              "dataDependencies": [],
+              "effects": [],
+              "status": "realized"
+            }
+          ]
+        }
+      ],
+      "patterns": [
+        "summary_stats",
+        "edit_form"
+      ],
+      "route": "/submissions/new",
+      "surfaceHints": {
+        "present": "page"
+      },
+      "actionSurfaceHints": {
+        "cap_submit_content": {
+          "present": "button",
+          "placement": "toolbar"
+        }
+      }
+    }
+  ],
+  "sitemap": [
+    {
+      "screenId": "submission_queue",
+      "label": "Queue",
+      "route": "/submissions",
+      "include": true
+    },
+    {
+      "screenId": "submission_detail",
+      "label": "Submission Details",
+      "route": "/submissions/:id",
+      "include": false
+    },
+    {
+      "screenId": "submission_create",
+      "label": "Submit",
+      "route": "/submissions/new",
+      "include": true
+    }
+  ]
+}

@@ -1,0 +1,2648 @@
+{
+  "accessibility": {
+    "obligations": []
+  },
+  "accessibilityRealization": {
+    "obligations": []
+  },
+  "designTokenMapping": {
+    "css_path": "src/app.css",
+    "mapped": [
+      {
+        "category": "density",
+        "marker": "--topogram-design-density",
+        "role": null,
+        "value": "compact"
+      },
+      {
+        "category": "tone",
+        "marker": "--topogram-design-tone",
+        "role": null,
+        "value": "operational"
+      },
+      {
+        "category": "radius_scale",
+        "marker": "--topogram-design-radius-scale",
+        "role": null,
+        "value": "medium"
+      },
+      {
+        "category": "color_roles",
+        "marker": "--topogram-design-color-primary",
+        "role": "primary",
+        "value": "accent"
+      },
+      {
+        "category": "color_roles",
+        "marker": "--topogram-design-color-danger",
+        "role": "danger",
+        "value": "critical"
+      },
+      {
+        "category": "typography_roles",
+        "marker": "--topogram-design-typography-body",
+        "role": "body",
+        "value": "readable"
+      },
+      {
+        "category": "typography_roles",
+        "marker": "--topogram-design-typography-heading",
+        "role": "heading",
+        "value": "prominent"
+      },
+      {
+        "category": "action_roles",
+        "marker": "--topogram-design-action-primary",
+        "role": "primary",
+        "value": "prominent"
+      },
+      {
+        "category": "action_roles",
+        "marker": "--topogram-design-action-destructive",
+        "role": "destructive",
+        "value": "danger"
+      },
+      {
+        "category": "accessibility",
+        "marker": "--topogram-design-accessibility-contrast",
+        "role": "contrast",
+        "value": "aa"
+      },
+      {
+        "category": "accessibility",
+        "marker": "--topogram-design-accessibility-focus",
+        "role": "focus",
+        "value": "visible"
+      }
+    ],
+    "missing": [],
+    "status": "mapped",
+    "tokens": {
+      "accessibility": {
+        "contrast": "aa",
+        "focus": "visible"
+      },
+      "action_roles": {
+        "destructive": "danger",
+        "primary": "prominent"
+      },
+      "color_roles": {
+        "danger": "critical",
+        "primary": "accent"
+      },
+      "density": "compact",
+      "radius_scale": "medium",
+      "tone": "operational",
+      "typography_roles": {
+        "body": "readable",
+        "heading": "prominent"
+      }
+    }
+  },
+  "diagnostics": [],
+  "generator": "topogram/sveltekit",
+  "i18nRealization": {
+    "localePolicy": null,
+    "messages": []
+  },
+  "messages": {
+    "localePolicy": null,
+    "messages": []
+  },
+  "ownership": {
+    "accessibility": "ui_contract",
+    "concreteSurfaceOwns": [
+      "screen_routes",
+      "surface_hints"
+    ],
+    "designTokens": "ui_contract",
+    "messages": "ui_contract",
+    "widgetPlacement": "ui_contract"
+  },
+  "projection": {
+    "id": "proj_web_surface",
+    "name": "Content Approval Web UI",
+    "type": "web_surface"
+  },
+  "screens": [
+    {
+      "accessibility": [],
+      "accessibilityRealization": [],
+      "actions": {
+        "destructive": null,
+        "primary": {
+          "id": "cap_submit_content",
+          "kind": "capability"
+        },
+        "screen": [
+          {
+            "capability": {
+              "id": "cap_submit_content",
+              "kind": "capability"
+            },
+            "placement": "toolbar",
+            "prominence": "primary"
+          },
+          {
+            "capability": {
+              "id": "cap_bulk_approve_submissions",
+              "kind": "capability"
+            },
+            "placement": "toolbar",
+            "prominence": "secondary"
+          }
+        ],
+        "secondary": null,
+        "terminal": null
+      },
+      "displayFields": [
+        {
+          "label": "Id",
+          "name": "id",
+          "required": true,
+          "requiredness": "required",
+          "role": "identifier",
+          "sourceName": "id",
+          "type": "uuid"
+        },
+        {
+          "label": "Title",
+          "name": "title",
+          "required": true,
+          "requiredness": "required",
+          "role": "primary",
+          "sourceName": "title",
+          "type": "text"
+        },
+        {
+          "label": "Status",
+          "name": "status",
+          "required": true,
+          "requiredness": "required",
+          "role": "metadata",
+          "sourceName": "status",
+          "type": "text"
+        },
+        {
+          "label": "Review Priority",
+          "name": "review_priority",
+          "required": false,
+          "requiredness": "optional",
+          "role": "priority",
+          "sourceName": "review_priority",
+          "type": "text"
+        },
+        {
+          "label": "Assigned Reviewer",
+          "name": "assigned_reviewer",
+          "required": false,
+          "requiredness": "optional",
+          "role": "metadata",
+          "sourceName": "assigned_reviewer",
+          "type": "text"
+        },
+        {
+          "label": "Author Name",
+          "name": "author_name",
+          "required": true,
+          "requiredness": "required",
+          "role": "metadata",
+          "sourceName": "author_name",
+          "type": "text"
+        },
+        {
+          "label": "Submitted At",
+          "name": "submitted_at",
+          "required": true,
+          "requiredness": "required",
+          "role": "date",
+          "sourceName": "submitted_at",
+          "type": "datetime"
+        }
+      ],
+      "i18nRealization": [],
+      "id": "submission_queue",
+      "kind": "list",
+      "messages": [],
+      "regions": [
+        {
+          "pattern": "summary_stats",
+          "placement": "primary",
+          "region": "hero",
+          "state": null,
+          "title": null,
+          "variant": null
+        },
+        {
+          "pattern": "resource_table",
+          "placement": "primary",
+          "region": "results",
+          "state": null,
+          "title": null,
+          "variant": null
+        }
+      ],
+      "route": "/submissions",
+      "title": "Review Queue",
+      "visibility": [],
+      "widgets": [
+        {
+          "accessibility": [],
+          "accessibilityRealization": [],
+          "behaviorRealizations": [
+            {
+              "actions": [],
+              "dataDependencies": [
+                {
+                  "prop": "rows",
+                  "source": {
+                    "id": "cap_list_submissions",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "directives": {
+                "fields": [
+                  "status"
+                ]
+              },
+              "effects": [],
+              "emits": [],
+              "kind": "grouping",
+              "source": "structured",
+              "state": null,
+              "status": "realized"
+            }
+          ],
+          "display": {
+            "diagnostics": [],
+            "fields": [
+              {
+                "label": "Id",
+                "name": "id",
+                "required": true,
+                "requiredness": "required",
+                "role": "identifier",
+                "sourceName": "id",
+                "type": "uuid"
+              },
+              {
+                "label": "Title",
+                "name": "title",
+                "required": true,
+                "requiredness": "required",
+                "role": "primary",
+                "sourceName": "title",
+                "type": "text"
+              },
+              {
+                "label": "Status",
+                "name": "status",
+                "required": true,
+                "requiredness": "required",
+                "role": "metadata",
+                "sourceName": "status",
+                "type": "text"
+              },
+              {
+                "label": "Review Priority",
+                "name": "review_priority",
+                "required": false,
+                "requiredness": "optional",
+                "role": "priority",
+                "sourceName": "review_priority",
+                "type": "text"
+              },
+              {
+                "label": "Assigned Reviewer",
+                "name": "assigned_reviewer",
+                "required": false,
+                "requiredness": "optional",
+                "role": "metadata",
+                "sourceName": "assigned_reviewer",
+                "type": "text"
+              },
+              {
+                "label": "Author Name",
+                "name": "author_name",
+                "required": true,
+                "requiredness": "required",
+                "role": "metadata",
+                "sourceName": "author_name",
+                "type": "text"
+              },
+              {
+                "label": "Submitted At",
+                "name": "submitted_at",
+                "required": true,
+                "requiredness": "required",
+                "role": "date",
+                "sourceName": "submitted_at",
+                "type": "datetime"
+              }
+            ],
+            "prop": "rows",
+            "source": {
+              "id": "cap_list_submissions",
+              "kind": "capability"
+            },
+            "sourceShape": {
+              "id": "shape_output_submission_card",
+              "kind": "shape"
+            }
+          },
+          "displayFields": [
+            {
+              "label": "Id",
+              "name": "id",
+              "required": true,
+              "requiredness": "required",
+              "role": "identifier",
+              "sourceName": "id",
+              "type": "uuid"
+            },
+            {
+              "label": "Title",
+              "name": "title",
+              "required": true,
+              "requiredness": "required",
+              "role": "primary",
+              "sourceName": "title",
+              "type": "text"
+            },
+            {
+              "label": "Status",
+              "name": "status",
+              "required": true,
+              "requiredness": "required",
+              "role": "metadata",
+              "sourceName": "status",
+              "type": "text"
+            },
+            {
+              "label": "Review Priority",
+              "name": "review_priority",
+              "required": false,
+              "requiredness": "optional",
+              "role": "priority",
+              "sourceName": "review_priority",
+              "type": "text"
+            },
+            {
+              "label": "Assigned Reviewer",
+              "name": "assigned_reviewer",
+              "required": false,
+              "requiredness": "optional",
+              "role": "metadata",
+              "sourceName": "assigned_reviewer",
+              "type": "text"
+            },
+            {
+              "label": "Author Name",
+              "name": "author_name",
+              "required": true,
+              "requiredness": "required",
+              "role": "metadata",
+              "sourceName": "author_name",
+              "type": "text"
+            },
+            {
+              "label": "Submitted At",
+              "name": "submitted_at",
+              "required": true,
+              "requiredness": "required",
+              "role": "date",
+              "sourceName": "submitted_at",
+              "type": "datetime"
+            }
+          ],
+          "i18nRealization": [],
+          "messages": [],
+          "pattern": "summary_stats",
+          "region": "hero",
+          "requiredMarkers": {
+            "displayField": "data-topogram-display-field",
+            "region": "data-topogram-region=\"hero\"",
+            "screen": "data-topogram-screen=\"submission_queue\"",
+            "widget": "data-topogram-widget=\"widget_submission_summary\""
+          },
+          "route": "/submissions",
+          "screen": "submission_queue",
+          "status": "rendered",
+          "supported": true,
+          "widget": "widget_submission_summary"
+        },
+        {
+          "accessibility": [],
+          "accessibilityRealization": [],
+          "behaviorRealizations": [
+            {
+              "actions": [],
+              "dataDependencies": [
+                {
+                  "prop": "rows",
+                  "source": {
+                    "id": "cap_list_submissions",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "directives": {
+                "emits": "row_select",
+                "mode": "multi",
+                "state": "selected_ids"
+              },
+              "effects": [
+                {
+                  "event": "row_select",
+                  "target": {
+                    "id": "submission_detail",
+                    "kind": "screen"
+                  },
+                  "type": "navigation"
+                }
+              ],
+              "emits": [
+                {
+                  "bindings": [
+                    {
+                      "action": "navigate",
+                      "event": "row_select",
+                      "target": {
+                        "id": "submission_detail",
+                        "kind": "screen"
+                      }
+                    }
+                  ],
+                  "bound": true,
+                  "effects": [
+                    {
+                      "event": "row_select",
+                      "target": {
+                        "id": "submission_detail",
+                        "kind": "screen"
+                      },
+                      "type": "navigation"
+                    }
+                  ],
+                  "event": "row_select"
+                }
+              ],
+              "kind": "selection",
+              "source": "structured",
+              "state": {
+                "bound": false,
+                "defaultValue": [],
+                "prop": "selected_ids",
+                "requiredness": "optional",
+                "source": null
+              },
+              "status": "realized"
+            },
+            {
+              "actions": [],
+              "dataDependencies": [
+                {
+                  "prop": "rows",
+                  "source": {
+                    "id": "cap_list_submissions",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "directives": {
+                "default": [
+                  "submitted_at",
+                  "desc"
+                ],
+                "fields": [
+                  "submitted_at",
+                  "status",
+                  "title"
+                ]
+              },
+              "effects": [],
+              "emits": [],
+              "kind": "sorting",
+              "source": "structured",
+              "state": null,
+              "status": "realized"
+            },
+            {
+              "actions": [],
+              "dataDependencies": [
+                {
+                  "prop": "rows",
+                  "source": {
+                    "id": "cap_list_submissions",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "directives": {
+                "fields": [
+                  "status"
+                ]
+              },
+              "effects": [],
+              "emits": [],
+              "kind": "filtering",
+              "source": "structured",
+              "state": null,
+              "status": "realized"
+            },
+            {
+              "actions": [],
+              "dataDependencies": [
+                {
+                  "prop": "rows",
+                  "source": {
+                    "id": "cap_list_submissions",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "directives": {
+                "mode": "cursor",
+                "page_size": 25
+              },
+              "effects": [],
+              "emits": [],
+              "kind": "pagination",
+              "source": "structured",
+              "state": null,
+              "status": "realized"
+            },
+            {
+              "actions": [
+                {
+                  "bindings": [
+                    {
+                      "action": "action",
+                      "event": "approve_selected",
+                      "target": {
+                        "id": "cap_bulk_approve_submissions",
+                        "kind": "capability"
+                      }
+                    }
+                  ],
+                  "bound": true,
+                  "effects": [
+                    {
+                      "capability": {
+                        "id": "cap_bulk_approve_submissions",
+                        "kind": "capability"
+                      },
+                      "event": "approve_selected",
+                      "type": "command"
+                    }
+                  ],
+                  "event": "approve_selected"
+                }
+              ],
+              "dataDependencies": [
+                {
+                  "prop": "rows",
+                  "source": {
+                    "id": "cap_list_submissions",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "directives": {
+                "actions": [
+                  "approve_selected"
+                ],
+                "emits": "approve_selected",
+                "state": "selected_ids"
+              },
+              "effects": [
+                {
+                  "capability": {
+                    "id": "cap_bulk_approve_submissions",
+                    "kind": "capability"
+                  },
+                  "event": "approve_selected",
+                  "type": "command"
+                }
+              ],
+              "emits": [
+                {
+                  "bindings": [
+                    {
+                      "action": "action",
+                      "event": "approve_selected",
+                      "target": {
+                        "id": "cap_bulk_approve_submissions",
+                        "kind": "capability"
+                      }
+                    }
+                  ],
+                  "bound": true,
+                  "effects": [
+                    {
+                      "capability": {
+                        "id": "cap_bulk_approve_submissions",
+                        "kind": "capability"
+                      },
+                      "event": "approve_selected",
+                      "type": "command"
+                    }
+                  ],
+                  "event": "approve_selected"
+                }
+              ],
+              "kind": "bulk_action",
+              "source": "structured",
+              "state": {
+                "bound": false,
+                "defaultValue": [],
+                "prop": "selected_ids",
+                "requiredness": "optional",
+                "source": null
+              },
+              "status": "realized"
+            }
+          ],
+          "display": {
+            "diagnostics": [],
+            "fields": [
+              {
+                "label": "Id",
+                "name": "id",
+                "required": true,
+                "requiredness": "required",
+                "role": "identifier",
+                "sourceName": "id",
+                "type": "uuid"
+              },
+              {
+                "label": "Title",
+                "name": "title",
+                "required": true,
+                "requiredness": "required",
+                "role": "primary",
+                "sourceName": "title",
+                "type": "text"
+              },
+              {
+                "label": "Status",
+                "name": "status",
+                "required": true,
+                "requiredness": "required",
+                "role": "metadata",
+                "sourceName": "status",
+                "type": "text"
+              },
+              {
+                "label": "Review Priority",
+                "name": "review_priority",
+                "required": false,
+                "requiredness": "optional",
+                "role": "priority",
+                "sourceName": "review_priority",
+                "type": "text"
+              },
+              {
+                "label": "Assigned Reviewer",
+                "name": "assigned_reviewer",
+                "required": false,
+                "requiredness": "optional",
+                "role": "metadata",
+                "sourceName": "assigned_reviewer",
+                "type": "text"
+              },
+              {
+                "label": "Author Name",
+                "name": "author_name",
+                "required": true,
+                "requiredness": "required",
+                "role": "metadata",
+                "sourceName": "author_name",
+                "type": "text"
+              },
+              {
+                "label": "Submitted At",
+                "name": "submitted_at",
+                "required": true,
+                "requiredness": "required",
+                "role": "date",
+                "sourceName": "submitted_at",
+                "type": "datetime"
+              }
+            ],
+            "prop": "rows",
+            "source": {
+              "id": "cap_list_submissions",
+              "kind": "capability"
+            },
+            "sourceShape": {
+              "id": "shape_output_submission_card",
+              "kind": "shape"
+            }
+          },
+          "displayFields": [
+            {
+              "label": "Id",
+              "name": "id",
+              "required": true,
+              "requiredness": "required",
+              "role": "identifier",
+              "sourceName": "id",
+              "type": "uuid"
+            },
+            {
+              "label": "Title",
+              "name": "title",
+              "required": true,
+              "requiredness": "required",
+              "role": "primary",
+              "sourceName": "title",
+              "type": "text"
+            },
+            {
+              "label": "Status",
+              "name": "status",
+              "required": true,
+              "requiredness": "required",
+              "role": "metadata",
+              "sourceName": "status",
+              "type": "text"
+            },
+            {
+              "label": "Review Priority",
+              "name": "review_priority",
+              "required": false,
+              "requiredness": "optional",
+              "role": "priority",
+              "sourceName": "review_priority",
+              "type": "text"
+            },
+            {
+              "label": "Assigned Reviewer",
+              "name": "assigned_reviewer",
+              "required": false,
+              "requiredness": "optional",
+              "role": "metadata",
+              "sourceName": "assigned_reviewer",
+              "type": "text"
+            },
+            {
+              "label": "Author Name",
+              "name": "author_name",
+              "required": true,
+              "requiredness": "required",
+              "role": "metadata",
+              "sourceName": "author_name",
+              "type": "text"
+            },
+            {
+              "label": "Submitted At",
+              "name": "submitted_at",
+              "required": true,
+              "requiredness": "required",
+              "role": "date",
+              "sourceName": "submitted_at",
+              "type": "datetime"
+            }
+          ],
+          "i18nRealization": [],
+          "messages": [],
+          "pattern": "resource_table",
+          "region": "results",
+          "requiredMarkers": {
+            "displayField": "data-topogram-display-field",
+            "region": "data-topogram-region=\"results\"",
+            "screen": "data-topogram-screen=\"submission_queue\"",
+            "widget": "data-topogram-widget=\"widget_submission_queue\""
+          },
+          "route": "/submissions",
+          "screen": "submission_queue",
+          "status": "rendered",
+          "supported": true,
+          "widget": "widget_submission_queue"
+        }
+      ]
+    },
+    {
+      "accessibility": [],
+      "accessibilityRealization": [],
+      "actions": {
+        "destructive": null,
+        "primary": {
+          "id": "cap_approve_submission",
+          "kind": "capability"
+        },
+        "screen": [
+          {
+            "capability": {
+              "id": "cap_approve_submission",
+              "kind": "capability"
+            },
+            "placement": "toolbar",
+            "prominence": "primary"
+          },
+          {
+            "capability": {
+              "id": "cap_request_changes",
+              "kind": "capability"
+            },
+            "placement": "toolbar",
+            "prominence": "secondary"
+          }
+        ],
+        "secondary": {
+          "id": "cap_request_changes",
+          "kind": "capability"
+        },
+        "terminal": null
+      },
+      "displayFields": [
+        {
+          "label": "Id",
+          "name": "id",
+          "required": true,
+          "requiredness": "required",
+          "role": "identifier",
+          "sourceName": "id",
+          "type": "uuid"
+        },
+        {
+          "label": "Title",
+          "name": "title",
+          "required": true,
+          "requiredness": "required",
+          "role": "primary",
+          "sourceName": "title",
+          "type": "text"
+        },
+        {
+          "label": "Body",
+          "name": "body",
+          "required": true,
+          "requiredness": "required",
+          "role": "metadata",
+          "sourceName": "body",
+          "type": "text"
+        },
+        {
+          "label": "Status",
+          "name": "status",
+          "required": true,
+          "requiredness": "required",
+          "role": "metadata",
+          "sourceName": "status",
+          "type": "text"
+        },
+        {
+          "label": "Review Priority",
+          "name": "review_priority",
+          "required": false,
+          "requiredness": "optional",
+          "role": "priority",
+          "sourceName": "review_priority",
+          "type": "text"
+        },
+        {
+          "label": "Assigned Reviewer",
+          "name": "assigned_reviewer",
+          "required": false,
+          "requiredness": "optional",
+          "role": "metadata",
+          "sourceName": "assigned_reviewer",
+          "type": "text"
+        },
+        {
+          "label": "Author Name",
+          "name": "author_name",
+          "required": true,
+          "requiredness": "required",
+          "role": "metadata",
+          "sourceName": "author_name",
+          "type": "text"
+        },
+        {
+          "label": "Submitted At",
+          "name": "submitted_at",
+          "required": true,
+          "requiredness": "required",
+          "role": "date",
+          "sourceName": "submitted_at",
+          "type": "datetime"
+        },
+        {
+          "label": "Reviewed At",
+          "name": "reviewed_at",
+          "required": false,
+          "requiredness": "optional",
+          "role": "date",
+          "sourceName": "reviewed_at",
+          "type": "datetime"
+        },
+        {
+          "label": "Reviewer Note",
+          "name": "reviewer_note",
+          "required": false,
+          "requiredness": "optional",
+          "role": "metadata",
+          "sourceName": "reviewer_note",
+          "type": "text"
+        }
+      ],
+      "i18nRealization": [],
+      "id": "submission_detail",
+      "kind": "detail",
+      "messages": [],
+      "regions": [
+        {
+          "pattern": "summary_stats",
+          "placement": "primary",
+          "region": "summary",
+          "state": null,
+          "title": null,
+          "variant": null
+        }
+      ],
+      "route": "/submissions/:id",
+      "title": "Submission Details",
+      "visibility": [],
+      "widgets": [
+        {
+          "accessibility": [],
+          "accessibilityRealization": [],
+          "behaviorRealizations": [
+            {
+              "actions": [
+                {
+                  "bindings": [
+                    {
+                      "action": "action",
+                      "event": "approve",
+                      "target": {
+                        "id": "cap_approve_submission",
+                        "kind": "capability"
+                      }
+                    }
+                  ],
+                  "bound": true,
+                  "capability": {
+                    "id": "cap_approve_submission",
+                    "kind": "capability"
+                  },
+                  "effects": [
+                    {
+                      "capability": {
+                        "id": "cap_approve_submission",
+                        "kind": "capability"
+                      },
+                      "event": "approve",
+                      "type": "command"
+                    }
+                  ],
+                  "event": null
+                },
+                {
+                  "bindings": [
+                    {
+                      "action": "action",
+                      "event": "request_changes",
+                      "target": {
+                        "id": "cap_request_changes",
+                        "kind": "capability"
+                      }
+                    }
+                  ],
+                  "bound": true,
+                  "capability": {
+                    "id": "cap_request_changes",
+                    "kind": "capability"
+                  },
+                  "effects": [
+                    {
+                      "capability": {
+                        "id": "cap_request_changes",
+                        "kind": "capability"
+                      },
+                      "event": "request_changes",
+                      "type": "command"
+                    }
+                  ],
+                  "event": null
+                }
+              ],
+              "dataDependencies": [
+                {
+                  "prop": "submission",
+                  "source": {
+                    "id": "cap_get_submission",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "directives": {
+                "actions": [
+                  "cap_approve_submission",
+                  "cap_request_changes"
+                ],
+                "rollback": "manual"
+              },
+              "effects": [
+                {
+                  "capability": {
+                    "id": "cap_approve_submission",
+                    "kind": "capability"
+                  },
+                  "event": "approve",
+                  "type": "command"
+                },
+                {
+                  "capability": {
+                    "id": "cap_request_changes",
+                    "kind": "capability"
+                  },
+                  "event": "request_changes",
+                  "type": "command"
+                }
+              ],
+              "emits": [],
+              "kind": "optimistic_update",
+              "source": "structured",
+              "state": null,
+              "status": "realized"
+            },
+            {
+              "actions": [],
+              "dataDependencies": [
+                {
+                  "prop": "submission",
+                  "source": {
+                    "id": "cap_get_submission",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "directives": {
+                "scope": "widget",
+                "shortcuts": [
+                  "approve",
+                  "request_changes"
+                ]
+              },
+              "effects": [],
+              "emits": [],
+              "kind": "keyboard_navigation",
+              "source": "structured",
+              "state": null,
+              "status": "realized"
+            }
+          ],
+          "display": {
+            "diagnostics": [],
+            "fields": [
+              {
+                "label": "Id",
+                "name": "id",
+                "required": true,
+                "requiredness": "required",
+                "role": "identifier",
+                "sourceName": "id",
+                "type": "uuid"
+              },
+              {
+                "label": "Title",
+                "name": "title",
+                "required": true,
+                "requiredness": "required",
+                "role": "primary",
+                "sourceName": "title",
+                "type": "text"
+              },
+              {
+                "label": "Body",
+                "name": "body",
+                "required": true,
+                "requiredness": "required",
+                "role": "metadata",
+                "sourceName": "body",
+                "type": "text"
+              },
+              {
+                "label": "Status",
+                "name": "status",
+                "required": true,
+                "requiredness": "required",
+                "role": "metadata",
+                "sourceName": "status",
+                "type": "text"
+              },
+              {
+                "label": "Review Priority",
+                "name": "review_priority",
+                "required": false,
+                "requiredness": "optional",
+                "role": "priority",
+                "sourceName": "review_priority",
+                "type": "text"
+              },
+              {
+                "label": "Assigned Reviewer",
+                "name": "assigned_reviewer",
+                "required": false,
+                "requiredness": "optional",
+                "role": "metadata",
+                "sourceName": "assigned_reviewer",
+                "type": "text"
+              },
+              {
+                "label": "Author Name",
+                "name": "author_name",
+                "required": true,
+                "requiredness": "required",
+                "role": "metadata",
+                "sourceName": "author_name",
+                "type": "text"
+              },
+              {
+                "label": "Submitted At",
+                "name": "submitted_at",
+                "required": true,
+                "requiredness": "required",
+                "role": "date",
+                "sourceName": "submitted_at",
+                "type": "datetime"
+              },
+              {
+                "label": "Reviewed At",
+                "name": "reviewed_at",
+                "required": false,
+                "requiredness": "optional",
+                "role": "date",
+                "sourceName": "reviewed_at",
+                "type": "datetime"
+              },
+              {
+                "label": "Reviewer Note",
+                "name": "reviewer_note",
+                "required": false,
+                "requiredness": "optional",
+                "role": "metadata",
+                "sourceName": "reviewer_note",
+                "type": "text"
+              }
+            ],
+            "prop": "submission",
+            "source": {
+              "id": "cap_get_submission",
+              "kind": "capability"
+            },
+            "sourceShape": {
+              "id": "shape_output_submission_detail",
+              "kind": "shape"
+            }
+          },
+          "displayFields": [
+            {
+              "label": "Id",
+              "name": "id",
+              "required": true,
+              "requiredness": "required",
+              "role": "identifier",
+              "sourceName": "id",
+              "type": "uuid"
+            },
+            {
+              "label": "Title",
+              "name": "title",
+              "required": true,
+              "requiredness": "required",
+              "role": "primary",
+              "sourceName": "title",
+              "type": "text"
+            },
+            {
+              "label": "Body",
+              "name": "body",
+              "required": true,
+              "requiredness": "required",
+              "role": "metadata",
+              "sourceName": "body",
+              "type": "text"
+            },
+            {
+              "label": "Status",
+              "name": "status",
+              "required": true,
+              "requiredness": "required",
+              "role": "metadata",
+              "sourceName": "status",
+              "type": "text"
+            },
+            {
+              "label": "Review Priority",
+              "name": "review_priority",
+              "required": false,
+              "requiredness": "optional",
+              "role": "priority",
+              "sourceName": "review_priority",
+              "type": "text"
+            },
+            {
+              "label": "Assigned Reviewer",
+              "name": "assigned_reviewer",
+              "required": false,
+              "requiredness": "optional",
+              "role": "metadata",
+              "sourceName": "assigned_reviewer",
+              "type": "text"
+            },
+            {
+              "label": "Author Name",
+              "name": "author_name",
+              "required": true,
+              "requiredness": "required",
+              "role": "metadata",
+              "sourceName": "author_name",
+              "type": "text"
+            },
+            {
+              "label": "Submitted At",
+              "name": "submitted_at",
+              "required": true,
+              "requiredness": "required",
+              "role": "date",
+              "sourceName": "submitted_at",
+              "type": "datetime"
+            },
+            {
+              "label": "Reviewed At",
+              "name": "reviewed_at",
+              "required": false,
+              "requiredness": "optional",
+              "role": "date",
+              "sourceName": "reviewed_at",
+              "type": "datetime"
+            },
+            {
+              "label": "Reviewer Note",
+              "name": "reviewer_note",
+              "required": false,
+              "requiredness": "optional",
+              "role": "metadata",
+              "sourceName": "reviewer_note",
+              "type": "text"
+            }
+          ],
+          "i18nRealization": [],
+          "messages": [],
+          "pattern": "summary_stats",
+          "region": "summary",
+          "requiredMarkers": {
+            "displayField": "data-topogram-display-field",
+            "region": "data-topogram-region=\"summary\"",
+            "screen": "data-topogram-screen=\"submission_detail\"",
+            "widget": "data-topogram-widget=\"widget_review_actions\""
+          },
+          "route": "/submissions/:id",
+          "screen": "submission_detail",
+          "status": "rendered",
+          "supported": true,
+          "widget": "widget_review_actions"
+        }
+      ]
+    },
+    {
+      "accessibility": [],
+      "accessibilityRealization": [],
+      "actions": {
+        "destructive": null,
+        "primary": null,
+        "screen": [
+          {
+            "capability": {
+              "id": "cap_submit_content",
+              "kind": "capability"
+            },
+            "placement": "footer",
+            "prominence": "primary"
+          }
+        ],
+        "secondary": null,
+        "terminal": null
+      },
+      "displayFields": [
+        {
+          "label": "Title",
+          "name": "title",
+          "required": true,
+          "requiredness": "required",
+          "role": "primary",
+          "sourceName": "title",
+          "type": "text"
+        },
+        {
+          "label": "Body",
+          "name": "body",
+          "required": true,
+          "requiredness": "required",
+          "role": "metadata",
+          "sourceName": "body",
+          "type": "text"
+        },
+        {
+          "label": "Author Name",
+          "name": "author_name",
+          "required": true,
+          "requiredness": "required",
+          "role": "metadata",
+          "sourceName": "author_name",
+          "type": "text"
+        }
+      ],
+      "i18nRealization": [],
+      "id": "submission_create",
+      "kind": "form",
+      "messages": [],
+      "regions": [
+        {
+          "pattern": "summary_stats",
+          "placement": "primary",
+          "region": "summary",
+          "state": null,
+          "title": null,
+          "variant": null
+        }
+      ],
+      "route": "/submissions/new",
+      "title": "Submit Content",
+      "visibility": [],
+      "widgets": [
+        {
+          "accessibility": [],
+          "accessibilityRealization": [],
+          "behaviorRealizations": [
+            {
+              "actions": [
+                {
+                  "bindings": [
+                    {
+                      "action": "action",
+                      "event": "submit",
+                      "target": {
+                        "id": "cap_submit_content",
+                        "kind": "capability"
+                      }
+                    }
+                  ],
+                  "bound": true,
+                  "capability": {
+                    "id": "cap_submit_content",
+                    "kind": "capability"
+                  },
+                  "effects": [
+                    {
+                      "capability": {
+                        "id": "cap_submit_content",
+                        "kind": "capability"
+                      },
+                      "event": "submit",
+                      "type": "command"
+                    }
+                  ],
+                  "event": null
+                }
+              ],
+              "dataDependencies": [],
+              "directives": {
+                "actions": [
+                  "cap_submit_content"
+                ],
+                "rollback": "manual"
+              },
+              "effects": [
+                {
+                  "capability": {
+                    "id": "cap_submit_content",
+                    "kind": "capability"
+                  },
+                  "event": "submit",
+                  "type": "command"
+                }
+              ],
+              "emits": [],
+              "kind": "optimistic_update",
+              "source": "structured",
+              "state": null,
+              "status": "realized"
+            },
+            {
+              "actions": [],
+              "dataDependencies": [],
+              "directives": {
+                "scope": "form",
+                "shortcuts": [
+                  "submit"
+                ]
+              },
+              "effects": [],
+              "emits": [],
+              "kind": "keyboard_navigation",
+              "source": "structured",
+              "state": null,
+              "status": "realized"
+            }
+          ],
+          "display": {
+            "diagnostics": [],
+            "fields": [
+              {
+                "label": "Title",
+                "name": "title",
+                "required": true,
+                "requiredness": "required",
+                "role": "primary",
+                "sourceName": "title",
+                "type": "text"
+              },
+              {
+                "label": "Body",
+                "name": "body",
+                "required": true,
+                "requiredness": "required",
+                "role": "metadata",
+                "sourceName": "body",
+                "type": "text"
+              },
+              {
+                "label": "Author Name",
+                "name": "author_name",
+                "required": true,
+                "requiredness": "required",
+                "role": "metadata",
+                "sourceName": "author_name",
+                "type": "text"
+              }
+            ],
+            "prop": null,
+            "source": {
+              "id": null,
+              "kind": null
+            },
+            "sourceShape": {
+              "id": "shape_input_submit_content",
+              "kind": "shape"
+            }
+          },
+          "displayFields": [
+            {
+              "label": "Title",
+              "name": "title",
+              "required": true,
+              "requiredness": "required",
+              "role": "primary",
+              "sourceName": "title",
+              "type": "text"
+            },
+            {
+              "label": "Body",
+              "name": "body",
+              "required": true,
+              "requiredness": "required",
+              "role": "metadata",
+              "sourceName": "body",
+              "type": "text"
+            },
+            {
+              "label": "Author Name",
+              "name": "author_name",
+              "required": true,
+              "requiredness": "required",
+              "role": "metadata",
+              "sourceName": "author_name",
+              "type": "text"
+            }
+          ],
+          "i18nRealization": [],
+          "messages": [],
+          "pattern": "summary_stats",
+          "region": "summary",
+          "requiredMarkers": {
+            "displayField": "data-topogram-display-field",
+            "region": "data-topogram-region=\"summary\"",
+            "screen": "data-topogram-screen=\"submission_create\"",
+            "widget": "data-topogram-widget=\"widget_submission_form\""
+          },
+          "route": "/submissions/new",
+          "screen": "submission_create",
+          "status": "rendered",
+          "supported": true,
+          "widget": "widget_submission_form"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "accessibility_obligations": 0,
+    "contract_only": 0,
+    "contract_only_accessibility_obligations": 0,
+    "diagnostics": 0,
+    "errors": 0,
+    "failed": 0,
+    "i18n_messages": 0,
+    "rendered": 4,
+    "rendered_accessibility_obligations": 0,
+    "rendered_i18n_messages": 0,
+    "routed_screens": 3,
+    "screens": 3,
+    "unsupported": 0,
+    "warnings": 0,
+    "widget_usages": 4
+  },
+  "surface": "web",
+  "type": "ui_realization_report",
+  "uiContract": {
+    "id": "proj_ui_contract",
+    "name": "Content Approval UI Contract",
+    "type": "ui_contract"
+  },
+  "version": 1,
+  "widgetUsages": [
+    {
+      "accessibility": [],
+      "accessibilityRealization": [],
+      "behaviorRealizations": [
+        {
+          "actions": [],
+          "dataDependencies": [
+            {
+              "prop": "rows",
+              "source": {
+                "id": "cap_list_submissions",
+                "kind": "capability"
+              }
+            }
+          ],
+          "directives": {
+            "fields": [
+              "status"
+            ]
+          },
+          "effects": [],
+          "emits": [],
+          "kind": "grouping",
+          "source": "structured",
+          "state": null,
+          "status": "realized"
+        }
+      ],
+      "display": {
+        "diagnostics": [],
+        "fields": [
+          {
+            "label": "Id",
+            "name": "id",
+            "required": true,
+            "requiredness": "required",
+            "role": "identifier",
+            "sourceName": "id",
+            "type": "uuid"
+          },
+          {
+            "label": "Title",
+            "name": "title",
+            "required": true,
+            "requiredness": "required",
+            "role": "primary",
+            "sourceName": "title",
+            "type": "text"
+          },
+          {
+            "label": "Status",
+            "name": "status",
+            "required": true,
+            "requiredness": "required",
+            "role": "metadata",
+            "sourceName": "status",
+            "type": "text"
+          },
+          {
+            "label": "Review Priority",
+            "name": "review_priority",
+            "required": false,
+            "requiredness": "optional",
+            "role": "priority",
+            "sourceName": "review_priority",
+            "type": "text"
+          },
+          {
+            "label": "Assigned Reviewer",
+            "name": "assigned_reviewer",
+            "required": false,
+            "requiredness": "optional",
+            "role": "metadata",
+            "sourceName": "assigned_reviewer",
+            "type": "text"
+          },
+          {
+            "label": "Author Name",
+            "name": "author_name",
+            "required": true,
+            "requiredness": "required",
+            "role": "metadata",
+            "sourceName": "author_name",
+            "type": "text"
+          },
+          {
+            "label": "Submitted At",
+            "name": "submitted_at",
+            "required": true,
+            "requiredness": "required",
+            "role": "date",
+            "sourceName": "submitted_at",
+            "type": "datetime"
+          }
+        ],
+        "prop": "rows",
+        "source": {
+          "id": "cap_list_submissions",
+          "kind": "capability"
+        },
+        "sourceShape": {
+          "id": "shape_output_submission_card",
+          "kind": "shape"
+        }
+      },
+      "displayFields": [
+        {
+          "label": "Id",
+          "name": "id",
+          "required": true,
+          "requiredness": "required",
+          "role": "identifier",
+          "sourceName": "id",
+          "type": "uuid"
+        },
+        {
+          "label": "Title",
+          "name": "title",
+          "required": true,
+          "requiredness": "required",
+          "role": "primary",
+          "sourceName": "title",
+          "type": "text"
+        },
+        {
+          "label": "Status",
+          "name": "status",
+          "required": true,
+          "requiredness": "required",
+          "role": "metadata",
+          "sourceName": "status",
+          "type": "text"
+        },
+        {
+          "label": "Review Priority",
+          "name": "review_priority",
+          "required": false,
+          "requiredness": "optional",
+          "role": "priority",
+          "sourceName": "review_priority",
+          "type": "text"
+        },
+        {
+          "label": "Assigned Reviewer",
+          "name": "assigned_reviewer",
+          "required": false,
+          "requiredness": "optional",
+          "role": "metadata",
+          "sourceName": "assigned_reviewer",
+          "type": "text"
+        },
+        {
+          "label": "Author Name",
+          "name": "author_name",
+          "required": true,
+          "requiredness": "required",
+          "role": "metadata",
+          "sourceName": "author_name",
+          "type": "text"
+        },
+        {
+          "label": "Submitted At",
+          "name": "submitted_at",
+          "required": true,
+          "requiredness": "required",
+          "role": "date",
+          "sourceName": "submitted_at",
+          "type": "datetime"
+        }
+      ],
+      "i18nRealization": [],
+      "messages": [],
+      "pattern": "summary_stats",
+      "region": "hero",
+      "requiredMarkers": {
+        "displayField": "data-topogram-display-field",
+        "region": "data-topogram-region=\"hero\"",
+        "screen": "data-topogram-screen=\"submission_queue\"",
+        "widget": "data-topogram-widget=\"widget_submission_summary\""
+      },
+      "route": "/submissions",
+      "screen": "submission_queue",
+      "status": "rendered",
+      "supported": true,
+      "widget": "widget_submission_summary"
+    },
+    {
+      "accessibility": [],
+      "accessibilityRealization": [],
+      "behaviorRealizations": [
+        {
+          "actions": [],
+          "dataDependencies": [
+            {
+              "prop": "rows",
+              "source": {
+                "id": "cap_list_submissions",
+                "kind": "capability"
+              }
+            }
+          ],
+          "directives": {
+            "emits": "row_select",
+            "mode": "multi",
+            "state": "selected_ids"
+          },
+          "effects": [
+            {
+              "event": "row_select",
+              "target": {
+                "id": "submission_detail",
+                "kind": "screen"
+              },
+              "type": "navigation"
+            }
+          ],
+          "emits": [
+            {
+              "bindings": [
+                {
+                  "action": "navigate",
+                  "event": "row_select",
+                  "target": {
+                    "id": "submission_detail",
+                    "kind": "screen"
+                  }
+                }
+              ],
+              "bound": true,
+              "effects": [
+                {
+                  "event": "row_select",
+                  "target": {
+                    "id": "submission_detail",
+                    "kind": "screen"
+                  },
+                  "type": "navigation"
+                }
+              ],
+              "event": "row_select"
+            }
+          ],
+          "kind": "selection",
+          "source": "structured",
+          "state": {
+            "bound": false,
+            "defaultValue": [],
+            "prop": "selected_ids",
+            "requiredness": "optional",
+            "source": null
+          },
+          "status": "realized"
+        },
+        {
+          "actions": [],
+          "dataDependencies": [
+            {
+              "prop": "rows",
+              "source": {
+                "id": "cap_list_submissions",
+                "kind": "capability"
+              }
+            }
+          ],
+          "directives": {
+            "default": [
+              "submitted_at",
+              "desc"
+            ],
+            "fields": [
+              "submitted_at",
+              "status",
+              "title"
+            ]
+          },
+          "effects": [],
+          "emits": [],
+          "kind": "sorting",
+          "source": "structured",
+          "state": null,
+          "status": "realized"
+        },
+        {
+          "actions": [],
+          "dataDependencies": [
+            {
+              "prop": "rows",
+              "source": {
+                "id": "cap_list_submissions",
+                "kind": "capability"
+              }
+            }
+          ],
+          "directives": {
+            "fields": [
+              "status"
+            ]
+          },
+          "effects": [],
+          "emits": [],
+          "kind": "filtering",
+          "source": "structured",
+          "state": null,
+          "status": "realized"
+        },
+        {
+          "actions": [],
+          "dataDependencies": [
+            {
+              "prop": "rows",
+              "source": {
+                "id": "cap_list_submissions",
+                "kind": "capability"
+              }
+            }
+          ],
+          "directives": {
+            "mode": "cursor",
+            "page_size": 25
+          },
+          "effects": [],
+          "emits": [],
+          "kind": "pagination",
+          "source": "structured",
+          "state": null,
+          "status": "realized"
+        },
+        {
+          "actions": [
+            {
+              "bindings": [
+                {
+                  "action": "action",
+                  "event": "approve_selected",
+                  "target": {
+                    "id": "cap_bulk_approve_submissions",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "bound": true,
+              "effects": [
+                {
+                  "capability": {
+                    "id": "cap_bulk_approve_submissions",
+                    "kind": "capability"
+                  },
+                  "event": "approve_selected",
+                  "type": "command"
+                }
+              ],
+              "event": "approve_selected"
+            }
+          ],
+          "dataDependencies": [
+            {
+              "prop": "rows",
+              "source": {
+                "id": "cap_list_submissions",
+                "kind": "capability"
+              }
+            }
+          ],
+          "directives": {
+            "actions": [
+              "approve_selected"
+            ],
+            "emits": "approve_selected",
+            "state": "selected_ids"
+          },
+          "effects": [
+            {
+              "capability": {
+                "id": "cap_bulk_approve_submissions",
+                "kind": "capability"
+              },
+              "event": "approve_selected",
+              "type": "command"
+            }
+          ],
+          "emits": [
+            {
+              "bindings": [
+                {
+                  "action": "action",
+                  "event": "approve_selected",
+                  "target": {
+                    "id": "cap_bulk_approve_submissions",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "bound": true,
+              "effects": [
+                {
+                  "capability": {
+                    "id": "cap_bulk_approve_submissions",
+                    "kind": "capability"
+                  },
+                  "event": "approve_selected",
+                  "type": "command"
+                }
+              ],
+              "event": "approve_selected"
+            }
+          ],
+          "kind": "bulk_action",
+          "source": "structured",
+          "state": {
+            "bound": false,
+            "defaultValue": [],
+            "prop": "selected_ids",
+            "requiredness": "optional",
+            "source": null
+          },
+          "status": "realized"
+        }
+      ],
+      "display": {
+        "diagnostics": [],
+        "fields": [
+          {
+            "label": "Id",
+            "name": "id",
+            "required": true,
+            "requiredness": "required",
+            "role": "identifier",
+            "sourceName": "id",
+            "type": "uuid"
+          },
+          {
+            "label": "Title",
+            "name": "title",
+            "required": true,
+            "requiredness": "required",
+            "role": "primary",
+            "sourceName": "title",
+            "type": "text"
+          },
+          {
+            "label": "Status",
+            "name": "status",
+            "required": true,
+            "requiredness": "required",
+            "role": "metadata",
+            "sourceName": "status",
+            "type": "text"
+          },
+          {
+            "label": "Review Priority",
+            "name": "review_priority",
+            "required": false,
+            "requiredness": "optional",
+            "role": "priority",
+            "sourceName": "review_priority",
+            "type": "text"
+          },
+          {
+            "label": "Assigned Reviewer",
+            "name": "assigned_reviewer",
+            "required": false,
+            "requiredness": "optional",
+            "role": "metadata",
+            "sourceName": "assigned_reviewer",
+            "type": "text"
+          },
+          {
+            "label": "Author Name",
+            "name": "author_name",
+            "required": true,
+            "requiredness": "required",
+            "role": "metadata",
+            "sourceName": "author_name",
+            "type": "text"
+          },
+          {
+            "label": "Submitted At",
+            "name": "submitted_at",
+            "required": true,
+            "requiredness": "required",
+            "role": "date",
+            "sourceName": "submitted_at",
+            "type": "datetime"
+          }
+        ],
+        "prop": "rows",
+        "source": {
+          "id": "cap_list_submissions",
+          "kind": "capability"
+        },
+        "sourceShape": {
+          "id": "shape_output_submission_card",
+          "kind": "shape"
+        }
+      },
+      "displayFields": [
+        {
+          "label": "Id",
+          "name": "id",
+          "required": true,
+          "requiredness": "required",
+          "role": "identifier",
+          "sourceName": "id",
+          "type": "uuid"
+        },
+        {
+          "label": "Title",
+          "name": "title",
+          "required": true,
+          "requiredness": "required",
+          "role": "primary",
+          "sourceName": "title",
+          "type": "text"
+        },
+        {
+          "label": "Status",
+          "name": "status",
+          "required": true,
+          "requiredness": "required",
+          "role": "metadata",
+          "sourceName": "status",
+          "type": "text"
+        },
+        {
+          "label": "Review Priority",
+          "name": "review_priority",
+          "required": false,
+          "requiredness": "optional",
+          "role": "priority",
+          "sourceName": "review_priority",
+          "type": "text"
+        },
+        {
+          "label": "Assigned Reviewer",
+          "name": "assigned_reviewer",
+          "required": false,
+          "requiredness": "optional",
+          "role": "metadata",
+          "sourceName": "assigned_reviewer",
+          "type": "text"
+        },
+        {
+          "label": "Author Name",
+          "name": "author_name",
+          "required": true,
+          "requiredness": "required",
+          "role": "metadata",
+          "sourceName": "author_name",
+          "type": "text"
+        },
+        {
+          "label": "Submitted At",
+          "name": "submitted_at",
+          "required": true,
+          "requiredness": "required",
+          "role": "date",
+          "sourceName": "submitted_at",
+          "type": "datetime"
+        }
+      ],
+      "i18nRealization": [],
+      "messages": [],
+      "pattern": "resource_table",
+      "region": "results",
+      "requiredMarkers": {
+        "displayField": "data-topogram-display-field",
+        "region": "data-topogram-region=\"results\"",
+        "screen": "data-topogram-screen=\"submission_queue\"",
+        "widget": "data-topogram-widget=\"widget_submission_queue\""
+      },
+      "route": "/submissions",
+      "screen": "submission_queue",
+      "status": "rendered",
+      "supported": true,
+      "widget": "widget_submission_queue"
+    },
+    {
+      "accessibility": [],
+      "accessibilityRealization": [],
+      "behaviorRealizations": [
+        {
+          "actions": [
+            {
+              "bindings": [
+                {
+                  "action": "action",
+                  "event": "approve",
+                  "target": {
+                    "id": "cap_approve_submission",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "bound": true,
+              "capability": {
+                "id": "cap_approve_submission",
+                "kind": "capability"
+              },
+              "effects": [
+                {
+                  "capability": {
+                    "id": "cap_approve_submission",
+                    "kind": "capability"
+                  },
+                  "event": "approve",
+                  "type": "command"
+                }
+              ],
+              "event": null
+            },
+            {
+              "bindings": [
+                {
+                  "action": "action",
+                  "event": "request_changes",
+                  "target": {
+                    "id": "cap_request_changes",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "bound": true,
+              "capability": {
+                "id": "cap_request_changes",
+                "kind": "capability"
+              },
+              "effects": [
+                {
+                  "capability": {
+                    "id": "cap_request_changes",
+                    "kind": "capability"
+                  },
+                  "event": "request_changes",
+                  "type": "command"
+                }
+              ],
+              "event": null
+            }
+          ],
+          "dataDependencies": [
+            {
+              "prop": "submission",
+              "source": {
+                "id": "cap_get_submission",
+                "kind": "capability"
+              }
+            }
+          ],
+          "directives": {
+            "actions": [
+              "cap_approve_submission",
+              "cap_request_changes"
+            ],
+            "rollback": "manual"
+          },
+          "effects": [
+            {
+              "capability": {
+                "id": "cap_approve_submission",
+                "kind": "capability"
+              },
+              "event": "approve",
+              "type": "command"
+            },
+            {
+              "capability": {
+                "id": "cap_request_changes",
+                "kind": "capability"
+              },
+              "event": "request_changes",
+              "type": "command"
+            }
+          ],
+          "emits": [],
+          "kind": "optimistic_update",
+          "source": "structured",
+          "state": null,
+          "status": "realized"
+        },
+        {
+          "actions": [],
+          "dataDependencies": [
+            {
+              "prop": "submission",
+              "source": {
+                "id": "cap_get_submission",
+                "kind": "capability"
+              }
+            }
+          ],
+          "directives": {
+            "scope": "widget",
+            "shortcuts": [
+              "approve",
+              "request_changes"
+            ]
+          },
+          "effects": [],
+          "emits": [],
+          "kind": "keyboard_navigation",
+          "source": "structured",
+          "state": null,
+          "status": "realized"
+        }
+      ],
+      "display": {
+        "diagnostics": [],
+        "fields": [
+          {
+            "label": "Id",
+            "name": "id",
+            "required": true,
+            "requiredness": "required",
+            "role": "identifier",
+            "sourceName": "id",
+            "type": "uuid"
+          },
+          {
+            "label": "Title",
+            "name": "title",
+            "required": true,
+            "requiredness": "required",
+            "role": "primary",
+            "sourceName": "title",
+            "type": "text"
+          },
+          {
+            "label": "Body",
+            "name": "body",
+            "required": true,
+            "requiredness": "required",
+            "role": "metadata",
+            "sourceName": "body",
+            "type": "text"
+          },
+          {
+            "label": "Status",
+            "name": "status",
+            "required": true,
+            "requiredness": "required",
+            "role": "metadata",
+            "sourceName": "status",
+            "type": "text"
+          },
+          {
+            "label": "Review Priority",
+            "name": "review_priority",
+            "required": false,
+            "requiredness": "optional",
+            "role": "priority",
+            "sourceName": "review_priority",
+            "type": "text"
+          },
+          {
+            "label": "Assigned Reviewer",
+            "name": "assigned_reviewer",
+            "required": false,
+            "requiredness": "optional",
+            "role": "metadata",
+            "sourceName": "assigned_reviewer",
+            "type": "text"
+          },
+          {
+            "label": "Author Name",
+            "name": "author_name",
+            "required": true,
+            "requiredness": "required",
+            "role": "metadata",
+            "sourceName": "author_name",
+            "type": "text"
+          },
+          {
+            "label": "Submitted At",
+            "name": "submitted_at",
+            "required": true,
+            "requiredness": "required",
+            "role": "date",
+            "sourceName": "submitted_at",
+            "type": "datetime"
+          },
+          {
+            "label": "Reviewed At",
+            "name": "reviewed_at",
+            "required": false,
+            "requiredness": "optional",
+            "role": "date",
+            "sourceName": "reviewed_at",
+            "type": "datetime"
+          },
+          {
+            "label": "Reviewer Note",
+            "name": "reviewer_note",
+            "required": false,
+            "requiredness": "optional",
+            "role": "metadata",
+            "sourceName": "reviewer_note",
+            "type": "text"
+          }
+        ],
+        "prop": "submission",
+        "source": {
+          "id": "cap_get_submission",
+          "kind": "capability"
+        },
+        "sourceShape": {
+          "id": "shape_output_submission_detail",
+          "kind": "shape"
+        }
+      },
+      "displayFields": [
+        {
+          "label": "Id",
+          "name": "id",
+          "required": true,
+          "requiredness": "required",
+          "role": "identifier",
+          "sourceName": "id",
+          "type": "uuid"
+        },
+        {
+          "label": "Title",
+          "name": "title",
+          "required": true,
+          "requiredness": "required",
+          "role": "primary",
+          "sourceName": "title",
+          "type": "text"
+        },
+        {
+          "label": "Body",
+          "name": "body",
+          "required": true,
+          "requiredness": "required",
+          "role": "metadata",
+          "sourceName": "body",
+          "type": "text"
+        },
+        {
+          "label": "Status",
+          "name": "status",
+          "required": true,
+          "requiredness": "required",
+          "role": "metadata",
+          "sourceName": "status",
+          "type": "text"
+        },
+        {
+          "label": "Review Priority",
+          "name": "review_priority",
+          "required": false,
+          "requiredness": "optional",
+          "role": "priority",
+          "sourceName": "review_priority",
+          "type": "text"
+        },
+        {
+          "label": "Assigned Reviewer",
+          "name": "assigned_reviewer",
+          "required": false,
+          "requiredness": "optional",
+          "role": "metadata",
+          "sourceName": "assigned_reviewer",
+          "type": "text"
+        },
+        {
+          "label": "Author Name",
+          "name": "author_name",
+          "required": true,
+          "requiredness": "required",
+          "role": "metadata",
+          "sourceName": "author_name",
+          "type": "text"
+        },
+        {
+          "label": "Submitted At",
+          "name": "submitted_at",
+          "required": true,
+          "requiredness": "required",
+          "role": "date",
+          "sourceName": "submitted_at",
+          "type": "datetime"
+        },
+        {
+          "label": "Reviewed At",
+          "name": "reviewed_at",
+          "required": false,
+          "requiredness": "optional",
+          "role": "date",
+          "sourceName": "reviewed_at",
+          "type": "datetime"
+        },
+        {
+          "label": "Reviewer Note",
+          "name": "reviewer_note",
+          "required": false,
+          "requiredness": "optional",
+          "role": "metadata",
+          "sourceName": "reviewer_note",
+          "type": "text"
+        }
+      ],
+      "i18nRealization": [],
+      "messages": [],
+      "pattern": "summary_stats",
+      "region": "summary",
+      "requiredMarkers": {
+        "displayField": "data-topogram-display-field",
+        "region": "data-topogram-region=\"summary\"",
+        "screen": "data-topogram-screen=\"submission_detail\"",
+        "widget": "data-topogram-widget=\"widget_review_actions\""
+      },
+      "route": "/submissions/:id",
+      "screen": "submission_detail",
+      "status": "rendered",
+      "supported": true,
+      "widget": "widget_review_actions"
+    },
+    {
+      "accessibility": [],
+      "accessibilityRealization": [],
+      "behaviorRealizations": [
+        {
+          "actions": [
+            {
+              "bindings": [
+                {
+                  "action": "action",
+                  "event": "submit",
+                  "target": {
+                    "id": "cap_submit_content",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "bound": true,
+              "capability": {
+                "id": "cap_submit_content",
+                "kind": "capability"
+              },
+              "effects": [
+                {
+                  "capability": {
+                    "id": "cap_submit_content",
+                    "kind": "capability"
+                  },
+                  "event": "submit",
+                  "type": "command"
+                }
+              ],
+              "event": null
+            }
+          ],
+          "dataDependencies": [],
+          "directives": {
+            "actions": [
+              "cap_submit_content"
+            ],
+            "rollback": "manual"
+          },
+          "effects": [
+            {
+              "capability": {
+                "id": "cap_submit_content",
+                "kind": "capability"
+              },
+              "event": "submit",
+              "type": "command"
+            }
+          ],
+          "emits": [],
+          "kind": "optimistic_update",
+          "source": "structured",
+          "state": null,
+          "status": "realized"
+        },
+        {
+          "actions": [],
+          "dataDependencies": [],
+          "directives": {
+            "scope": "form",
+            "shortcuts": [
+              "submit"
+            ]
+          },
+          "effects": [],
+          "emits": [],
+          "kind": "keyboard_navigation",
+          "source": "structured",
+          "state": null,
+          "status": "realized"
+        }
+      ],
+      "display": {
+        "diagnostics": [],
+        "fields": [
+          {
+            "label": "Title",
+            "name": "title",
+            "required": true,
+            "requiredness": "required",
+            "role": "primary",
+            "sourceName": "title",
+            "type": "text"
+          },
+          {
+            "label": "Body",
+            "name": "body",
+            "required": true,
+            "requiredness": "required",
+            "role": "metadata",
+            "sourceName": "body",
+            "type": "text"
+          },
+          {
+            "label": "Author Name",
+            "name": "author_name",
+            "required": true,
+            "requiredness": "required",
+            "role": "metadata",
+            "sourceName": "author_name",
+            "type": "text"
+          }
+        ],
+        "prop": null,
+        "source": {
+          "id": null,
+          "kind": null
+        },
+        "sourceShape": {
+          "id": "shape_input_submit_content",
+          "kind": "shape"
+        }
+      },
+      "displayFields": [
+        {
+          "label": "Title",
+          "name": "title",
+          "required": true,
+          "requiredness": "required",
+          "role": "primary",
+          "sourceName": "title",
+          "type": "text"
+        },
+        {
+          "label": "Body",
+          "name": "body",
+          "required": true,
+          "requiredness": "required",
+          "role": "metadata",
+          "sourceName": "body",
+          "type": "text"
+        },
+        {
+          "label": "Author Name",
+          "name": "author_name",
+          "required": true,
+          "requiredness": "required",
+          "role": "metadata",
+          "sourceName": "author_name",
+          "type": "text"
+        }
+      ],
+      "i18nRealization": [],
+      "messages": [],
+      "pattern": "summary_stats",
+      "region": "summary",
+      "requiredMarkers": {
+        "displayField": "data-topogram-display-field",
+        "region": "data-topogram-region=\"summary\"",
+        "screen": "data-topogram-screen=\"submission_create\"",
+        "widget": "data-topogram-widget=\"widget_submission_form\""
+      },
+      "route": "/submissions/new",
+      "screen": "submission_create",
+      "status": "rendered",
+      "supported": true,
+      "widget": "widget_submission_form"
+    }
+  ]
+}

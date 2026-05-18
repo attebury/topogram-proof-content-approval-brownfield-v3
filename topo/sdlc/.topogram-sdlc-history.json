@@ -1,0 +1,117 @@
+{
+  "task_adopt_brownfield_spec": [
+    {
+      "from": "unclaimed",
+      "to": "claimed",
+      "at": "2026-05-15T07:29:15.764Z",
+      "by": "actor_operator",
+      "note": "task started"
+    },
+    {
+      "from": "claimed",
+      "to": "in-progress",
+      "at": "2026-05-15T07:29:15.769Z",
+      "by": "actor_operator",
+      "note": "task started"
+    },
+    {
+      "from": "in-progress",
+      "to": "done",
+      "at": "2026-05-15T07:29:18.290Z",
+      "by": "actor_operator",
+      "note": null
+    }
+  ],
+  "task_maintained_bulk_approve": [
+    {
+      "from": "unclaimed",
+      "to": "claimed",
+      "at": "2026-05-15T07:32:49.691Z",
+      "by": "actor_operator",
+      "note": "task started"
+    },
+    {
+      "from": "claimed",
+      "to": "in-progress",
+      "at": "2026-05-15T07:32:49.697Z",
+      "by": "actor_operator",
+      "note": "task started"
+    },
+    {
+      "from": "in-progress",
+      "to": "done",
+      "at": "2026-05-15T07:32:51.952Z",
+      "by": "actor_operator",
+      "note": null
+    }
+  ],
+  "task_refresh_drift": [
+    {
+      "from": "unclaimed",
+      "to": "claimed",
+      "at": "2026-05-15T08:07:57.271Z",
+      "by": "actor_operator",
+      "note": "task started"
+    },
+    {
+      "from": "claimed",
+      "to": "in-progress",
+      "at": "2026-05-15T08:07:57.276Z",
+      "by": "actor_operator",
+      "note": "task started"
+    },
+    {
+      "from": "in-progress",
+      "to": "done",
+      "at": "2026-05-15T08:08:55.294Z",
+      "by": "actor_operator",
+      "note": null
+    }
+  ],
+  "task_recreate_other_stack": [
+    {
+      "from": "unclaimed",
+      "to": "claimed",
+      "at": "2026-05-15T08:11:33.859Z",
+      "by": "actor_operator",
+      "note": "task started"
+    },
+    {
+      "from": "claimed",
+      "to": "in-progress",
+      "at": "2026-05-15T08:11:33.865Z",
+      "by": "actor_operator",
+      "note": "task started"
+    },
+    {
+      "from": "in-progress",
+      "to": "done",
+      "at": "2026-05-15T08:15:40.643Z",
+      "by": "actor_operator",
+      "note": null
+    }
+  ],
+  "task_parity_proof": [
+    {
+      "from": "unclaimed",
+      "to": "claimed",
+      "at": "2026-05-15T08:18:01.430Z",
+      "by": "actor_operator",
+      "note": "task started"
+    },
+    {
+      "from": "claimed",
+      "to": "in-progress",
+      "at": "2026-05-15T08:18:01.459Z",
+      "by": "actor_operator",
+      "note": "task started"
+    },
+    {
+      "from": "in-progress",
+      "to": "done",
+      "at": "2026-05-15T08:18:08.221Z",
+      "by": "actor_operator",
+      "note": null
+    }
+  ]
+}

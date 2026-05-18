@@ -1,16 +1,23 @@
-# Current Step
+# Step 07: Parity Proof
 
-> Scaffold checkpoint for topogram-proof-content-approval-brownfield-v3.
+Repository: `topogram-proof-content-approval-brownfield-v3`
+CLI baseline: `@topogram/cli@0.3.99`
 
-Status: current scaffold
-Audience: evaluators, maintainers, and agents
-Use when: you need to understand the current branch before the full v3 checkpoints are populated.
+## Claim
 
-This initial main branch establishes verification scaffolding and the v3 story plan. It does not claim a completed product proof step yet.
+Compare maintained and recreated stacks through contracts and verification summaries.
+
+## Verification
 
 Run:
 
 ```bash
-npm ci
 npm run verify
 ```
+
+## Proof Artifacts
+
+- `proof/manifest.json` lists the artifacts required for this checkpoint.
+- `proof/artifacts/path-hygiene-audit.json` records public path hygiene status.
+- The branch and tag names are part of the proof story.
+

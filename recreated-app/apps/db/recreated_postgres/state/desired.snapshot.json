@@ -1,0 +1,130 @@
+{
+  "engine": "postgres",
+  "tables": [
+    {
+      "type": "db_table_contract",
+      "entity": {
+        "id": "entity_content_submission",
+        "name": "Content Submission"
+      },
+      "table": "content_submissions",
+      "columns": [
+        {
+          "name": "id",
+          "sourceField": "id",
+          "fieldType": "uuid",
+          "requiredness": "required",
+          "defaultValue": null
+        },
+        {
+          "name": "title",
+          "sourceField": "title",
+          "fieldType": "text",
+          "requiredness": "required",
+          "defaultValue": null
+        },
+        {
+          "name": "body",
+          "sourceField": "body",
+          "fieldType": "text",
+          "requiredness": "required",
+          "defaultValue": null
+        },
+        {
+          "name": "status",
+          "sourceField": "status",
+          "fieldType": "text",
+          "requiredness": "required",
+          "defaultValue": null
+        },
+        {
+          "name": "review_priority",
+          "sourceField": "review_priority",
+          "fieldType": "text",
+          "requiredness": "optional",
+          "defaultValue": null
+        },
+        {
+          "name": "assigned_reviewer",
+          "sourceField": "assigned_reviewer",
+          "fieldType": "text",
+          "requiredness": "optional",
+          "defaultValue": null
+        },
+        {
+          "name": "author_name",
+          "sourceField": "author_name",
+          "fieldType": "text",
+          "requiredness": "required",
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "sourceField": "created_at",
+          "fieldType": "datetime",
+          "requiredness": "required",
+          "defaultValue": null
+        },
+        {
+          "name": "submitted_at",
+          "sourceField": "submitted_at",
+          "fieldType": "datetime",
+          "requiredness": "required",
+          "defaultValue": null
+        },
+        {
+          "name": "reviewed_at",
+          "sourceField": "reviewed_at",
+          "fieldType": "datetime",
+          "requiredness": "optional",
+          "defaultValue": null
+        },
+        {
+          "name": "reviewer_note",
+          "sourceField": "reviewer_note",
+          "fieldType": "text",
+          "requiredness": "optional",
+          "defaultValue": null
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "uniques": [],
+      "indexes": [
+        {
+          "type": "index",
+          "fields": [
+            "status"
+          ]
+        },
+        {
+          "type": "index",
+          "fields": [
+            "review_priority"
+          ]
+        },
+        {
+          "type": "index",
+          "fields": [
+            "assigned_reviewer"
+          ]
+        },
+        {
+          "type": "index",
+          "fields": [
+            "submitted_at"
+          ]
+        }
+      ],
+      "relations": [],
+      "lifecycle": {
+        "softDelete": null,
+        "timestamps": {
+          "createdAt": "created_at",
+          "updatedAt": "reviewed_at"
+        }
+      }
+    }
+  ]
+}

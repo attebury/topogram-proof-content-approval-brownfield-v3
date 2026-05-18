@@ -1,0 +1,42 @@
+{
+  "dryRun": false,
+  "link": {
+    "after": [
+      "verification_adopt_brownfield_spec"
+    ],
+    "before": [
+      "verification_adopt_brownfield_spec"
+    ],
+    "dryRun": false,
+    "field": "verification_refs",
+    "file": "<repo>/topo/sdlc/tasks/adopt-brownfield-spec.tg",
+    "from": {
+      "id": "task_adopt_brownfield_spec",
+      "kind": "task"
+    },
+    "ok": true,
+    "to": {
+      "id": "verification_adopt_brownfield_spec",
+      "kind": "verification"
+    },
+    "written": true
+  },
+  "ok": true,
+  "taskId": "task_adopt_brownfield_spec",
+  "transition": {
+    "archivable": true,
+    "dod": {
+      "errors": [],
+      "satisfied": true,
+      "warnings": []
+    },
+    "dryRun": false,
+    "file": "<repo>/topo/sdlc/tasks/adopt-brownfield-spec.tg",
+    "from": "in-progress",
+    "id": "task_adopt_brownfield_spec",
+    "kind": "task",
+    "ok": true,
+    "to": "done"
+  },
+  "verificationId": "verification_adopt_brownfield_spec"
+}

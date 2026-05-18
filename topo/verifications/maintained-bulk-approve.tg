@@ -1,0 +1,8 @@
+verification verification_maintained_bulk_approve {
+  name "Maintained Bulk Approve Verification"
+  description "Runs Topogram check, SDLC check, maintained app API behavior verification, and React build verification for the bulk approve checkpoint."
+  validates [cap_list_submissions, cap_bulk_approve_submissions]
+  method runtime
+  scenarios [brownfield_bulk_approve_api_ui_compile]
+  status active
+}

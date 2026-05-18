@@ -1,0 +1,126 @@
+{
+  "approvals": [],
+  "behavior": [
+    "selection",
+    "sorting",
+    "filtering",
+    "pagination",
+    "bulk_action"
+  ],
+  "behaviors": [
+    {
+      "directives": {
+        "emits": "row_select",
+        "mode": "multi",
+        "state": "selected_ids"
+      },
+      "kind": "selection",
+      "source": "structured"
+    },
+    {
+      "directives": {
+        "default": [
+          "submitted_at",
+          "desc"
+        ],
+        "fields": [
+          "submitted_at",
+          "status",
+          "title"
+        ]
+      },
+      "kind": "sorting",
+      "source": "structured"
+    },
+    {
+      "directives": {
+        "fields": [
+          "status"
+        ]
+      },
+      "kind": "filtering",
+      "source": "structured"
+    },
+    {
+      "directives": {
+        "mode": "cursor",
+        "page_size": 25
+      },
+      "kind": "pagination",
+      "source": "structured"
+    },
+    {
+      "directives": {
+        "actions": [
+          "approve_selected"
+        ],
+        "emits": "approve_selected",
+        "state": "selected_ids"
+      },
+      "kind": "bulk_action",
+      "source": "structured"
+    }
+  ],
+  "category": "collection",
+  "dependencies": [],
+  "description": "Reusable review queue widget for content submissions.",
+  "events": [
+    {
+      "id": "row_select",
+      "shape": {
+        "id": "shape_output_submission_card",
+        "kind": "shape"
+      }
+    },
+    {
+      "id": "approve_selected",
+      "shape": {
+        "id": "shape_input_bulk_review",
+        "kind": "shape"
+      }
+    }
+  ],
+  "id": "widget_submission_queue",
+  "lookups": [],
+  "name": "Submission Queue",
+  "patterns": [
+    "resource_table",
+    "data_grid_view"
+  ],
+  "props": [
+    {
+      "defaultValue": null,
+      "name": "rows",
+      "requiredness": "required",
+      "type": "array"
+    },
+    {
+      "defaultValue": [],
+      "name": "selected_ids",
+      "requiredness": "optional",
+      "type": "array"
+    },
+    {
+      "defaultValue": false,
+      "name": "loading",
+      "requiredness": "optional",
+      "type": "boolean"
+    }
+  ],
+  "regions": [
+    "results"
+  ],
+  "slots": [
+    {
+      "description": "Review queue actions and filters",
+      "id": "toolbar"
+    },
+    {
+      "description": "Empty queue messaging",
+      "id": "empty_state"
+    }
+  ],
+  "status": "active",
+  "type": "ui_widget_contract",
+  "version": "1.1"
+}

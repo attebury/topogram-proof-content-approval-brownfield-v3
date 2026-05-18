@@ -1,0 +1,11 @@
+shape shape_input_bulk_review {
+  name "Bulk Review Input"
+  description "Review queue selection payload for maintained bulk review UI behavior."
+
+  fields {
+    submission_ids array required
+    reviewer_note text optional
+  }
+
+  status active
+}

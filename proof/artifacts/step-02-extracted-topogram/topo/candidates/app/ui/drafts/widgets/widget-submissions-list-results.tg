@@ -1,0 +1,22 @@
+widget widget_submissions_list_results {
+  # Import metadata: confidence low; evidence 2; inferred pattern search_results; inferred region results.
+  # Missing decisions: confirm widget reuse boundary; confirm prop names and data source; confirm events and behavior; confirm supported regions and patterns.
+  # Inferred event: row_select navigate submissions_detail; review payload shape shape_event_submissions_row_select.
+  # Event declarations are draft bindings and require payload shape review before adoption.
+  name "SubmissionQueueScreen results"
+  description "Candidate reusable widget inferred from imported UI evidence. Review props, behavior, events, and reuse before adoption."
+  category collection
+  props {
+    rows array required
+  }
+  events {
+    row_select shape_event_submissions_row_select
+  }
+  behavior [selection]
+  behaviors {
+    selection mode single emits row_select
+  }
+  patterns [search_results]
+  regions [results]
+  status proposed
+}

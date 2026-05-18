@@ -1,0 +1,14 @@
+task task_adopt_brownfield_spec {
+  name "Adopt Brownfield Spec"
+  description "Promote reviewed extraction candidates into canonical Topogram source, enable SDLC, and capture adoption/check/query proof artifacts."
+  satisfies [req_adopt_brownfield_spec]
+  acceptance_refs [ac_adopt_brownfield_spec]
+  verification_refs [verification_adopt_brownfield_spec]
+  affects [cap_list_submissions, cap_get_submission, cap_submit_content, cap_approve_submission, cap_request_changes]
+  blocked_by []
+  disposition active
+  priority high
+  work_type implementation
+  claimed_by [actor_operator]
+  status done
+}

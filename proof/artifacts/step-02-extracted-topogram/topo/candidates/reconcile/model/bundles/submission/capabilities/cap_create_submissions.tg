@@ -1,0 +1,10 @@
+# imported confidence: 0.82
+# imported source_kind: unknown
+capability cap_create_submissions {
+  name "undefined"
+  description "Candidate capability imported from brownfield API evidence"
+
+  creates [entity_submission]
+
+  status active
+}

@@ -1,0 +1,10 @@
+# imported confidence: 0.82
+# imported source_kind: unknown
+capability cap_list_health {
+  name "undefined"
+  description "Candidate capability imported from brownfield API evidence"
+
+  reads [entity_health]
+
+  status active
+}

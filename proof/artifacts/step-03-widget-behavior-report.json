@@ -1,0 +1,1088 @@
+{
+  "behaviors": [
+    {
+      "actions": [],
+      "behavior": {
+        "directives": {
+          "fields": [
+            "status"
+          ]
+        },
+        "kind": "grouping",
+        "source": "structured",
+        "status": "realized"
+      },
+      "capabilities": [
+        "cap_list_submissions"
+      ],
+      "check_codes": [],
+      "data_dependencies": [
+        {
+          "prop": "rows",
+          "source": {
+            "id": "cap_list_submissions",
+            "kind": "capability"
+          }
+        }
+      ],
+      "diagnostics": [],
+      "effect_types": [
+        "none"
+      ],
+      "effects": [],
+      "emits": [],
+      "key": "proj_web_surface:proj_ui_contract:submission_queue:hero:widget_submission_summary:0:grouping:0",
+      "projection": {
+        "id": "proj_web_surface",
+        "name": "Content Approval Web UI",
+        "source_path": "<workspace>/projections/proj-web-surface.tg",
+        "status": "active",
+        "type": "web_surface"
+      },
+      "region": "hero",
+      "screen": {
+        "id": "submission_queue",
+        "kind": "list",
+        "title": "Review Queue"
+      },
+      "source_projection": {
+        "id": "proj_ui_contract",
+        "name": "Content Approval UI Contract",
+        "source_path": "<workspace>/projections/proj-ui-contract.tg",
+        "status": "active",
+        "type": "ui_contract"
+      },
+      "widget": {
+        "category": "display",
+        "id": "widget_submission_summary",
+        "name": "Submission Summary",
+        "source_path": "<workspace>/widgets/widget-submission-summary.tg",
+        "status": "active",
+        "version": "1.0"
+      }
+    },
+    {
+      "actions": [],
+      "behavior": {
+        "directives": {
+          "emits": "row_select",
+          "mode": "multi",
+          "state": "selected_ids"
+        },
+        "kind": "selection",
+        "source": "structured",
+        "status": "realized"
+      },
+      "capabilities": [
+        "cap_list_submissions"
+      ],
+      "check_codes": [],
+      "data_dependencies": [
+        {
+          "prop": "rows",
+          "source": {
+            "id": "cap_list_submissions",
+            "kind": "capability"
+          }
+        }
+      ],
+      "diagnostics": [],
+      "effect_types": [
+        "navigation"
+      ],
+      "effects": [
+        {
+          "event": "row_select",
+          "target": {
+            "id": "submission_detail",
+            "kind": "screen"
+          },
+          "type": "navigation"
+        }
+      ],
+      "emits": [
+        {
+          "bindings": [
+            {
+              "action": "navigate",
+              "event": "row_select",
+              "target": {
+                "id": "submission_detail",
+                "kind": "screen"
+              }
+            }
+          ],
+          "bound": true,
+          "effects": [
+            {
+              "event": "row_select",
+              "target": {
+                "id": "submission_detail",
+                "kind": "screen"
+              },
+              "type": "navigation"
+            }
+          ],
+          "event": "row_select"
+        }
+      ],
+      "key": "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:selection:0",
+      "projection": {
+        "id": "proj_web_surface",
+        "name": "Content Approval Web UI",
+        "source_path": "<workspace>/projections/proj-web-surface.tg",
+        "status": "active",
+        "type": "web_surface"
+      },
+      "region": "results",
+      "screen": {
+        "id": "submission_queue",
+        "kind": "list",
+        "title": "Review Queue"
+      },
+      "source_projection": {
+        "id": "proj_ui_contract",
+        "name": "Content Approval UI Contract",
+        "source_path": "<workspace>/projections/proj-ui-contract.tg",
+        "status": "active",
+        "type": "ui_contract"
+      },
+      "widget": {
+        "category": "collection",
+        "id": "widget_submission_queue",
+        "name": "Submission Queue",
+        "source_path": "<workspace>/widgets/widget-submission-queue.tg",
+        "status": "active",
+        "version": "1.1"
+      }
+    },
+    {
+      "actions": [],
+      "behavior": {
+        "directives": {
+          "default": [
+            "submitted_at",
+            "desc"
+          ],
+          "fields": [
+            "submitted_at",
+            "status",
+            "title"
+          ]
+        },
+        "kind": "sorting",
+        "source": "structured",
+        "status": "realized"
+      },
+      "capabilities": [
+        "cap_list_submissions"
+      ],
+      "check_codes": [],
+      "data_dependencies": [
+        {
+          "prop": "rows",
+          "source": {
+            "id": "cap_list_submissions",
+            "kind": "capability"
+          }
+        }
+      ],
+      "diagnostics": [],
+      "effect_types": [
+        "none"
+      ],
+      "effects": [],
+      "emits": [],
+      "key": "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:sorting:1",
+      "projection": {
+        "id": "proj_web_surface",
+        "name": "Content Approval Web UI",
+        "source_path": "<workspace>/projections/proj-web-surface.tg",
+        "status": "active",
+        "type": "web_surface"
+      },
+      "region": "results",
+      "screen": {
+        "id": "submission_queue",
+        "kind": "list",
+        "title": "Review Queue"
+      },
+      "source_projection": {
+        "id": "proj_ui_contract",
+        "name": "Content Approval UI Contract",
+        "source_path": "<workspace>/projections/proj-ui-contract.tg",
+        "status": "active",
+        "type": "ui_contract"
+      },
+      "widget": {
+        "category": "collection",
+        "id": "widget_submission_queue",
+        "name": "Submission Queue",
+        "source_path": "<workspace>/widgets/widget-submission-queue.tg",
+        "status": "active",
+        "version": "1.1"
+      }
+    },
+    {
+      "actions": [],
+      "behavior": {
+        "directives": {
+          "fields": [
+            "status"
+          ]
+        },
+        "kind": "filtering",
+        "source": "structured",
+        "status": "realized"
+      },
+      "capabilities": [
+        "cap_list_submissions"
+      ],
+      "check_codes": [],
+      "data_dependencies": [
+        {
+          "prop": "rows",
+          "source": {
+            "id": "cap_list_submissions",
+            "kind": "capability"
+          }
+        }
+      ],
+      "diagnostics": [],
+      "effect_types": [
+        "none"
+      ],
+      "effects": [],
+      "emits": [],
+      "key": "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:filtering:2",
+      "projection": {
+        "id": "proj_web_surface",
+        "name": "Content Approval Web UI",
+        "source_path": "<workspace>/projections/proj-web-surface.tg",
+        "status": "active",
+        "type": "web_surface"
+      },
+      "region": "results",
+      "screen": {
+        "id": "submission_queue",
+        "kind": "list",
+        "title": "Review Queue"
+      },
+      "source_projection": {
+        "id": "proj_ui_contract",
+        "name": "Content Approval UI Contract",
+        "source_path": "<workspace>/projections/proj-ui-contract.tg",
+        "status": "active",
+        "type": "ui_contract"
+      },
+      "widget": {
+        "category": "collection",
+        "id": "widget_submission_queue",
+        "name": "Submission Queue",
+        "source_path": "<workspace>/widgets/widget-submission-queue.tg",
+        "status": "active",
+        "version": "1.1"
+      }
+    },
+    {
+      "actions": [],
+      "behavior": {
+        "directives": {
+          "mode": "cursor",
+          "page_size": 25
+        },
+        "kind": "pagination",
+        "source": "structured",
+        "status": "realized"
+      },
+      "capabilities": [
+        "cap_list_submissions"
+      ],
+      "check_codes": [],
+      "data_dependencies": [
+        {
+          "prop": "rows",
+          "source": {
+            "id": "cap_list_submissions",
+            "kind": "capability"
+          }
+        }
+      ],
+      "diagnostics": [],
+      "effect_types": [
+        "none"
+      ],
+      "effects": [],
+      "emits": [],
+      "key": "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:pagination:3",
+      "projection": {
+        "id": "proj_web_surface",
+        "name": "Content Approval Web UI",
+        "source_path": "<workspace>/projections/proj-web-surface.tg",
+        "status": "active",
+        "type": "web_surface"
+      },
+      "region": "results",
+      "screen": {
+        "id": "submission_queue",
+        "kind": "list",
+        "title": "Review Queue"
+      },
+      "source_projection": {
+        "id": "proj_ui_contract",
+        "name": "Content Approval UI Contract",
+        "source_path": "<workspace>/projections/proj-ui-contract.tg",
+        "status": "active",
+        "type": "ui_contract"
+      },
+      "widget": {
+        "category": "collection",
+        "id": "widget_submission_queue",
+        "name": "Submission Queue",
+        "source_path": "<workspace>/widgets/widget-submission-queue.tg",
+        "status": "active",
+        "version": "1.1"
+      }
+    },
+    {
+      "actions": [
+        {
+          "bindings": [
+            {
+              "action": "action",
+              "event": "approve_selected",
+              "target": {
+                "id": "cap_bulk_approve_submissions",
+                "kind": "capability"
+              }
+            }
+          ],
+          "bound": true,
+          "effects": [
+            {
+              "capability": {
+                "id": "cap_bulk_approve_submissions",
+                "kind": "capability"
+              },
+              "event": "approve_selected",
+              "type": "command"
+            }
+          ],
+          "event": "approve_selected"
+        }
+      ],
+      "behavior": {
+        "directives": {
+          "actions": [
+            "approve_selected"
+          ],
+          "emits": "approve_selected",
+          "state": "selected_ids"
+        },
+        "kind": "bulk_action",
+        "source": "structured",
+        "status": "realized"
+      },
+      "capabilities": [
+        "cap_bulk_approve_submissions",
+        "cap_list_submissions"
+      ],
+      "check_codes": [],
+      "data_dependencies": [
+        {
+          "prop": "rows",
+          "source": {
+            "id": "cap_list_submissions",
+            "kind": "capability"
+          }
+        }
+      ],
+      "diagnostics": [],
+      "effect_types": [
+        "command"
+      ],
+      "effects": [
+        {
+          "capability": {
+            "id": "cap_bulk_approve_submissions",
+            "kind": "capability"
+          },
+          "event": "approve_selected",
+          "type": "command"
+        }
+      ],
+      "emits": [
+        {
+          "bindings": [
+            {
+              "action": "action",
+              "event": "approve_selected",
+              "target": {
+                "id": "cap_bulk_approve_submissions",
+                "kind": "capability"
+              }
+            }
+          ],
+          "bound": true,
+          "effects": [
+            {
+              "capability": {
+                "id": "cap_bulk_approve_submissions",
+                "kind": "capability"
+              },
+              "event": "approve_selected",
+              "type": "command"
+            }
+          ],
+          "event": "approve_selected"
+        }
+      ],
+      "key": "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:bulk_action:4",
+      "projection": {
+        "id": "proj_web_surface",
+        "name": "Content Approval Web UI",
+        "source_path": "<workspace>/projections/proj-web-surface.tg",
+        "status": "active",
+        "type": "web_surface"
+      },
+      "region": "results",
+      "screen": {
+        "id": "submission_queue",
+        "kind": "list",
+        "title": "Review Queue"
+      },
+      "source_projection": {
+        "id": "proj_ui_contract",
+        "name": "Content Approval UI Contract",
+        "source_path": "<workspace>/projections/proj-ui-contract.tg",
+        "status": "active",
+        "type": "ui_contract"
+      },
+      "widget": {
+        "category": "collection",
+        "id": "widget_submission_queue",
+        "name": "Submission Queue",
+        "source_path": "<workspace>/widgets/widget-submission-queue.tg",
+        "status": "active",
+        "version": "1.1"
+      }
+    },
+    {
+      "actions": [
+        {
+          "bindings": [
+            {
+              "action": "action",
+              "event": "approve",
+              "target": {
+                "id": "cap_approve_submission",
+                "kind": "capability"
+              }
+            }
+          ],
+          "bound": true,
+          "capability": {
+            "id": "cap_approve_submission",
+            "kind": "capability"
+          },
+          "effects": [
+            {
+              "capability": {
+                "id": "cap_approve_submission",
+                "kind": "capability"
+              },
+              "event": "approve",
+              "type": "command"
+            }
+          ],
+          "event": null
+        },
+        {
+          "bindings": [
+            {
+              "action": "action",
+              "event": "request_changes",
+              "target": {
+                "id": "cap_request_changes",
+                "kind": "capability"
+              }
+            }
+          ],
+          "bound": true,
+          "capability": {
+            "id": "cap_request_changes",
+            "kind": "capability"
+          },
+          "effects": [
+            {
+              "capability": {
+                "id": "cap_request_changes",
+                "kind": "capability"
+              },
+              "event": "request_changes",
+              "type": "command"
+            }
+          ],
+          "event": null
+        }
+      ],
+      "behavior": {
+        "directives": {
+          "actions": [
+            "cap_approve_submission",
+            "cap_request_changes"
+          ],
+          "rollback": "manual"
+        },
+        "kind": "optimistic_update",
+        "source": "structured",
+        "status": "realized"
+      },
+      "capabilities": [
+        "cap_approve_submission",
+        "cap_get_submission",
+        "cap_request_changes"
+      ],
+      "check_codes": [],
+      "data_dependencies": [
+        {
+          "prop": "submission",
+          "source": {
+            "id": "cap_get_submission",
+            "kind": "capability"
+          }
+        }
+      ],
+      "diagnostics": [],
+      "effect_types": [
+        "command"
+      ],
+      "effects": [
+        {
+          "capability": {
+            "id": "cap_approve_submission",
+            "kind": "capability"
+          },
+          "event": "approve",
+          "type": "command"
+        },
+        {
+          "capability": {
+            "id": "cap_request_changes",
+            "kind": "capability"
+          },
+          "event": "request_changes",
+          "type": "command"
+        }
+      ],
+      "emits": [],
+      "key": "proj_web_surface:proj_ui_contract:submission_detail:summary:widget_review_actions:2:optimistic_update:0",
+      "projection": {
+        "id": "proj_web_surface",
+        "name": "Content Approval Web UI",
+        "source_path": "<workspace>/projections/proj-web-surface.tg",
+        "status": "active",
+        "type": "web_surface"
+      },
+      "region": "summary",
+      "screen": {
+        "id": "submission_detail",
+        "kind": "detail",
+        "title": "Submission Details"
+      },
+      "source_projection": {
+        "id": "proj_ui_contract",
+        "name": "Content Approval UI Contract",
+        "source_path": "<workspace>/projections/proj-ui-contract.tg",
+        "status": "active",
+        "type": "ui_contract"
+      },
+      "widget": {
+        "category": "feedback",
+        "id": "widget_review_actions",
+        "name": "Review Actions",
+        "source_path": "<workspace>/widgets/widget-review-actions.tg",
+        "status": "active",
+        "version": "1.0"
+      }
+    },
+    {
+      "actions": [],
+      "behavior": {
+        "directives": {
+          "scope": "widget",
+          "shortcuts": [
+            "approve",
+            "request_changes"
+          ]
+        },
+        "kind": "keyboard_navigation",
+        "source": "structured",
+        "status": "realized"
+      },
+      "capabilities": [
+        "cap_get_submission"
+      ],
+      "check_codes": [],
+      "data_dependencies": [
+        {
+          "prop": "submission",
+          "source": {
+            "id": "cap_get_submission",
+            "kind": "capability"
+          }
+        }
+      ],
+      "diagnostics": [],
+      "effect_types": [
+        "none"
+      ],
+      "effects": [],
+      "emits": [],
+      "key": "proj_web_surface:proj_ui_contract:submission_detail:summary:widget_review_actions:2:keyboard_navigation:1",
+      "projection": {
+        "id": "proj_web_surface",
+        "name": "Content Approval Web UI",
+        "source_path": "<workspace>/projections/proj-web-surface.tg",
+        "status": "active",
+        "type": "web_surface"
+      },
+      "region": "summary",
+      "screen": {
+        "id": "submission_detail",
+        "kind": "detail",
+        "title": "Submission Details"
+      },
+      "source_projection": {
+        "id": "proj_ui_contract",
+        "name": "Content Approval UI Contract",
+        "source_path": "<workspace>/projections/proj-ui-contract.tg",
+        "status": "active",
+        "type": "ui_contract"
+      },
+      "widget": {
+        "category": "feedback",
+        "id": "widget_review_actions",
+        "name": "Review Actions",
+        "source_path": "<workspace>/widgets/widget-review-actions.tg",
+        "status": "active",
+        "version": "1.0"
+      }
+    },
+    {
+      "actions": [
+        {
+          "bindings": [
+            {
+              "action": "action",
+              "event": "submit",
+              "target": {
+                "id": "cap_submit_content",
+                "kind": "capability"
+              }
+            }
+          ],
+          "bound": true,
+          "capability": {
+            "id": "cap_submit_content",
+            "kind": "capability"
+          },
+          "effects": [
+            {
+              "capability": {
+                "id": "cap_submit_content",
+                "kind": "capability"
+              },
+              "event": "submit",
+              "type": "command"
+            }
+          ],
+          "event": null
+        }
+      ],
+      "behavior": {
+        "directives": {
+          "actions": [
+            "cap_submit_content"
+          ],
+          "rollback": "manual"
+        },
+        "kind": "optimistic_update",
+        "source": "structured",
+        "status": "realized"
+      },
+      "capabilities": [
+        "cap_submit_content"
+      ],
+      "check_codes": [],
+      "data_dependencies": [],
+      "diagnostics": [],
+      "effect_types": [
+        "command"
+      ],
+      "effects": [
+        {
+          "capability": {
+            "id": "cap_submit_content",
+            "kind": "capability"
+          },
+          "event": "submit",
+          "type": "command"
+        }
+      ],
+      "emits": [],
+      "key": "proj_web_surface:proj_ui_contract:submission_create:summary:widget_submission_form:3:optimistic_update:0",
+      "projection": {
+        "id": "proj_web_surface",
+        "name": "Content Approval Web UI",
+        "source_path": "<workspace>/projections/proj-web-surface.tg",
+        "status": "active",
+        "type": "web_surface"
+      },
+      "region": "summary",
+      "screen": {
+        "id": "submission_create",
+        "kind": "form",
+        "title": "Submit Content"
+      },
+      "source_projection": {
+        "id": "proj_ui_contract",
+        "name": "Content Approval UI Contract",
+        "source_path": "<workspace>/projections/proj-ui-contract.tg",
+        "status": "active",
+        "type": "ui_contract"
+      },
+      "widget": {
+        "category": "form",
+        "id": "widget_submission_form",
+        "name": "Submission Form",
+        "source_path": "<workspace>/widgets/widget-submission-form.tg",
+        "status": "active",
+        "version": "1.0"
+      }
+    },
+    {
+      "actions": [],
+      "behavior": {
+        "directives": {
+          "scope": "form",
+          "shortcuts": [
+            "submit"
+          ]
+        },
+        "kind": "keyboard_navigation",
+        "source": "structured",
+        "status": "realized"
+      },
+      "capabilities": [],
+      "check_codes": [],
+      "data_dependencies": [],
+      "diagnostics": [],
+      "effect_types": [
+        "none"
+      ],
+      "effects": [],
+      "emits": [],
+      "key": "proj_web_surface:proj_ui_contract:submission_create:summary:widget_submission_form:3:keyboard_navigation:1",
+      "projection": {
+        "id": "proj_web_surface",
+        "name": "Content Approval Web UI",
+        "source_path": "<workspace>/projections/proj-web-surface.tg",
+        "status": "active",
+        "type": "web_surface"
+      },
+      "region": "summary",
+      "screen": {
+        "id": "submission_create",
+        "kind": "form",
+        "title": "Submit Content"
+      },
+      "source_projection": {
+        "id": "proj_ui_contract",
+        "name": "Content Approval UI Contract",
+        "source_path": "<workspace>/projections/proj-ui-contract.tg",
+        "status": "active",
+        "type": "ui_contract"
+      },
+      "widget": {
+        "category": "form",
+        "id": "widget_submission_form",
+        "name": "Submission Form",
+        "source_path": "<workspace>/widgets/widget-submission-form.tg",
+        "status": "active",
+        "version": "1.0"
+      }
+    }
+  ],
+  "checks": [],
+  "filters": {
+    "projection": "proj_web_surface",
+    "widget": null
+  },
+  "groups": {
+    "capabilities": [
+      {
+        "behaviors": [
+          "proj_web_surface:proj_ui_contract:submission_detail:summary:widget_review_actions:2:optimistic_update:0"
+        ],
+        "declared": 0,
+        "id": "cap_approve_submission",
+        "partial": 0,
+        "realized": 1,
+        "total_behaviors": 1
+      },
+      {
+        "behaviors": [
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:bulk_action:4"
+        ],
+        "declared": 0,
+        "id": "cap_bulk_approve_submissions",
+        "partial": 0,
+        "realized": 1,
+        "total_behaviors": 1
+      },
+      {
+        "behaviors": [
+          "proj_web_surface:proj_ui_contract:submission_detail:summary:widget_review_actions:2:keyboard_navigation:1",
+          "proj_web_surface:proj_ui_contract:submission_detail:summary:widget_review_actions:2:optimistic_update:0"
+        ],
+        "declared": 0,
+        "id": "cap_get_submission",
+        "partial": 0,
+        "realized": 2,
+        "total_behaviors": 2
+      },
+      {
+        "behaviors": [
+          "proj_web_surface:proj_ui_contract:submission_queue:hero:widget_submission_summary:0:grouping:0",
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:bulk_action:4",
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:filtering:2",
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:pagination:3",
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:selection:0",
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:sorting:1"
+        ],
+        "declared": 0,
+        "id": "cap_list_submissions",
+        "partial": 0,
+        "realized": 6,
+        "total_behaviors": 6
+      },
+      {
+        "behaviors": [
+          "proj_web_surface:proj_ui_contract:submission_detail:summary:widget_review_actions:2:optimistic_update:0"
+        ],
+        "declared": 0,
+        "id": "cap_request_changes",
+        "partial": 0,
+        "realized": 1,
+        "total_behaviors": 1
+      },
+      {
+        "behaviors": [
+          "proj_web_surface:proj_ui_contract:submission_create:summary:widget_submission_form:3:optimistic_update:0"
+        ],
+        "declared": 0,
+        "id": "cap_submit_content",
+        "partial": 0,
+        "realized": 1,
+        "total_behaviors": 1
+      }
+    ],
+    "effects": [
+      {
+        "behaviors": [
+          "proj_web_surface:proj_ui_contract:submission_create:summary:widget_submission_form:3:optimistic_update:0",
+          "proj_web_surface:proj_ui_contract:submission_detail:summary:widget_review_actions:2:optimistic_update:0",
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:bulk_action:4"
+        ],
+        "declared": 0,
+        "id": "command",
+        "partial": 0,
+        "realized": 3,
+        "total_behaviors": 3
+      },
+      {
+        "behaviors": [
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:selection:0"
+        ],
+        "declared": 0,
+        "id": "navigation",
+        "partial": 0,
+        "realized": 1,
+        "total_behaviors": 1
+      },
+      {
+        "behaviors": [
+          "proj_web_surface:proj_ui_contract:submission_create:summary:widget_submission_form:3:keyboard_navigation:1",
+          "proj_web_surface:proj_ui_contract:submission_detail:summary:widget_review_actions:2:keyboard_navigation:1",
+          "proj_web_surface:proj_ui_contract:submission_queue:hero:widget_submission_summary:0:grouping:0",
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:filtering:2",
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:pagination:3",
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:sorting:1"
+        ],
+        "declared": 0,
+        "id": "none",
+        "partial": 0,
+        "realized": 6,
+        "total_behaviors": 6
+      }
+    ],
+    "screens": [
+      {
+        "behaviors": [
+          "proj_web_surface:proj_ui_contract:submission_create:summary:widget_submission_form:3:keyboard_navigation:1",
+          "proj_web_surface:proj_ui_contract:submission_create:summary:widget_submission_form:3:optimistic_update:0"
+        ],
+        "declared": 0,
+        "id": "submission_create",
+        "partial": 0,
+        "realized": 2,
+        "total_behaviors": 2
+      },
+      {
+        "behaviors": [
+          "proj_web_surface:proj_ui_contract:submission_detail:summary:widget_review_actions:2:keyboard_navigation:1",
+          "proj_web_surface:proj_ui_contract:submission_detail:summary:widget_review_actions:2:optimistic_update:0"
+        ],
+        "declared": 0,
+        "id": "submission_detail",
+        "partial": 0,
+        "realized": 2,
+        "total_behaviors": 2
+      },
+      {
+        "behaviors": [
+          "proj_web_surface:proj_ui_contract:submission_queue:hero:widget_submission_summary:0:grouping:0",
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:bulk_action:4",
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:filtering:2",
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:pagination:3",
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:selection:0",
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:sorting:1"
+        ],
+        "declared": 0,
+        "id": "submission_queue",
+        "partial": 0,
+        "realized": 6,
+        "total_behaviors": 6
+      }
+    ],
+    "widgets": [
+      {
+        "behaviors": [
+          "proj_web_surface:proj_ui_contract:submission_detail:summary:widget_review_actions:2:keyboard_navigation:1",
+          "proj_web_surface:proj_ui_contract:submission_detail:summary:widget_review_actions:2:optimistic_update:0"
+        ],
+        "declared": 0,
+        "id": "widget_review_actions",
+        "partial": 0,
+        "realized": 2,
+        "total_behaviors": 2
+      },
+      {
+        "behaviors": [
+          "proj_web_surface:proj_ui_contract:submission_create:summary:widget_submission_form:3:keyboard_navigation:1",
+          "proj_web_surface:proj_ui_contract:submission_create:summary:widget_submission_form:3:optimistic_update:0"
+        ],
+        "declared": 0,
+        "id": "widget_submission_form",
+        "partial": 0,
+        "realized": 2,
+        "total_behaviors": 2
+      },
+      {
+        "behaviors": [
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:bulk_action:4",
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:filtering:2",
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:pagination:3",
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:selection:0",
+          "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1:sorting:1"
+        ],
+        "declared": 0,
+        "id": "widget_submission_queue",
+        "partial": 0,
+        "realized": 5,
+        "total_behaviors": 5
+      },
+      {
+        "behaviors": [
+          "proj_web_surface:proj_ui_contract:submission_queue:hero:widget_submission_summary:0:grouping:0"
+        ],
+        "declared": 0,
+        "id": "widget_submission_summary",
+        "partial": 0,
+        "realized": 1,
+        "total_behaviors": 1
+      }
+    ]
+  },
+  "highlights": [],
+  "impact": {
+    "capabilities": [
+      "cap_approve_submission",
+      "cap_bulk_approve_submissions",
+      "cap_get_submission",
+      "cap_list_submissions",
+      "cap_request_changes",
+      "cap_submit_content"
+    ],
+    "projections": [
+      "proj_ui_contract",
+      "proj_web_surface"
+    ],
+    "widgets": [
+      "widget_review_actions",
+      "widget_submission_form",
+      "widget_submission_queue",
+      "widget_submission_summary"
+    ]
+  },
+  "summary": {
+    "affected_capabilities": [
+      "cap_approve_submission",
+      "cap_bulk_approve_submissions",
+      "cap_get_submission",
+      "cap_list_submissions",
+      "cap_request_changes",
+      "cap_submit_content"
+    ],
+    "affected_projections": [
+      "proj_ui_contract",
+      "proj_web_surface"
+    ],
+    "affected_widgets": [
+      "widget_review_actions",
+      "widget_submission_form",
+      "widget_submission_queue",
+      "widget_submission_summary"
+    ],
+    "declared": 0,
+    "errors": 0,
+    "partial": 0,
+    "realized": 10,
+    "total_behaviors": 10,
+    "total_usages": 4,
+    "warnings": 0
+  },
+  "type": "widget_behavior_report",
+  "write_scope": {
+    "paths": [
+      "<workspace>/projections/proj-ui-contract.tg",
+      "<workspace>/projections/proj-web-surface.tg",
+      "<workspace>/widgets/widget-review-actions.tg",
+      "<workspace>/widgets/widget-submission-form.tg",
+      "<workspace>/widgets/widget-submission-queue.tg",
+      "<workspace>/widgets/widget-submission-summary.tg"
+    ],
+    "projection_files": [
+      "<workspace>/projections/proj-ui-contract.tg",
+      "<workspace>/projections/proj-web-surface.tg"
+    ],
+    "verification_files": [],
+    "widget_files": [
+      "<workspace>/widgets/widget-review-actions.tg",
+      "<workspace>/widgets/widget-submission-form.tg",
+      "<workspace>/widgets/widget-submission-queue.tg",
+      "<workspace>/widgets/widget-submission-summary.tg"
+    ]
+  }
+}

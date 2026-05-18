@@ -1,0 +1,12 @@
+capability cap_bulk_approve_submissions {
+  name "Bulk Approve Submissions"
+  description "Approves multiple selected content submissions."
+
+  actors [actor_operator]
+  reads [entity_content_submission]
+  updates [entity_content_submission]
+  input [shape_input_bulk_review]
+  output [shape_output_submission_card]
+
+  status active
+}

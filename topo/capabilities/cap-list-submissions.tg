@@ -1,0 +1,11 @@
+capability cap_list_submissions {
+  name "List Submissions"
+  description "Lists submitted content in review order."
+
+  actors [actor_operator]
+  reads [entity_content_submission]
+  input [shape_input_list_submissions]
+  output [shape_output_submission_card]
+
+  status active
+}

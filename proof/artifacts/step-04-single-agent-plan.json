@@ -1,0 +1,226 @@
+{
+  "active_preset_ids": [],
+  "blocking_conditions": [],
+  "current_focus": {
+    "kind": "mode_focus",
+    "label": "Human-owned maintained code changes constrained by emitted Topogram artifacts"
+  },
+  "extraction_context": null,
+  "mode": "maintained-app-edit",
+  "next_action": null,
+  "operator_loop": {
+    "current_surface": "single-agent-plan",
+    "decision_surface": "proceed-decision",
+    "immediate_artifacts": [
+      "context-bundle.maintained-app.json",
+      "maintained-boundary.json"
+    ],
+    "review_surface": "review-packet",
+    "start_query_family": "maintained-boundary",
+    "verification_surface": "verification-targets"
+  },
+  "preset_blockers": [
+    "no_go"
+  ],
+  "preset_guidance_summary": {
+    "active_preset_ids": [],
+    "preset_blockers": [
+      "no_go"
+    ],
+    "recommended_preset_action": null,
+    "summary": {
+      "active_provider_count": 0,
+      "active_team_count": 0,
+      "manifest_declared_count": 0,
+      "missing_declared_count": 0,
+      "skipped_count": 0
+    }
+  },
+  "primary_artifacts": [
+    "context-bundle.maintained-app.json",
+    "maintained-boundary.json"
+  ],
+  "proof_targets": {
+    "generated_checks": [
+      "compile-check"
+    ],
+    "maintained_app_checks": [
+      "examples/maintained/proof-app/scripts/compile-check.mjs",
+      "examples/maintained/proof-app/scripts/smoke.mjs",
+      "examples/maintained/proof-app/scripts/runtime-check.mjs"
+    ],
+    "rationale": "Maintained-app bundle should point agents at both generated verification and maintained proof gates.",
+    "verification_ids": []
+  },
+  "recommended_preset_action": null,
+  "recommended_sequence": [
+    {
+      "action": "read_primary_artifact",
+      "artifact": "context-bundle.maintained-app.json",
+      "order": 1,
+      "reason": "Start from the maintained-app bundle to see accepted, guarded, and no-go seams.",
+      "review_required": false
+    },
+    {
+      "action": "inspect_review_boundaries",
+      "order": 2,
+      "reason": "Review human-owned seams and guarded boundaries before editing maintained code.",
+      "review_required": true
+    },
+    {
+      "action": "respect_write_scope",
+      "order": 3,
+      "reason": "Keep edits inside the maintained write scope attached to the current proof bundle.",
+      "review_required": false
+    },
+    {
+      "action": "run_proof_targets",
+      "order": 4,
+      "proof_targets": {
+        "generated_checks": [
+          "compile-check"
+        ],
+        "maintained_app_checks": [
+          "examples/maintained/proof-app/scripts/compile-check.mjs",
+          "examples/maintained/proof-app/scripts/smoke.mjs",
+          "examples/maintained/proof-app/scripts/runtime-check.mjs"
+        ],
+        "rationale": "Maintained-app bundle should point agents at both generated verification and maintained proof gates.",
+        "verification_ids": []
+      },
+      "reason": "Run maintained proof checks after the bounded edit.",
+      "review_required": false
+    }
+  ],
+  "resolved_workflow_context": {
+    "applied_presets": [],
+    "artifact_load_order": [
+      "context-bundle.maintained-app.json",
+      "maintained-boundary.json"
+    ],
+    "conflict_notes": [],
+    "effective_handoff_defaults": {
+      "required_fields": []
+    },
+    "effective_multi_agent_policy": {
+      "allowed": true,
+      "default_strategy": null
+    },
+    "effective_review_policy": {
+      "block_on": [
+        "no_go"
+      ],
+      "escalate_categories": [],
+      "overall_risk": "review_required",
+      "risk_reasons": [
+        "maintained_proof_gates"
+      ]
+    },
+    "effective_verification_policy": {
+      "output_verification_targets": [],
+      "recommended": [],
+      "required": [
+        "compile-check",
+        "examples/maintained/proof-app/scripts/compile-check.mjs",
+        "examples/maintained/proof-app/scripts/smoke.mjs",
+        "examples/maintained/proof-app/scripts/runtime-check.mjs"
+      ]
+    },
+    "effective_write_scope": {
+      "generator_owned": [
+        "artifacts/**",
+        "apps/**"
+      ],
+      "human_owned_review_required": [
+        "examples/maintained/proof-app/**"
+      ],
+      "out_of_bounds": [
+        "topo/**"
+      ],
+      "safe_to_edit": []
+    },
+    "extraction_context": null,
+    "field_resolution": {
+      "artifact_load_order": [],
+      "handoff_defaults": [],
+      "multi_agent_policy": [],
+      "preferred_queries": [],
+      "recommended_task_mode": [],
+      "review_policy": [],
+      "tool_hints": [],
+      "verification_policy": []
+    },
+    "policy_notes": [],
+    "preferred_queries": [
+      "maintained-boundary",
+      "maintained-conformance",
+      "seam-check",
+      "change-plan"
+    ],
+    "recommended_artifact_queries": [],
+    "resolved_task_mode": "maintained-app-edit",
+    "skipped_presets": [],
+    "tool_hints": {},
+    "type": "resolved_workflow_context_query",
+    "workflow_presets": {
+      "active_provider_count": 0,
+      "active_team_count": 0,
+      "provider": [],
+      "provider_manifest_declarations": [],
+      "provider_manifest_summary": {
+        "declared_workflow_preset_count": 0,
+        "imported_declared_workflow_preset_count": 0,
+        "invalid_declared_workflow_preset_count": 0,
+        "manifest_count": 0,
+        "missing_declared_workflow_preset_count": 0
+      },
+      "team": []
+    }
+  },
+  "review_boundaries": {
+    "approved_review_groups": [],
+    "ownership_boundary": {
+      "canonical_topogram": {
+        "agent_mode": "propose_review_adopt",
+        "owner": "human"
+      },
+      "generated_artifacts": {
+        "agent_mode": "regenerate_or_compare",
+        "owner": "engine"
+      },
+      "maintained_code": {
+        "agent_mode": "explicit_boundary_required",
+        "owner": "human"
+      },
+      "proposal_surfaces": {
+        "agent_mode": "stage_map_customize_reject",
+        "owner": "human"
+      }
+    },
+    "requires_human_review": [],
+    "review_emphasis": [
+      "accepted_vs_guarded_vs_no_go",
+      "human_owned_seams",
+      "maintained_surface_boundaries"
+    ]
+  },
+  "summary": {
+    "focus": "Human-owned maintained code changes constrained by emitted Topogram artifacts",
+    "preferred_start": "context-bundle maintained-app"
+  },
+  "type": "single_agent_plan",
+  "workspace": "<repo>/topo",
+  "write_scope": {
+    "generator_owned": [
+      "artifacts/**",
+      "apps/**"
+    ],
+    "human_owned_review_required": [
+      "examples/maintained/proof-app/**"
+    ],
+    "out_of_bounds": [
+      "topo/**"
+    ],
+    "safe_to_edit": []
+  }
+}

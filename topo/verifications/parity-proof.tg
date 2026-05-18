@@ -1,0 +1,8 @@
+verification verification_parity_proof {
+  name "Parity Proof Verification"
+  description "Runs Topogram check, SDLC check, maintained app verification, generated app compile, and emitted contract/report artifacts for parity comparison."
+  validates [cap_list_submissions, cap_get_submission, cap_submit_content, cap_approve_submission, cap_request_changes, cap_bulk_approve_submissions]
+  method runtime
+  scenarios [brownfield_maintained_generated_parity_report]
+  status active
+}

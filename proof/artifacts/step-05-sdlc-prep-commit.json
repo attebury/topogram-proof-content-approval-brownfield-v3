@@ -1,0 +1,62 @@
+{
+  "changedFiles": [
+    "proof/STEP.md",
+    "proof/artifacts/step-02-extracted-topogram/.topogram-extract.json",
+    "proof/artifacts/step-02-extracted-topogram/topo/candidates/app/api/candidates.json",
+    "proof/artifacts/step-02-extracted-topogram/topo/candidates/app/api/findings.json",
+    "proof/artifacts/step-02-extracted-topogram/topo/candidates/app/api/report.md",
+    "proof/artifacts/step-02-extracted-topogram/topo/candidates/app/candidates.json",
+    "proof/artifacts/step-02-extracted-topogram/topo/candidates/app/findings.json",
+    "proof/artifacts/step-02-extracted-topogram/topo/candidates/app/report.md",
+    "proof/artifacts/step-02-extracted-topogram/topo/candidates/reconcile/adoption-status.json",
+    "proof/artifacts/step-02-extracted-topogram/topo/candidates/reconcile/adoption-status.md",
+    "proof/artifacts/step-02-extracted-topogram/topo/candidates/reconcile/model/bundles/health/capabilities/cap_res.tg",
+    "proof/artifacts/step-02-extracted-topogram/topo/candidates/reconcile/model/bundles/health/docs/journeys/health_journey.md",
+    "proof/artifacts/step-02-extracted-topogram/topo/candidates/reconcile/report.json",
+    "proof/artifacts/step-02-extracted-topogram/topo/candidates/reconcile/report.md",
+    "src/api/app.js",
+    "src/api/repository.js",
+    "src/check.js",
+    "topo/sdlc/.topogram-sdlc-history.json",
+    "proof/artifacts/step-05-check.json",
+    "proof/artifacts/step-05-extract-check.json",
+    "proof/artifacts/step-05-extract-diff.json",
+    "proof/artifacts/step-05-extract-refresh-dry-run.json",
+    "proof/artifacts/step-05-extract-refresh.json",
+    "proof/artifacts/step-05-npm-verify.txt",
+    "proof/artifacts/step-05-sdlc-check.txt",
+    "proof/artifacts/step-05-sdlc-complete-task-refresh-drift.json",
+    "proof/artifacts/step-05-sdlc-start-task-refresh-drift.json",
+    "topo/sdlc/acceptance_criteria/refresh-drift.tg",
+    "topo/sdlc/requirements/refresh-drift.tg",
+    "topo/sdlc/tasks/refresh-drift.tg",
+    "topo/verifications/refresh-drift.tg"
+  ],
+  "changedTasks": [
+    {
+      "disposition": "active",
+      "explicitDisposition": true,
+      "file": "topo/sdlc/tasks/refresh-drift.tg",
+      "id": "task_refresh_drift",
+      "priority": "medium",
+      "requiresDisposition": false,
+      "status": "done"
+    }
+  ],
+  "errors": [],
+  "nextCommands": [
+    "topogram sdlc explain <task-id> --json",
+    "topogram query slice ./topo --task <task-id> --json",
+    "topogram sdlc gate . --base <ref> --head <ref> --require-adopted"
+  ],
+  "ok": true,
+  "openTasks": [],
+  "projectRoot": "<repo>",
+  "taskFiles": [
+    "topo/sdlc/tasks/refresh-drift.tg"
+  ],
+  "topogramRoot": "<repo>/topo",
+  "type": "sdlc_commit_prep",
+  "version": "1",
+  "warnings": []
+}

@@ -1,0 +1,811 @@
+{
+  "broadSelectorCount": 8,
+  "broadSelectors": [
+    {
+      "appliedItemCount": 0,
+      "blockedItemCount": 19,
+      "itemCount": 19,
+      "kind": "plan",
+      "label": "approved or pending plan items",
+      "pendingItemCount": 19,
+      "previewCommand": "topogram adopt from-plan proof/artifacts/step-02-extracted-topogram --dry-run",
+      "selector": "from-plan",
+      "writeCommand": "topogram adopt from-plan proof/artifacts/step-02-extracted-topogram --write"
+    },
+    {
+      "appliedItemCount": 0,
+      "blockedItemCount": 1,
+      "itemCount": 1,
+      "kind": "kind",
+      "label": "shapes",
+      "pendingItemCount": 1,
+      "previewCommand": "topogram adopt shapes proof/artifacts/step-02-extracted-topogram --dry-run",
+      "selector": "shapes",
+      "writeCommand": "topogram adopt shapes proof/artifacts/step-02-extracted-topogram --write"
+    },
+    {
+      "appliedItemCount": 0,
+      "blockedItemCount": 2,
+      "itemCount": 2,
+      "kind": "kind",
+      "label": "entities",
+      "pendingItemCount": 2,
+      "previewCommand": "topogram adopt entities proof/artifacts/step-02-extracted-topogram --dry-run",
+      "selector": "entities",
+      "writeCommand": "topogram adopt entities proof/artifacts/step-02-extracted-topogram --write"
+    },
+    {
+      "appliedItemCount": 0,
+      "blockedItemCount": 5,
+      "itemCount": 5,
+      "kind": "kind",
+      "label": "capabilities",
+      "pendingItemCount": 5,
+      "previewCommand": "topogram adopt capabilities proof/artifacts/step-02-extracted-topogram --dry-run",
+      "selector": "capabilities",
+      "writeCommand": "topogram adopt capabilities proof/artifacts/step-02-extracted-topogram --write"
+    },
+    {
+      "appliedItemCount": 0,
+      "blockedItemCount": 2,
+      "itemCount": 2,
+      "kind": "kind",
+      "label": "widgets",
+      "pendingItemCount": 2,
+      "previewCommand": "topogram adopt widgets proof/artifacts/step-02-extracted-topogram --dry-run",
+      "selector": "widgets",
+      "writeCommand": "topogram adopt widgets proof/artifacts/step-02-extracted-topogram --write"
+    },
+    {
+      "appliedItemCount": 0,
+      "blockedItemCount": 4,
+      "itemCount": 4,
+      "kind": "track",
+      "label": "docs",
+      "pendingItemCount": 4,
+      "previewCommand": "topogram adopt docs proof/artifacts/step-02-extracted-topogram --dry-run",
+      "selector": "docs",
+      "writeCommand": "topogram adopt docs proof/artifacts/step-02-extracted-topogram --write"
+    },
+    {
+      "appliedItemCount": 0,
+      "blockedItemCount": 4,
+      "itemCount": 4,
+      "kind": "track",
+      "label": "journey docs",
+      "pendingItemCount": 4,
+      "previewCommand": "topogram adopt journeys proof/artifacts/step-02-extracted-topogram --dry-run",
+      "selector": "journeys",
+      "writeCommand": "topogram adopt journeys proof/artifacts/step-02-extracted-topogram --write"
+    },
+    {
+      "appliedItemCount": 0,
+      "blockedItemCount": 7,
+      "itemCount": 7,
+      "kind": "track",
+      "label": "UI reports, widgets, and event shapes",
+      "pendingItemCount": 7,
+      "previewCommand": "topogram adopt ui proof/artifacts/step-02-extracted-topogram --dry-run",
+      "selector": "ui",
+      "writeCommand": "topogram adopt ui proof/artifacts/step-02-extracted-topogram --write"
+    }
+  ],
+  "extractorContext": {
+    "bundledExtractors": [],
+    "candidateCounts": {
+      "apiCapabilities": 5,
+      "apiRoutes": 12,
+      "cliCapabilities": 0,
+      "cliCommands": 0,
+      "cliSurfaces": 0,
+      "dbEntities": 2,
+      "dbEnums": 0,
+      "dbMaintainedSeams": 1,
+      "uiFlows": 0,
+      "uiRoutes": 4,
+      "uiScreens": 4,
+      "uiShapes": 1,
+      "uiWidgets": 2,
+      "verifications": 0,
+      "workflows": 0
+    },
+    "packageBackedExtractors": [
+      {
+        "compatibleCliRange": "^0.3.80",
+        "extractors": [
+          "db.prisma-package"
+        ],
+        "id": "@topogram/extractor-prisma-db",
+        "manifestPath": "<repo>/node_modules/@topogram/extractor-prisma-db/topogram-extractor.json",
+        "manifestVersion": "1",
+        "packageName": "@topogram/extractor-prisma-db",
+        "packageVersion": "0.1.0",
+        "packageVersionStatus": "installed",
+        "policyPin": {
+          "expectedVersion": "1",
+          "matches": true,
+          "pinCommand": "topogram extractor policy pin @topogram/extractor-prisma-db@1",
+          "pinnedVersion": "1",
+          "state": "pinned"
+        },
+        "tracks": [
+          "db"
+        ],
+        "version": "1"
+      },
+      {
+        "compatibleCliRange": "^0.3.80",
+        "extractors": [
+          "api.express-package"
+        ],
+        "id": "@topogram/extractor-express-api",
+        "manifestPath": "<repo>/node_modules/@topogram/extractor-express-api/topogram-extractor.json",
+        "manifestVersion": "1",
+        "packageName": "@topogram/extractor-express-api",
+        "packageVersion": "0.1.0",
+        "packageVersionStatus": "installed",
+        "policyPin": {
+          "expectedVersion": "1",
+          "matches": true,
+          "pinCommand": "topogram extractor policy pin @topogram/extractor-express-api@1",
+          "pinnedVersion": "1",
+          "state": "pinned"
+        },
+        "tracks": [
+          "api"
+        ],
+        "version": "1"
+      },
+      {
+        "compatibleCliRange": "^0.3.85",
+        "extractors": [
+          "ui.react-router-package"
+        ],
+        "id": "@topogram/extractor-react-router",
+        "manifestPath": "<repo>/node_modules/@topogram/extractor-react-router/topogram-extractor.json",
+        "manifestVersion": "1",
+        "packageName": "@topogram/extractor-react-router",
+        "packageVersion": "0.1.1",
+        "packageVersionStatus": "installed",
+        "policyPin": {
+          "expectedVersion": "1",
+          "matches": true,
+          "pinCommand": "topogram extractor policy pin @topogram/extractor-react-router@1",
+          "pinnedVersion": "1",
+          "state": "pinned"
+        },
+        "tracks": [
+          "ui"
+        ],
+        "version": "1"
+      }
+    ],
+    "provenancePath": "<repo>/proof/artifacts/step-02-extracted-topogram/.topogram-extract.json",
+    "safetyNotes": [
+      "Extractor packages are evidence producers only; review candidates before canonical adoption.",
+      "Use dry-run adoption before --write, especially when package-backed extractors contributed candidates."
+    ],
+    "summary": {
+      "bundled_extractor_count": 0,
+      "package_backed_extractor_count": 3,
+      "source_file_count": 22
+    }
+  },
+  "nextCommand": "topogram adopt bundle:content-submission proof/artifacts/step-02-extracted-topogram --dry-run",
+  "ok": true,
+  "projectRoot": "<repo>/proof/artifacts/step-02-extracted-topogram",
+  "selectorCount": 7,
+  "selectors": [
+    {
+      "appliedItemCount": 0,
+      "blockedItemCount": 0,
+      "bundle": "content-submission",
+      "complete": false,
+      "extractorContext": {
+        "bundledExtractors": [],
+        "candidateCounts": {
+          "apiCapabilities": 5,
+          "apiRoutes": 12,
+          "cliCapabilities": 0,
+          "cliCommands": 0,
+          "cliSurfaces": 0,
+          "dbEntities": 2,
+          "dbEnums": 0,
+          "dbMaintainedSeams": 1,
+          "uiFlows": 0,
+          "uiRoutes": 4,
+          "uiScreens": 4,
+          "uiShapes": 1,
+          "uiWidgets": 2,
+          "verifications": 0,
+          "workflows": 0
+        },
+        "packageBackedExtractors": [
+          {
+            "compatibleCliRange": "^0.3.80",
+            "extractors": [
+              "db.prisma-package"
+            ],
+            "id": "@topogram/extractor-prisma-db",
+            "manifestVersion": "1",
+            "packageName": "@topogram/extractor-prisma-db",
+            "packageVersion": "0.1.0",
+            "packageVersionStatus": "installed",
+            "policyPin": {
+              "expectedVersion": "1",
+              "matches": true,
+              "pinCommand": "topogram extractor policy pin @topogram/extractor-prisma-db@1",
+              "pinnedVersion": "1",
+              "state": "pinned"
+            },
+            "tracks": [
+              "db"
+            ],
+            "version": "1"
+          },
+          {
+            "compatibleCliRange": "^0.3.80",
+            "extractors": [
+              "api.express-package"
+            ],
+            "id": "@topogram/extractor-express-api",
+            "manifestVersion": "1",
+            "packageName": "@topogram/extractor-express-api",
+            "packageVersion": "0.1.0",
+            "packageVersionStatus": "installed",
+            "policyPin": {
+              "expectedVersion": "1",
+              "matches": true,
+              "pinCommand": "topogram extractor policy pin @topogram/extractor-express-api@1",
+              "pinnedVersion": "1",
+              "state": "pinned"
+            },
+            "tracks": [
+              "api"
+            ],
+            "version": "1"
+          },
+          {
+            "compatibleCliRange": "^0.3.85",
+            "extractors": [
+              "ui.react-router-package"
+            ],
+            "id": "@topogram/extractor-react-router",
+            "manifestVersion": "1",
+            "packageName": "@topogram/extractor-react-router",
+            "packageVersion": "0.1.1",
+            "packageVersionStatus": "installed",
+            "policyPin": {
+              "expectedVersion": "1",
+              "matches": true,
+              "pinCommand": "topogram extractor policy pin @topogram/extractor-react-router@1",
+              "pinnedVersion": "1",
+              "state": "pinned"
+            },
+            "tracks": [
+              "ui"
+            ],
+            "version": "1"
+          }
+        ],
+        "safetyNotes": [
+          "Extractor packages are evidence producers only; review candidates before canonical adoption.",
+          "Use dry-run adoption before --write, especially when package-backed extractors contributed candidates."
+        ],
+        "tracks": []
+      },
+      "itemCount": 1,
+      "kind": "bundle",
+      "pendingItemCount": 1,
+      "previewCommand": "topogram adopt bundle:content-submission proof/artifacts/step-02-extracted-topogram --dry-run",
+      "selector": "bundle:content-submission",
+      "writeCommand": "topogram adopt bundle:content-submission proof/artifacts/step-02-extracted-topogram --write"
+    },
+    {
+      "appliedItemCount": 0,
+      "blockedItemCount": 0,
+      "bundle": "contentsubmission",
+      "complete": false,
+      "extractorContext": {
+        "bundledExtractors": [],
+        "candidateCounts": {
+          "apiCapabilities": 5,
+          "apiRoutes": 12,
+          "cliCapabilities": 0,
+          "cliCommands": 0,
+          "cliSurfaces": 0,
+          "dbEntities": 2,
+          "dbEnums": 0,
+          "dbMaintainedSeams": 1,
+          "uiFlows": 0,
+          "uiRoutes": 4,
+          "uiScreens": 4,
+          "uiShapes": 1,
+          "uiWidgets": 2,
+          "verifications": 0,
+          "workflows": 0
+        },
+        "packageBackedExtractors": [
+          {
+            "compatibleCliRange": "^0.3.80",
+            "extractors": [
+              "db.prisma-package"
+            ],
+            "id": "@topogram/extractor-prisma-db",
+            "manifestVersion": "1",
+            "packageName": "@topogram/extractor-prisma-db",
+            "packageVersion": "0.1.0",
+            "packageVersionStatus": "installed",
+            "policyPin": {
+              "expectedVersion": "1",
+              "matches": true,
+              "pinCommand": "topogram extractor policy pin @topogram/extractor-prisma-db@1",
+              "pinnedVersion": "1",
+              "state": "pinned"
+            },
+            "tracks": [
+              "db"
+            ],
+            "version": "1"
+          },
+          {
+            "compatibleCliRange": "^0.3.80",
+            "extractors": [
+              "api.express-package"
+            ],
+            "id": "@topogram/extractor-express-api",
+            "manifestVersion": "1",
+            "packageName": "@topogram/extractor-express-api",
+            "packageVersion": "0.1.0",
+            "packageVersionStatus": "installed",
+            "policyPin": {
+              "expectedVersion": "1",
+              "matches": true,
+              "pinCommand": "topogram extractor policy pin @topogram/extractor-express-api@1",
+              "pinnedVersion": "1",
+              "state": "pinned"
+            },
+            "tracks": [
+              "api"
+            ],
+            "version": "1"
+          },
+          {
+            "compatibleCliRange": "^0.3.85",
+            "extractors": [
+              "ui.react-router-package"
+            ],
+            "id": "@topogram/extractor-react-router",
+            "manifestVersion": "1",
+            "packageName": "@topogram/extractor-react-router",
+            "packageVersion": "0.1.1",
+            "packageVersionStatus": "installed",
+            "policyPin": {
+              "expectedVersion": "1",
+              "matches": true,
+              "pinCommand": "topogram extractor policy pin @topogram/extractor-react-router@1",
+              "pinnedVersion": "1",
+              "state": "pinned"
+            },
+            "tracks": [
+              "ui"
+            ],
+            "version": "1"
+          }
+        ],
+        "safetyNotes": [
+          "Extractor packages are evidence producers only; review candidates before canonical adoption.",
+          "Use dry-run adoption before --write, especially when package-backed extractors contributed candidates."
+        ],
+        "tracks": []
+      },
+      "itemCount": 1,
+      "kind": "bundle",
+      "pendingItemCount": 1,
+      "previewCommand": "topogram adopt bundle:contentsubmission proof/artifacts/step-02-extracted-topogram --dry-run",
+      "selector": "bundle:contentsubmission",
+      "writeCommand": "topogram adopt bundle:contentsubmission proof/artifacts/step-02-extracted-topogram --write"
+    },
+    {
+      "appliedItemCount": 0,
+      "blockedItemCount": 0,
+      "bundle": "database",
+      "complete": false,
+      "extractorContext": {
+        "bundledExtractors": [],
+        "candidateCounts": {
+          "apiCapabilities": 5,
+          "apiRoutes": 12,
+          "cliCapabilities": 0,
+          "cliCommands": 0,
+          "cliSurfaces": 0,
+          "dbEntities": 2,
+          "dbEnums": 0,
+          "dbMaintainedSeams": 1,
+          "uiFlows": 0,
+          "uiRoutes": 4,
+          "uiScreens": 4,
+          "uiShapes": 1,
+          "uiWidgets": 2,
+          "verifications": 0,
+          "workflows": 0
+        },
+        "packageBackedExtractors": [
+          {
+            "compatibleCliRange": "^0.3.80",
+            "extractors": [
+              "db.prisma-package"
+            ],
+            "id": "@topogram/extractor-prisma-db",
+            "manifestVersion": "1",
+            "packageName": "@topogram/extractor-prisma-db",
+            "packageVersion": "0.1.0",
+            "packageVersionStatus": "installed",
+            "policyPin": {
+              "expectedVersion": "1",
+              "matches": true,
+              "pinCommand": "topogram extractor policy pin @topogram/extractor-prisma-db@1",
+              "pinnedVersion": "1",
+              "state": "pinned"
+            },
+            "tracks": [
+              "db"
+            ],
+            "version": "1"
+          }
+        ],
+        "safetyNotes": [
+          "Extractor packages are evidence producers only; review candidates before canonical adoption.",
+          "Use dry-run adoption before --write, especially when package-backed extractors contributed candidates."
+        ],
+        "tracks": [
+          "db"
+        ]
+      },
+      "itemCount": 1,
+      "kind": "bundle",
+      "pendingItemCount": 1,
+      "previewCommand": "topogram adopt bundle:database proof/artifacts/step-02-extracted-topogram --dry-run",
+      "selector": "bundle:database",
+      "writeCommand": "topogram adopt bundle:database proof/artifacts/step-02-extracted-topogram --write"
+    },
+    {
+      "appliedItemCount": 0,
+      "blockedItemCount": 0,
+      "bundle": "health",
+      "complete": false,
+      "extractorContext": {
+        "bundledExtractors": [],
+        "candidateCounts": {
+          "apiCapabilities": 5,
+          "apiRoutes": 12,
+          "cliCapabilities": 0,
+          "cliCommands": 0,
+          "cliSurfaces": 0,
+          "dbEntities": 2,
+          "dbEnums": 0,
+          "dbMaintainedSeams": 1,
+          "uiFlows": 0,
+          "uiRoutes": 4,
+          "uiScreens": 4,
+          "uiShapes": 1,
+          "uiWidgets": 2,
+          "verifications": 0,
+          "workflows": 0
+        },
+        "packageBackedExtractors": [
+          {
+            "compatibleCliRange": "^0.3.80",
+            "extractors": [
+              "db.prisma-package"
+            ],
+            "id": "@topogram/extractor-prisma-db",
+            "manifestVersion": "1",
+            "packageName": "@topogram/extractor-prisma-db",
+            "packageVersion": "0.1.0",
+            "packageVersionStatus": "installed",
+            "policyPin": {
+              "expectedVersion": "1",
+              "matches": true,
+              "pinCommand": "topogram extractor policy pin @topogram/extractor-prisma-db@1",
+              "pinnedVersion": "1",
+              "state": "pinned"
+            },
+            "tracks": [
+              "db"
+            ],
+            "version": "1"
+          },
+          {
+            "compatibleCliRange": "^0.3.80",
+            "extractors": [
+              "api.express-package"
+            ],
+            "id": "@topogram/extractor-express-api",
+            "manifestVersion": "1",
+            "packageName": "@topogram/extractor-express-api",
+            "packageVersion": "0.1.0",
+            "packageVersionStatus": "installed",
+            "policyPin": {
+              "expectedVersion": "1",
+              "matches": true,
+              "pinCommand": "topogram extractor policy pin @topogram/extractor-express-api@1",
+              "pinnedVersion": "1",
+              "state": "pinned"
+            },
+            "tracks": [
+              "api"
+            ],
+            "version": "1"
+          },
+          {
+            "compatibleCliRange": "^0.3.85",
+            "extractors": [
+              "ui.react-router-package"
+            ],
+            "id": "@topogram/extractor-react-router",
+            "manifestVersion": "1",
+            "packageName": "@topogram/extractor-react-router",
+            "packageVersion": "0.1.1",
+            "packageVersionStatus": "installed",
+            "policyPin": {
+              "expectedVersion": "1",
+              "matches": true,
+              "pinCommand": "topogram extractor policy pin @topogram/extractor-react-router@1",
+              "pinnedVersion": "1",
+              "state": "pinned"
+            },
+            "tracks": [
+              "ui"
+            ],
+            "version": "1"
+          }
+        ],
+        "safetyNotes": [
+          "Extractor packages are evidence producers only; review candidates before canonical adoption.",
+          "Use dry-run adoption before --write, especially when package-backed extractors contributed candidates."
+        ],
+        "tracks": []
+      },
+      "itemCount": 3,
+      "kind": "bundle",
+      "pendingItemCount": 3,
+      "previewCommand": "topogram adopt bundle:health proof/artifacts/step-02-extracted-topogram --dry-run",
+      "selector": "bundle:health",
+      "writeCommand": "topogram adopt bundle:health proof/artifacts/step-02-extracted-topogram --write"
+    },
+    {
+      "appliedItemCount": 0,
+      "blockedItemCount": 0,
+      "bundle": "home-dashboard",
+      "complete": false,
+      "extractorContext": {
+        "bundledExtractors": [],
+        "candidateCounts": {
+          "apiCapabilities": 5,
+          "apiRoutes": 12,
+          "cliCapabilities": 0,
+          "cliCommands": 0,
+          "cliSurfaces": 0,
+          "dbEntities": 2,
+          "dbEnums": 0,
+          "dbMaintainedSeams": 1,
+          "uiFlows": 0,
+          "uiRoutes": 4,
+          "uiScreens": 4,
+          "uiShapes": 1,
+          "uiWidgets": 2,
+          "verifications": 0,
+          "workflows": 0
+        },
+        "packageBackedExtractors": [
+          {
+            "compatibleCliRange": "^0.3.85",
+            "extractors": [
+              "ui.react-router-package"
+            ],
+            "id": "@topogram/extractor-react-router",
+            "manifestVersion": "1",
+            "packageName": "@topogram/extractor-react-router",
+            "packageVersion": "0.1.1",
+            "packageVersionStatus": "installed",
+            "policyPin": {
+              "expectedVersion": "1",
+              "matches": true,
+              "pinCommand": "topogram extractor policy pin @topogram/extractor-react-router@1",
+              "pinnedVersion": "1",
+              "state": "pinned"
+            },
+            "tracks": [
+              "ui"
+            ],
+            "version": "1"
+          }
+        ],
+        "safetyNotes": [
+          "Extractor packages are evidence producers only; review candidates before canonical adoption.",
+          "Use dry-run adoption before --write, especially when package-backed extractors contributed candidates."
+        ],
+        "tracks": [
+          "ui"
+        ]
+      },
+      "itemCount": 3,
+      "kind": "bundle",
+      "pendingItemCount": 3,
+      "previewCommand": "topogram adopt bundle:home-dashboard proof/artifacts/step-02-extracted-topogram --dry-run",
+      "selector": "bundle:home-dashboard",
+      "writeCommand": "topogram adopt bundle:home-dashboard proof/artifacts/step-02-extracted-topogram --write"
+    },
+    {
+      "appliedItemCount": 0,
+      "blockedItemCount": 0,
+      "bundle": "submission",
+      "complete": false,
+      "extractorContext": {
+        "bundledExtractors": [],
+        "candidateCounts": {
+          "apiCapabilities": 5,
+          "apiRoutes": 12,
+          "cliCapabilities": 0,
+          "cliCommands": 0,
+          "cliSurfaces": 0,
+          "dbEntities": 2,
+          "dbEnums": 0,
+          "dbMaintainedSeams": 1,
+          "uiFlows": 0,
+          "uiRoutes": 4,
+          "uiScreens": 4,
+          "uiShapes": 1,
+          "uiWidgets": 2,
+          "verifications": 0,
+          "workflows": 0
+        },
+        "packageBackedExtractors": [
+          {
+            "compatibleCliRange": "^0.3.80",
+            "extractors": [
+              "db.prisma-package"
+            ],
+            "id": "@topogram/extractor-prisma-db",
+            "manifestVersion": "1",
+            "packageName": "@topogram/extractor-prisma-db",
+            "packageVersion": "0.1.0",
+            "packageVersionStatus": "installed",
+            "policyPin": {
+              "expectedVersion": "1",
+              "matches": true,
+              "pinCommand": "topogram extractor policy pin @topogram/extractor-prisma-db@1",
+              "pinnedVersion": "1",
+              "state": "pinned"
+            },
+            "tracks": [
+              "db"
+            ],
+            "version": "1"
+          },
+          {
+            "compatibleCliRange": "^0.3.80",
+            "extractors": [
+              "api.express-package"
+            ],
+            "id": "@topogram/extractor-express-api",
+            "manifestVersion": "1",
+            "packageName": "@topogram/extractor-express-api",
+            "packageVersion": "0.1.0",
+            "packageVersionStatus": "installed",
+            "policyPin": {
+              "expectedVersion": "1",
+              "matches": true,
+              "pinCommand": "topogram extractor policy pin @topogram/extractor-express-api@1",
+              "pinnedVersion": "1",
+              "state": "pinned"
+            },
+            "tracks": [
+              "api"
+            ],
+            "version": "1"
+          },
+          {
+            "compatibleCliRange": "^0.3.85",
+            "extractors": [
+              "ui.react-router-package"
+            ],
+            "id": "@topogram/extractor-react-router",
+            "manifestVersion": "1",
+            "packageName": "@topogram/extractor-react-router",
+            "packageVersion": "0.1.1",
+            "packageVersionStatus": "installed",
+            "policyPin": {
+              "expectedVersion": "1",
+              "matches": true,
+              "pinCommand": "topogram extractor policy pin @topogram/extractor-react-router@1",
+              "pinnedVersion": "1",
+              "state": "pinned"
+            },
+            "tracks": [
+              "ui"
+            ],
+            "version": "1"
+          }
+        ],
+        "safetyNotes": [
+          "Extractor packages are evidence producers only; review candidates before canonical adoption.",
+          "Use dry-run adoption before --write, especially when package-backed extractors contributed candidates."
+        ],
+        "tracks": []
+      },
+      "itemCount": 6,
+      "kind": "bundle",
+      "pendingItemCount": 6,
+      "previewCommand": "topogram adopt bundle:submission proof/artifacts/step-02-extracted-topogram --dry-run",
+      "selector": "bundle:submission",
+      "writeCommand": "topogram adopt bundle:submission proof/artifacts/step-02-extracted-topogram --write"
+    },
+    {
+      "appliedItemCount": 0,
+      "blockedItemCount": 0,
+      "bundle": "submissions",
+      "complete": false,
+      "extractorContext": {
+        "bundledExtractors": [],
+        "candidateCounts": {
+          "apiCapabilities": 5,
+          "apiRoutes": 12,
+          "cliCapabilities": 0,
+          "cliCommands": 0,
+          "cliSurfaces": 0,
+          "dbEntities": 2,
+          "dbEnums": 0,
+          "dbMaintainedSeams": 1,
+          "uiFlows": 0,
+          "uiRoutes": 4,
+          "uiScreens": 4,
+          "uiShapes": 1,
+          "uiWidgets": 2,
+          "verifications": 0,
+          "workflows": 0
+        },
+        "packageBackedExtractors": [
+          {
+            "compatibleCliRange": "^0.3.85",
+            "extractors": [
+              "ui.react-router-package"
+            ],
+            "id": "@topogram/extractor-react-router",
+            "manifestVersion": "1",
+            "packageName": "@topogram/extractor-react-router",
+            "packageVersion": "0.1.1",
+            "packageVersionStatus": "installed",
+            "policyPin": {
+              "expectedVersion": "1",
+              "matches": true,
+              "pinCommand": "topogram extractor policy pin @topogram/extractor-react-router@1",
+              "pinnedVersion": "1",
+              "state": "pinned"
+            },
+            "tracks": [
+              "ui"
+            ],
+            "version": "1"
+          }
+        ],
+        "safetyNotes": [
+          "Extractor packages are evidence producers only; review candidates before canonical adoption.",
+          "Use dry-run adoption before --write, especially when package-backed extractors contributed candidates."
+        ],
+        "tracks": [
+          "ui"
+        ]
+      },
+      "itemCount": 4,
+      "kind": "bundle",
+      "pendingItemCount": 4,
+      "previewCommand": "topogram adopt bundle:submissions proof/artifacts/step-02-extracted-topogram --dry-run",
+      "selector": "bundle:submissions",
+      "writeCommand": "topogram adopt bundle:submissions proof/artifacts/step-02-extracted-topogram --write"
+    }
+  ],
+  "topogramRoot": "<repo>/proof/artifacts/step-02-extracted-topogram/topo",
+  "workspaceRoot": "<repo>/proof/artifacts/step-02-extracted-topogram/topo"
+}

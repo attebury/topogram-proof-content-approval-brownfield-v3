@@ -1,0 +1,22 @@
+# imported confidence: 0.9
+# imported source_kind: unknown
+entity entity_content_submission {
+  name "undefined"
+  description "Candidate entity imported from brownfield schema evidence"
+
+  fields {
+    id untitled required
+    title untitled required
+    body untitled required
+    status untitled required
+    review_priority untitled optional
+    assigned_reviewer untitled optional
+    author_name untitled required
+    created_at untitled required
+    submitted_at untitled required
+    reviewed_at untitled optional
+    reviewer_note untitled optional
+  }
+
+  status active
+}
