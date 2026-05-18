@@ -15,7 +15,9 @@ provenance:
   - src/api/app.js#GET /submissions
   - src/api/app.js#GET /submissions/:submissionId
   - src/api/app.js#POST /submissions
+  - src/api/app.js#POST /submissions/bulk-approve
   - src/api/app.js#POST /submissions/:submissionId/approve
+  - src/api/app.js#POST /submissions/:submissionId/archive
   - src/api/app.js#POST /submissions/:submissionId/request-changes
 tags:
   - import

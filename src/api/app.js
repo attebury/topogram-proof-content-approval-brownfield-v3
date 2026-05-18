@@ -1,6 +1,7 @@
 import express from "express";
 import {
   approveSubmission,
+  archiveSubmission,
   bulkApproveSubmissions,
   createSubmission,
   getSubmission,
@@ -45,6 +46,15 @@ export function createContentApprovalApp() {
 
   app.post("/submissions/:submissionId/approve", (req, res) => {
     const submission = approveSubmission(req.params.submissionId, req.body);
+    if (!submission) {
+      res.status(404).json({ error: "submission_not_found" });
+      return;
+    }
+    res.json(submission);
+  });
+
+  app.post("/submissions/:submissionId/archive", (req, res) => {
+    const submission = archiveSubmission(req.params.submissionId, req.body);
     if (!submission) {
       res.status(404).json({ error: "submission_not_found" });
       return;

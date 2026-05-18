@@ -68,6 +68,13 @@ try {
   assert.equal(bulk.body.count, 2);
   assert.ok(bulk.body.items.every((item) => item.status === "approved"));
 
+  const archived = await request("/submissions/sub_101/archive", {
+    method: "POST",
+    body: JSON.stringify({ reason: "No longer needed." }),
+  });
+  assert.equal(archived.response.status, 200);
+  assert.equal(archived.body.status, "archived");
+
   console.log("Brownfield baseline API behavior verified.");
 } finally {
   await new Promise((resolve) => server.close(resolve));

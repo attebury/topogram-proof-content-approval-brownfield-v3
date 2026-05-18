@@ -1,0 +1,131 @@
+{
+  "acceptance_criteria": [
+    {
+      "id": "ac_refresh_drift",
+      "kind": "acceptance_criterion",
+      "name": "Refresh Drift",
+      "status": "approved"
+    }
+  ],
+  "actor": "actor_operator",
+  "blockers": [],
+  "can_start": true,
+  "decisions": [],
+  "dryRun": false,
+  "next_commands": [
+    "topogram query slice ./topo --task task_refresh_drift --json",
+    "topogram query single-agent-plan ./topo --mode implementation --task task_refresh_drift --json",
+    "topogram query sdlc-proof-gaps ./topo --task task_refresh_drift --json",
+    "topogram query verification-targets ./topo --task task_refresh_drift --json",
+    "topogram sdlc complete task_refresh_drift . --verification <verification-id> --actor actor_operator --write"
+  ],
+  "ok": true,
+  "plans": [],
+  "proof_gaps": {
+    "errors": [],
+    "missing": {
+      "acceptance_refs": false,
+      "satisfies": false,
+      "verification_refs": false
+    },
+    "ready_for_done": true,
+    "task": {
+      "acceptance_refs": [
+        "ac_refresh_drift"
+      ],
+      "blocked_by": [],
+      "claimed_by": [
+        "actor_operator"
+      ],
+      "disposition": "active",
+      "id": "task_refresh_drift",
+      "kind": "task",
+      "name": "Refresh Drift",
+      "priority": "medium",
+      "satisfies": [
+        "req_refresh_drift"
+      ],
+      "status": "in-progress",
+      "verification_refs": [
+        "verification_refresh_drift"
+      ],
+      "work_type": "implementation"
+    },
+    "warnings": []
+  },
+  "refusal_reasons": [],
+  "requirements": [
+    {
+      "id": "req_refresh_drift",
+      "kind": "requirement",
+      "name": "Refresh Drift",
+      "status": "approved"
+    }
+  ],
+  "rules": [],
+  "task": {
+    "acceptance_refs": [
+      "ac_refresh_drift"
+    ],
+    "blocked_by": [],
+    "claimed_by": [
+      "actor_operator"
+    ],
+    "disposition": "active",
+    "id": "task_refresh_drift",
+    "kind": "task",
+    "name": "Refresh Drift",
+    "priority": "medium",
+    "satisfies": [
+      "req_refresh_drift"
+    ],
+    "status": "in-progress",
+    "verification_refs": [
+      "verification_refresh_drift"
+    ],
+    "work_type": "implementation"
+  },
+  "transitions": [
+    {
+      "archivable": false,
+      "dod": {
+        "errors": [],
+        "satisfied": true,
+        "warnings": []
+      },
+      "dryRun": false,
+      "file": "<repo>/topo/sdlc/tasks/refresh-drift.tg",
+      "from": "unclaimed",
+      "id": "task_refresh_drift",
+      "kind": "task",
+      "ok": true,
+      "to": "claimed"
+    },
+    {
+      "archivable": false,
+      "dod": {
+        "errors": [],
+        "satisfied": true,
+        "warnings": []
+      },
+      "dryRun": false,
+      "file": "<repo>/topo/sdlc/tasks/refresh-drift.tg",
+      "from": "claimed",
+      "id": "task_refresh_drift",
+      "kind": "task",
+      "ok": true,
+      "to": "in-progress"
+    }
+  ],
+  "type": "sdlc_start_packet",
+  "verifications": [
+    {
+      "id": "verification_refresh_drift",
+      "kind": "verification",
+      "name": "Refresh Drift Verification",
+      "status": "active"
+    }
+  ],
+  "version": 1,
+  "written": true
+}

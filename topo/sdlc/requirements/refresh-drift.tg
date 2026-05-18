@@ -1,0 +1,9 @@
+requirement req_refresh_drift {
+  name "Refresh Drift"
+  description "The brownfield proof must show that source changes outside the adopted spec are surfaced through extraction refresh and diff artifacts for review."
+  affects [cap_list_submissions]
+  introduces_rules []
+  respects_rules []
+  priority medium
+  status approved
+}

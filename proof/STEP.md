@@ -1,11 +1,11 @@
-# Step 04: Feature From Slice
+# Step 05: Refresh Drift
 
 Repository: `topogram-proof-content-approval-brownfield-v3`
 CLI baseline: `@topogram/cli@0.3.99`
 
 ## Claim
 
-Implement a maintained feature from agent-safe slice context.
+Refresh extraction and review source/spec drift explicitly.
 
 ## Verification
 

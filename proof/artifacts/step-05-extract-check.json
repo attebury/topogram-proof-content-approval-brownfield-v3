@@ -1,0 +1,673 @@
+{
+  "errors": [
+    {
+      "loc": {
+        "end": {
+          "column": 29,
+          "line": 7,
+          "offset": 219
+        },
+        "file": "<repo>/proof/artifacts/step-02-extracted-topogram/topo/capabilities/cap-create-submissions.tg",
+        "start": {
+          "column": 12,
+          "line": 7,
+          "offset": 202
+        }
+      },
+      "message": "Missing reference 'entity_submission' in field 'creates' on capability cap_create_submissions",
+      "source": "topogram"
+    },
+    {
+      "loc": {
+        "end": {
+          "column": 27,
+          "line": 7,
+          "offset": 213
+        },
+        "file": "<repo>/proof/artifacts/step-02-extracted-topogram/topo/capabilities/cap-get-submission.tg",
+        "start": {
+          "column": 10,
+          "line": 7,
+          "offset": 196
+        }
+      },
+      "message": "Missing reference 'entity_submission' in field 'reads' on capability cap_get_submission",
+      "source": "topogram"
+    },
+    {
+      "loc": {
+        "end": {
+          "column": 23,
+          "line": 7,
+          "offset": 206
+        },
+        "file": "<repo>/proof/artifacts/step-02-extracted-topogram/topo/capabilities/cap-list-health.tg",
+        "start": {
+          "column": 10,
+          "line": 7,
+          "offset": 193
+        }
+      },
+      "message": "Missing reference 'entity_health' in field 'reads' on capability cap_list_health",
+      "source": "topogram"
+    },
+    {
+      "loc": {
+        "end": {
+          "column": 27,
+          "line": 7,
+          "offset": 215
+        },
+        "file": "<repo>/proof/artifacts/step-02-extracted-topogram/topo/capabilities/cap-list-submissions.tg",
+        "start": {
+          "column": 10,
+          "line": 7,
+          "offset": 198
+        }
+      },
+      "message": "Missing reference 'entity_submission' in field 'reads' on capability cap_list_submissions",
+      "source": "topogram"
+    },
+    {
+      "loc": {
+        "end": {
+          "column": 23,
+          "line": 11,
+          "offset": 409
+        },
+        "file": "<repo>/proof/artifacts/step-02-extracted-topogram/topo/capabilities/cap-res.tg",
+        "start": {
+          "column": 10,
+          "line": 11,
+          "offset": 396
+        }
+      },
+      "message": "Missing reference 'entity_health' in field 'reads' on capability cap_res",
+      "source": "topogram"
+    }
+  ],
+  "extract": {
+    "content": {
+      "added": [],
+      "changed": [],
+      "removed": []
+    },
+    "diagnostics": [],
+    "errors": [],
+    "exists": true,
+    "ok": true,
+    "path": "<repo>/proof/artifacts/step-02-extracted-topogram/.topogram-extract.json",
+    "source": {
+      "extract": {
+        "candidateCounts": {
+          "apiCapabilities": 5,
+          "apiRoutes": 16,
+          "cliCapabilities": 0,
+          "cliCommands": 0,
+          "cliSurfaces": 0,
+          "dbEntities": 2,
+          "dbEnums": 0,
+          "dbMaintainedSeams": 1,
+          "uiFlows": 0,
+          "uiRoutes": 4,
+          "uiScreens": 4,
+          "uiShapes": 1,
+          "uiWidgets": 2,
+          "verifications": 0,
+          "workflows": 0
+        },
+        "extractorPackages": [],
+        "findingsCount": 3,
+        "tracks": [
+          "db",
+          "api",
+          "ui"
+        ]
+      },
+      "extractedAt": "2026-05-15T07:24:59.674Z",
+      "files": [
+        {
+          "path": ".gitignore",
+          "sha256": "478a9fee598602bfccfdeab89e41943e4046fefdad892f9c93d635391a5d8372",
+          "size": 67
+        },
+        {
+          "path": "README.md",
+          "sha256": "c5e4bd8317714cf54c0ffe6b7cbd8cc37a612adbf06a0d450b5eea44eda50ea5",
+          "size": 770
+        },
+        {
+          "path": "index.html",
+          "sha256": "fd489b554bedc78d63e376d88e75ed02c67ec8f0012972650c0374a7992e7196",
+          "size": 249
+        },
+        {
+          "path": "package-lock.json",
+          "sha256": "71a2a06e42fc164e74793724c9befd8181044714efce59631975685f8f01bf9f",
+          "size": 91105
+        },
+        {
+          "path": "package.json",
+          "sha256": "25552b1555bd4f7fe400563270af8c35d2dcad84c8cc226fb952350e6d0dd746",
+          "size": 792
+        },
+        {
+          "path": "prisma/migrations/20260515010101_init/migration.sql",
+          "sha256": "b4effd8c804f0b7a6febb31ca71e3b84c3d0b2aefb6eb7009ea314fc058a66c3",
+          "size": 808
+        },
+        {
+          "path": "prisma/schema.prisma",
+          "sha256": "fbd7019a9476ccd7a439f375b7112fc973812186c977743dda645a54344b3586",
+          "size": 680
+        },
+        {
+          "path": "proof/README.md",
+          "sha256": "8b775d5ba3940e3f5055a25ae6fd0f12de342bf1e3e7ceed9097ea95e011b16d",
+          "size": 1354
+        },
+        {
+          "path": "proof/STEP.md",
+          "sha256": "ed10435e4bd506d6c89e475ebcc4e4175b822a53f252f0d48e34120693b48000",
+          "size": 1591
+        },
+        {
+          "path": "proof/artifacts/step-01-npm-verify.txt",
+          "sha256": "48a23f102f0cc6922b4103edf1939f333b4b357231fb292d4186681a8d98e784",
+          "size": 513
+        },
+        {
+          "path": "proof/artifacts/step-03-adopt-dry-run.json",
+          "sha256": "272b31b75eddec5b566869b2864fbef4e82f42b71ed2ffbf235616381ef290af",
+          "size": 119998
+        },
+        {
+          "path": "proof/artifacts/step-03-adopt-list.json",
+          "sha256": "5603dc8a33de584ec8a1f6ac42fe0032eadeb5dfdd40f9ee3c3c3212278860db",
+          "size": 27873
+        },
+        {
+          "path": "proof/artifacts/step-03-adopt-write.json",
+          "sha256": "a3b4ca76f288251503578dc47d3f8522f9323ccc58201b624e0d8b54f78d7f3f",
+          "size": 152623
+        },
+        {
+          "path": "proof/artifacts/step-03-agent-brief.json",
+          "sha256": "3df2318d11062381889e3a2ab3759a32bd43feb7f9e572c9e1265e0350a1e7a3",
+          "size": 9457
+        },
+        {
+          "path": "proof/artifacts/step-03-check.json",
+          "sha256": "eec5aa5bd8578ec073ff184a7f49a249eb9a6b3b961313f6db9a0718cc42154f",
+          "size": 643
+        },
+        {
+          "path": "proof/artifacts/step-03-npm-verify.txt",
+          "sha256": "0d9c1a1258836688869f71731588d9746e5ce11b0c489bd567e7ee0382e6d2c2",
+          "size": 565
+        },
+        {
+          "path": "proof/artifacts/step-03-sdlc-check.txt",
+          "sha256": "44ac116448a8f4cfdfe074fd0bad6de67ba63ec941288ff3ec0deedaa509af81",
+          "size": 123
+        },
+        {
+          "path": "proof/artifacts/step-03-sdlc-complete-task-adopt-brownfield-spec.json",
+          "sha256": "69cf643dc8690aa71ca45a9e763f5eb5b5f2169ad98e80c3a6847e304931e376",
+          "size": 1081
+        },
+        {
+          "path": "proof/artifacts/step-03-sdlc-prep-commit.json",
+          "sha256": "bfeed890ccc2b533b447bbc1f6d2184be1cdae2a3bbbf6012dad6e539b02a8b6",
+          "size": 5083
+        },
+        {
+          "path": "proof/artifacts/step-03-sdlc-start-task-adopt-brownfield-spec.json",
+          "sha256": "e6e7fa0521c7d17ca6af8377ca72a3e13f5f55633e95cde9deb893e88fb96d47",
+          "size": 3425
+        },
+        {
+          "path": "proof/artifacts/step-03-task-slice.json",
+          "sha256": "e9bcb54a825581a4ae92247d271085429b5e970a0e9cd675bf0eb58b51f5ca32",
+          "size": 12843
+        },
+        {
+          "path": "proof/artifacts/step-04-check.json",
+          "sha256": "6b436aa10430ad702591ebf0ca06be41934730c7e7e1277a4a2fe978f61be3f8",
+          "size": 643
+        },
+        {
+          "path": "proof/artifacts/step-04-npm-verify.txt",
+          "sha256": "2f79b313a1cab507ef84c6b2507fe6df5b74bd651701a1f29e9b20156454442f",
+          "size": 565
+        },
+        {
+          "path": "proof/artifacts/step-04-sdlc-check.txt",
+          "sha256": "44ac116448a8f4cfdfe074fd0bad6de67ba63ec941288ff3ec0deedaa509af81",
+          "size": 123
+        },
+        {
+          "path": "proof/artifacts/step-04-sdlc-complete-task-maintained-bulk-approve.json",
+          "sha256": "4d152efe8f1889baa1d7294b76f9bf10e58f820015dd54e8c0520b79b572f36d",
+          "size": 1099
+        },
+        {
+          "path": "proof/artifacts/step-04-sdlc-prep-commit.json",
+          "sha256": "9a8604640959cf571dbed1b021881698177944d0e023f11329df4d0998ab64be",
+          "size": 1984
+        },
+        {
+          "path": "proof/artifacts/step-04-sdlc-start-task-maintained-bulk-approve.json",
+          "sha256": "c936c46bfa2a034fb5c79709abcc0d45bf4dd4e024e2d4e0e2bce7e6fa62c633",
+          "size": 3479
+        },
+        {
+          "path": "proof/artifacts/step-04-single-agent-plan.json",
+          "sha256": "0d6b577ab6fba436d84e02c67f57923de2bb5a3538080c145d3bf87afbaefc48",
+          "size": 6597
+        },
+        {
+          "path": "proof/artifacts/step-04-task-slice.json",
+          "sha256": "6db4a87ff71b9bf9154c4a6ed76e5b68be283d69d88710eb3d44f9a309b0477b",
+          "size": 9958
+        },
+        {
+          "path": "src/api/app.js",
+          "sha256": "5e9c8d6e681f990cd57cc30789e34beff8fe225041150731fec4562744b771af",
+          "size": 2130
+        },
+        {
+          "path": "src/api/repository.js",
+          "sha256": "6a28b7b3350a530288e8807da77649633b0f9008f7cf0723f544d516082d97b0",
+          "size": 3124
+        },
+        {
+          "path": "src/api/server.js",
+          "sha256": "770f2f8c89a0a99be3e69ff430f82ef1b2ddbd0df876ce4484f1ac237d0eb0e2",
+          "size": 291
+        },
+        {
+          "path": "src/check.js",
+          "sha256": "b9f16a0c015b2a863b271f87f728519137bef73f235cfdb9591625c5c89e9d72",
+          "size": 2707
+        },
+        {
+          "path": "src/ui/App.jsx",
+          "sha256": "a33c6d711c9707809eb2f318850a1936b6747239ec2a4c9572b01e6b1c1d7066",
+          "size": 995
+        },
+        {
+          "path": "src/ui/main.jsx",
+          "sha256": "b67d59ac200812b92241a3ed4d838628f6323a7b981fdff58cd3956d8b949333",
+          "size": 335
+        },
+        {
+          "path": "src/ui/screens/NewSubmission.jsx",
+          "sha256": "2af5f17908b23d9ffd4d93b58729bb137f3082d9d5012cd1823d8553c09c36bf",
+          "size": 687
+        },
+        {
+          "path": "src/ui/screens/SubmissionDetail.jsx",
+          "sha256": "b2e0e3301956cdb3cd0e7e0032941132180e03321f2e48cfb0ade3e43a8b4816",
+          "size": 687
+        },
+        {
+          "path": "src/ui/screens/SubmissionQueue.jsx",
+          "sha256": "15f788fd75875cdb007195f6182c93e0650927d0e530b9d39b72bc770882d8fb",
+          "size": 2322
+        },
+        {
+          "path": "src/ui/styles.css",
+          "sha256": "39f36f5702105013aa6225f70845b8f790607b93db407ec8d0066c29ddaa9078",
+          "size": 1851
+        },
+        {
+          "path": "topo/actors/actor-operator.tg",
+          "sha256": "461854abf0fac0b737e774efbfce36c34ea2ea1b40a68fe0cfc6cdbdd878b777",
+          "size": 113
+        },
+        {
+          "path": "topo/capabilities/cap-approve-submission.tg",
+          "sha256": "83c647ba9c56b2bb7e1552b0f1734506d822bff953ff16cbc2317f90d960d262",
+          "size": 314
+        },
+        {
+          "path": "topo/capabilities/cap-bulk-approve-submissions.tg",
+          "sha256": "79391cbc7c19678284e1a7956f6454d39dcc6ebf9167a9320cc1961e1deeaf3a",
+          "size": 334
+        },
+        {
+          "path": "topo/capabilities/cap-get-submission.tg",
+          "sha256": "c47a1a10bf561289a2f2760c5fc3989cdcc70b46ca38334e58fbfd5f707883fc",
+          "size": 276
+        },
+        {
+          "path": "topo/capabilities/cap-list-submissions.tg",
+          "sha256": "c4321c1c645b38b8e298f8389f64f4ddc78f8632520e6b9e1388b3b870efaee3",
+          "size": 278
+        },
+        {
+          "path": "topo/capabilities/cap-request-changes.tg",
+          "sha256": "26213dced943b6616518ce66e82222fcb684224a746f2dd95c76c3da1ae56abe",
+          "size": 336
+        },
+        {
+          "path": "topo/capabilities/cap-submit-content.tg",
+          "sha256": "6a5fe63952c6b4e58d18ca083a6ea5fb0e1fd8f6f25b5bc4aac450c4a926c6dc",
+          "size": 277
+        },
+        {
+          "path": "topo/entities/entity-content-submission.tg",
+          "sha256": "69c487a847596ab7ba8691f04764e45df4d5b59ea2bf07088f2142fc1be86780",
+          "size": 706
+        },
+        {
+          "path": "topo/projections/proj-api.tg",
+          "sha256": "e3f241d9edb880285d4ad9f322d862e9a0c442c594d3a33a008f0f1310828f9d",
+          "size": 1693
+        },
+        {
+          "path": "topo/projections/proj-db-postgres.tg",
+          "sha256": "0661fd3c2af3dcbae0664ea3e53b8ae6fb611558438c6b81af7c44528c11968f",
+          "size": 780
+        },
+        {
+          "path": "topo/projections/proj-ui-contract.tg",
+          "sha256": "1c4bb981197af72ad96ad53f64458c431a11458b00a62e1a8d8ae074ca5f8bd3",
+          "size": 3867
+        },
+        {
+          "path": "topo/projections/proj-web-surface.tg",
+          "sha256": "7604b1fa81885c3cace3fac6c38dc1998fef9b4e399981554114ab1abe553c33",
+          "size": 1166
+        },
+        {
+          "path": "topo/sdlc/.topogram-sdlc-history.json",
+          "sha256": "9716dd25d505bb19453c6688db429e7b235cd443b09aaff254511ec7cb8a3737",
+          "size": 1391
+        },
+        {
+          "path": "topo/sdlc/acceptance_criteria/adopt-brownfield-spec.tg",
+          "sha256": "8b2d6ee970760ee6478349d70c20dfb83ecf0956d37e72d39e8334fe219bd2a6",
+          "size": 412
+        },
+        {
+          "path": "topo/sdlc/acceptance_criteria/maintained-bulk-approve.tg",
+          "sha256": "709df86444b69cd8bc513de0bad89fe224e0214d8fd4836b8550403f7b3f4120",
+          "size": 384
+        },
+        {
+          "path": "topo/sdlc/acceptance_criteria/refresh-drift.tg",
+          "sha256": "bf2f21537f6929d9ba316233c26b831fb5d0491f0b5e353d0c5901804e3bd78c",
+          "size": 335
+        },
+        {
+          "path": "topo/sdlc/requirements/adopt-brownfield-spec.tg",
+          "sha256": "16d3b36ee0926d6b24b831c9f436737ebc409eb6441b65ea58cc861581c6fdb6",
+          "size": 426
+        },
+        {
+          "path": "topo/sdlc/requirements/maintained-bulk-approve.tg",
+          "sha256": "0e743308b3ba123b96a9992b4b40cff00a2281f2111e2669e0372188cfd6d932",
+          "size": 379
+        },
+        {
+          "path": "topo/sdlc/requirements/refresh-drift.tg",
+          "sha256": "77f1e01348d90f7b4c91bbe1abbd456774f40e15c154a27219f3697c16704269",
+          "size": 331
+        },
+        {
+          "path": "topo/sdlc/tasks/adopt-brownfield-spec.tg",
+          "sha256": "79252841b732b6cf0ea1d12d8670bc50cc74321e19533eb35672f7ec1fe3b5ac",
+          "size": 601
+        },
+        {
+          "path": "topo/sdlc/tasks/maintained-bulk-approve.tg",
+          "sha256": "15048c724501db241929d49b48d3cd19d65e33255600993159a8809e4cfb8d03",
+          "size": 531
+        },
+        {
+          "path": "topo/sdlc/tasks/refresh-drift.tg",
+          "sha256": "1cf463859ce7a57361e650738ef406ad1c92d2ece322a3d480f7ef0cd09eaab8",
+          "size": 495
+        },
+        {
+          "path": "topo/shapes/shape-input-approve-submission.tg",
+          "sha256": "c7ef8e32e470c51eb84c45f1cd82b4e8dce8728722fc94401609fef38cd15f53",
+          "size": 238
+        },
+        {
+          "path": "topo/shapes/shape-input-bulk-review.tg",
+          "sha256": "2e14b8c12b029add215219567a6fc1840c3532f5934301ad6cc9d7e5058be7a1",
+          "size": 247
+        },
+        {
+          "path": "topo/shapes/shape-input-get-submission.tg",
+          "sha256": "8b350a48873657e6304ff0d084263f8073566d33b35c3386b2cef86d4db37416",
+          "size": 184
+        },
+        {
+          "path": "topo/shapes/shape-input-list-submissions.tg",
+          "sha256": "bf8ffe029aca12604927aa8743f70abd79bab9483ea83ceffcbf3dfab049d4fb",
+          "size": 234
+        },
+        {
+          "path": "topo/shapes/shape-input-request-changes.tg",
+          "sha256": "6619c1d76869725516a5dfdbd98f6afc3b930746bfc1cb69134f2e18cf1d74a9",
+          "size": 228
+        },
+        {
+          "path": "topo/shapes/shape-input-submit-content.tg",
+          "sha256": "000953708408ec69045808fdf390cacd65ed0a59b0a92ea3b6e4184e2b7afb50",
+          "size": 239
+        },
+        {
+          "path": "topo/shapes/shape-output-submission-card.tg",
+          "sha256": "af3099f6be479bbfce84ba2a800723a0d7f1e9cdbe9fc8f4162b6e7b1c7ce3e2",
+          "size": 279
+        },
+        {
+          "path": "topo/shapes/shape-output-submission-detail.tg",
+          "sha256": "47c082651d9f3c6b49b3db914480929e12d563ca84b1e4f7b3ce28a4a488095d",
+          "size": 316
+        },
+        {
+          "path": "topo/verifications/adopt-brownfield-spec.tg",
+          "sha256": "b2cd8cafb858c4046a4a3f790a617706bc6d12431329d4b3310a6c8c46a1351e",
+          "size": 500
+        },
+        {
+          "path": "topo/verifications/maintained-bulk-approve.tg",
+          "sha256": "a594178a65ac8b3426690b223cb6190a966055bfb548c6e5ae6a03d414f73c7e",
+          "size": 404
+        },
+        {
+          "path": "topo/verifications/refresh-drift.tg",
+          "sha256": "49023e8fafc09d7a748487874314e2b0c5fb8d9218fac1a88b355db90bbdba4c",
+          "size": 353
+        },
+        {
+          "path": "topo/widgets/widget-review-actions.tg",
+          "sha256": "9f17067a85c2db282055294e19384c230a8985d577ace22a0f95ab8bd58afd61",
+          "size": 645
+        },
+        {
+          "path": "topo/widgets/widget-submission-form.tg",
+          "sha256": "7bb5265ddec0664b4361051aa507be7e911e81266db103f6535a5d2963afd09b",
+          "size": 512
+        },
+        {
+          "path": "topo/widgets/widget-submission-queue.tg",
+          "sha256": "fc7ddd2599ce90a142b3e947641c28ecefda7fce56812c8fa1547d468080b7e7",
+          "size": 962
+        },
+        {
+          "path": "topo/widgets/widget-submission-summary.tg",
+          "sha256": "cda9d9f7994ce780e43e61dcf404fa057b817892710876015c2e32f31ae5e520",
+          "size": 360
+        },
+        {
+          "path": "topogram.extractor-policy.json",
+          "sha256": "ef348d62750fc29b30a213efacbf61eef335b66ace96f7714c0952d018a3f730",
+          "size": 496
+        },
+        {
+          "path": "topogram.project.json",
+          "sha256": "9519ef6236323d6597ee0f665fc8c0167b5648ebef0af0069db784be5bedb43d",
+          "size": 189
+        },
+        {
+          "path": "topogram.sdlc-policy.json",
+          "sha256": "d3c378a529a96c12b9b5e2b3453a006ec86c2c10f1ef1cf53a40b38f93a13769",
+          "size": 351
+        },
+        {
+          "path": "vite.config.js",
+          "sha256": "eca485c281977125366d4800553256e419f364984e615f75a2d2bae54f7857fd",
+          "size": 136
+        }
+      ],
+      "kind": "brownfield-extract",
+      "ownership": {
+        "extractedArtifacts": "project-owned",
+        "note": "Topogram artifacts created by extraction are editable after extraction. Source hashes record the brownfield app evidence trusted at extraction time."
+      },
+      "refresh": {
+        "previousSourceStatus": "changed",
+        "sourceDiffCounts": {
+          "added": 58,
+          "changed": 6,
+          "removed": 0
+        }
+      },
+      "refreshedAt": "2026-05-15T08:07:59.211Z",
+      "source": {
+        "hashAlgorithm": "sha256",
+        "ignoredRoots": [
+          "<repo>/proof/artifacts/step-02-extracted-topogram"
+        ],
+        "path": "<repo>"
+      },
+      "version": "0.1"
+    },
+    "status": "clean"
+  },
+  "ok": false,
+  "projectRoot": "<repo>/proof/artifacts/step-02-extracted-topogram",
+  "topogram": {
+    "errors": [
+      {
+        "loc": {
+          "end": {
+            "column": 29,
+            "line": 7,
+            "offset": 219
+          },
+          "file": "<repo>/proof/artifacts/step-02-extracted-topogram/topo/capabilities/cap-create-submissions.tg",
+          "start": {
+            "column": 12,
+            "line": 7,
+            "offset": 202
+          }
+        },
+        "message": "Missing reference 'entity_submission' in field 'creates' on capability cap_create_submissions",
+        "source": "topogram"
+      },
+      {
+        "loc": {
+          "end": {
+            "column": 27,
+            "line": 7,
+            "offset": 213
+          },
+          "file": "<repo>/proof/artifacts/step-02-extracted-topogram/topo/capabilities/cap-get-submission.tg",
+          "start": {
+            "column": 10,
+            "line": 7,
+            "offset": 196
+          }
+        },
+        "message": "Missing reference 'entity_submission' in field 'reads' on capability cap_get_submission",
+        "source": "topogram"
+      },
+      {
+        "loc": {
+          "end": {
+            "column": 23,
+            "line": 7,
+            "offset": 206
+          },
+          "file": "<repo>/proof/artifacts/step-02-extracted-topogram/topo/capabilities/cap-list-health.tg",
+          "start": {
+            "column": 10,
+            "line": 7,
+            "offset": 193
+          }
+        },
+        "message": "Missing reference 'entity_health' in field 'reads' on capability cap_list_health",
+        "source": "topogram"
+      },
+      {
+        "loc": {
+          "end": {
+            "column": 27,
+            "line": 7,
+            "offset": 215
+          },
+          "file": "<repo>/proof/artifacts/step-02-extracted-topogram/topo/capabilities/cap-list-submissions.tg",
+          "start": {
+            "column": 10,
+            "line": 7,
+            "offset": 198
+          }
+        },
+        "message": "Missing reference 'entity_submission' in field 'reads' on capability cap_list_submissions",
+        "source": "topogram"
+      },
+      {
+        "loc": {
+          "end": {
+            "column": 23,
+            "line": 11,
+            "offset": 409
+          },
+          "file": "<repo>/proof/artifacts/step-02-extracted-topogram/topo/capabilities/cap-res.tg",
+          "start": {
+            "column": 10,
+            "line": 11,
+            "offset": 396
+          }
+        },
+        "message": "Missing reference 'entity_health' in field 'reads' on capability cap_res",
+        "source": "topogram"
+      }
+    ],
+    "inputPath": "<repo>/proof/artifacts/step-02-extracted-topogram",
+    "ok": false,
+    "project": {
+      "compatibility": false,
+      "configPath": "<repo>/proof/artifacts/step-02-extracted-topogram/topogram.project.json",
+      "resolvedTopology": {
+        "edges": [],
+        "outputs": [
+          {
+            "name": "maintained_app",
+            "ownership": "maintained",
+            "path": "./app"
+          }
+        ],
+        "runtimes": []
+      },
+      "topology": {
+        "runtimes": []
+      },
+      "valid": true
+    },
+    "topogram": {
+      "files": 10,
+      "statements": 10,
+      "valid": false
+    }
+  },
+  "workspaceRoot": "<repo>/proof/artifacts/step-02-extracted-topogram/topo"
+}

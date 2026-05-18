@@ -44,5 +44,28 @@
       "by": "actor_operator",
       "note": null
     }
+  ],
+  "task_refresh_drift": [
+    {
+      "from": "unclaimed",
+      "to": "claimed",
+      "at": "2026-05-15T08:07:57.271Z",
+      "by": "actor_operator",
+      "note": "task started"
+    },
+    {
+      "from": "claimed",
+      "to": "in-progress",
+      "at": "2026-05-15T08:07:57.276Z",
+      "by": "actor_operator",
+      "note": "task started"
+    },
+    {
+      "from": "in-progress",
+      "to": "done",
+      "at": "2026-05-15T08:08:55.294Z",
+      "by": "actor_operator",
+      "note": null
+    }
   ]
 }

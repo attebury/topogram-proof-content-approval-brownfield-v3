@@ -1,0 +1,42 @@
+{
+  "dryRun": false,
+  "link": {
+    "after": [
+      "verification_refresh_drift"
+    ],
+    "before": [
+      "verification_refresh_drift"
+    ],
+    "dryRun": false,
+    "field": "verification_refs",
+    "file": "<repo>/topo/sdlc/tasks/refresh-drift.tg",
+    "from": {
+      "id": "task_refresh_drift",
+      "kind": "task"
+    },
+    "ok": true,
+    "to": {
+      "id": "verification_refresh_drift",
+      "kind": "verification"
+    },
+    "written": true
+  },
+  "ok": true,
+  "taskId": "task_refresh_drift",
+  "transition": {
+    "archivable": true,
+    "dod": {
+      "errors": [],
+      "satisfied": true,
+      "warnings": []
+    },
+    "dryRun": false,
+    "file": "<repo>/topo/sdlc/tasks/refresh-drift.tg",
+    "from": "in-progress",
+    "id": "task_refresh_drift",
+    "kind": "task",
+    "ok": true,
+    "to": "done"
+  },
+  "verificationId": "verification_refresh_drift"
+}

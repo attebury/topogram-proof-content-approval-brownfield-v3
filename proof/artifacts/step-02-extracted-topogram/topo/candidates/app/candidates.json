@@ -442,7 +442,9 @@
           "src/api/app.js#GET /submissions",
           "src/api/app.js#GET /submissions/:submissionId",
           "src/api/app.js#POST /submissions",
+          "src/api/app.js#POST /submissions/bulk-approve",
           "src/api/app.js#POST /submissions/:submissionId/approve",
+          "src/api/app.js#POST /submissions/:submissionId/archive",
           "src/api/app.js#POST /submissions/:submissionId/request-changes"
         ],
         "track": "api",
@@ -617,12 +619,30 @@
         ]
       },
       {
+        "path": "/submissions/bulk-approve",
+        "method": "POST",
+        "confidence": "medium",
+        "source_kind": "route_code",
+        "provenance": [
+          "src/api/app.js#POST /submissions/bulk-approve"
+        ]
+      },
+      {
         "path": "/submissions/{submissionId}/approve",
         "method": "POST",
         "confidence": "medium",
         "source_kind": "route_code",
         "provenance": [
           "src/api/app.js#POST /submissions/:submissionId/approve"
+        ]
+      },
+      {
+        "path": "/submissions/{submissionId}/archive",
+        "method": "POST",
+        "confidence": "medium",
+        "source_kind": "route_code",
+        "provenance": [
+          "src/api/app.js#POST /submissions/:submissionId/archive"
         ]
       },
       {
@@ -743,6 +763,32 @@
       {
         "source": "package:@topogram/extractor-express-api",
         "method": "POST",
+        "path": "/submissions/bulk-approve",
+        "sourcePath": "src/api/app.js",
+        "capability": "cap_create_submissions",
+        "entity": "entity_submission",
+        "params": [],
+        "query": [
+          "status"
+        ],
+        "auth": {
+          "required": false,
+          "elevated": false,
+          "source": "none"
+        },
+        "evidence": [
+          {
+            "file": "src/api/app.js",
+            "appPath": "src/api/app.js",
+            "note": "POST /submissions/bulk-approve"
+          }
+        ],
+        "confidence": 0.82,
+        "provenance": []
+      },
+      {
+        "source": "package:@topogram/extractor-express-api",
+        "method": "POST",
         "path": "/submissions/{submissionId}/approve",
         "sourcePath": "src/api/app.js",
         "capability": "cap_create_submissions",
@@ -763,6 +809,34 @@
             "file": "src/api/app.js",
             "appPath": "src/api/app.js",
             "note": "POST /submissions/{submissionId}/approve"
+          }
+        ],
+        "confidence": 0.82,
+        "provenance": []
+      },
+      {
+        "source": "package:@topogram/extractor-express-api",
+        "method": "POST",
+        "path": "/submissions/{submissionId}/archive",
+        "sourcePath": "src/api/app.js",
+        "capability": "cap_create_submissions",
+        "entity": "entity_submission",
+        "params": [
+          "submissionId"
+        ],
+        "query": [
+          "status"
+        ],
+        "auth": {
+          "required": false,
+          "elevated": false,
+          "source": "none"
+        },
+        "evidence": [
+          {
+            "file": "src/api/app.js",
+            "appPath": "src/api/app.js",
+            "note": "POST /submissions/{submissionId}/archive"
           }
         ],
         "confidence": 0.82,

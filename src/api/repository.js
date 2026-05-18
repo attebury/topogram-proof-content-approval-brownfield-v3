@@ -91,3 +91,12 @@ export function requestChanges(id, input = {}) {
   submission.reviewer_note = input.reviewer_note || "Changes requested.";
   return serialize(submission);
 }
+
+export function archiveSubmission(id, input = {}) {
+  const submission = submissions.get(id);
+  if (!submission) return null;
+  submission.status = "archived";
+  submission.reviewed_at = new Date().toISOString();
+  submission.reviewer_note = input.reason || "Archived.";
+  return serialize(submission);
+}

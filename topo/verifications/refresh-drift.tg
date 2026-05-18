@@ -1,0 +1,8 @@
+verification verification_refresh_drift {
+  name "Refresh Drift Verification"
+  description "Runs extraction refresh/diff/check, Topogram check, SDLC check, and maintained app verification for the source/spec drift checkpoint."
+  validates [cap_list_submissions]
+  method runtime
+  scenarios [brownfield_extract_refresh_drift_visible]
+  status active
+}

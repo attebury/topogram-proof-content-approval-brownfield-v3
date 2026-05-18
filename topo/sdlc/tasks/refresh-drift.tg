@@ -1,0 +1,14 @@
+task task_refresh_drift {
+  name "Refresh Drift"
+  description "Add an intentional archive endpoint drift, refresh extraction, and capture diff/check artifacts without adopting the drift into canonical topo."
+  satisfies [req_refresh_drift]
+  acceptance_refs [ac_refresh_drift]
+  verification_refs [verification_refresh_drift]
+  affects [cap_list_submissions]
+  blocked_by []
+  disposition active
+  priority medium
+  work_type implementation
+  claimed_by [actor_operator]
+  status done
+}
