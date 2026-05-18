@@ -1,0 +1,324 @@
+{
+  "cap_submit_content": {
+    "capability": {
+      "id": "cap_submit_content"
+    },
+    "endpoint": {
+      "method": "POST",
+      "path": "/submissions",
+      "successStatus": 201
+    },
+    "requestContract": {
+      "fields": [],
+      "transport": {
+        "path": [],
+        "query": [],
+        "header": [],
+        "body": []
+      }
+    },
+    "responseContract": null
+  },
+  "cap_get_submission": {
+    "capability": {
+      "id": "cap_get_submission"
+    },
+    "endpoint": {
+      "method": "GET",
+      "path": "/submissions/:id",
+      "successStatus": 200
+    },
+    "requestContract": {
+      "fields": [
+        {
+          "name": "submission_id",
+          "sourceName": "submission_id",
+          "required": false,
+          "schema": {
+            "type": "string"
+          },
+          "transport": {
+            "location": "path",
+            "wireName": "id"
+          }
+        }
+      ],
+      "transport": {
+        "path": [
+          {
+            "name": "submission_id",
+            "sourceName": "submission_id",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "transport": {
+              "location": "path",
+              "wireName": "id"
+            }
+          }
+        ],
+        "query": [],
+        "header": [],
+        "body": []
+      }
+    },
+    "responseContract": null
+  },
+  "cap_list_submissions": {
+    "capability": {
+      "id": "cap_list_submissions"
+    },
+    "endpoint": {
+      "method": "GET",
+      "path": "/submissions",
+      "successStatus": 200
+    },
+    "requestContract": {
+      "fields": [
+        {
+          "name": "status",
+          "sourceName": "status",
+          "required": false,
+          "schema": {
+            "type": "string"
+          },
+          "transport": {
+            "location": "query",
+            "wireName": "status"
+          }
+        },
+        {
+          "name": "after",
+          "sourceName": "after",
+          "required": false,
+          "schema": {
+            "type": "string"
+          },
+          "transport": {
+            "location": "query",
+            "wireName": "after"
+          }
+        },
+        {
+          "name": "limit",
+          "sourceName": "limit",
+          "required": false,
+          "schema": {
+            "type": "string"
+          },
+          "transport": {
+            "location": "query",
+            "wireName": "limit"
+          }
+        }
+      ],
+      "transport": {
+        "path": [],
+        "query": [
+          {
+            "name": "status",
+            "sourceName": "status",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "transport": {
+              "location": "query",
+              "wireName": "status"
+            }
+          },
+          {
+            "name": "after",
+            "sourceName": "after",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "transport": {
+              "location": "query",
+              "wireName": "after"
+            }
+          },
+          {
+            "name": "limit",
+            "sourceName": "limit",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "transport": {
+              "location": "query",
+              "wireName": "limit"
+            }
+          }
+        ],
+        "header": [],
+        "body": []
+      }
+    },
+    "responseContract": null
+  },
+  "cap_approve_submission": {
+    "capability": {
+      "id": "cap_approve_submission"
+    },
+    "endpoint": {
+      "method": "POST",
+      "path": "/submissions/:id/approve",
+      "successStatus": 200
+    },
+    "requestContract": {
+      "fields": [
+        {
+          "name": "submission_id",
+          "sourceName": "submission_id",
+          "required": false,
+          "schema": {
+            "type": "string"
+          },
+          "transport": {
+            "location": "path",
+            "wireName": "id"
+          }
+        },
+        {
+          "name": "reviewer_note",
+          "sourceName": "reviewer_note",
+          "required": false,
+          "schema": {
+            "type": "string"
+          },
+          "transport": {
+            "location": "body",
+            "wireName": "reviewer_note"
+          }
+        }
+      ],
+      "transport": {
+        "path": [
+          {
+            "name": "submission_id",
+            "sourceName": "submission_id",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "transport": {
+              "location": "path",
+              "wireName": "id"
+            }
+          }
+        ],
+        "query": [],
+        "header": [],
+        "body": [
+          {
+            "name": "reviewer_note",
+            "sourceName": "reviewer_note",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "transport": {
+              "location": "body",
+              "wireName": "reviewer_note"
+            }
+          }
+        ]
+      }
+    },
+    "responseContract": null
+  },
+  "cap_bulk_approve_submissions": {
+    "capability": {
+      "id": "cap_bulk_approve_submissions"
+    },
+    "endpoint": {
+      "method": "POST",
+      "path": "/submissions/bulk-approve",
+      "successStatus": 200
+    },
+    "requestContract": {
+      "fields": [],
+      "transport": {
+        "path": [],
+        "query": [],
+        "header": [],
+        "body": []
+      }
+    },
+    "responseContract": null
+  },
+  "cap_request_changes": {
+    "capability": {
+      "id": "cap_request_changes"
+    },
+    "endpoint": {
+      "method": "POST",
+      "path": "/submissions/:id/request-changes",
+      "successStatus": 200
+    },
+    "requestContract": {
+      "fields": [
+        {
+          "name": "submission_id",
+          "sourceName": "submission_id",
+          "required": false,
+          "schema": {
+            "type": "string"
+          },
+          "transport": {
+            "location": "path",
+            "wireName": "id"
+          }
+        },
+        {
+          "name": "reviewer_note",
+          "sourceName": "reviewer_note",
+          "required": false,
+          "schema": {
+            "type": "string"
+          },
+          "transport": {
+            "location": "body",
+            "wireName": "reviewer_note"
+          }
+        }
+      ],
+      "transport": {
+        "path": [
+          {
+            "name": "submission_id",
+            "sourceName": "submission_id",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "transport": {
+              "location": "path",
+              "wireName": "id"
+            }
+          }
+        ],
+        "query": [],
+        "header": [],
+        "body": [
+          {
+            "name": "reviewer_note",
+            "sourceName": "reviewer_note",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "transport": {
+              "location": "body",
+              "wireName": "reviewer_note"
+            }
+          }
+        ]
+      }
+    },
+    "responseContract": null
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "files": [
+    {
+      "path": "implementation/backend/reference.js",
+      "sha256": "cb9f630211b33487c065f687eb08497338ee2367ee82d95964ed8352adf29170",
+      "size": 1695
+    },
+    {
+      "path": "implementation/backend/repository-reference.js",
+      "sha256": "a81c041460d0f7da1a01f103fcc828e00806b75969f7e88abadbca83af0881ed",
+      "size": 1045
+    },
+    {
+      "path": "implementation/backend/repository-renderers.js",
+      "sha256": "7cf465108332aa2c469ec695870d7f1139759fc131173b6021fc9795ea6dfa54",
+      "size": 5578
+    },
+    {
+      "path": "implementation/index.js",
+      "sha256": "1db9906c9831eb3a82e76d51490dc9e2cad590b7459f5f0ee6767eba39b44ffd",
+      "size": 1462
+    },
+    {
+      "path": "implementation/README.md",
+      "sha256": "0bb658bd7cd36df61d568ae8b22db511a45a6b7310d12eaaac7d15fb8bf65ef0",
+      "size": 243
+    },
+    {
+      "path": "implementation/runtime/check-renderers.js",
+      "sha256": "9d8282fd84d627e5f476d48a720806132e0d1e4cf129f70435d8f10cfd2635a1",
+      "size": 5724
+    },
+    {
+      "path": "implementation/runtime/checks.js",
+      "sha256": "d443622d19f45e0dbda969e8c6a51900d5329394e772b45a346437c87f9586cc",
+      "size": 2890
+    },
+    {
+      "path": "implementation/runtime/reference.js",
+      "sha256": "57ac1a152563c14a8fa83ec40389407b11cd56fd98e358a9c23d6369188c2cb3",
+      "size": 2616
+    },
+    {
+      "path": "topo/actors/actor-operator.tg",
+      "sha256": "461854abf0fac0b737e774efbfce36c34ea2ea1b40a68fe0cfc6cdbdd878b777",
+      "size": 113
+    },
+    {
+      "path": "topo/capabilities/cap-approve-submission.tg",
+      "sha256": "83c647ba9c56b2bb7e1552b0f1734506d822bff953ff16cbc2317f90d960d262",
+      "size": 314
+    },
+    {
+      "path": "topo/capabilities/cap-bulk-approve-submissions.tg",
+      "sha256": "79391cbc7c19678284e1a7956f6454d39dcc6ebf9167a9320cc1961e1deeaf3a",
+      "size": 334
+    },
+    {
+      "path": "topo/capabilities/cap-get-submission.tg",
+      "sha256": "c47a1a10bf561289a2f2760c5fc3989cdcc70b46ca38334e58fbfd5f707883fc",
+      "size": 276
+    },
+    {
+      "path": "topo/capabilities/cap-list-submissions.tg",
+      "sha256": "c4321c1c645b38b8e298f8389f64f4ddc78f8632520e6b9e1388b3b870efaee3",
+      "size": 278
+    },
+    {
+      "path": "topo/capabilities/cap-request-changes.tg",
+      "sha256": "26213dced943b6616518ce66e82222fcb684224a746f2dd95c76c3da1ae56abe",
+      "size": 336
+    },
+    {
+      "path": "topo/capabilities/cap-submit-content.tg",
+      "sha256": "6a5fe63952c6b4e58d18ca083a6ea5fb0e1fd8f6f25b5bc4aac450c4a926c6dc",
+      "size": 277
+    },
+    {
+      "path": "topo/entities/entity-content-submission.tg",
+      "sha256": "69c487a847596ab7ba8691f04764e45df4d5b59ea2bf07088f2142fc1be86780",
+      "size": 706
+    },
+    {
+      "path": "topo/projections/proj-api.tg",
+      "sha256": "e3f241d9edb880285d4ad9f322d862e9a0c442c594d3a33a008f0f1310828f9d",
+      "size": 1693
+    },
+    {
+      "path": "topo/projections/proj-db-postgres.tg",
+      "sha256": "0661fd3c2af3dcbae0664ea3e53b8ae6fb611558438c6b81af7c44528c11968f",
+      "size": 780
+    },
+    {
+      "path": "topo/projections/proj-ui-contract.tg",
+      "sha256": "1c4bb981197af72ad96ad53f64458c431a11458b00a62e1a8d8ae074ca5f8bd3",
+      "size": 3867
+    },
+    {
+      "path": "topo/projections/proj-web-surface.tg",
+      "sha256": "7604b1fa81885c3cace3fac6c38dc1998fef9b4e399981554114ab1abe553c33",
+      "size": 1166
+    },
+    {
+      "path": "topo/sdlc/.topogram-sdlc-history.json",
+      "sha256": "95cf400e7f0a84642768119faf614939a55ce88e106694987c13a8f867103052",
+      "size": 1905
+    },
+    {
+      "path": "topo/sdlc/acceptance_criteria/adopt-brownfield-spec.tg",
+      "sha256": "8b2d6ee970760ee6478349d70c20dfb83ecf0956d37e72d39e8334fe219bd2a6",
+      "size": 412
+    },
+    {
+      "path": "topo/sdlc/acceptance_criteria/maintained-bulk-approve.tg",
+      "sha256": "709df86444b69cd8bc513de0bad89fe224e0214d8fd4836b8550403f7b3f4120",
+      "size": 384
+    },
+    {
+      "path": "topo/sdlc/acceptance_criteria/recreate-other-stack.tg",
+      "sha256": "530f8296709db3f72dd9bafcf182937de94949be3bb30fb1de2966e7f9d17cdc",
+      "size": 395
+    },
+    {
+      "path": "topo/sdlc/acceptance_criteria/refresh-drift.tg",
+      "sha256": "bf2f21537f6929d9ba316233c26b831fb5d0491f0b5e353d0c5901804e3bd78c",
+      "size": 335
+    },
+    {
+      "path": "topo/sdlc/requirements/adopt-brownfield-spec.tg",
+      "sha256": "16d3b36ee0926d6b24b831c9f436737ebc409eb6441b65ea58cc861581c6fdb6",
+      "size": 426
+    },
+    {
+      "path": "topo/sdlc/requirements/maintained-bulk-approve.tg",
+      "sha256": "0e743308b3ba123b96a9992b4b40cff00a2281f2111e2669e0372188cfd6d932",
+      "size": 379
+    },
+    {
+      "path": "topo/sdlc/requirements/recreate-other-stack.tg",
+      "sha256": "00bb4bb81991d557be9449146a0a658edba42bf53b884d00019bc53b24bfafbc",
+      "size": 473
+    },
+    {
+      "path": "topo/sdlc/requirements/refresh-drift.tg",
+      "sha256": "77f1e01348d90f7b4c91bbe1abbd456774f40e15c154a27219f3697c16704269",
+      "size": 331
+    },
+    {
+      "path": "topo/sdlc/tasks/adopt-brownfield-spec.tg",
+      "sha256": "79252841b732b6cf0ea1d12d8670bc50cc74321e19533eb35672f7ec1fe3b5ac",
+      "size": 601
+    },
+    {
+      "path": "topo/sdlc/tasks/maintained-bulk-approve.tg",
+      "sha256": "15048c724501db241929d49b48d3cd19d65e33255600993159a8809e4cfb8d03",
+      "size": 531
+    },
+    {
+      "path": "topo/sdlc/tasks/recreate-other-stack.tg",
+      "sha256": "a496822e0f9274b572c5130efd8005a5bacf39d46ea2c6a17c274ff4f6a1911f",
+      "size": 630
+    },
+    {
+      "path": "topo/sdlc/tasks/refresh-drift.tg",
+      "sha256": "f24ae7c137dc8968b773c092f7e3094c5d8d97a97b33bb5121aa8fd401a410ee",
+      "size": 488
+    },
+    {
+      "path": "topo/shapes/shape-input-approve-submission.tg",
+      "sha256": "c7ef8e32e470c51eb84c45f1cd82b4e8dce8728722fc94401609fef38cd15f53",
+      "size": 238
+    },
+    {
+      "path": "topo/shapes/shape-input-bulk-review.tg",
+      "sha256": "2e14b8c12b029add215219567a6fc1840c3532f5934301ad6cc9d7e5058be7a1",
+      "size": 247
+    },
+    {
+      "path": "topo/shapes/shape-input-get-submission.tg",
+      "sha256": "8b350a48873657e6304ff0d084263f8073566d33b35c3386b2cef86d4db37416",
+      "size": 184
+    },
+    {
+      "path": "topo/shapes/shape-input-list-submissions.tg",
+      "sha256": "bf8ffe029aca12604927aa8743f70abd79bab9483ea83ceffcbf3dfab049d4fb",
+      "size": 234
+    },
+    {
+      "path": "topo/shapes/shape-input-request-changes.tg",
+      "sha256": "6619c1d76869725516a5dfdbd98f6afc3b930746bfc1cb69134f2e18cf1d74a9",
+      "size": 228
+    },
+    {
+      "path": "topo/shapes/shape-input-submit-content.tg",
+      "sha256": "000953708408ec69045808fdf390cacd65ed0a59b0a92ea3b6e4184e2b7afb50",
+      "size": 239
+    },
+    {
+      "path": "topo/shapes/shape-output-submission-card.tg",
+      "sha256": "af3099f6be479bbfce84ba2a800723a0d7f1e9cdbe9fc8f4162b6e7b1c7ce3e2",
+      "size": 279
+    },
+    {
+      "path": "topo/shapes/shape-output-submission-detail.tg",
+      "sha256": "47c082651d9f3c6b49b3db914480929e12d563ca84b1e4f7b3ce28a4a488095d",
+      "size": 316
+    },
+    {
+      "path": "topo/verifications/adopt-brownfield-spec.tg",
+      "sha256": "b2cd8cafb858c4046a4a3f790a617706bc6d12431329d4b3310a6c8c46a1351e",
+      "size": 500
+    },
+    {
+      "path": "topo/verifications/maintained-bulk-approve.tg",
+      "sha256": "a594178a65ac8b3426690b223cb6190a966055bfb548c6e5ae6a03d414f73c7e",
+      "size": 404
+    },
+    {
+      "path": "topo/verifications/recreate-other-stack.tg",
+      "sha256": "97734848117f678530902d8177740ce96e905438b4d0fba56bb816d7a27e26a9",
+      "size": 491
+    },
+    {
+      "path": "topo/verifications/refresh-drift.tg",
+      "sha256": "49023e8fafc09d7a748487874314e2b0c5fb8d9218fac1a88b355db90bbdba4c",
+      "size": 353
+    },
+    {
+      "path": "topo/widgets/widget-review-actions.tg",
+      "sha256": "9f17067a85c2db282055294e19384c230a8985d577ace22a0f95ab8bd58afd61",
+      "size": 645
+    },
+    {
+      "path": "topo/widgets/widget-submission-form.tg",
+      "sha256": "7bb5265ddec0664b4361051aa507be7e911e81266db103f6535a5d2963afd09b",
+      "size": 512
+    },
+    {
+      "path": "topo/widgets/widget-submission-queue.tg",
+      "sha256": "fc7ddd2599ce90a142b3e947641c28ecefda7fce56812c8fa1547d468080b7e7",
+      "size": 962
+    },
+    {
+      "path": "topo/widgets/widget-submission-summary.tg",
+      "sha256": "cda9d9f7994ce780e43e61dcf404fa057b817892710876015c2e32f31ae5e520",
+      "size": 360
+    },
+    {
+      "path": "topogram.project.json",
+      "sha256": "42df042b6af9bbe1715230ed917d86ee5aa89a0e0cb8b68dd79665e551acf0a0",
+      "size": 1527
+    }
+  ],
+  "template": {
+    "catalog": null,
+    "id": null,
+    "requested": null,
+    "source": null,
+    "sourceSpec": null,
+    "version": null
+  },
+  "version": "0.1"
+}

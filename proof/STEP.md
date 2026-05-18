@@ -1,11 +1,11 @@
-# Step 05: Refresh Drift
+# Step 06: Recreate Other Stack
 
 Repository: `topogram-proof-content-approval-brownfield-v3`
 CLI baseline: `@topogram/cli@0.3.99`
 
 ## Claim
 
-Refresh extraction and review source/spec drift explicitly.
+Generate a cross-stack recreation beside maintained source.
 
 ## Verification
 

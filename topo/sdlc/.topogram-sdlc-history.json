@@ -67,5 +67,28 @@
       "by": "actor_operator",
       "note": null
     }
+  ],
+  "task_recreate_other_stack": [
+    {
+      "from": "unclaimed",
+      "to": "claimed",
+      "at": "2026-05-15T08:11:33.859Z",
+      "by": "actor_operator",
+      "note": "task started"
+    },
+    {
+      "from": "claimed",
+      "to": "in-progress",
+      "at": "2026-05-15T08:11:33.865Z",
+      "by": "actor_operator",
+      "note": "task started"
+    },
+    {
+      "from": "in-progress",
+      "to": "done",
+      "at": "2026-05-15T08:15:40.643Z",
+      "by": "actor_operator",
+      "note": null
+    }
   ]
 }

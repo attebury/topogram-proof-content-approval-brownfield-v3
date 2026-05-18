@@ -1,0 +1,6 @@
+acceptance_criterion ac_recreate_other_stack {
+  name "Recreate Other Stack"
+  description "Given a maintained brownfield app with an adopted Topogram, when a generated SvelteKit/Hono/Postgres recreation is emitted into recreated-app, then generated compile passes and maintained source files remain outside the generated output path."
+  requirement req_recreate_other_stack
+  status approved
+}

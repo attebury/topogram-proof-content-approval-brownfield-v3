@@ -1,0 +1,15 @@
+app = "content-approval-deployment-stack"
+primary_region = "ord"
+
+[build]
+  dockerfile = "services/recreated_api/Dockerfile"
+
+[env]
+  PORT = "3100"
+
+[http_service]
+  internal_port = 3100
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0

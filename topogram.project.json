@@ -2,12 +2,61 @@
   "version": "0.1",
   "workspace": "./topo",
   "outputs": {
-    "maintained_app": {
-      "path": ".",
+    "maintained_source": {
+      "path": "./src",
       "ownership": "maintained"
+    },
+    "maintained_db": {
+      "path": "./prisma",
+      "ownership": "maintained"
+    },
+    "recreated_app": {
+      "path": "./recreated-app",
+      "ownership": "generated"
     }
   },
   "topology": {
-    "runtimes": []
+    "runtimes": [
+      {
+        "id": "recreated_api",
+        "kind": "api_service",
+        "projection": "proj_api",
+        "port": 3100,
+        "uses_database": "recreated_postgres",
+        "generator": {
+          "id": "@topogram/generator-hono-api",
+          "package": "@topogram/generator-hono-api",
+          "version": "1"
+        }
+      },
+      {
+        "id": "recreated_web",
+        "kind": "web_surface",
+        "projection": "proj_web_surface",
+        "port": 5174,
+        "uses_api": "recreated_api",
+        "generator": {
+          "id": "@topogram/generator-sveltekit-web",
+          "package": "@topogram/generator-sveltekit-web",
+          "version": "1"
+        }
+      },
+      {
+        "id": "recreated_postgres",
+        "kind": "database",
+        "projection": "proj_db_postgres",
+        "port": 5433,
+        "generator": {
+          "id": "@topogram/generator-postgres-db",
+          "package": "@topogram/generator-postgres-db",
+          "version": "1"
+        }
+      }
+    ]
+  },
+  "implementation": {
+    "id": "web-api-db-template",
+    "module": "./implementation/index.js",
+    "export": "WEB_API_DB_IMPLEMENTATION"
   }
 }

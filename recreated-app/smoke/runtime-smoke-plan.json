@@ -1,0 +1,76 @@
+{
+  "type": "runtime_smoke_plan",
+  "name": "Content Approval Runtime Smoke Plan",
+  "projections": {
+    "api": "proj_api",
+    "ui": "proj_web_surface"
+  },
+  "topology": {
+    "runtimes": [
+      {
+        "id": "recreated_api",
+        "kind": "api_service",
+        "projection": "proj_api",
+        "generator": {
+          "id": "@topogram/generator-hono-api",
+          "package": "@topogram/generator-hono-api",
+          "version": "1"
+        }
+      },
+      {
+        "id": "recreated_web",
+        "kind": "web_surface",
+        "projection": "proj_web_surface",
+        "generator": {
+          "id": "@topogram/generator-sveltekit-web",
+          "package": "@topogram/generator-sveltekit-web",
+          "version": "1"
+        }
+      },
+      {
+        "id": "recreated_postgres",
+        "kind": "database",
+        "projection": "proj_db_postgres",
+        "generator": {
+          "id": "@topogram/generator-postgres-db",
+          "package": "@topogram/generator-postgres-db",
+          "version": "1"
+        }
+      }
+    ]
+  },
+  "env": {
+    "apiBase": "TOPOGRAM_API_BASE_URL",
+    "webBase": "TOPOGRAM_WEB_BASE_URL"
+  },
+  "checks": [
+    {
+      "id": "web_home_page",
+      "type": "web_get",
+      "path": "/",
+      "expectStatus": 200,
+      "expectText": "Topogram Starter"
+    },
+    {
+      "id": "submit_content",
+      "type": "api_post",
+      "path": "/submissions",
+      "expectStatus": 201,
+      "capabilityId": "cap_submit_content"
+    },
+    {
+      "id": "get_submission",
+      "type": "api_get",
+      "path": "/submissions/:id",
+      "expectStatus": 200,
+      "capabilityId": "cap_get_submission"
+    },
+    {
+      "id": "list_submissions",
+      "type": "api_get",
+      "path": "/submissions",
+      "expectStatus": 200,
+      "capabilityId": "cap_list_submissions"
+    }
+  ]
+}

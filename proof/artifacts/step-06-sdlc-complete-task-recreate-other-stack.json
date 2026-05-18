@@ -1,0 +1,42 @@
+{
+  "dryRun": false,
+  "link": {
+    "after": [
+      "verification_recreate_other_stack"
+    ],
+    "before": [
+      "verification_recreate_other_stack"
+    ],
+    "dryRun": false,
+    "field": "verification_refs",
+    "file": "<repo>/topo/sdlc/tasks/recreate-other-stack.tg",
+    "from": {
+      "id": "task_recreate_other_stack",
+      "kind": "task"
+    },
+    "ok": true,
+    "to": {
+      "id": "verification_recreate_other_stack",
+      "kind": "verification"
+    },
+    "written": true
+  },
+  "ok": true,
+  "taskId": "task_recreate_other_stack",
+  "transition": {
+    "archivable": true,
+    "dod": {
+      "errors": [],
+      "satisfied": true,
+      "warnings": []
+    },
+    "dryRun": false,
+    "file": "<repo>/topo/sdlc/tasks/recreate-other-stack.tg",
+    "from": "in-progress",
+    "id": "task_recreate_other_stack",
+    "kind": "task",
+    "ok": true,
+    "to": "done"
+  },
+  "verificationId": "verification_recreate_other_stack"
+}

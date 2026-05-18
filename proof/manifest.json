@@ -8,12 +8,13 @@
     "proof-02-extract-with-packages",
     "proof-03-adopt-app-map",
     "proof-04-feature-from-slice",
-    "proof-05-refresh-drift"
+    "proof-05-refresh-drift",
+    "proof-06-recreate-other-stack"
   ],
   "requiresCanonicalTopo": true,
   "requiresSdlc": true,
   "forbidsCanonicalTopo": false,
-  "requiresRecreatedCompile": false,
+  "requiresRecreatedCompile": true,
   "appCheckScript": "check",
   "requiredArtifacts": [
     {
@@ -110,6 +111,18 @@
       "json": true,
       "keys": [
         "candidateCounts"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-06-generate.txt",
+      "contains": [
+        "Wrote"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-06-recreated-app-compile.txt",
+      "contains": [
+        "Compile checks passed"
       ]
     }
   ]

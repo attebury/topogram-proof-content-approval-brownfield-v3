@@ -1,0 +1,215 @@
+{
+  "type": "app_bundle_plan",
+  "name": "Content Approval App Bundle",
+  "projections": {
+    "api": "proj_api",
+    "ui": "proj_web_surface",
+    "db": "proj_db_postgres",
+    "dbType": "db_contract",
+    "dbEngine": "postgres"
+  },
+  "topology": {
+    "runtimes": [
+      {
+        "id": "recreated_api",
+        "kind": "api_service",
+        "projection": "proj_api",
+        "generator": {
+          "id": "@topogram/generator-hono-api",
+          "package": "@topogram/generator-hono-api",
+          "version": "1"
+        },
+        "port": 3100,
+        "uses_api": null,
+        "uses_database": "recreated_postgres"
+      },
+      {
+        "id": "recreated_web",
+        "kind": "web_surface",
+        "projection": "proj_web_surface",
+        "generator": {
+          "id": "@topogram/generator-sveltekit-web",
+          "package": "@topogram/generator-sveltekit-web",
+          "version": "1"
+        },
+        "port": 5174,
+        "uses_api": "recreated_api",
+        "uses_database": null
+      },
+      {
+        "id": "recreated_postgres",
+        "kind": "database",
+        "projection": "proj_db_postgres",
+        "generator": {
+          "id": "@topogram/generator-postgres-db",
+          "package": "@topogram/generator-postgres-db",
+          "version": "1"
+        },
+        "port": 5433,
+        "uses_api": null,
+        "uses_database": null
+      }
+    ]
+  },
+  "runtimeReference": {
+    "localDbProjectionId": "proj_db_postgres",
+    "serviceName": "content-approval-server",
+    "ports": {
+      "server": 3000,
+      "web": 5173
+    },
+    "environment": {
+      "name": "Content Approval Local Runtime Stack",
+      "databaseName": "topogram_content_approval",
+      "envExample": "PUBLIC_TOPOGRAM_DEMO_PRIMARY_ID=33333333-3333-4333-8333-333333333333\nTOPOGRAM_DEMO_PRIMARY_ID=33333333-3333-4333-8333-333333333333\nTOPOGRAM_DEMO_BODY=\"Draft content waiting for editorial approval.\""
+    },
+    "compileCheck": {
+      "name": "Content Approval Generated Compile Checks"
+    },
+    "smoke": {
+      "name": "Content Approval Runtime Smoke Plan",
+      "bundleTitle": "Content Approval Runtime Smoke Bundle",
+      "defaultContainerEnvVar": "TOPOGRAM_DEMO_BODY",
+      "webPath": "/",
+      "expectText": "Topogram Starter",
+      "createPath": "/submissions",
+      "getPathPrefix": "/submissions/",
+      "listPath": "/submissions",
+      "createPayload": {
+        "title": "Smoke Test Submission",
+        "author_name": "Smoke Author",
+        "containerField": "body"
+      }
+    },
+    "runtimeCheck": {
+      "name": "Content Approval Runtime Check Plan",
+      "bundleTitle": "Content Approval Runtime Check Bundle",
+      "requiredEnv": [
+        "TOPOGRAM_API_BASE_URL",
+        "TOPOGRAM_WEB_BASE_URL",
+        "TOPOGRAM_DEMO_PRIMARY_ID"
+      ],
+      "demoContainerEnvVar": "TOPOGRAM_DEMO_BODY",
+      "demoPrimaryEnvVar": "TOPOGRAM_DEMO_PRIMARY_ID",
+      "lookupPaths": {},
+      "stageNotes": [
+        {
+          "id": "environment",
+          "summary": "required env, web readiness, API health, API readiness, and seeded content submission lookup"
+        },
+        {
+          "id": "api",
+          "summary": "core content submission create, get, list, approve, and request-changes paths"
+        }
+      ],
+      "notes": [
+        "Mutating checks create, approve, and request changes on a runtime-check content submission.",
+        "Later stages are skipped if environment readiness fails.",
+        "The generated server exposes both /health and /ready.",
+        "Use the smoke bundle for a faster minimal confidence check.",
+        "Use this runtime-check bundle for staged verification and JSON reporting."
+      ],
+      "verification": {
+        "methods": [
+          "runtime"
+        ],
+        "sources": [
+          {
+            "id": "verification_adopt_brownfield_spec",
+            "name": "Adopt Brownfield Spec Verification",
+            "method": "runtime",
+            "validates": [
+              "cap_list_submissions",
+              "cap_get_submission",
+              "cap_submit_content",
+              "cap_approve_submission",
+              "cap_request_changes"
+            ]
+          },
+          {
+            "id": "verification_maintained_bulk_approve",
+            "name": "Maintained Bulk Approve Verification",
+            "method": "runtime",
+            "validates": [
+              "cap_list_submissions",
+              "cap_bulk_approve_submissions"
+            ]
+          },
+          {
+            "id": "verification_recreate_other_stack",
+            "name": "Recreate Other Stack Verification",
+            "method": "runtime",
+            "validates": [
+              "cap_list_submissions",
+              "cap_get_submission",
+              "cap_submit_content",
+              "cap_approve_submission",
+              "cap_request_changes",
+              "cap_bulk_approve_submissions"
+            ]
+          },
+          {
+            "id": "verification_refresh_drift",
+            "name": "Refresh Drift Verification",
+            "method": "runtime",
+            "validates": [
+              "cap_list_submissions"
+            ]
+          }
+        ],
+        "scenarios": [
+          {
+            "id": "brownfield_adoption_topogram_check_sdlc_check_app_verify",
+            "label": "brownfield adoption topogram check sdlc check app verify"
+          },
+          {
+            "id": "brownfield_bulk_approve_api_ui_compile",
+            "label": "brownfield bulk approve api ui compile"
+          },
+          {
+            "id": "brownfield_generated_recreation_compile_maintained_source_preserved",
+            "label": "brownfield generated recreation compile maintained source preserved"
+          },
+          {
+            "id": "brownfield_extract_refresh_drift_visible",
+            "label": "brownfield extract refresh drift visible"
+          }
+        ]
+      }
+    },
+    "appBundle": {
+      "name": "Content Approval App Bundle",
+      "demoContainerName": "Draft content waiting for editorial approval.",
+      "demoPrimaryTitle": "Launch announcement"
+    },
+    "demoEnv": {
+      "userId": "",
+      "containerId": "Draft content waiting for editorial approval.",
+      "primaryId": "33333333-3333-4333-8333-333333333333"
+    }
+  },
+  "profiles": {
+    "environment": "local_process",
+    "deployment": "fly_io"
+  },
+  "commands": {
+    "bootstrap": "./scripts/bootstrap.sh",
+    "dev": "./scripts/dev.sh",
+    "compile": "./scripts/compile-check.sh",
+    "runtime": "./scripts/runtime.sh",
+    "smoke": "./scripts/smoke.sh",
+    "runtimeCheck": "./scripts/runtime-check.sh",
+    "deployCheck": "./scripts/deploy-check.sh"
+  },
+  "layout": {
+    "apps": "apps",
+    "deploy": "deploy",
+    "smoke": "smoke",
+    "runtimeCheck": "runtime-check",
+    "compile": "compile",
+    "services": "apps/services",
+    "web": "apps/web",
+    "db": "apps/db",
+    "native": "apps/native"
+  }
+}

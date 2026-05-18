@@ -1,0 +1,11 @@
+$ npx topogram sdlc check . --strict
+exit_code=0
+
+## stdout
+{
+  "errors": [],
+  "ok": true,
+  "warnings": []
+}
+
+## stderr

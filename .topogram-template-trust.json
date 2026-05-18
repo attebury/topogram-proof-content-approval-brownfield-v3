@@ -1,0 +1,66 @@
+{
+  "version": "1",
+  "trustPolicy": "topogram-template-executable-implementation-v1",
+  "trustedAt": "2026-05-15T08:14:42.331Z",
+  "template": {
+    "id": null,
+    "version": null,
+    "source": null,
+    "sourceSpec": null,
+    "requested": null,
+    "sourceRoot": null,
+    "catalog": null
+  },
+  "implementation": {
+    "id": "web-api-db-template",
+    "module": "./implementation/index.js",
+    "export": "WEB_API_DB_IMPLEMENTATION"
+  },
+  "content": {
+    "algorithm": "sha256",
+    "root": "implementation",
+    "digest": "6d7c0932adaaa4e8a2b2db495d31965fbf0d40c291a40ebf2606061415bf45c9",
+    "files": [
+      {
+        "path": "backend/reference.js",
+        "sha256": "cb9f630211b33487c065f687eb08497338ee2367ee82d95964ed8352adf29170",
+        "size": 1695
+      },
+      {
+        "path": "backend/repository-reference.js",
+        "sha256": "a81c041460d0f7da1a01f103fcc828e00806b75969f7e88abadbca83af0881ed",
+        "size": 1045
+      },
+      {
+        "path": "backend/repository-renderers.js",
+        "sha256": "7cf465108332aa2c469ec695870d7f1139759fc131173b6021fc9795ea6dfa54",
+        "size": 5578
+      },
+      {
+        "path": "index.js",
+        "sha256": "1db9906c9831eb3a82e76d51490dc9e2cad590b7459f5f0ee6767eba39b44ffd",
+        "size": 1462
+      },
+      {
+        "path": "README.md",
+        "sha256": "0bb658bd7cd36df61d568ae8b22db511a45a6b7310d12eaaac7d15fb8bf65ef0",
+        "size": 243
+      },
+      {
+        "path": "runtime/check-renderers.js",
+        "sha256": "9d8282fd84d627e5f476d48a720806132e0d1e4cf129f70435d8f10cfd2635a1",
+        "size": 5724
+      },
+      {
+        "path": "runtime/checks.js",
+        "sha256": "d443622d19f45e0dbda969e8c6a51900d5329394e772b45a346437c87f9586cc",
+        "size": 2890
+      },
+      {
+        "path": "runtime/reference.js",
+        "sha256": "57ac1a152563c14a8fa83ec40389407b11cd56fd98e358a9c23d6369188c2cb3",
+        "size": 2616
+      }
+    ]
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "errors": [],
+  "inputPath": "<repo>/topo",
+  "ok": true,
+  "project": {
+    "compatibility": false,
+    "configPath": "<repo>/topogram.project.json",
+    "resolvedTopology": {
+      "edges": [
+        {
+          "from": "recreated_api",
+          "to": "recreated_postgres",
+          "type": "uses_database"
+        },
+        {
+          "from": "recreated_web",
+          "to": "recreated_api",
+          "type": "calls_api"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "maintained_db",
+          "ownership": "maintained",
+          "path": "./prisma"
+        },
+        {
+          "name": "maintained_source",
+          "ownership": "maintained",
+          "path": "./src"
+        },
+        {
+          "name": "recreated_app",
+          "ownership": "generated",
+          "path": "./recreated-app"
+        }
+      ],
+      "runtimes": [
+        {
+          "generator": {
+            "id": "@topogram/generator-hono-api",
+            "version": "1"
+          },
+          "id": "recreated_api",
+          "kind": "api_service",
+          "migration": null,
+          "port": 3100,
+          "projection": "proj_api",
+          "references": {
+            "uses_api": null,
+            "uses_database": "recreated_postgres"
+          }
+        },
+        {
+          "generator": {
+            "id": "@topogram/generator-postgres-db",
+            "version": "1"
+          },
+          "id": "recreated_postgres",
+          "kind": "database",
+          "migration": null,
+          "port": 5433,
+          "projection": "proj_db_postgres",
+          "references": {
+            "uses_api": null,
+            "uses_database": null
+          }
+        },
+        {
+          "generator": {
+            "id": "@topogram/generator-sveltekit-web",
+            "version": "1"
+          },
+          "id": "recreated_web",
+          "kind": "web_surface",
+          "migration": null,
+          "port": 5174,
+          "projection": "proj_web_surface",
+          "references": {
+            "uses_api": "recreated_api",
+            "uses_database": null
+          }
+        }
+      ]
+    },
+    "topology": {
+      "runtimes": [
+        {
+          "generator": {
+            "id": "@topogram/generator-hono-api",
+            "package": "@topogram/generator-hono-api",
+            "version": "1"
+          },
+          "id": "recreated_api",
+          "kind": "api_service",
+          "port": 3100,
+          "projection": "proj_api",
+          "uses_database": "recreated_postgres"
+        },
+        {
+          "generator": {
+            "id": "@topogram/generator-sveltekit-web",
+            "package": "@topogram/generator-sveltekit-web",
+            "version": "1"
+          },
+          "id": "recreated_web",
+          "kind": "web_surface",
+          "port": 5174,
+          "projection": "proj_web_surface",
+          "uses_api": "recreated_api"
+        },
+        {
+          "generator": {
+            "id": "@topogram/generator-postgres-db",
+            "package": "@topogram/generator-postgres-db",
+            "version": "1"
+          },
+          "id": "recreated_postgres",
+          "kind": "database",
+          "port": 5433,
+          "projection": "proj_db_postgres"
+        }
+      ]
+    },
+    "valid": true
+  },
+  "topogram": {
+    "files": 40,
+    "statements": 40,
+    "valid": true
+  }
+}

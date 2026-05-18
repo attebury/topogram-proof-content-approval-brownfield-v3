@@ -1,0 +1,173 @@
+{
+  "type": "generation_coverage",
+  "surface": "web",
+  "generator": "@topogram/generator-sveltekit-web",
+  "projection": {
+    "id": "proj_web_surface",
+    "name": "Content Approval Web UI",
+    "type": "web_surface"
+  },
+  "summary": {
+    "routed_screens": 3,
+    "rendered_screens": 3,
+    "implementation_screens": 0,
+    "generator_screens": 3,
+    "widget_usages": 4,
+    "rendered_widget_usages": 4,
+    "diagnostics": 0,
+    "errors": 0,
+    "warnings": 0
+  },
+  "design_intent": {
+    "status": "mapped",
+    "css_path": "src/app.css",
+    "tokens": {
+      "density": "compact",
+      "tone": "operational",
+      "radius_scale": "medium",
+      "color_roles": {
+        "primary": "accent",
+        "danger": "critical"
+      },
+      "typography_roles": {
+        "body": "readable",
+        "heading": "prominent"
+      },
+      "action_roles": {
+        "primary": "prominent",
+        "destructive": "danger"
+      },
+      "accessibility": {
+        "contrast": "aa",
+        "focus": "visible"
+      }
+    },
+    "mapped": [
+      {
+        "category": "density",
+        "role": null,
+        "value": "compact",
+        "marker": "--topogram-design-density"
+      },
+      {
+        "category": "tone",
+        "role": null,
+        "value": "operational",
+        "marker": "--topogram-design-tone"
+      },
+      {
+        "category": "radius_scale",
+        "role": null,
+        "value": "medium",
+        "marker": "--topogram-design-radius-scale"
+      },
+      {
+        "category": "color_roles",
+        "role": "primary",
+        "value": "accent",
+        "marker": "--topogram-design-color-primary"
+      },
+      {
+        "category": "color_roles",
+        "role": "danger",
+        "value": "critical",
+        "marker": "--topogram-design-color-danger"
+      },
+      {
+        "category": "typography_roles",
+        "role": "body",
+        "value": "readable",
+        "marker": "--topogram-design-typography-body"
+      },
+      {
+        "category": "typography_roles",
+        "role": "heading",
+        "value": "prominent",
+        "marker": "--topogram-design-typography-heading"
+      },
+      {
+        "category": "action_roles",
+        "role": "primary",
+        "value": "prominent",
+        "marker": "--topogram-design-action-primary"
+      },
+      {
+        "category": "action_roles",
+        "role": "destructive",
+        "value": "danger",
+        "marker": "--topogram-design-action-destructive"
+      },
+      {
+        "category": "accessibility",
+        "role": "contrast",
+        "value": "aa",
+        "marker": "--topogram-design-accessibility-contrast"
+      },
+      {
+        "category": "accessibility",
+        "role": "focus",
+        "value": "visible",
+        "marker": "--topogram-design-accessibility-focus"
+      }
+    ],
+    "missing": []
+  },
+  "screens": [
+    {
+      "id": "submission_queue",
+      "route": "/submissions",
+      "page": "src/routes/submissions/+page.svelte",
+      "rendered": true,
+      "renderer": "generator",
+      "widget_usages": [
+        {
+          "widget": "widget_submission_summary",
+          "region": "hero",
+          "pattern": "summary_stats",
+          "supported": true,
+          "rendered": true
+        },
+        {
+          "widget": "widget_submission_queue",
+          "region": "results",
+          "pattern": "resource_table",
+          "supported": true,
+          "rendered": true
+        }
+      ]
+    },
+    {
+      "id": "submission_detail",
+      "route": "/submissions/:id",
+      "page": "src/routes/submissions/[id]/+page.svelte",
+      "rendered": true,
+      "renderer": "generator",
+      "widget_usages": [
+        {
+          "widget": "widget_review_actions",
+          "region": "summary",
+          "pattern": "summary_stats",
+          "supported": true,
+          "rendered": true
+        }
+      ]
+    },
+    {
+      "id": "submission_create",
+      "route": "/submissions/new",
+      "page": "src/routes/submissions/new/+page.svelte",
+      "rendered": true,
+      "renderer": "generator",
+      "widget_usages": [
+        {
+          "widget": "widget_submission_form",
+          "region": "summary",
+          "pattern": "summary_stats",
+          "supported": true,
+          "rendered": true
+        }
+      ]
+    }
+  ],
+  "diagnostics": []
+}
