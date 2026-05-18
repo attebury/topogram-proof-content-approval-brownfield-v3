@@ -1,0 +1,156 @@
+{
+  "errors": [],
+  "extractor": {
+    "candidateKinds": [
+      "capability",
+      "route",
+      "stack"
+    ],
+    "capabilities": {
+      "authHints": true,
+      "params": true,
+      "routes": true
+    },
+    "compatibleCliRange": "^0.3.80",
+    "compatibleCliSource": "package.json",
+    "currentCliVersion": "0.3.90",
+    "errors": [],
+    "evidenceTypes": [
+      "runtime_source",
+      "parser_config"
+    ],
+    "executesPackageCode": false,
+    "extractCommand": "topogram extract ./express-api --out ./imported-topogram --from api --extractor @topogram/extractor-express-api",
+    "extractors": [
+      "api.express-package"
+    ],
+    "extracts": [
+      "API route candidates",
+      "capability suggestions",
+      "parameter evidence",
+      "auth hints",
+      "stack evidence"
+    ],
+    "id": "@topogram/extractor-express-api",
+    "installCommand": "npm install -D @topogram/extractor-express-api",
+    "installed": true,
+    "knownFirstParty": true,
+    "label": "Express API",
+    "loadsAdapter": false,
+    "manifestPath": "<repo>/node_modules/@topogram/extractor-express-api/topogram-extractor.json",
+    "manifestVersion": "1",
+    "package": "@topogram/extractor-express-api",
+    "packageRoot": "<repo>/node_modules/@topogram/extractor-express-api",
+    "packageVersion": "0.1.0",
+    "packageVersionStatus": "installed",
+    "policyPin": {
+      "allowed": true,
+      "expectedVersion": "1",
+      "matches": true,
+      "pinCommand": "topogram extractor policy pin @topogram/extractor-express-api@1",
+      "pinnedVersion": "1",
+      "policyExists": true,
+      "policyPath": "<repo>/topogram.extractor-policy.json",
+      "state": "pinned"
+    },
+    "policyPinCommand": "topogram extractor policy pin @topogram/extractor-express-api@1",
+    "reviewWorkflow": {
+      "packageCodeExecution": {
+        "check": true,
+        "extract": true,
+        "list": false,
+        "policy": false,
+        "show": false
+      },
+      "safetyNotes": [
+        "topogram extractor list/show/policy do not load package adapter code.",
+        "topogram extractor check and topogram extract load package adapter code.",
+        "Extractor packages emit review-only candidates; core owns persistence, reconcile, adoption, and canonical topo writes.",
+        "Run dry-run adoption before --write."
+      ],
+      "steps": [
+        {
+          "command": "topogram extractor list",
+          "id": "discover",
+          "packageCodeExecution": false,
+          "purpose": "Find bundled and first-party package-backed extractors by track."
+        },
+        {
+          "command": "topogram extractor show @topogram/extractor-express-api",
+          "id": "inspect",
+          "packageCodeExecution": false,
+          "purpose": "Read manifest purpose, tracks, install command, policy pin command, and extract command."
+        },
+        {
+          "command": "npm install -D @topogram/extractor-express-api",
+          "id": "install",
+          "packageCodeExecution": false,
+          "purpose": "Install the extractor package explicitly; Topogram does not install it during extraction."
+        },
+        {
+          "command": "npm install -D @topogram/extractor-express-api@latest",
+          "id": "upgrade",
+          "packageCodeExecution": false,
+          "purpose": "Upgrade the package if its installed npm package version or compatible CLI range is stale."
+        },
+        {
+          "command": "topogram extractor policy pin @topogram/extractor-express-api@1",
+          "id": "pin_policy",
+          "packageCodeExecution": false,
+          "purpose": "Allow and pin the extractor manifest version before execution."
+        },
+        {
+          "command": "topogram extractor check @topogram/extractor-express-api",
+          "id": "check",
+          "packageCodeExecution": true,
+          "purpose": "Load the adapter and run a minimal smoke extraction against a synthetic fixture."
+        },
+        {
+          "command": "topogram extract ./express-api --out ./imported-topogram --from api --extractor @topogram/extractor-express-api",
+          "id": "extract",
+          "packageCodeExecution": true,
+          "purpose": "Read brownfield source and write review-only candidates plus extraction provenance."
+        },
+        {
+          "command": "topogram extract plan ./imported-topogram",
+          "id": "review_plan",
+          "packageCodeExecution": false,
+          "purpose": "Review bundles, extractor provenance, candidate counts, and safety notes."
+        },
+        {
+          "command": "topogram adopt --list ./imported-topogram",
+          "id": "list_selectors",
+          "packageCodeExecution": false,
+          "purpose": "Choose an explicit adoption selector."
+        },
+        {
+          "command": "topogram adopt <selector> ./imported-topogram --dry-run",
+          "id": "dry_run_adoption",
+          "packageCodeExecution": false,
+          "purpose": "Preview canonical topo writes before changing project-owned records."
+        },
+        {
+          "command": "topogram adopt <selector> ./imported-topogram --write",
+          "id": "write_reviewed_adoption",
+          "packageCodeExecution": false,
+          "purpose": "Write only reviewed canonical records; extractor packages never own adoption semantics."
+        }
+      ],
+      "type": "extractor_review_workflow"
+    },
+    "showCommand": "topogram extractor show @topogram/extractor-express-api",
+    "source": "package",
+    "stack": {
+      "framework": "express",
+      "runtime": "node"
+    },
+    "tracks": [
+      "api"
+    ],
+    "upgradeCommand": "npm install -D @topogram/extractor-express-api@latest",
+    "useWhen": "Use for Express route files, routers, params, middleware, and auth hints.",
+    "version": "1"
+  },
+  "ok": true,
+  "sourceSpec": "@topogram/extractor-express-api"
+}

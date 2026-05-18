@@ -4,7 +4,8 @@
   "story": "real-ish brownfield app, package-backed extractors, reviewable adoption, agent-safe maintained change, drift refresh, and cross-stack recreation",
   "topogramCliVersion": "0.3.99",
   "expectedTags": [
-    "proof-01-brownfield-baseline"
+    "proof-01-brownfield-baseline",
+    "proof-02-extract-with-packages"
   ],
   "requiresCanonicalTopo": false,
   "requiresSdlc": false,
@@ -27,6 +28,34 @@
       "path": "proof/artifacts/step-01-npm-verify.txt",
       "contains": [
         "verified"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-02-extracted-topogram/proof/artifacts/step-02-extract.json",
+      "json": true,
+      "keys": [
+        "candidateCounts"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-02-extracted-topogram/proof/artifacts/step-02-extract-plan.json",
+      "json": true,
+      "keys": [
+        "commands"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-02-extracted-topogram/proof/artifacts/step-02-extractor-list.json",
+      "json": true,
+      "keys": [
+        "extractors"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-02-extracted-topogram/proof/artifacts/step-02-extractor-policy-status.json",
+      "json": true,
+      "keys": [
+        "policy"
       ]
     }
   ]

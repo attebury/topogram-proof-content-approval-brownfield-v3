@@ -1,0 +1,9 @@
+[
+  {
+    "kind": "route_inventory",
+    "files": [
+      "src/api/app.js"
+    ],
+    "route_count": 6
+  }
+]

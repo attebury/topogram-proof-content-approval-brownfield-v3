@@ -1,0 +1,1712 @@
+{
+  "cwd": "<repo>",
+  "extractors": [
+    {
+      "candidateKinds": [
+        "entity",
+        "enum",
+        "relation",
+        "index",
+        "maintained_db_migration_seam"
+      ],
+      "capabilities": {
+        "maintainedSeams": true,
+        "migrations": true,
+        "schema": true
+      },
+      "compatibleCliRange": "^0.3.90",
+      "compatibleCliSource": "current_cli_default",
+      "currentCliVersion": "0.3.90",
+      "errors": [],
+      "evidenceTypes": [
+        "runtime_source",
+        "parser_config"
+      ],
+      "executesPackageCode": false,
+      "extractCommand": "topogram extract ./drizzle-app --out ./imported-topogram --from db --extractor @topogram/extractor-drizzle-db",
+      "extractors": [
+        "db.drizzle"
+      ],
+      "extracts": [
+        "entities",
+        "relations",
+        "indexes",
+        "maintained DB seam proposals",
+        "schema/migration evidence"
+      ],
+      "id": "@topogram/extractor-drizzle-db",
+      "installCommand": "npm install -D @topogram/extractor-drizzle-db",
+      "installed": false,
+      "knownFirstParty": true,
+      "label": "Drizzle DB",
+      "loadsAdapter": false,
+      "manifestPath": null,
+      "manifestVersion": "1",
+      "package": "@topogram/extractor-drizzle-db",
+      "packageRoot": null,
+      "packageVersion": null,
+      "packageVersionStatus": "not_installed",
+      "policyPin": {
+        "allowed": true,
+        "expectedVersion": "1",
+        "matches": null,
+        "pinCommand": "topogram extractor policy pin @topogram/extractor-drizzle-db@1",
+        "pinnedVersion": null,
+        "policyExists": true,
+        "policyPath": "<repo>/topogram.extractor-policy.json",
+        "state": "allowed_unpinned"
+      },
+      "policyPinCommand": "topogram extractor policy pin @topogram/extractor-drizzle-db@1",
+      "reviewWorkflow": {
+        "packageCodeExecution": {
+          "check": true,
+          "extract": true,
+          "list": false,
+          "policy": false,
+          "show": false
+        },
+        "safetyNotes": [
+          "topogram extractor list/show/policy do not load package adapter code.",
+          "topogram extractor check and topogram extract load package adapter code.",
+          "Extractor packages emit review-only candidates; core owns persistence, reconcile, adoption, and canonical topo writes.",
+          "Run dry-run adoption before --write."
+        ],
+        "steps": [
+          {
+            "command": "topogram extractor list",
+            "id": "discover",
+            "packageCodeExecution": false,
+            "purpose": "Find bundled and first-party package-backed extractors by track."
+          },
+          {
+            "command": "topogram extractor show @topogram/extractor-drizzle-db",
+            "id": "inspect",
+            "packageCodeExecution": false,
+            "purpose": "Read manifest purpose, tracks, install command, policy pin command, and extract command."
+          },
+          {
+            "command": "npm install -D @topogram/extractor-drizzle-db",
+            "id": "install",
+            "packageCodeExecution": false,
+            "purpose": "Install the extractor package explicitly; Topogram does not install it during extraction."
+          },
+          {
+            "command": "topogram extractor policy pin @topogram/extractor-drizzle-db@1",
+            "id": "pin_policy",
+            "packageCodeExecution": false,
+            "purpose": "Allow and pin the extractor manifest version before execution."
+          },
+          {
+            "command": "topogram extractor check @topogram/extractor-drizzle-db",
+            "id": "check",
+            "packageCodeExecution": true,
+            "purpose": "Load the adapter and run a minimal smoke extraction against a synthetic fixture."
+          },
+          {
+            "command": "topogram extract ./drizzle-app --out ./imported-topogram --from db --extractor @topogram/extractor-drizzle-db",
+            "id": "extract",
+            "packageCodeExecution": true,
+            "purpose": "Read brownfield source and write review-only candidates plus extraction provenance."
+          },
+          {
+            "command": "topogram extract plan ./imported-topogram",
+            "id": "review_plan",
+            "packageCodeExecution": false,
+            "purpose": "Review bundles, extractor provenance, candidate counts, and safety notes."
+          },
+          {
+            "command": "topogram adopt --list ./imported-topogram",
+            "id": "list_selectors",
+            "packageCodeExecution": false,
+            "purpose": "Choose an explicit adoption selector."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --dry-run",
+            "id": "dry_run_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Preview canonical topo writes before changing project-owned records."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --write",
+            "id": "write_reviewed_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Write only reviewed canonical records; extractor packages never own adoption semantics."
+          }
+        ],
+        "type": "extractor_review_workflow"
+      },
+      "showCommand": "topogram extractor show @topogram/extractor-drizzle-db",
+      "source": "package",
+      "stack": {
+        "domain": "database",
+        "orm": "drizzle"
+      },
+      "tracks": [
+        "db"
+      ],
+      "upgradeCommand": "npm install -D @topogram/extractor-drizzle-db@latest",
+      "useWhen": "Use for Drizzle config, schema modules, table definitions, and migration output.",
+      "version": "1"
+    },
+    {
+      "candidateKinds": [
+        "capability",
+        "route",
+        "stack"
+      ],
+      "capabilities": {
+        "authHints": true,
+        "params": true,
+        "routes": true
+      },
+      "compatibleCliRange": "^0.3.80",
+      "compatibleCliSource": "package.json",
+      "currentCliVersion": "0.3.90",
+      "errors": [],
+      "evidenceTypes": [
+        "runtime_source",
+        "parser_config"
+      ],
+      "executesPackageCode": false,
+      "extractCommand": "topogram extract ./express-api --out ./imported-topogram --from api --extractor @topogram/extractor-express-api",
+      "extractors": [
+        "api.express-package"
+      ],
+      "extracts": [
+        "API route candidates",
+        "capability suggestions",
+        "parameter evidence",
+        "auth hints",
+        "stack evidence"
+      ],
+      "id": "@topogram/extractor-express-api",
+      "installCommand": "npm install -D @topogram/extractor-express-api",
+      "installed": true,
+      "knownFirstParty": true,
+      "label": "Express API",
+      "loadsAdapter": false,
+      "manifestPath": "<repo>/node_modules/@topogram/extractor-express-api/topogram-extractor.json",
+      "manifestVersion": "1",
+      "package": "@topogram/extractor-express-api",
+      "packageRoot": "<repo>/node_modules/@topogram/extractor-express-api",
+      "packageVersion": "0.1.0",
+      "packageVersionStatus": "installed",
+      "policyPin": {
+        "allowed": true,
+        "expectedVersion": "1",
+        "matches": true,
+        "pinCommand": "topogram extractor policy pin @topogram/extractor-express-api@1",
+        "pinnedVersion": "1",
+        "policyExists": true,
+        "policyPath": "<repo>/topogram.extractor-policy.json",
+        "state": "pinned"
+      },
+      "policyPinCommand": "topogram extractor policy pin @topogram/extractor-express-api@1",
+      "reviewWorkflow": {
+        "packageCodeExecution": {
+          "check": true,
+          "extract": true,
+          "list": false,
+          "policy": false,
+          "show": false
+        },
+        "safetyNotes": [
+          "topogram extractor list/show/policy do not load package adapter code.",
+          "topogram extractor check and topogram extract load package adapter code.",
+          "Extractor packages emit review-only candidates; core owns persistence, reconcile, adoption, and canonical topo writes.",
+          "Run dry-run adoption before --write."
+        ],
+        "steps": [
+          {
+            "command": "topogram extractor list",
+            "id": "discover",
+            "packageCodeExecution": false,
+            "purpose": "Find bundled and first-party package-backed extractors by track."
+          },
+          {
+            "command": "topogram extractor show @topogram/extractor-express-api",
+            "id": "inspect",
+            "packageCodeExecution": false,
+            "purpose": "Read manifest purpose, tracks, install command, policy pin command, and extract command."
+          },
+          {
+            "command": "npm install -D @topogram/extractor-express-api",
+            "id": "install",
+            "packageCodeExecution": false,
+            "purpose": "Install the extractor package explicitly; Topogram does not install it during extraction."
+          },
+          {
+            "command": "npm install -D @topogram/extractor-express-api@latest",
+            "id": "upgrade",
+            "packageCodeExecution": false,
+            "purpose": "Upgrade the package if its installed npm package version or compatible CLI range is stale."
+          },
+          {
+            "command": "topogram extractor policy pin @topogram/extractor-express-api@1",
+            "id": "pin_policy",
+            "packageCodeExecution": false,
+            "purpose": "Allow and pin the extractor manifest version before execution."
+          },
+          {
+            "command": "topogram extractor check @topogram/extractor-express-api",
+            "id": "check",
+            "packageCodeExecution": true,
+            "purpose": "Load the adapter and run a minimal smoke extraction against a synthetic fixture."
+          },
+          {
+            "command": "topogram extract ./express-api --out ./imported-topogram --from api --extractor @topogram/extractor-express-api",
+            "id": "extract",
+            "packageCodeExecution": true,
+            "purpose": "Read brownfield source and write review-only candidates plus extraction provenance."
+          },
+          {
+            "command": "topogram extract plan ./imported-topogram",
+            "id": "review_plan",
+            "packageCodeExecution": false,
+            "purpose": "Review bundles, extractor provenance, candidate counts, and safety notes."
+          },
+          {
+            "command": "topogram adopt --list ./imported-topogram",
+            "id": "list_selectors",
+            "packageCodeExecution": false,
+            "purpose": "Choose an explicit adoption selector."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --dry-run",
+            "id": "dry_run_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Preview canonical topo writes before changing project-owned records."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --write",
+            "id": "write_reviewed_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Write only reviewed canonical records; extractor packages never own adoption semantics."
+          }
+        ],
+        "type": "extractor_review_workflow"
+      },
+      "showCommand": "topogram extractor show @topogram/extractor-express-api",
+      "source": "package",
+      "stack": {
+        "framework": "express",
+        "runtime": "node"
+      },
+      "tracks": [
+        "api"
+      ],
+      "upgradeCommand": "npm install -D @topogram/extractor-express-api@latest",
+      "useWhen": "Use for Express route files, routers, params, middleware, and auth hints.",
+      "version": "1"
+    },
+    {
+      "candidateKinds": [
+        "command",
+        "capability",
+        "cli_surface"
+      ],
+      "capabilities": {
+        "commands": true,
+        "effects": true,
+        "options": true
+      },
+      "compatibleCliRange": "^0.3.90",
+      "compatibleCliSource": "current_cli_default",
+      "currentCliVersion": "0.3.90",
+      "errors": [],
+      "evidenceTypes": [
+        "runtime_source",
+        "parser_config"
+      ],
+      "executesPackageCode": false,
+      "extractCommand": "topogram extract ./existing-cli --out ./imported-topogram --from cli --extractor @topogram/extractor-node-cli",
+      "extractors": [
+        "cli.node-package"
+      ],
+      "extracts": [
+        "command candidates",
+        "options",
+        "effects",
+        "CLI surface projections",
+        "capability suggestions"
+      ],
+      "id": "@topogram/extractor-node-cli",
+      "installCommand": "npm install -D @topogram/extractor-node-cli",
+      "installed": false,
+      "knownFirstParty": true,
+      "label": "Node CLI",
+      "loadsAdapter": false,
+      "manifestPath": null,
+      "manifestVersion": "1",
+      "package": "@topogram/extractor-node-cli",
+      "packageRoot": null,
+      "packageVersion": null,
+      "packageVersionStatus": "not_installed",
+      "policyPin": {
+        "allowed": true,
+        "expectedVersion": "1",
+        "matches": null,
+        "pinCommand": "topogram extractor policy pin @topogram/extractor-node-cli@1",
+        "pinnedVersion": null,
+        "policyExists": true,
+        "policyPath": "<repo>/topogram.extractor-policy.json",
+        "state": "allowed_unpinned"
+      },
+      "policyPinCommand": "topogram extractor policy pin @topogram/extractor-node-cli@1",
+      "reviewWorkflow": {
+        "packageCodeExecution": {
+          "check": true,
+          "extract": true,
+          "list": false,
+          "policy": false,
+          "show": false
+        },
+        "safetyNotes": [
+          "topogram extractor list/show/policy do not load package adapter code.",
+          "topogram extractor check and topogram extract load package adapter code.",
+          "Extractor packages emit review-only candidates; core owns persistence, reconcile, adoption, and canonical topo writes.",
+          "Run dry-run adoption before --write."
+        ],
+        "steps": [
+          {
+            "command": "topogram extractor list",
+            "id": "discover",
+            "packageCodeExecution": false,
+            "purpose": "Find bundled and first-party package-backed extractors by track."
+          },
+          {
+            "command": "topogram extractor show @topogram/extractor-node-cli",
+            "id": "inspect",
+            "packageCodeExecution": false,
+            "purpose": "Read manifest purpose, tracks, install command, policy pin command, and extract command."
+          },
+          {
+            "command": "npm install -D @topogram/extractor-node-cli",
+            "id": "install",
+            "packageCodeExecution": false,
+            "purpose": "Install the extractor package explicitly; Topogram does not install it during extraction."
+          },
+          {
+            "command": "topogram extractor policy pin @topogram/extractor-node-cli@1",
+            "id": "pin_policy",
+            "packageCodeExecution": false,
+            "purpose": "Allow and pin the extractor manifest version before execution."
+          },
+          {
+            "command": "topogram extractor check @topogram/extractor-node-cli",
+            "id": "check",
+            "packageCodeExecution": true,
+            "purpose": "Load the adapter and run a minimal smoke extraction against a synthetic fixture."
+          },
+          {
+            "command": "topogram extract ./existing-cli --out ./imported-topogram --from cli --extractor @topogram/extractor-node-cli",
+            "id": "extract",
+            "packageCodeExecution": true,
+            "purpose": "Read brownfield source and write review-only candidates plus extraction provenance."
+          },
+          {
+            "command": "topogram extract plan ./imported-topogram",
+            "id": "review_plan",
+            "packageCodeExecution": false,
+            "purpose": "Review bundles, extractor provenance, candidate counts, and safety notes."
+          },
+          {
+            "command": "topogram adopt --list ./imported-topogram",
+            "id": "list_selectors",
+            "packageCodeExecution": false,
+            "purpose": "Choose an explicit adoption selector."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --dry-run",
+            "id": "dry_run_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Preview canonical topo writes before changing project-owned records."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --write",
+            "id": "write_reviewed_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Write only reviewed canonical records; extractor packages never own adoption semantics."
+          }
+        ],
+        "type": "extractor_review_workflow"
+      },
+      "showCommand": "topogram extractor show @topogram/extractor-node-cli",
+      "source": "package",
+      "stack": {
+        "domain": "cli",
+        "runtime": "node"
+      },
+      "tracks": [
+        "cli"
+      ],
+      "upgradeCommand": "npm install -D @topogram/extractor-node-cli@latest",
+      "useWhen": "Use for Node package CLIs with bin entries, scripts, command modules, and help text.",
+      "version": "1"
+    },
+    {
+      "candidateKinds": [
+        "entity",
+        "enum",
+        "relation",
+        "index",
+        "maintained_db_migration_seam"
+      ],
+      "capabilities": {
+        "maintainedDbSeams": true,
+        "migrations": true,
+        "schema": true
+      },
+      "compatibleCliRange": "^0.3.80",
+      "compatibleCliSource": "package.json",
+      "currentCliVersion": "0.3.90",
+      "errors": [],
+      "evidenceTypes": [
+        "runtime_source",
+        "parser_config"
+      ],
+      "executesPackageCode": false,
+      "extractCommand": "topogram extract ./prisma-app --out ./imported-topogram --from db --extractor @topogram/extractor-prisma-db",
+      "extractors": [
+        "db.prisma-package"
+      ],
+      "extracts": [
+        "entities",
+        "enums",
+        "relations",
+        "indexes",
+        "maintained DB seam proposals"
+      ],
+      "id": "@topogram/extractor-prisma-db",
+      "installCommand": "npm install -D @topogram/extractor-prisma-db",
+      "installed": true,
+      "knownFirstParty": true,
+      "label": "Prisma DB",
+      "loadsAdapter": false,
+      "manifestPath": "<repo>/node_modules/@topogram/extractor-prisma-db/topogram-extractor.json",
+      "manifestVersion": "1",
+      "package": "@topogram/extractor-prisma-db",
+      "packageRoot": "<repo>/node_modules/@topogram/extractor-prisma-db",
+      "packageVersion": "0.1.0",
+      "packageVersionStatus": "installed",
+      "policyPin": {
+        "allowed": true,
+        "expectedVersion": "1",
+        "matches": true,
+        "pinCommand": "topogram extractor policy pin @topogram/extractor-prisma-db@1",
+        "pinnedVersion": "1",
+        "policyExists": true,
+        "policyPath": "<repo>/topogram.extractor-policy.json",
+        "state": "pinned"
+      },
+      "policyPinCommand": "topogram extractor policy pin @topogram/extractor-prisma-db@1",
+      "reviewWorkflow": {
+        "packageCodeExecution": {
+          "check": true,
+          "extract": true,
+          "list": false,
+          "policy": false,
+          "show": false
+        },
+        "safetyNotes": [
+          "topogram extractor list/show/policy do not load package adapter code.",
+          "topogram extractor check and topogram extract load package adapter code.",
+          "Extractor packages emit review-only candidates; core owns persistence, reconcile, adoption, and canonical topo writes.",
+          "Run dry-run adoption before --write."
+        ],
+        "steps": [
+          {
+            "command": "topogram extractor list",
+            "id": "discover",
+            "packageCodeExecution": false,
+            "purpose": "Find bundled and first-party package-backed extractors by track."
+          },
+          {
+            "command": "topogram extractor show @topogram/extractor-prisma-db",
+            "id": "inspect",
+            "packageCodeExecution": false,
+            "purpose": "Read manifest purpose, tracks, install command, policy pin command, and extract command."
+          },
+          {
+            "command": "npm install -D @topogram/extractor-prisma-db",
+            "id": "install",
+            "packageCodeExecution": false,
+            "purpose": "Install the extractor package explicitly; Topogram does not install it during extraction."
+          },
+          {
+            "command": "npm install -D @topogram/extractor-prisma-db@latest",
+            "id": "upgrade",
+            "packageCodeExecution": false,
+            "purpose": "Upgrade the package if its installed npm package version or compatible CLI range is stale."
+          },
+          {
+            "command": "topogram extractor policy pin @topogram/extractor-prisma-db@1",
+            "id": "pin_policy",
+            "packageCodeExecution": false,
+            "purpose": "Allow and pin the extractor manifest version before execution."
+          },
+          {
+            "command": "topogram extractor check @topogram/extractor-prisma-db",
+            "id": "check",
+            "packageCodeExecution": true,
+            "purpose": "Load the adapter and run a minimal smoke extraction against a synthetic fixture."
+          },
+          {
+            "command": "topogram extract ./prisma-app --out ./imported-topogram --from db --extractor @topogram/extractor-prisma-db",
+            "id": "extract",
+            "packageCodeExecution": true,
+            "purpose": "Read brownfield source and write review-only candidates plus extraction provenance."
+          },
+          {
+            "command": "topogram extract plan ./imported-topogram",
+            "id": "review_plan",
+            "packageCodeExecution": false,
+            "purpose": "Review bundles, extractor provenance, candidate counts, and safety notes."
+          },
+          {
+            "command": "topogram adopt --list ./imported-topogram",
+            "id": "list_selectors",
+            "packageCodeExecution": false,
+            "purpose": "Choose an explicit adoption selector."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --dry-run",
+            "id": "dry_run_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Preview canonical topo writes before changing project-owned records."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --write",
+            "id": "write_reviewed_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Write only reviewed canonical records; extractor packages never own adoption semantics."
+          }
+        ],
+        "type": "extractor_review_workflow"
+      },
+      "showCommand": "topogram extractor show @topogram/extractor-prisma-db",
+      "source": "package",
+      "stack": {
+        "database": "relational",
+        "orm": "prisma"
+      },
+      "tracks": [
+        "db"
+      ],
+      "upgradeCommand": "npm install -D @topogram/extractor-prisma-db@latest",
+      "useWhen": "Use for Prisma schema.prisma models plus Prisma migration evidence.",
+      "version": "1"
+    },
+    {
+      "candidateKinds": [
+        "screen",
+        "route",
+        "flow",
+        "widget",
+        "shape",
+        "stack"
+      ],
+      "capabilities": {
+        "flows": true,
+        "routes": true,
+        "screens": true,
+        "widgets": true
+      },
+      "compatibleCliRange": "^0.3.85",
+      "compatibleCliSource": "package.json",
+      "currentCliVersion": "0.3.90",
+      "errors": [],
+      "evidenceTypes": [
+        "runtime_source",
+        "parser_config"
+      ],
+      "executesPackageCode": false,
+      "extractCommand": "topogram extract ./react-router-app --out ./imported-topogram --from ui --extractor @topogram/extractor-react-router",
+      "extractors": [
+        "ui.react-router-package"
+      ],
+      "extracts": [
+        "screens",
+        "routes",
+        "flow candidates",
+        "widget evidence",
+        "stack evidence"
+      ],
+      "id": "@topogram/extractor-react-router",
+      "installCommand": "npm install -D @topogram/extractor-react-router",
+      "installed": true,
+      "knownFirstParty": true,
+      "label": "React Router UI",
+      "loadsAdapter": false,
+      "manifestPath": "<repo>/node_modules/@topogram/extractor-react-router/topogram-extractor.json",
+      "manifestVersion": "1",
+      "package": "@topogram/extractor-react-router",
+      "packageRoot": "<repo>/node_modules/@topogram/extractor-react-router",
+      "packageVersion": "0.1.1",
+      "packageVersionStatus": "installed",
+      "policyPin": {
+        "allowed": true,
+        "expectedVersion": "1",
+        "matches": true,
+        "pinCommand": "topogram extractor policy pin @topogram/extractor-react-router@1",
+        "pinnedVersion": "1",
+        "policyExists": true,
+        "policyPath": "<repo>/topogram.extractor-policy.json",
+        "state": "pinned"
+      },
+      "policyPinCommand": "topogram extractor policy pin @topogram/extractor-react-router@1",
+      "reviewWorkflow": {
+        "packageCodeExecution": {
+          "check": true,
+          "extract": true,
+          "list": false,
+          "policy": false,
+          "show": false
+        },
+        "safetyNotes": [
+          "topogram extractor list/show/policy do not load package adapter code.",
+          "topogram extractor check and topogram extract load package adapter code.",
+          "Extractor packages emit review-only candidates; core owns persistence, reconcile, adoption, and canonical topo writes.",
+          "Run dry-run adoption before --write."
+        ],
+        "steps": [
+          {
+            "command": "topogram extractor list",
+            "id": "discover",
+            "packageCodeExecution": false,
+            "purpose": "Find bundled and first-party package-backed extractors by track."
+          },
+          {
+            "command": "topogram extractor show @topogram/extractor-react-router",
+            "id": "inspect",
+            "packageCodeExecution": false,
+            "purpose": "Read manifest purpose, tracks, install command, policy pin command, and extract command."
+          },
+          {
+            "command": "npm install -D @topogram/extractor-react-router",
+            "id": "install",
+            "packageCodeExecution": false,
+            "purpose": "Install the extractor package explicitly; Topogram does not install it during extraction."
+          },
+          {
+            "command": "npm install -D @topogram/extractor-react-router@latest",
+            "id": "upgrade",
+            "packageCodeExecution": false,
+            "purpose": "Upgrade the package if its installed npm package version or compatible CLI range is stale."
+          },
+          {
+            "command": "topogram extractor policy pin @topogram/extractor-react-router@1",
+            "id": "pin_policy",
+            "packageCodeExecution": false,
+            "purpose": "Allow and pin the extractor manifest version before execution."
+          },
+          {
+            "command": "topogram extractor check @topogram/extractor-react-router",
+            "id": "check",
+            "packageCodeExecution": true,
+            "purpose": "Load the adapter and run a minimal smoke extraction against a synthetic fixture."
+          },
+          {
+            "command": "topogram extract ./react-router-app --out ./imported-topogram --from ui --extractor @topogram/extractor-react-router",
+            "id": "extract",
+            "packageCodeExecution": true,
+            "purpose": "Read brownfield source and write review-only candidates plus extraction provenance."
+          },
+          {
+            "command": "topogram extract plan ./imported-topogram",
+            "id": "review_plan",
+            "packageCodeExecution": false,
+            "purpose": "Review bundles, extractor provenance, candidate counts, and safety notes."
+          },
+          {
+            "command": "topogram adopt --list ./imported-topogram",
+            "id": "list_selectors",
+            "packageCodeExecution": false,
+            "purpose": "Choose an explicit adoption selector."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --dry-run",
+            "id": "dry_run_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Preview canonical topo writes before changing project-owned records."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --write",
+            "id": "write_reviewed_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Write only reviewed canonical records; extractor packages never own adoption semantics."
+          }
+        ],
+        "type": "extractor_review_workflow"
+      },
+      "showCommand": "topogram extractor show @topogram/extractor-react-router",
+      "source": "package",
+      "stack": {
+        "framework": "react-router",
+        "runtime": "browser"
+      },
+      "tracks": [
+        "ui"
+      ],
+      "upgradeCommand": "npm install -D @topogram/extractor-react-router@latest",
+      "useWhen": "Use for React Router route trees, route modules, screen hints, and non-resource UI flows.",
+      "version": "1"
+    },
+    {
+      "candidateKinds": [
+        "capability",
+        "route",
+        "stack"
+      ],
+      "capabilities": {
+        "graphql": true,
+        "openapi": true,
+        "routes": true
+      },
+      "compatibleCliRange": null,
+      "compatibleCliSource": "missing",
+      "currentCliVersion": "0.3.90",
+      "errors": [],
+      "evidenceTypes": [
+        "runtime_source",
+        "parser_config",
+        "docs",
+        "tests",
+        "fixtures"
+      ],
+      "executesPackageCode": false,
+      "extractCommand": "topogram extract ./existing-app --out ./imported-topogram --from api --extractor topogram/api-extractors",
+      "extractors": [
+        "api.openapi",
+        "api.openapi-code",
+        "api.graphql-sdl",
+        "api.graphql-code-first",
+        "api.trpc",
+        "api.aspnet-core",
+        "api.retrofit",
+        "api.swift-webapi",
+        "api.flutter-dio",
+        "api.react-native-repository",
+        "api.fastify",
+        "api.express",
+        "api.django-routes",
+        "api.rails-routes",
+        "api.micronaut",
+        "api.jaxrs",
+        "api.spring-web",
+        "api.next-route",
+        "api.generic-route-fallback",
+        "api.next-server-action",
+        "api.nextauth"
+      ],
+      "extracts": [],
+      "id": "topogram/api-extractors",
+      "installed": true,
+      "knownFirstParty": false,
+      "label": null,
+      "loadsAdapter": false,
+      "manifestPath": null,
+      "manifestVersion": "1",
+      "packageRoot": null,
+      "packageVersion": null,
+      "packageVersionStatus": "not_installed",
+      "policyPin": {
+        "allowed": null,
+        "expectedVersion": "1",
+        "matches": null,
+        "pinCommand": null,
+        "pinnedVersion": null,
+        "policyExists": true,
+        "policyPath": "<repo>/topogram.extractor-policy.json",
+        "state": "not_applicable"
+      },
+      "reviewWorkflow": {
+        "packageCodeExecution": {
+          "check": true,
+          "extract": true,
+          "list": false,
+          "policy": false,
+          "show": false
+        },
+        "safetyNotes": [
+          "topogram extractor list/show/policy do not load package adapter code.",
+          "topogram extractor check and topogram extract load package adapter code.",
+          "Extractor packages emit review-only candidates; core owns persistence, reconcile, adoption, and canonical topo writes.",
+          "Run dry-run adoption before --write."
+        ],
+        "steps": [
+          {
+            "command": "topogram extractor list",
+            "id": "discover",
+            "packageCodeExecution": false,
+            "purpose": "Find bundled and first-party package-backed extractors by track."
+          },
+          {
+            "command": "topogram extractor show topogram/api-extractors",
+            "id": "inspect",
+            "packageCodeExecution": false,
+            "purpose": "Read manifest purpose, tracks, install command, policy pin command, and extract command."
+          },
+          {
+            "command": "topogram extract ./existing-app --out ./imported-topogram --from api --extractor topogram/api-extractors",
+            "id": "extract",
+            "packageCodeExecution": true,
+            "purpose": "Read brownfield source and write review-only candidates plus extraction provenance."
+          },
+          {
+            "command": "topogram extract plan ./imported-topogram",
+            "id": "review_plan",
+            "packageCodeExecution": false,
+            "purpose": "Review bundles, extractor provenance, candidate counts, and safety notes."
+          },
+          {
+            "command": "topogram adopt --list ./imported-topogram",
+            "id": "list_selectors",
+            "packageCodeExecution": false,
+            "purpose": "Choose an explicit adoption selector."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --dry-run",
+            "id": "dry_run_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Preview canonical topo writes before changing project-owned records."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --write",
+            "id": "write_reviewed_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Write only reviewed canonical records; extractor packages never own adoption semantics."
+          }
+        ],
+        "type": "extractor_review_workflow"
+      },
+      "source": "bundled",
+      "stack": {
+        "domain": "api"
+      },
+      "tracks": [
+        "api"
+      ],
+      "useWhen": null,
+      "version": "1"
+    },
+    {
+      "candidateKinds": [
+        "command",
+        "capability",
+        "cli_surface"
+      ],
+      "capabilities": {
+        "commands": true,
+        "effects": true,
+        "options": true
+      },
+      "compatibleCliRange": null,
+      "compatibleCliSource": "missing",
+      "currentCliVersion": "0.3.90",
+      "errors": [],
+      "evidenceTypes": [
+        "runtime_source",
+        "parser_config",
+        "docs",
+        "tests",
+        "fixtures"
+      ],
+      "executesPackageCode": false,
+      "extractCommand": "topogram extract ./existing-app --out ./imported-topogram --from cli --extractor topogram/cli-extractors",
+      "extractors": [
+        "cli.generic"
+      ],
+      "extracts": [],
+      "id": "topogram/cli-extractors",
+      "installed": true,
+      "knownFirstParty": false,
+      "label": null,
+      "loadsAdapter": false,
+      "manifestPath": null,
+      "manifestVersion": "1",
+      "packageRoot": null,
+      "packageVersion": null,
+      "packageVersionStatus": "not_installed",
+      "policyPin": {
+        "allowed": null,
+        "expectedVersion": "1",
+        "matches": null,
+        "pinCommand": null,
+        "pinnedVersion": null,
+        "policyExists": true,
+        "policyPath": "<repo>/topogram.extractor-policy.json",
+        "state": "not_applicable"
+      },
+      "reviewWorkflow": {
+        "packageCodeExecution": {
+          "check": true,
+          "extract": true,
+          "list": false,
+          "policy": false,
+          "show": false
+        },
+        "safetyNotes": [
+          "topogram extractor list/show/policy do not load package adapter code.",
+          "topogram extractor check and topogram extract load package adapter code.",
+          "Extractor packages emit review-only candidates; core owns persistence, reconcile, adoption, and canonical topo writes.",
+          "Run dry-run adoption before --write."
+        ],
+        "steps": [
+          {
+            "command": "topogram extractor list",
+            "id": "discover",
+            "packageCodeExecution": false,
+            "purpose": "Find bundled and first-party package-backed extractors by track."
+          },
+          {
+            "command": "topogram extractor show topogram/cli-extractors",
+            "id": "inspect",
+            "packageCodeExecution": false,
+            "purpose": "Read manifest purpose, tracks, install command, policy pin command, and extract command."
+          },
+          {
+            "command": "topogram extract ./existing-app --out ./imported-topogram --from cli --extractor topogram/cli-extractors",
+            "id": "extract",
+            "packageCodeExecution": true,
+            "purpose": "Read brownfield source and write review-only candidates plus extraction provenance."
+          },
+          {
+            "command": "topogram extract plan ./imported-topogram",
+            "id": "review_plan",
+            "packageCodeExecution": false,
+            "purpose": "Review bundles, extractor provenance, candidate counts, and safety notes."
+          },
+          {
+            "command": "topogram adopt --list ./imported-topogram",
+            "id": "list_selectors",
+            "packageCodeExecution": false,
+            "purpose": "Choose an explicit adoption selector."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --dry-run",
+            "id": "dry_run_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Preview canonical topo writes before changing project-owned records."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --write",
+            "id": "write_reviewed_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Write only reviewed canonical records; extractor packages never own adoption semantics."
+          }
+        ],
+        "type": "extractor_review_workflow"
+      },
+      "source": "bundled",
+      "stack": {
+        "domain": "cli"
+      },
+      "tracks": [
+        "cli"
+      ],
+      "useWhen": null,
+      "version": "1"
+    },
+    {
+      "candidateKinds": [
+        "entity",
+        "enum",
+        "relation",
+        "index",
+        "maintained_db_migration_seam"
+      ],
+      "capabilities": {
+        "maintainedSeams": true,
+        "migrations": true,
+        "schema": true
+      },
+      "compatibleCliRange": null,
+      "compatibleCliSource": "missing",
+      "currentCliVersion": "0.3.90",
+      "errors": [],
+      "evidenceTypes": [
+        "runtime_source",
+        "parser_config",
+        "docs",
+        "tests",
+        "fixtures"
+      ],
+      "executesPackageCode": false,
+      "extractCommand": "topogram extract ./existing-app --out ./imported-topogram --from db --extractor topogram/db-extractors",
+      "extractors": [
+        "db.prisma",
+        "db.django-models",
+        "db.ef-core",
+        "db.room",
+        "db.swiftdata",
+        "db.dotnet-models",
+        "db.flutter-entities",
+        "db.react-native-entities",
+        "db.rails-schema",
+        "db.liquibase",
+        "db.mybatis-xml",
+        "db.jpa",
+        "db.drizzle",
+        "db.sql",
+        "db.snapshot"
+      ],
+      "extracts": [],
+      "id": "topogram/db-extractors",
+      "installed": true,
+      "knownFirstParty": false,
+      "label": null,
+      "loadsAdapter": false,
+      "manifestPath": null,
+      "manifestVersion": "1",
+      "packageRoot": null,
+      "packageVersion": null,
+      "packageVersionStatus": "not_installed",
+      "policyPin": {
+        "allowed": null,
+        "expectedVersion": "1",
+        "matches": null,
+        "pinCommand": null,
+        "pinnedVersion": null,
+        "policyExists": true,
+        "policyPath": "<repo>/topogram.extractor-policy.json",
+        "state": "not_applicable"
+      },
+      "reviewWorkflow": {
+        "packageCodeExecution": {
+          "check": true,
+          "extract": true,
+          "list": false,
+          "policy": false,
+          "show": false
+        },
+        "safetyNotes": [
+          "topogram extractor list/show/policy do not load package adapter code.",
+          "topogram extractor check and topogram extract load package adapter code.",
+          "Extractor packages emit review-only candidates; core owns persistence, reconcile, adoption, and canonical topo writes.",
+          "Run dry-run adoption before --write."
+        ],
+        "steps": [
+          {
+            "command": "topogram extractor list",
+            "id": "discover",
+            "packageCodeExecution": false,
+            "purpose": "Find bundled and first-party package-backed extractors by track."
+          },
+          {
+            "command": "topogram extractor show topogram/db-extractors",
+            "id": "inspect",
+            "packageCodeExecution": false,
+            "purpose": "Read manifest purpose, tracks, install command, policy pin command, and extract command."
+          },
+          {
+            "command": "topogram extract ./existing-app --out ./imported-topogram --from db --extractor topogram/db-extractors",
+            "id": "extract",
+            "packageCodeExecution": true,
+            "purpose": "Read brownfield source and write review-only candidates plus extraction provenance."
+          },
+          {
+            "command": "topogram extract plan ./imported-topogram",
+            "id": "review_plan",
+            "packageCodeExecution": false,
+            "purpose": "Review bundles, extractor provenance, candidate counts, and safety notes."
+          },
+          {
+            "command": "topogram adopt --list ./imported-topogram",
+            "id": "list_selectors",
+            "packageCodeExecution": false,
+            "purpose": "Choose an explicit adoption selector."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --dry-run",
+            "id": "dry_run_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Preview canonical topo writes before changing project-owned records."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --write",
+            "id": "write_reviewed_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Write only reviewed canonical records; extractor packages never own adoption semantics."
+          }
+        ],
+        "type": "extractor_review_workflow"
+      },
+      "source": "bundled",
+      "stack": {
+        "domain": "database"
+      },
+      "tracks": [
+        "db"
+      ],
+      "useWhen": null,
+      "version": "1"
+    },
+    {
+      "candidateKinds": [
+        "screen",
+        "route",
+        "action",
+        "flow",
+        "widget",
+        "shape",
+        "stack"
+      ],
+      "capabilities": {
+        "flows": true,
+        "screens": true,
+        "widgets": true
+      },
+      "compatibleCliRange": null,
+      "compatibleCliSource": "missing",
+      "currentCliVersion": "0.3.90",
+      "errors": [],
+      "evidenceTypes": [
+        "runtime_source",
+        "parser_config",
+        "docs",
+        "tests",
+        "fixtures"
+      ],
+      "executesPackageCode": false,
+      "extractCommand": "topogram extract ./existing-app --out ./imported-topogram --from ui --extractor topogram/ui-extractors",
+      "extractors": [
+        "ui.next-app-router",
+        "ui.next-pages-router",
+        "ui.android-compose",
+        "ui.blazor",
+        "ui.razor-pages",
+        "ui.swiftui",
+        "ui.uikit",
+        "ui.maui-xaml",
+        "ui.flutter-screens",
+        "ui.react-native-screens",
+        "ui.react-router",
+        "ui.sveltekit",
+        "ui.backend-only"
+      ],
+      "extracts": [],
+      "id": "topogram/ui-extractors",
+      "installed": true,
+      "knownFirstParty": false,
+      "label": null,
+      "loadsAdapter": false,
+      "manifestPath": null,
+      "manifestVersion": "1",
+      "packageRoot": null,
+      "packageVersion": null,
+      "packageVersionStatus": "not_installed",
+      "policyPin": {
+        "allowed": null,
+        "expectedVersion": "1",
+        "matches": null,
+        "pinCommand": null,
+        "pinnedVersion": null,
+        "policyExists": true,
+        "policyPath": "<repo>/topogram.extractor-policy.json",
+        "state": "not_applicable"
+      },
+      "reviewWorkflow": {
+        "packageCodeExecution": {
+          "check": true,
+          "extract": true,
+          "list": false,
+          "policy": false,
+          "show": false
+        },
+        "safetyNotes": [
+          "topogram extractor list/show/policy do not load package adapter code.",
+          "topogram extractor check and topogram extract load package adapter code.",
+          "Extractor packages emit review-only candidates; core owns persistence, reconcile, adoption, and canonical topo writes.",
+          "Run dry-run adoption before --write."
+        ],
+        "steps": [
+          {
+            "command": "topogram extractor list",
+            "id": "discover",
+            "packageCodeExecution": false,
+            "purpose": "Find bundled and first-party package-backed extractors by track."
+          },
+          {
+            "command": "topogram extractor show topogram/ui-extractors",
+            "id": "inspect",
+            "packageCodeExecution": false,
+            "purpose": "Read manifest purpose, tracks, install command, policy pin command, and extract command."
+          },
+          {
+            "command": "topogram extract ./existing-app --out ./imported-topogram --from ui --extractor topogram/ui-extractors",
+            "id": "extract",
+            "packageCodeExecution": true,
+            "purpose": "Read brownfield source and write review-only candidates plus extraction provenance."
+          },
+          {
+            "command": "topogram extract plan ./imported-topogram",
+            "id": "review_plan",
+            "packageCodeExecution": false,
+            "purpose": "Review bundles, extractor provenance, candidate counts, and safety notes."
+          },
+          {
+            "command": "topogram adopt --list ./imported-topogram",
+            "id": "list_selectors",
+            "packageCodeExecution": false,
+            "purpose": "Choose an explicit adoption selector."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --dry-run",
+            "id": "dry_run_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Preview canonical topo writes before changing project-owned records."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --write",
+            "id": "write_reviewed_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Write only reviewed canonical records; extractor packages never own adoption semantics."
+          }
+        ],
+        "type": "extractor_review_workflow"
+      },
+      "source": "bundled",
+      "stack": {
+        "domain": "ui"
+      },
+      "tracks": [
+        "ui"
+      ],
+      "useWhen": null,
+      "version": "1"
+    },
+    {
+      "candidateKinds": [
+        "verification",
+        "scenario",
+        "framework",
+        "script"
+      ],
+      "capabilities": {
+        "verifications": true
+      },
+      "compatibleCliRange": null,
+      "compatibleCliSource": "missing",
+      "currentCliVersion": "0.3.90",
+      "errors": [],
+      "evidenceTypes": [
+        "runtime_source",
+        "parser_config",
+        "docs",
+        "tests",
+        "fixtures"
+      ],
+      "executesPackageCode": false,
+      "extractCommand": "topogram extract ./existing-app --out ./imported-topogram --from verification --extractor topogram/verification-extractors",
+      "extractors": [
+        "verification.generic"
+      ],
+      "extracts": [],
+      "id": "topogram/verification-extractors",
+      "installed": true,
+      "knownFirstParty": false,
+      "label": null,
+      "loadsAdapter": false,
+      "manifestPath": null,
+      "manifestVersion": "1",
+      "packageRoot": null,
+      "packageVersion": null,
+      "packageVersionStatus": "not_installed",
+      "policyPin": {
+        "allowed": null,
+        "expectedVersion": "1",
+        "matches": null,
+        "pinCommand": null,
+        "pinnedVersion": null,
+        "policyExists": true,
+        "policyPath": "<repo>/topogram.extractor-policy.json",
+        "state": "not_applicable"
+      },
+      "reviewWorkflow": {
+        "packageCodeExecution": {
+          "check": true,
+          "extract": true,
+          "list": false,
+          "policy": false,
+          "show": false
+        },
+        "safetyNotes": [
+          "topogram extractor list/show/policy do not load package adapter code.",
+          "topogram extractor check and topogram extract load package adapter code.",
+          "Extractor packages emit review-only candidates; core owns persistence, reconcile, adoption, and canonical topo writes.",
+          "Run dry-run adoption before --write."
+        ],
+        "steps": [
+          {
+            "command": "topogram extractor list",
+            "id": "discover",
+            "packageCodeExecution": false,
+            "purpose": "Find bundled and first-party package-backed extractors by track."
+          },
+          {
+            "command": "topogram extractor show topogram/verification-extractors",
+            "id": "inspect",
+            "packageCodeExecution": false,
+            "purpose": "Read manifest purpose, tracks, install command, policy pin command, and extract command."
+          },
+          {
+            "command": "topogram extract ./existing-app --out ./imported-topogram --from verification --extractor topogram/verification-extractors",
+            "id": "extract",
+            "packageCodeExecution": true,
+            "purpose": "Read brownfield source and write review-only candidates plus extraction provenance."
+          },
+          {
+            "command": "topogram extract plan ./imported-topogram",
+            "id": "review_plan",
+            "packageCodeExecution": false,
+            "purpose": "Review bundles, extractor provenance, candidate counts, and safety notes."
+          },
+          {
+            "command": "topogram adopt --list ./imported-topogram",
+            "id": "list_selectors",
+            "packageCodeExecution": false,
+            "purpose": "Choose an explicit adoption selector."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --dry-run",
+            "id": "dry_run_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Preview canonical topo writes before changing project-owned records."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --write",
+            "id": "write_reviewed_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Write only reviewed canonical records; extractor packages never own adoption semantics."
+          }
+        ],
+        "type": "extractor_review_workflow"
+      },
+      "source": "bundled",
+      "stack": {
+        "domain": "verification"
+      },
+      "tracks": [
+        "verification"
+      ],
+      "useWhen": null,
+      "version": "1"
+    },
+    {
+      "candidateKinds": [
+        "workflow",
+        "workflow_state",
+        "workflow_transition"
+      ],
+      "capabilities": {
+        "workflows": true
+      },
+      "compatibleCliRange": null,
+      "compatibleCliSource": "missing",
+      "currentCliVersion": "0.3.90",
+      "errors": [],
+      "evidenceTypes": [
+        "runtime_source",
+        "parser_config",
+        "docs",
+        "tests",
+        "fixtures"
+      ],
+      "executesPackageCode": false,
+      "extractCommand": "topogram extract ./existing-app --out ./imported-topogram --from workflows --extractor topogram/workflow-extractors",
+      "extractors": [
+        "workflows.generic"
+      ],
+      "extracts": [],
+      "id": "topogram/workflow-extractors",
+      "installed": true,
+      "knownFirstParty": false,
+      "label": null,
+      "loadsAdapter": false,
+      "manifestPath": null,
+      "manifestVersion": "1",
+      "packageRoot": null,
+      "packageVersion": null,
+      "packageVersionStatus": "not_installed",
+      "policyPin": {
+        "allowed": null,
+        "expectedVersion": "1",
+        "matches": null,
+        "pinCommand": null,
+        "pinnedVersion": null,
+        "policyExists": true,
+        "policyPath": "<repo>/topogram.extractor-policy.json",
+        "state": "not_applicable"
+      },
+      "reviewWorkflow": {
+        "packageCodeExecution": {
+          "check": true,
+          "extract": true,
+          "list": false,
+          "policy": false,
+          "show": false
+        },
+        "safetyNotes": [
+          "topogram extractor list/show/policy do not load package adapter code.",
+          "topogram extractor check and topogram extract load package adapter code.",
+          "Extractor packages emit review-only candidates; core owns persistence, reconcile, adoption, and canonical topo writes.",
+          "Run dry-run adoption before --write."
+        ],
+        "steps": [
+          {
+            "command": "topogram extractor list",
+            "id": "discover",
+            "packageCodeExecution": false,
+            "purpose": "Find bundled and first-party package-backed extractors by track."
+          },
+          {
+            "command": "topogram extractor show topogram/workflow-extractors",
+            "id": "inspect",
+            "packageCodeExecution": false,
+            "purpose": "Read manifest purpose, tracks, install command, policy pin command, and extract command."
+          },
+          {
+            "command": "topogram extract ./existing-app --out ./imported-topogram --from workflows --extractor topogram/workflow-extractors",
+            "id": "extract",
+            "packageCodeExecution": true,
+            "purpose": "Read brownfield source and write review-only candidates plus extraction provenance."
+          },
+          {
+            "command": "topogram extract plan ./imported-topogram",
+            "id": "review_plan",
+            "packageCodeExecution": false,
+            "purpose": "Review bundles, extractor provenance, candidate counts, and safety notes."
+          },
+          {
+            "command": "topogram adopt --list ./imported-topogram",
+            "id": "list_selectors",
+            "packageCodeExecution": false,
+            "purpose": "Choose an explicit adoption selector."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --dry-run",
+            "id": "dry_run_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Preview canonical topo writes before changing project-owned records."
+          },
+          {
+            "command": "topogram adopt <selector> ./imported-topogram --write",
+            "id": "write_reviewed_adoption",
+            "packageCodeExecution": false,
+            "purpose": "Write only reviewed canonical records; extractor packages never own adoption semantics."
+          }
+        ],
+        "type": "extractor_review_workflow"
+      },
+      "source": "bundled",
+      "stack": {
+        "domain": "workflow"
+      },
+      "tracks": [
+        "workflows"
+      ],
+      "useWhen": null,
+      "version": "1"
+    }
+  ],
+  "groups": {
+    "api": [
+      {
+        "extractCommand": "topogram extract ./express-api --out ./imported-topogram --from api --extractor @topogram/extractor-express-api",
+        "id": "@topogram/extractor-express-api",
+        "installed": true,
+        "knownFirstParty": true,
+        "label": "Express API",
+        "package": "@topogram/extractor-express-api",
+        "source": "package",
+        "useWhen": "Use for Express route files, routers, params, middleware, and auth hints."
+      },
+      {
+        "extractCommand": "topogram extract ./existing-app --out ./imported-topogram --from api --extractor topogram/api-extractors",
+        "id": "topogram/api-extractors",
+        "installed": true,
+        "knownFirstParty": false,
+        "label": null,
+        "package": null,
+        "source": "bundled",
+        "useWhen": null
+      }
+    ],
+    "cli": [
+      {
+        "extractCommand": "topogram extract ./existing-cli --out ./imported-topogram --from cli --extractor @topogram/extractor-node-cli",
+        "id": "@topogram/extractor-node-cli",
+        "installed": false,
+        "knownFirstParty": true,
+        "label": "Node CLI",
+        "package": "@topogram/extractor-node-cli",
+        "source": "package",
+        "useWhen": "Use for Node package CLIs with bin entries, scripts, command modules, and help text."
+      },
+      {
+        "extractCommand": "topogram extract ./existing-app --out ./imported-topogram --from cli --extractor topogram/cli-extractors",
+        "id": "topogram/cli-extractors",
+        "installed": true,
+        "knownFirstParty": false,
+        "label": null,
+        "package": null,
+        "source": "bundled",
+        "useWhen": null
+      }
+    ],
+    "db": [
+      {
+        "extractCommand": "topogram extract ./drizzle-app --out ./imported-topogram --from db --extractor @topogram/extractor-drizzle-db",
+        "id": "@topogram/extractor-drizzle-db",
+        "installed": false,
+        "knownFirstParty": true,
+        "label": "Drizzle DB",
+        "package": "@topogram/extractor-drizzle-db",
+        "source": "package",
+        "useWhen": "Use for Drizzle config, schema modules, table definitions, and migration output."
+      },
+      {
+        "extractCommand": "topogram extract ./prisma-app --out ./imported-topogram --from db --extractor @topogram/extractor-prisma-db",
+        "id": "@topogram/extractor-prisma-db",
+        "installed": true,
+        "knownFirstParty": true,
+        "label": "Prisma DB",
+        "package": "@topogram/extractor-prisma-db",
+        "source": "package",
+        "useWhen": "Use for Prisma schema.prisma models plus Prisma migration evidence."
+      },
+      {
+        "extractCommand": "topogram extract ./existing-app --out ./imported-topogram --from db --extractor topogram/db-extractors",
+        "id": "topogram/db-extractors",
+        "installed": true,
+        "knownFirstParty": false,
+        "label": null,
+        "package": null,
+        "source": "bundled",
+        "useWhen": null
+      }
+    ],
+    "ui": [
+      {
+        "extractCommand": "topogram extract ./react-router-app --out ./imported-topogram --from ui --extractor @topogram/extractor-react-router",
+        "id": "@topogram/extractor-react-router",
+        "installed": true,
+        "knownFirstParty": true,
+        "label": "React Router UI",
+        "package": "@topogram/extractor-react-router",
+        "source": "package",
+        "useWhen": "Use for React Router route trees, route modules, screen hints, and non-resource UI flows."
+      },
+      {
+        "extractCommand": "topogram extract ./existing-app --out ./imported-topogram --from ui --extractor topogram/ui-extractors",
+        "id": "topogram/ui-extractors",
+        "installed": true,
+        "knownFirstParty": false,
+        "label": null,
+        "package": null,
+        "source": "bundled",
+        "useWhen": null
+      }
+    ],
+    "verification": [
+      {
+        "extractCommand": "topogram extract ./existing-app --out ./imported-topogram --from verification --extractor topogram/verification-extractors",
+        "id": "topogram/verification-extractors",
+        "installed": true,
+        "knownFirstParty": false,
+        "label": null,
+        "package": null,
+        "source": "bundled",
+        "useWhen": null
+      }
+    ],
+    "workflows": [
+      {
+        "extractCommand": "topogram extract ./existing-app --out ./imported-topogram --from workflows --extractor topogram/workflow-extractors",
+        "id": "topogram/workflow-extractors",
+        "installed": true,
+        "knownFirstParty": false,
+        "label": null,
+        "package": null,
+        "source": "bundled",
+        "useWhen": null
+      }
+    ]
+  },
+  "ok": true,
+  "reviewWorkflow": {
+    "packageCodeExecution": {
+      "check": true,
+      "extract": true,
+      "list": false,
+      "policy": false,
+      "show": false
+    },
+    "safetyNotes": [
+      "topogram extractor list/show/policy do not load package adapter code.",
+      "topogram extractor check and topogram extract load package adapter code.",
+      "Extractor packages emit review-only candidates; core owns persistence, reconcile, adoption, and canonical topo writes.",
+      "Run dry-run adoption before --write."
+    ],
+    "steps": [
+      {
+        "command": "topogram extractor list",
+        "id": "discover",
+        "packageCodeExecution": false,
+        "purpose": "Find bundled and first-party package-backed extractors by track."
+      },
+      {
+        "command": "topogram extractor show <extractor>",
+        "id": "inspect",
+        "packageCodeExecution": false,
+        "purpose": "Read manifest purpose, tracks, install command, policy pin command, and extract command."
+      },
+      {
+        "command": "topogram extractor check <extractor>",
+        "id": "check",
+        "packageCodeExecution": true,
+        "purpose": "Load the adapter and run a minimal smoke extraction against a synthetic fixture."
+      },
+      {
+        "command": "topogram extract ./existing-app --out ./imported-topogram --from db,api,ui,cli --extractor <extractor>",
+        "id": "extract",
+        "packageCodeExecution": true,
+        "purpose": "Read brownfield source and write review-only candidates plus extraction provenance."
+      },
+      {
+        "command": "topogram extract plan ./imported-topogram",
+        "id": "review_plan",
+        "packageCodeExecution": false,
+        "purpose": "Review bundles, extractor provenance, candidate counts, and safety notes."
+      },
+      {
+        "command": "topogram adopt --list ./imported-topogram",
+        "id": "list_selectors",
+        "packageCodeExecution": false,
+        "purpose": "Choose an explicit adoption selector."
+      },
+      {
+        "command": "topogram adopt <selector> ./imported-topogram --dry-run",
+        "id": "dry_run_adoption",
+        "packageCodeExecution": false,
+        "purpose": "Preview canonical topo writes before changing project-owned records."
+      },
+      {
+        "command": "topogram adopt <selector> ./imported-topogram --write",
+        "id": "write_reviewed_adoption",
+        "packageCodeExecution": false,
+        "purpose": "Write only reviewed canonical records; extractor packages never own adoption semantics."
+      }
+    ],
+    "type": "extractor_review_workflow"
+  },
+  "summary": {
+    "bundled": 6,
+    "installed": 9,
+    "knownFirstParty": 5,
+    "missingFirstParty": 2,
+    "package": 5,
+    "total": 11
+  }
+}

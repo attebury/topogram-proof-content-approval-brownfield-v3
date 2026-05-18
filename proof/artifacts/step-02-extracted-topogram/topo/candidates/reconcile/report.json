@@ -1,0 +1,3212 @@
+{
+  "adopt_selector": null,
+  "adopt_write_mode": false,
+  "adoption_plan_items": [
+    {
+      "bundle": "content-submission",
+      "confidence": null,
+      "item": "entity_content_submission",
+      "kind": "entity",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "pending"
+    },
+    {
+      "bundle": "contentsubmission",
+      "confidence": null,
+      "item": "entity_contentsubmission",
+      "kind": "entity",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "pending"
+    },
+    {
+      "bundle": "health",
+      "confidence": null,
+      "item": "cap_list_health",
+      "kind": "capability",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "pending"
+    },
+    {
+      "bundle": "health",
+      "confidence": null,
+      "item": "cap_res",
+      "kind": "capability",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "pending"
+    },
+    {
+      "bundle": "health",
+      "confidence": null,
+      "item": "health_journey",
+      "kind": "doc",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "pending"
+    },
+    {
+      "bundle": "home-dashboard",
+      "confidence": null,
+      "item": "home_dashboard_journey",
+      "kind": "doc",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "pending"
+    },
+    {
+      "bundle": "home-dashboard",
+      "confidence": null,
+      "item": "ui_home_dashboard",
+      "kind": "ui",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "pending"
+    },
+    {
+      "bundle": "home-dashboard",
+      "confidence": "low",
+      "item": "widget_home_dashboard_results",
+      "kind": "widget",
+      "recommendation": "Promote this reviewed widget candidate before binding or reusing it from canonical projections.",
+      "related_capabilities": [
+        "cap_get_submission"
+      ],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "pending"
+    },
+    {
+      "bundle": "submission",
+      "confidence": null,
+      "item": "cap_create_submissions",
+      "kind": "capability",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "pending"
+    },
+    {
+      "bundle": "submission",
+      "confidence": null,
+      "item": "cap_get_submission",
+      "kind": "capability",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "pending"
+    },
+    {
+      "bundle": "submission",
+      "confidence": null,
+      "item": "cap_list_submissions",
+      "kind": "capability",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "pending"
+    },
+    {
+      "bundle": "submission",
+      "confidence": null,
+      "item": "submission_journey",
+      "kind": "doc",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "pending"
+    },
+    {
+      "bundle": "submission",
+      "confidence": null,
+      "item": "shape_event_submissions_row_select",
+      "kind": "shape",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "pending"
+    },
+    {
+      "bundle": "submission",
+      "confidence": "low",
+      "item": "widget_submissions_list_results",
+      "kind": "widget",
+      "recommendation": "Promote this reviewed widget candidate before binding or reusing it from canonical projections.",
+      "related_capabilities": [
+        "cap_list_submissions"
+      ],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "pending"
+    },
+    {
+      "bundle": "submissions",
+      "confidence": null,
+      "item": "submissions_journey",
+      "kind": "doc",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "pending"
+    },
+    {
+      "bundle": "submissions",
+      "confidence": null,
+      "item": "ui_submissions_create",
+      "kind": "ui",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "pending"
+    },
+    {
+      "bundle": "submissions",
+      "confidence": null,
+      "item": "ui_submissions_detail",
+      "kind": "ui",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "pending"
+    },
+    {
+      "bundle": "submissions",
+      "confidence": null,
+      "item": "ui_submissions_list",
+      "kind": "ui",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "pending"
+    }
+  ],
+  "adoption_plan_path": "candidates/reconcile/adoption-plan.json",
+  "agent_adoption_plan_items": [
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "content-submission",
+      "canonical_rel_path": "entities/entity-content-submission.tg",
+      "current_state": "stage",
+      "event_name": null,
+      "human_review_required": true,
+      "id": "content-submission:entity:entity_content_submission",
+      "item": "entity_content_submission",
+      "kind": "entity",
+      "maintained_seam_candidates": [
+        {
+          "allowed_change_classes": [
+            "proposal_only"
+          ],
+          "apply": "never",
+          "confidence": "high",
+          "drift_signals": [
+            "schema_or_migration_changed",
+            "migration_directory_changed"
+          ],
+          "emitted_dependencies": [
+            "topo/state/db/app_db/current.snapshot.json",
+            "proj_db"
+          ],
+          "evidence": [
+            "prisma/schema.prisma",
+            "prisma/migrations/20260515010101_init/migration.sql"
+          ],
+          "id_hint": "seam_prisma_db_migrations",
+          "kind": "maintained_db_migration_seam",
+          "label": "PRISMA maintained database migrations",
+          "maintained_modules": [
+            "prisma/schema.prisma",
+            "prisma/migrations"
+          ],
+          "manual_next_steps": [
+            "Review evidence, match_reasons, and missing_decisions before accepting this seam.",
+            "Confirm database runtime 'app_db' and projection 'proj_db' are the right topology targets for the maintained app.",
+            "If accepted, copy proposed_runtime_migration into the matching database runtime's migration block in topogram.project.json.",
+            "Keep ownership 'maintained' and apply 'never'; import must not apply migrations or patch maintained app files.",
+            "After editing topogram.project.json, run topogram check . --json and the maintained app's migration verification."
+          ],
+          "match_reasons": [
+            "found Prisma schema",
+            "found Prisma migrations directory"
+          ],
+          "migrationsPath": "prisma/migrations",
+          "missing_decisions": [],
+          "output_id": "maintained_app",
+          "ownership": "maintained",
+          "ownership_class": "human_owned",
+          "project_config_target": {
+            "file": "topogram.project.json",
+            "path": "topology.runtimes[id=app_db].migration",
+            "projection_id": "proj_db",
+            "runtime_id": "app_db"
+          },
+          "projection_id_hint": "proj_db",
+          "proposed_runtime_migration": {
+            "apply": "never",
+            "migrationsPath": "prisma/migrations",
+            "ownership": "maintained",
+            "schemaPath": "prisma/schema.prisma",
+            "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+            "tool": "prisma"
+          },
+          "provenance": [
+            "prisma/schema.prisma",
+            "prisma/migrations/20260515010101_init/migration.sql"
+          ],
+          "runtime_id_hint": "app_db",
+          "schemaPath": "prisma/schema.prisma",
+          "seam_id": "seam_prisma_db_migrations",
+          "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+          "source_kind": "migration_strategy_inference",
+          "source_of_truth": "candidate",
+          "status": "review_required",
+          "tool": "prisma",
+          "track": "db"
+        }
+      ],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "content-submission",
+        "canonical_rel_path": "entities/entity-content-submission.tg",
+        "source_path": "candidates/reconcile/model/bundles/content-submission/entities/entity_content_submission.tg"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/content-submission/entities/entity_content_submission.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "entity",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "contentsubmission",
+      "canonical_rel_path": "entities/entity-contentsubmission.tg",
+      "current_state": "stage",
+      "event_name": null,
+      "human_review_required": true,
+      "id": "contentsubmission:entity:entity_contentsubmission",
+      "item": "entity_contentsubmission",
+      "kind": "entity",
+      "maintained_seam_candidates": [
+        {
+          "allowed_change_classes": [
+            "proposal_only"
+          ],
+          "apply": "never",
+          "confidence": "high",
+          "drift_signals": [
+            "schema_or_migration_changed",
+            "migration_directory_changed"
+          ],
+          "emitted_dependencies": [
+            "topo/state/db/app_db/current.snapshot.json",
+            "proj_db"
+          ],
+          "evidence": [
+            "prisma/schema.prisma",
+            "prisma/migrations/20260515010101_init/migration.sql"
+          ],
+          "id_hint": "seam_prisma_db_migrations",
+          "kind": "maintained_db_migration_seam",
+          "label": "PRISMA maintained database migrations",
+          "maintained_modules": [
+            "prisma/schema.prisma",
+            "prisma/migrations"
+          ],
+          "manual_next_steps": [
+            "Review evidence, match_reasons, and missing_decisions before accepting this seam.",
+            "Confirm database runtime 'app_db' and projection 'proj_db' are the right topology targets for the maintained app.",
+            "If accepted, copy proposed_runtime_migration into the matching database runtime's migration block in topogram.project.json.",
+            "Keep ownership 'maintained' and apply 'never'; import must not apply migrations or patch maintained app files.",
+            "After editing topogram.project.json, run topogram check . --json and the maintained app's migration verification."
+          ],
+          "match_reasons": [
+            "found Prisma schema",
+            "found Prisma migrations directory"
+          ],
+          "migrationsPath": "prisma/migrations",
+          "missing_decisions": [],
+          "output_id": "maintained_app",
+          "ownership": "maintained",
+          "ownership_class": "human_owned",
+          "project_config_target": {
+            "file": "topogram.project.json",
+            "path": "topology.runtimes[id=app_db].migration",
+            "projection_id": "proj_db",
+            "runtime_id": "app_db"
+          },
+          "projection_id_hint": "proj_db",
+          "proposed_runtime_migration": {
+            "apply": "never",
+            "migrationsPath": "prisma/migrations",
+            "ownership": "maintained",
+            "schemaPath": "prisma/schema.prisma",
+            "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+            "tool": "prisma"
+          },
+          "provenance": [
+            "prisma/schema.prisma",
+            "prisma/migrations/20260515010101_init/migration.sql"
+          ],
+          "runtime_id_hint": "app_db",
+          "schemaPath": "prisma/schema.prisma",
+          "seam_id": "seam_prisma_db_migrations",
+          "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+          "source_kind": "migration_strategy_inference",
+          "source_of_truth": "candidate",
+          "status": "review_required",
+          "tool": "prisma",
+          "track": "db"
+        }
+      ],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "contentsubmission",
+        "canonical_rel_path": "entities/entity-contentsubmission.tg",
+        "source_path": "candidates/reconcile/model/bundles/contentsubmission/entities/entity_contentsubmission.tg"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/contentsubmission/entities/entity_contentsubmission.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "entity",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "health",
+      "canonical_rel_path": "capabilities/cap-list-health.tg",
+      "current_state": "stage",
+      "event_name": null,
+      "human_review_required": true,
+      "id": "health:capability:cap_list_health",
+      "item": "cap_list_health",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "health",
+        "canonical_rel_path": "capabilities/cap-list-health.tg",
+        "source_path": "candidates/reconcile/model/bundles/health/capabilities/cap_list_health.tg"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/health/capabilities/cap_list_health.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "health",
+      "canonical_rel_path": "capabilities/cap-res.tg",
+      "current_state": "stage",
+      "event_name": null,
+      "human_review_required": true,
+      "id": "health:capability:cap_res",
+      "item": "cap_res",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "health",
+        "canonical_rel_path": "capabilities/cap-res.tg",
+        "source_path": "candidates/reconcile/model/bundles/health/capabilities/cap_res.tg"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/health/capabilities/cap_res.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "health",
+      "canonical_rel_path": "docs/journeys/health_journey.md",
+      "current_state": "stage",
+      "event_name": null,
+      "human_review_required": true,
+      "id": "health:doc:health_journey",
+      "item": "health_journey",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "health",
+        "canonical_rel_path": "docs/journeys/health_journey.md",
+        "source_path": "candidates/reconcile/model/bundles/health/docs/journeys/health_journey.md"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_doc_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/health/docs/journeys/health_journey.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "docs",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "home-dashboard",
+      "canonical_rel_path": "docs/journeys/home_dashboard_journey.md",
+      "current_state": "stage",
+      "event_name": null,
+      "human_review_required": true,
+      "id": "home-dashboard:doc:home_dashboard_journey",
+      "item": "home_dashboard_journey",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "home-dashboard",
+        "canonical_rel_path": "docs/journeys/home_dashboard_journey.md",
+        "source_path": "candidates/reconcile/model/bundles/home-dashboard/docs/journeys/home_dashboard_journey.md"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_doc_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/home-dashboard/docs/journeys/home_dashboard_journey.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "docs",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "home-dashboard",
+      "canonical_rel_path": "docs/reports/ui-home_dashboard.md",
+      "current_state": "stage",
+      "event_name": null,
+      "human_review_required": true,
+      "id": "home-dashboard:ui:ui_home_dashboard",
+      "item": "ui_home_dashboard",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "home-dashboard",
+        "canonical_rel_path": "docs/reports/ui-home_dashboard.md",
+        "source_path": "candidates/reconcile/model/bundles/home-dashboard/docs/reports/ui-home_dashboard.md"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/home-dashboard/docs/reports/ui-home_dashboard.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "home-dashboard",
+      "canonical_rel_path": "widgets/widget-home-dashboard-results.tg",
+      "current_state": "stage",
+      "event_name": null,
+      "human_review_required": true,
+      "id": "home-dashboard:widget:widget_home_dashboard_results",
+      "item": "widget_home_dashboard_results",
+      "kind": "widget",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "home-dashboard",
+        "canonical_rel_path": "widgets/widget-home-dashboard-results.tg",
+        "source_path": "candidates/reconcile/model/bundles/home-dashboard/widgets/widget_home_dashboard_results.tg"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [
+          "cap_get_submission"
+        ],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/home-dashboard/widgets/widget_home_dashboard_results.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "widget",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "submission",
+      "canonical_rel_path": "capabilities/cap-create-submissions.tg",
+      "current_state": "stage",
+      "event_name": null,
+      "human_review_required": true,
+      "id": "submission:capability:cap_create_submissions",
+      "item": "cap_create_submissions",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "submission",
+        "canonical_rel_path": "capabilities/cap-create-submissions.tg",
+        "source_path": "candidates/reconcile/model/bundles/submission/capabilities/cap_create_submissions.tg"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/submission/capabilities/cap_create_submissions.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "submission",
+      "canonical_rel_path": "capabilities/cap-get-submission.tg",
+      "current_state": "stage",
+      "event_name": null,
+      "human_review_required": true,
+      "id": "submission:capability:cap_get_submission",
+      "item": "cap_get_submission",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "submission",
+        "canonical_rel_path": "capabilities/cap-get-submission.tg",
+        "source_path": "candidates/reconcile/model/bundles/submission/capabilities/cap_get_submission.tg"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/submission/capabilities/cap_get_submission.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "submission",
+      "canonical_rel_path": "capabilities/cap-list-submissions.tg",
+      "current_state": "stage",
+      "event_name": null,
+      "human_review_required": true,
+      "id": "submission:capability:cap_list_submissions",
+      "item": "cap_list_submissions",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "submission",
+        "canonical_rel_path": "capabilities/cap-list-submissions.tg",
+        "source_path": "candidates/reconcile/model/bundles/submission/capabilities/cap_list_submissions.tg"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/submission/capabilities/cap_list_submissions.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "submission",
+      "canonical_rel_path": "docs/journeys/submission_journey.md",
+      "current_state": "stage",
+      "event_name": null,
+      "human_review_required": true,
+      "id": "submission:doc:submission_journey",
+      "item": "submission_journey",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "submission",
+        "canonical_rel_path": "docs/journeys/submission_journey.md",
+        "source_path": "candidates/reconcile/model/bundles/submission/docs/journeys/submission_journey.md"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_doc_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/submission/docs/journeys/submission_journey.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "docs",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "submission",
+      "canonical_rel_path": "shapes/shape-event-submissions-row-select.tg",
+      "current_state": "stage",
+      "event_name": "row_select",
+      "human_review_required": true,
+      "id": "submission:shape:shape_event_submissions_row_select",
+      "item": "shape_event_submissions_row_select",
+      "kind": "shape",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "submission",
+        "canonical_rel_path": "shapes/shape-event-submissions-row-select.tg",
+        "source_path": "candidates/reconcile/model/bundles/submission/shapes/shape_event_submissions_row_select.tg"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_kind": "ui_widget_event",
+      "source_path": "candidates/reconcile/model/bundles/submission/shapes/shape_event_submissions_row_select.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "shape",
+      "ui_impacts": [],
+      "widget_id": "widget_submissions_list_results",
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "submission",
+      "canonical_rel_path": "widgets/widget-submissions-list-results.tg",
+      "current_state": "stage",
+      "event_name": null,
+      "human_review_required": true,
+      "id": "submission:widget:widget_submissions_list_results",
+      "item": "widget_submissions_list_results",
+      "kind": "widget",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "submission",
+        "canonical_rel_path": "widgets/widget-submissions-list-results.tg",
+        "source_path": "candidates/reconcile/model/bundles/submission/widgets/widget_submissions_list_results.tg"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [
+        "shape_event_submissions_row_select"
+      ],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [
+          "cap_list_submissions"
+        ],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [
+          "shape_event_submissions_row_select"
+        ],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/submission/widgets/widget_submissions_list_results.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "widget",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "submissions",
+      "canonical_rel_path": "docs/journeys/submissions_journey.md",
+      "current_state": "stage",
+      "event_name": null,
+      "human_review_required": true,
+      "id": "submissions:doc:submissions_journey",
+      "item": "submissions_journey",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "submissions",
+        "canonical_rel_path": "docs/journeys/submissions_journey.md",
+        "source_path": "candidates/reconcile/model/bundles/submissions/docs/journeys/submissions_journey.md"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_doc_surface"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/submissions/docs/journeys/submissions_journey.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "docs",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "submissions",
+      "canonical_rel_path": "docs/reports/ui-submissions_create.md",
+      "current_state": "stage",
+      "event_name": null,
+      "human_review_required": true,
+      "id": "submissions:ui:ui_submissions_create",
+      "item": "ui_submissions_create",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "submissions",
+        "canonical_rel_path": "docs/reports/ui-submissions_create.md",
+        "source_path": "candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_create.md"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_create.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "submissions",
+      "canonical_rel_path": "docs/reports/ui-submissions_detail.md",
+      "current_state": "stage",
+      "event_name": null,
+      "human_review_required": true,
+      "id": "submissions:ui:ui_submissions_detail",
+      "item": "ui_submissions_detail",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "submissions",
+        "canonical_rel_path": "docs/reports/ui-submissions_detail.md",
+        "source_path": "candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_detail.md"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_detail.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "submissions",
+      "canonical_rel_path": "docs/reports/ui-submissions_list.md",
+      "current_state": "stage",
+      "event_name": null,
+      "human_review_required": true,
+      "id": "submissions:ui:ui_submissions_list",
+      "item": "ui_submissions_list",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "submissions",
+        "canonical_rel_path": "docs/reports/ui-submissions_list.md",
+        "source_path": "candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_list.md"
+      },
+      "recommended_state": "accept",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_kind": null,
+      "source_path": "candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_list.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "widget_id": null,
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "database",
+      "canonical_rel_path": null,
+      "current_state": "stage",
+      "human_review_required": true,
+      "id": "seam_prisma_db_migrations",
+      "item": "seam_prisma_db_migrations",
+      "kind": "maintained_db_migration_seam",
+      "maintained_seam_candidates": [
+        {
+          "allowed_change_classes": [
+            "proposal_only"
+          ],
+          "apply": "never",
+          "confidence": "high",
+          "drift_signals": [
+            "schema_or_migration_changed",
+            "migration_directory_changed"
+          ],
+          "emitted_dependencies": [
+            "topo/state/db/app_db/current.snapshot.json",
+            "proj_db"
+          ],
+          "evidence": [
+            "prisma/schema.prisma",
+            "prisma/migrations/20260515010101_init/migration.sql"
+          ],
+          "id_hint": "seam_prisma_db_migrations",
+          "kind": "maintained_db_migration_seam",
+          "label": "PRISMA maintained database migrations",
+          "maintained_modules": [
+            "prisma/schema.prisma",
+            "prisma/migrations"
+          ],
+          "manual_next_steps": [
+            "Review evidence, match_reasons, and missing_decisions before accepting this seam.",
+            "Confirm database runtime 'app_db' and projection 'proj_db' are the right topology targets for the maintained app.",
+            "If accepted, copy proposed_runtime_migration into the matching database runtime's migration block in topogram.project.json.",
+            "Keep ownership 'maintained' and apply 'never'; import must not apply migrations or patch maintained app files.",
+            "After editing topogram.project.json, run topogram check . --json and the maintained app's migration verification."
+          ],
+          "match_reasons": [
+            "found Prisma schema",
+            "found Prisma migrations directory"
+          ],
+          "migrationsPath": "prisma/migrations",
+          "missing_decisions": [],
+          "output_id": "maintained_app",
+          "ownership": "maintained",
+          "ownership_class": "human_owned",
+          "project_config_target": {
+            "file": "topogram.project.json",
+            "path": "topology.runtimes[id=app_db].migration",
+            "projection_id": "proj_db",
+            "runtime_id": "app_db"
+          },
+          "projection_id_hint": "proj_db",
+          "proposed_runtime_migration": {
+            "apply": "never",
+            "migrationsPath": "prisma/migrations",
+            "ownership": "maintained",
+            "schemaPath": "prisma/schema.prisma",
+            "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+            "tool": "prisma"
+          },
+          "provenance": [
+            "prisma/schema.prisma",
+            "prisma/migrations/20260515010101_init/migration.sql"
+          ],
+          "runtime_id_hint": "app_db",
+          "schemaPath": "prisma/schema.prisma",
+          "seam_id": "seam_prisma_db_migrations",
+          "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+          "source_kind": "migration_strategy_inference",
+          "source_of_truth": "candidate",
+          "status": "review_required",
+          "tool": "prisma",
+          "track": "db"
+        }
+      ],
+      "mapping_suggestions": [
+        {
+          "evidence": [
+            "prisma/schema.prisma",
+            "prisma/migrations/20260515010101_init/migration.sql"
+          ],
+          "id": "seam_prisma_db_migrations",
+          "manual_next_steps": [
+            "Review evidence, match_reasons, and missing_decisions before accepting this seam.",
+            "Confirm database runtime 'app_db' and projection 'proj_db' are the right topology targets for the maintained app.",
+            "If accepted, copy proposed_runtime_migration into the matching database runtime's migration block in topogram.project.json.",
+            "Keep ownership 'maintained' and apply 'never'; import must not apply migrations or patch maintained app files.",
+            "After editing topogram.project.json, run topogram check . --json and the maintained app's migration verification."
+          ],
+          "missing_decisions": [],
+          "project_config_target": {
+            "file": "topogram.project.json",
+            "path": "topology.runtimes[id=app_db].migration",
+            "projection_id": "proj_db",
+            "runtime_id": "app_db"
+          },
+          "proposed_runtime_migration": {
+            "apply": "never",
+            "migrationsPath": "prisma/migrations",
+            "ownership": "maintained",
+            "schemaPath": "prisma/schema.prisma",
+            "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+            "tool": "prisma"
+          },
+          "reason": "Review the inferred database migration strategy before editing topogram.project.json.",
+          "type": "manual_project_config_review"
+        }
+      ],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "database",
+        "canonical_rel_path": null,
+        "source_path": "candidates/app/db/candidates.json"
+      },
+      "recommended_state": "customize",
+      "related_shapes": [],
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_shapes": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "manual_project_config_review",
+          "proposal_only_maintained_db_migration_seam"
+        ]
+      },
+      "source_kind": "migration_strategy_inference",
+      "source_path": "candidates/app/db/candidates.json",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "db",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    }
+  ],
+  "agent_adoption_plan_path": "candidates/reconcile/adoption-plan.agent.json",
+  "applied_items": [],
+  "approved_items": [],
+  "approved_review_groups": [],
+  "blocked_items": [],
+  "bootstrapped_topogram_root": false,
+  "bundle_blockers": [
+    {
+      "applied_items": [],
+      "approved_items": [],
+      "blocked_items": [],
+      "blocking_dependencies": [],
+      "bundle": "content-submission",
+      "pending_items": [
+        "entity_content_submission"
+      ],
+      "skipped_items": []
+    },
+    {
+      "applied_items": [],
+      "approved_items": [],
+      "blocked_items": [],
+      "blocking_dependencies": [],
+      "bundle": "contentsubmission",
+      "pending_items": [
+        "entity_contentsubmission"
+      ],
+      "skipped_items": []
+    },
+    {
+      "applied_items": [],
+      "approved_items": [],
+      "blocked_items": [],
+      "blocking_dependencies": [],
+      "bundle": "health",
+      "pending_items": [
+        "cap_list_health",
+        "cap_res",
+        "health_journey"
+      ],
+      "skipped_items": []
+    },
+    {
+      "applied_items": [],
+      "approved_items": [],
+      "blocked_items": [],
+      "blocking_dependencies": [],
+      "bundle": "home-dashboard",
+      "pending_items": [
+        "home_dashboard_journey",
+        "ui_home_dashboard",
+        "widget_home_dashboard_results"
+      ],
+      "skipped_items": []
+    },
+    {
+      "applied_items": [],
+      "approved_items": [],
+      "blocked_items": [],
+      "blocking_dependencies": [],
+      "bundle": "submission",
+      "pending_items": [
+        "cap_create_submissions",
+        "cap_get_submission",
+        "cap_list_submissions",
+        "shape_event_submissions_row_select",
+        "submission_journey",
+        "widget_submissions_list_results"
+      ],
+      "skipped_items": []
+    },
+    {
+      "applied_items": [],
+      "approved_items": [],
+      "blocked_items": [],
+      "blocking_dependencies": [],
+      "bundle": "submissions",
+      "pending_items": [
+        "submissions_journey",
+        "ui_submissions_create",
+        "ui_submissions_detail",
+        "ui_submissions_list"
+      ],
+      "skipped_items": []
+    }
+  ],
+  "bundle_priorities": [
+    {
+      "applied_items": 0,
+      "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
+      "blocked_items": 0,
+      "bundle": "submission",
+      "evidence": {
+        "actors": 0,
+        "capabilities": 3,
+        "docs": 1,
+        "entities": 0,
+        "enums": 0,
+        "roles": 0,
+        "screens": 0,
+        "shapes": 1,
+        "widgets": 1,
+        "workflows": 0
+      },
+      "evidence_score": 22,
+      "is_complete": false,
+      "next_action": {
+        "kind": "adopt_from_plan",
+        "label": "Adopt approved items now",
+        "reason": "0 approved item(s) are ready to promote safely.",
+        "safe_adopt_now_count": 0,
+        "selector": "from-plan",
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
+      "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [
+          "cap_create_submissions",
+          "cap_get_submission",
+          "cap_list_submissions"
+        ],
+        "cliSurfaceIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "cap_create_submissions",
+        "primaryEntityId": null,
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because API capability evidence, UI widget evidence, doc evidence converges on the same submission concept.",
+        "widgetIds": [
+          "widget_submissions_list_results"
+        ],
+        "workflowIds": []
+      },
+      "pending_items": 6,
+      "recommend_bundle_review_selector": null,
+      "recommend_from_plan": true,
+      "recommended_actor_role_actions": [],
+      "recommended_doc_drift_actions": [],
+      "recommended_doc_link_actions": [],
+      "recommended_doc_metadata_patch_actions": []
+    },
+    {
+      "applied_items": 0,
+      "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
+      "blocked_items": 0,
+      "bundle": "health",
+      "evidence": {
+        "actors": 0,
+        "capabilities": 2,
+        "docs": 1,
+        "entities": 0,
+        "enums": 0,
+        "roles": 0,
+        "screens": 0,
+        "shapes": 0,
+        "widgets": 0,
+        "workflows": 0
+      },
+      "evidence_score": 13,
+      "is_complete": false,
+      "next_action": {
+        "kind": "adopt_from_plan",
+        "label": "Adopt approved items now",
+        "reason": "0 approved item(s) are ready to promote safely.",
+        "safe_adopt_now_count": 0,
+        "selector": "from-plan",
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
+      "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [
+          "cap_list_health",
+          "cap_res"
+        ],
+        "cliSurfaceIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "cap_list_health",
+        "primaryEntityId": null,
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because API capability evidence, doc evidence converges on the same health concept.",
+        "widgetIds": [],
+        "workflowIds": []
+      },
+      "pending_items": 3,
+      "recommend_bundle_review_selector": null,
+      "recommend_from_plan": true,
+      "recommended_actor_role_actions": [],
+      "recommended_doc_drift_actions": [],
+      "recommended_doc_link_actions": [],
+      "recommended_doc_metadata_patch_actions": []
+    },
+    {
+      "applied_items": 0,
+      "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
+      "blocked_items": 0,
+      "bundle": "content-submission",
+      "evidence": {
+        "actors": 0,
+        "capabilities": 0,
+        "docs": 0,
+        "entities": 1,
+        "enums": 0,
+        "roles": 0,
+        "screens": 0,
+        "shapes": 0,
+        "widgets": 0,
+        "workflows": 0
+      },
+      "evidence_score": 8,
+      "is_complete": false,
+      "next_action": {
+        "kind": "adopt_from_plan",
+        "label": "Adopt approved items now",
+        "reason": "0 approved item(s) are ready to promote safely.",
+        "safe_adopt_now_count": 0,
+        "selector": "from-plan",
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
+      "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "cliSurfaceIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_content_submission",
+        "primaryEntityId": "entity_content_submission",
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because entity evidence converges on the same content submission concept.",
+        "widgetIds": [],
+        "workflowIds": []
+      },
+      "pending_items": 1,
+      "recommend_bundle_review_selector": null,
+      "recommend_from_plan": true,
+      "recommended_actor_role_actions": [],
+      "recommended_doc_drift_actions": [],
+      "recommended_doc_link_actions": [],
+      "recommended_doc_metadata_patch_actions": []
+    },
+    {
+      "applied_items": 0,
+      "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
+      "blocked_items": 0,
+      "bundle": "contentsubmission",
+      "evidence": {
+        "actors": 0,
+        "capabilities": 0,
+        "docs": 0,
+        "entities": 1,
+        "enums": 0,
+        "roles": 0,
+        "screens": 0,
+        "shapes": 0,
+        "widgets": 0,
+        "workflows": 0
+      },
+      "evidence_score": 8,
+      "is_complete": false,
+      "next_action": {
+        "kind": "adopt_from_plan",
+        "label": "Adopt approved items now",
+        "reason": "0 approved item(s) are ready to promote safely.",
+        "safe_adopt_now_count": 0,
+        "selector": "from-plan",
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
+      "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "cliSurfaceIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_contentsubmission",
+        "primaryEntityId": "entity_contentsubmission",
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because entity evidence converges on the same contentsubmission concept.",
+        "widgetIds": [],
+        "workflowIds": []
+      },
+      "pending_items": 1,
+      "recommend_bundle_review_selector": null,
+      "recommend_from_plan": true,
+      "recommended_actor_role_actions": [],
+      "recommended_doc_drift_actions": [],
+      "recommended_doc_link_actions": [],
+      "recommended_doc_metadata_patch_actions": []
+    },
+    {
+      "applied_items": 0,
+      "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
+      "blocked_items": 0,
+      "bundle": "submissions",
+      "evidence": {
+        "actors": 0,
+        "capabilities": 0,
+        "docs": 1,
+        "entities": 0,
+        "enums": 0,
+        "roles": 0,
+        "screens": 3,
+        "shapes": 0,
+        "widgets": 0,
+        "workflows": 0
+      },
+      "evidence_score": 4,
+      "is_complete": false,
+      "next_action": {
+        "kind": "adopt_from_plan",
+        "label": "Adopt approved items now",
+        "reason": "0 approved item(s) are ready to promote safely.",
+        "safe_adopt_now_count": 0,
+        "selector": "from-plan",
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
+      "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "cliSurfaceIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_submissions",
+        "primaryEntityId": "entity_submissions",
+        "routePaths": [
+          "/submissions/new",
+          "/submissions/:submissionId",
+          "/submissions"
+        ],
+        "screenIds": [
+          "submissions_create",
+          "submissions_detail",
+          "submissions_list"
+        ],
+        "whyThisBundle": "This bundle exists because UI screen/route evidence, doc evidence converges on the same submissions concept.",
+        "widgetIds": [],
+        "workflowIds": []
+      },
+      "pending_items": 4,
+      "recommend_bundle_review_selector": null,
+      "recommend_from_plan": true,
+      "recommended_actor_role_actions": [],
+      "recommended_doc_drift_actions": [],
+      "recommended_doc_link_actions": [],
+      "recommended_doc_metadata_patch_actions": []
+    },
+    {
+      "applied_items": 0,
+      "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
+      "blocked_items": 0,
+      "bundle": "home-dashboard",
+      "evidence": {
+        "actors": 0,
+        "capabilities": 0,
+        "docs": 1,
+        "entities": 0,
+        "enums": 0,
+        "roles": 0,
+        "screens": 1,
+        "shapes": 0,
+        "widgets": 1,
+        "workflows": 0
+      },
+      "evidence_score": 2,
+      "is_complete": false,
+      "next_action": {
+        "kind": "adopt_from_plan",
+        "label": "Adopt approved items now",
+        "reason": "0 approved item(s) are ready to promote safely.",
+        "safe_adopt_now_count": 0,
+        "selector": "from-plan",
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
+      "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "cliSurfaceIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "home_dashboard",
+        "primaryEntityId": null,
+        "routePaths": [
+          "/"
+        ],
+        "screenIds": [
+          "home_dashboard"
+        ],
+        "whyThisBundle": "This bundle exists because UI widget evidence, UI screen/route evidence, doc evidence converges on the same home dashboard concept.",
+        "widgetIds": [
+          "widget_home_dashboard_results"
+        ],
+        "workflowIds": []
+      },
+      "pending_items": 3,
+      "recommend_bundle_review_selector": null,
+      "recommend_from_plan": true,
+      "recommended_actor_role_actions": [],
+      "recommended_doc_drift_actions": [],
+      "recommended_doc_link_actions": [],
+      "recommended_doc_metadata_patch_actions": []
+    }
+  ],
+  "candidate_model_bundles": [
+    {
+      "actor_details": [],
+      "actors": [],
+      "adoption_plan": [
+        {
+          "action": "promote_entity",
+          "item": "entity_content_submission",
+          "target": null
+        }
+      ],
+      "auth_claim_hints": [],
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_role_guidance": [],
+      "capabilities": [],
+      "cli_surfaces": [],
+      "doc_drift_summaries": [],
+      "doc_link_suggestions": [],
+      "doc_metadata_patches": [],
+      "docs": [],
+      "entities": [
+        "entity_content_submission"
+      ],
+      "enums": [],
+      "id": "entity_content_submission",
+      "label": "Content Submission",
+      "maintained_seam_candidates": [
+        {
+          "id": "content-submission:entity:entity_content_submission",
+          "kind": "entity",
+          "maintained_seam_candidates": [
+            {
+              "allowed_change_classes": [
+                "proposal_only"
+              ],
+              "apply": "never",
+              "confidence": "high",
+              "drift_signals": [
+                "schema_or_migration_changed",
+                "migration_directory_changed"
+              ],
+              "emitted_dependencies": [
+                "topo/state/db/app_db/current.snapshot.json",
+                "proj_db"
+              ],
+              "evidence": [
+                "prisma/schema.prisma",
+                "prisma/migrations/20260515010101_init/migration.sql"
+              ],
+              "id_hint": "seam_prisma_db_migrations",
+              "kind": "maintained_db_migration_seam",
+              "label": "PRISMA maintained database migrations",
+              "maintained_modules": [
+                "prisma/schema.prisma",
+                "prisma/migrations"
+              ],
+              "manual_next_steps": [
+                "Review evidence, match_reasons, and missing_decisions before accepting this seam.",
+                "Confirm database runtime 'app_db' and projection 'proj_db' are the right topology targets for the maintained app.",
+                "If accepted, copy proposed_runtime_migration into the matching database runtime's migration block in topogram.project.json.",
+                "Keep ownership 'maintained' and apply 'never'; import must not apply migrations or patch maintained app files.",
+                "After editing topogram.project.json, run topogram check . --json and the maintained app's migration verification."
+              ],
+              "match_reasons": [
+                "found Prisma schema",
+                "found Prisma migrations directory"
+              ],
+              "migrationsPath": "prisma/migrations",
+              "missing_decisions": [],
+              "output_id": "maintained_app",
+              "ownership": "maintained",
+              "ownership_class": "human_owned",
+              "project_config_target": {
+                "file": "topogram.project.json",
+                "path": "topology.runtimes[id=app_db].migration",
+                "projection_id": "proj_db",
+                "runtime_id": "app_db"
+              },
+              "projection_id_hint": "proj_db",
+              "proposed_runtime_migration": {
+                "apply": "never",
+                "migrationsPath": "prisma/migrations",
+                "ownership": "maintained",
+                "schemaPath": "prisma/schema.prisma",
+                "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+                "tool": "prisma"
+              },
+              "provenance": [
+                "prisma/schema.prisma",
+                "prisma/migrations/20260515010101_init/migration.sql"
+              ],
+              "runtime_id_hint": "app_db",
+              "schemaPath": "prisma/schema.prisma",
+              "seam_id": "seam_prisma_db_migrations",
+              "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+              "source_kind": "migration_strategy_inference",
+              "source_of_truth": "candidate",
+              "status": "review_required",
+              "tool": "prisma",
+              "track": "db"
+            }
+          ]
+        }
+      ],
+      "merge_hints": {
+        "action": "promote_as_candidate_concept",
+        "canonicalEntityTarget": null,
+        "promoteActors": [],
+        "promoteCapabilities": [],
+        "promoteDocs": [],
+        "promoteEnums": [],
+        "promoteRoles": [],
+        "promoteScreens": [],
+        "promoteShapes": [],
+        "promoteWorkflows": []
+      },
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "cliSurfaceIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_content_submission",
+        "primaryEntityId": "entity_content_submission",
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because entity evidence converges on the same content submission concept.",
+        "widgetIds": [],
+        "workflowIds": []
+      },
+      "projection_impacts": [],
+      "projection_patches": [],
+      "role_details": [],
+      "roles": [],
+      "screens": [],
+      "shapes": [],
+      "slug": "content-submission",
+      "ui_flows": [],
+      "ui_impacts": [],
+      "widgets": [],
+      "workflow_impacts": [],
+      "workflows": []
+    },
+    {
+      "actor_details": [],
+      "actors": [],
+      "adoption_plan": [
+        {
+          "action": "promote_entity",
+          "item": "entity_contentsubmission",
+          "target": null
+        }
+      ],
+      "auth_claim_hints": [],
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_role_guidance": [],
+      "capabilities": [],
+      "cli_surfaces": [],
+      "doc_drift_summaries": [],
+      "doc_link_suggestions": [],
+      "doc_metadata_patches": [],
+      "docs": [],
+      "entities": [
+        "entity_contentsubmission"
+      ],
+      "enums": [],
+      "id": "entity_contentsubmission",
+      "label": "ContentSubmission",
+      "maintained_seam_candidates": [
+        {
+          "id": "contentsubmission:entity:entity_contentsubmission",
+          "kind": "entity",
+          "maintained_seam_candidates": [
+            {
+              "allowed_change_classes": [
+                "proposal_only"
+              ],
+              "apply": "never",
+              "confidence": "high",
+              "drift_signals": [
+                "schema_or_migration_changed",
+                "migration_directory_changed"
+              ],
+              "emitted_dependencies": [
+                "topo/state/db/app_db/current.snapshot.json",
+                "proj_db"
+              ],
+              "evidence": [
+                "prisma/schema.prisma",
+                "prisma/migrations/20260515010101_init/migration.sql"
+              ],
+              "id_hint": "seam_prisma_db_migrations",
+              "kind": "maintained_db_migration_seam",
+              "label": "PRISMA maintained database migrations",
+              "maintained_modules": [
+                "prisma/schema.prisma",
+                "prisma/migrations"
+              ],
+              "manual_next_steps": [
+                "Review evidence, match_reasons, and missing_decisions before accepting this seam.",
+                "Confirm database runtime 'app_db' and projection 'proj_db' are the right topology targets for the maintained app.",
+                "If accepted, copy proposed_runtime_migration into the matching database runtime's migration block in topogram.project.json.",
+                "Keep ownership 'maintained' and apply 'never'; import must not apply migrations or patch maintained app files.",
+                "After editing topogram.project.json, run topogram check . --json and the maintained app's migration verification."
+              ],
+              "match_reasons": [
+                "found Prisma schema",
+                "found Prisma migrations directory"
+              ],
+              "migrationsPath": "prisma/migrations",
+              "missing_decisions": [],
+              "output_id": "maintained_app",
+              "ownership": "maintained",
+              "ownership_class": "human_owned",
+              "project_config_target": {
+                "file": "topogram.project.json",
+                "path": "topology.runtimes[id=app_db].migration",
+                "projection_id": "proj_db",
+                "runtime_id": "app_db"
+              },
+              "projection_id_hint": "proj_db",
+              "proposed_runtime_migration": {
+                "apply": "never",
+                "migrationsPath": "prisma/migrations",
+                "ownership": "maintained",
+                "schemaPath": "prisma/schema.prisma",
+                "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+                "tool": "prisma"
+              },
+              "provenance": [
+                "prisma/schema.prisma",
+                "prisma/migrations/20260515010101_init/migration.sql"
+              ],
+              "runtime_id_hint": "app_db",
+              "schemaPath": "prisma/schema.prisma",
+              "seam_id": "seam_prisma_db_migrations",
+              "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+              "source_kind": "migration_strategy_inference",
+              "source_of_truth": "candidate",
+              "status": "review_required",
+              "tool": "prisma",
+              "track": "db"
+            }
+          ]
+        }
+      ],
+      "merge_hints": {
+        "action": "promote_as_candidate_concept",
+        "canonicalEntityTarget": null,
+        "promoteActors": [],
+        "promoteCapabilities": [],
+        "promoteDocs": [],
+        "promoteEnums": [],
+        "promoteRoles": [],
+        "promoteScreens": [],
+        "promoteShapes": [],
+        "promoteWorkflows": []
+      },
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "cliSurfaceIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_contentsubmission",
+        "primaryEntityId": "entity_contentsubmission",
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because entity evidence converges on the same contentsubmission concept.",
+        "widgetIds": [],
+        "workflowIds": []
+      },
+      "projection_impacts": [],
+      "projection_patches": [],
+      "role_details": [],
+      "roles": [],
+      "screens": [],
+      "shapes": [],
+      "slug": "contentsubmission",
+      "ui_flows": [],
+      "ui_impacts": [],
+      "widgets": [],
+      "workflow_impacts": [],
+      "workflows": []
+    },
+    {
+      "actor_details": [],
+      "actors": [],
+      "adoption_plan": [],
+      "auth_claim_hints": [],
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_role_guidance": [],
+      "capabilities": [],
+      "cli_surfaces": [],
+      "doc_drift_summaries": [],
+      "doc_link_suggestions": [],
+      "doc_metadata_patches": [],
+      "docs": [],
+      "entities": [],
+      "enums": [],
+      "id": "database",
+      "label": "Database",
+      "maintained_seam_candidates": [
+        {
+          "id": "seam_prisma_db_migrations",
+          "kind": "maintained_db_migration_seam",
+          "maintained_seam_candidates": [
+            {
+              "allowed_change_classes": [
+                "proposal_only"
+              ],
+              "apply": "never",
+              "confidence": "high",
+              "drift_signals": [
+                "schema_or_migration_changed",
+                "migration_directory_changed"
+              ],
+              "emitted_dependencies": [
+                "topo/state/db/app_db/current.snapshot.json",
+                "proj_db"
+              ],
+              "evidence": [
+                "prisma/schema.prisma",
+                "prisma/migrations/20260515010101_init/migration.sql"
+              ],
+              "id_hint": "seam_prisma_db_migrations",
+              "kind": "maintained_db_migration_seam",
+              "label": "PRISMA maintained database migrations",
+              "maintained_modules": [
+                "prisma/schema.prisma",
+                "prisma/migrations"
+              ],
+              "manual_next_steps": [
+                "Review evidence, match_reasons, and missing_decisions before accepting this seam.",
+                "Confirm database runtime 'app_db' and projection 'proj_db' are the right topology targets for the maintained app.",
+                "If accepted, copy proposed_runtime_migration into the matching database runtime's migration block in topogram.project.json.",
+                "Keep ownership 'maintained' and apply 'never'; import must not apply migrations or patch maintained app files.",
+                "After editing topogram.project.json, run topogram check . --json and the maintained app's migration verification."
+              ],
+              "match_reasons": [
+                "found Prisma schema",
+                "found Prisma migrations directory"
+              ],
+              "migrationsPath": "prisma/migrations",
+              "missing_decisions": [],
+              "output_id": "maintained_app",
+              "ownership": "maintained",
+              "ownership_class": "human_owned",
+              "project_config_target": {
+                "file": "topogram.project.json",
+                "path": "topology.runtimes[id=app_db].migration",
+                "projection_id": "proj_db",
+                "runtime_id": "app_db"
+              },
+              "projection_id_hint": "proj_db",
+              "proposed_runtime_migration": {
+                "apply": "never",
+                "migrationsPath": "prisma/migrations",
+                "ownership": "maintained",
+                "schemaPath": "prisma/schema.prisma",
+                "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+                "tool": "prisma"
+              },
+              "provenance": [
+                "prisma/schema.prisma",
+                "prisma/migrations/20260515010101_init/migration.sql"
+              ],
+              "runtime_id_hint": "app_db",
+              "schemaPath": "prisma/schema.prisma",
+              "seam_id": "seam_prisma_db_migrations",
+              "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+              "source_kind": "migration_strategy_inference",
+              "source_of_truth": "candidate",
+              "status": "review_required",
+              "tool": "prisma",
+              "track": "db"
+            }
+          ]
+        }
+      ],
+      "merge_hints": {
+        "action": "promote_as_candidate_concept",
+        "canonicalEntityTarget": null,
+        "promoteActors": [],
+        "promoteCapabilities": [],
+        "promoteDocs": [],
+        "promoteEnums": [],
+        "promoteRoles": [],
+        "promoteScreens": [],
+        "promoteShapes": [],
+        "promoteWorkflows": []
+      },
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "cliSurfaceIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "database",
+        "primaryEntityId": null,
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because multiple imported signals point at the same database concept.",
+        "widgetIds": [],
+        "workflowIds": []
+      },
+      "projection_impacts": [],
+      "projection_patches": [],
+      "role_details": [],
+      "roles": [],
+      "screens": [],
+      "shapes": [],
+      "slug": "database",
+      "ui_flows": [],
+      "ui_impacts": [],
+      "widgets": [],
+      "workflow_impacts": [],
+      "workflows": []
+    },
+    {
+      "actor_details": [],
+      "actors": [],
+      "adoption_plan": [
+        {
+          "action": "promote_capability",
+          "item": "cap_list_health",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_res",
+          "target": null
+        },
+        {
+          "action": "promote_doc",
+          "canonical_rel_path": "docs/journeys/health_journey.md",
+          "doc_kind": "journey",
+          "item": "health_journey",
+          "source_path": "candidates/reconcile/model/bundles/health/docs/journeys/health_journey.md",
+          "target": null
+        }
+      ],
+      "auth_claim_hints": [],
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_role_guidance": [],
+      "capabilities": [
+        "cap_list_health",
+        "cap_res"
+      ],
+      "cli_surfaces": [],
+      "doc_drift_summaries": [],
+      "doc_link_suggestions": [],
+      "doc_metadata_patches": [],
+      "docs": [
+        "health_journey"
+      ],
+      "entities": [],
+      "enums": [],
+      "id": "entity_health",
+      "label": "Health",
+      "maintained_seam_candidates": [],
+      "merge_hints": {
+        "action": "promote_as_candidate_concept",
+        "canonicalEntityTarget": null,
+        "promoteActors": [],
+        "promoteCapabilities": [
+          "cap_list_health",
+          "cap_res"
+        ],
+        "promoteDocs": [
+          "health_journey"
+        ],
+        "promoteEnums": [],
+        "promoteRoles": [],
+        "promoteScreens": [],
+        "promoteShapes": [],
+        "promoteWorkflows": []
+      },
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [
+          "cap_list_health",
+          "cap_res"
+        ],
+        "cliSurfaceIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "cap_list_health",
+        "primaryEntityId": null,
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because API capability evidence, doc evidence converges on the same health concept.",
+        "widgetIds": [],
+        "workflowIds": []
+      },
+      "projection_impacts": [],
+      "projection_patches": [],
+      "role_details": [],
+      "roles": [],
+      "screens": [],
+      "shapes": [],
+      "slug": "health",
+      "ui_flows": [],
+      "ui_impacts": [],
+      "widgets": [],
+      "workflow_impacts": [],
+      "workflows": []
+    },
+    {
+      "actor_details": [],
+      "actors": [],
+      "adoption_plan": [
+        {
+          "action": "promote_doc",
+          "canonical_rel_path": "docs/journeys/home_dashboard_journey.md",
+          "doc_kind": "journey",
+          "item": "home_dashboard_journey",
+          "source_path": "candidates/reconcile/model/bundles/home-dashboard/docs/journeys/home_dashboard_journey.md",
+          "target": null
+        },
+        {
+          "action": "promote_widget",
+          "canonical_rel_path": "widgets/widget-home-dashboard-results.tg",
+          "confidence": "low",
+          "inference_summary": null,
+          "item": "widget_home_dashboard_results",
+          "related_capabilities": [
+            "cap_get_submission"
+          ],
+          "related_shapes": [],
+          "source_path": "candidates/reconcile/model/bundles/home-dashboard/widgets/widget_home_dashboard_results.tg",
+          "target": null
+        },
+        {
+          "action": "promote_ui_report",
+          "canonical_rel_path": "docs/reports/ui-home_dashboard.md",
+          "item": "ui_home_dashboard",
+          "source_path": "candidates/reconcile/model/bundles/home-dashboard/docs/reports/ui-home_dashboard.md",
+          "target": null
+        }
+      ],
+      "auth_claim_hints": [],
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_role_guidance": [],
+      "capabilities": [],
+      "cli_surfaces": [],
+      "doc_drift_summaries": [],
+      "doc_link_suggestions": [],
+      "doc_metadata_patches": [],
+      "docs": [
+        "home_dashboard_journey"
+      ],
+      "entities": [],
+      "enums": [],
+      "id": "entity_home-dashboard",
+      "label": "Home Dashboard",
+      "maintained_seam_candidates": [],
+      "merge_hints": {
+        "action": "promote_as_candidate_concept",
+        "canonicalEntityTarget": null,
+        "promoteActors": [],
+        "promoteCapabilities": [],
+        "promoteDocs": [
+          "home_dashboard_journey"
+        ],
+        "promoteEnums": [],
+        "promoteRoles": [],
+        "promoteScreens": [
+          "home_dashboard"
+        ],
+        "promoteShapes": [],
+        "promoteWorkflows": []
+      },
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "cliSurfaceIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "home_dashboard",
+        "primaryEntityId": null,
+        "routePaths": [
+          "/"
+        ],
+        "screenIds": [
+          "home_dashboard"
+        ],
+        "whyThisBundle": "This bundle exists because UI widget evidence, UI screen/route evidence, doc evidence converges on the same home dashboard concept.",
+        "widgetIds": [
+          "widget_home_dashboard_results"
+        ],
+        "workflowIds": []
+      },
+      "projection_impacts": [],
+      "projection_patches": [],
+      "role_details": [],
+      "roles": [],
+      "screens": [
+        "home_dashboard"
+      ],
+      "shapes": [],
+      "slug": "home-dashboard",
+      "ui_flows": [],
+      "ui_impacts": [],
+      "widgets": [
+        "widget_home_dashboard_results"
+      ],
+      "workflow_impacts": [],
+      "workflows": []
+    },
+    {
+      "actor_details": [],
+      "actors": [],
+      "adoption_plan": [
+        {
+          "action": "promote_capability",
+          "item": "cap_create_submissions",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_get_submission",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_list_submissions",
+          "target": null
+        },
+        {
+          "action": "promote_shape",
+          "event_name": "row_select",
+          "item": "shape_event_submissions_row_select",
+          "source_kind": "ui_widget_event",
+          "target": null,
+          "widget_id": "widget_submissions_list_results"
+        },
+        {
+          "action": "promote_doc",
+          "canonical_rel_path": "docs/journeys/submission_journey.md",
+          "doc_kind": "journey",
+          "item": "submission_journey",
+          "source_path": "candidates/reconcile/model/bundles/submission/docs/journeys/submission_journey.md",
+          "target": null
+        },
+        {
+          "action": "promote_widget",
+          "canonical_rel_path": "widgets/widget-submissions-list-results.tg",
+          "confidence": "low",
+          "inference_summary": null,
+          "item": "widget_submissions_list_results",
+          "related_capabilities": [
+            "cap_list_submissions"
+          ],
+          "related_shapes": [
+            "shape_event_submissions_row_select"
+          ],
+          "source_path": "candidates/reconcile/model/bundles/submission/widgets/widget_submissions_list_results.tg",
+          "target": null
+        }
+      ],
+      "auth_claim_hints": [],
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_role_guidance": [],
+      "capabilities": [
+        "cap_create_submissions",
+        "cap_get_submission",
+        "cap_list_submissions"
+      ],
+      "cli_surfaces": [],
+      "doc_drift_summaries": [],
+      "doc_link_suggestions": [],
+      "doc_metadata_patches": [],
+      "docs": [
+        "submission_journey"
+      ],
+      "entities": [],
+      "enums": [],
+      "id": "entity_submission",
+      "label": "Submission",
+      "maintained_seam_candidates": [],
+      "merge_hints": {
+        "action": "promote_as_candidate_concept",
+        "canonicalEntityTarget": null,
+        "promoteActors": [],
+        "promoteCapabilities": [
+          "cap_create_submissions",
+          "cap_get_submission",
+          "cap_list_submissions"
+        ],
+        "promoteDocs": [
+          "submission_journey"
+        ],
+        "promoteEnums": [],
+        "promoteRoles": [],
+        "promoteScreens": [],
+        "promoteShapes": [
+          "shape_event_submissions_row_select"
+        ],
+        "promoteWorkflows": []
+      },
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [
+          "cap_create_submissions",
+          "cap_get_submission",
+          "cap_list_submissions"
+        ],
+        "cliSurfaceIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "cap_create_submissions",
+        "primaryEntityId": null,
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because API capability evidence, UI widget evidence, doc evidence converges on the same submission concept.",
+        "widgetIds": [
+          "widget_submissions_list_results"
+        ],
+        "workflowIds": []
+      },
+      "projection_impacts": [],
+      "projection_patches": [],
+      "role_details": [],
+      "roles": [],
+      "screens": [],
+      "shapes": [
+        "shape_event_submissions_row_select"
+      ],
+      "slug": "submission",
+      "ui_flows": [],
+      "ui_impacts": [],
+      "widgets": [
+        "widget_submissions_list_results"
+      ],
+      "workflow_impacts": [],
+      "workflows": []
+    },
+    {
+      "actor_details": [],
+      "actors": [],
+      "adoption_plan": [
+        {
+          "action": "promote_doc",
+          "canonical_rel_path": "docs/journeys/submissions_journey.md",
+          "doc_kind": "journey",
+          "item": "submissions_journey",
+          "source_path": "candidates/reconcile/model/bundles/submissions/docs/journeys/submissions_journey.md",
+          "target": null
+        },
+        {
+          "action": "promote_ui_report",
+          "canonical_rel_path": "docs/reports/ui-submissions_create.md",
+          "item": "ui_submissions_create",
+          "source_path": "candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_create.md",
+          "target": null
+        },
+        {
+          "action": "promote_ui_report",
+          "canonical_rel_path": "docs/reports/ui-submissions_detail.md",
+          "item": "ui_submissions_detail",
+          "source_path": "candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_detail.md",
+          "target": null
+        },
+        {
+          "action": "promote_ui_report",
+          "canonical_rel_path": "docs/reports/ui-submissions_list.md",
+          "item": "ui_submissions_list",
+          "source_path": "candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_list.md",
+          "target": null
+        }
+      ],
+      "auth_claim_hints": [],
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_role_guidance": [],
+      "capabilities": [],
+      "cli_surfaces": [],
+      "doc_drift_summaries": [],
+      "doc_link_suggestions": [],
+      "doc_metadata_patches": [],
+      "docs": [
+        "submissions_journey"
+      ],
+      "entities": [],
+      "enums": [],
+      "id": "entity_submissions",
+      "label": "Submissions",
+      "maintained_seam_candidates": [],
+      "merge_hints": {
+        "action": "promote_as_candidate_concept",
+        "canonicalEntityTarget": null,
+        "promoteActors": [],
+        "promoteCapabilities": [],
+        "promoteDocs": [
+          "submissions_journey"
+        ],
+        "promoteEnums": [],
+        "promoteRoles": [],
+        "promoteScreens": [
+          "submissions_create",
+          "submissions_detail",
+          "submissions_list"
+        ],
+        "promoteShapes": [],
+        "promoteWorkflows": []
+      },
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "cliSurfaceIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_submissions",
+        "primaryEntityId": "entity_submissions",
+        "routePaths": [
+          "/submissions/new",
+          "/submissions/:submissionId",
+          "/submissions"
+        ],
+        "screenIds": [
+          "submissions_create",
+          "submissions_detail",
+          "submissions_list"
+        ],
+        "whyThisBundle": "This bundle exists because UI screen/route evidence, doc evidence converges on the same submissions concept.",
+        "widgetIds": [],
+        "workflowIds": []
+      },
+      "projection_impacts": [],
+      "projection_patches": [],
+      "role_details": [],
+      "roles": [],
+      "screens": [
+        "submissions_create",
+        "submissions_detail",
+        "submissions_list"
+      ],
+      "shapes": [],
+      "slug": "submissions",
+      "ui_flows": [],
+      "ui_impacts": [],
+      "widgets": [],
+      "workflow_impacts": [],
+      "workflows": []
+    }
+  ],
+  "candidate_model_files": [
+    "candidates/reconcile/model/bundles/content-submission/README.md",
+    "candidates/reconcile/model/bundles/content-submission/entities/entity_content_submission.tg",
+    "candidates/reconcile/model/bundles/contentsubmission/README.md",
+    "candidates/reconcile/model/bundles/contentsubmission/entities/entity_contentsubmission.tg",
+    "candidates/reconcile/model/bundles/database/README.md",
+    "candidates/reconcile/model/bundles/health/README.md",
+    "candidates/reconcile/model/bundles/health/capabilities/cap_list_health.tg",
+    "candidates/reconcile/model/bundles/health/capabilities/cap_res.tg",
+    "candidates/reconcile/model/bundles/health/docs/journeys/health_journey.md",
+    "candidates/reconcile/model/bundles/home-dashboard/README.md",
+    "candidates/reconcile/model/bundles/home-dashboard/docs/journeys/home_dashboard_journey.md",
+    "candidates/reconcile/model/bundles/home-dashboard/docs/reports/ui-home_dashboard.md",
+    "candidates/reconcile/model/bundles/home-dashboard/widgets/widget_home_dashboard_results.tg",
+    "candidates/reconcile/model/bundles/submission/README.md",
+    "candidates/reconcile/model/bundles/submission/capabilities/cap_create_submissions.tg",
+    "candidates/reconcile/model/bundles/submission/capabilities/cap_get_submission.tg",
+    "candidates/reconcile/model/bundles/submission/capabilities/cap_list_submissions.tg",
+    "candidates/reconcile/model/bundles/submission/docs/journeys/submission_journey.md",
+    "candidates/reconcile/model/bundles/submission/shapes/shape_event_submissions_row_select.tg",
+    "candidates/reconcile/model/bundles/submission/widgets/widget_submissions_list_results.tg",
+    "candidates/reconcile/model/bundles/submissions/README.md",
+    "candidates/reconcile/model/bundles/submissions/docs/journeys/submissions_journey.md",
+    "candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_create.md",
+    "candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_detail.md",
+    "candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_list.md"
+  ],
+  "projection_dependent_items": [],
+  "projection_review_groups": [],
+  "promoted": [],
+  "promoted_canonical_items": [],
+  "refreshed_canonical_files": [],
+  "skipped": [],
+  "skipped_items": [],
+  "staged_items": [
+    "content-submission:entity:entity_content_submission",
+    "contentsubmission:entity:entity_contentsubmission",
+    "health:capability:cap_list_health",
+    "health:capability:cap_res",
+    "health:doc:health_journey",
+    "home-dashboard:doc:home_dashboard_journey",
+    "home-dashboard:ui:ui_home_dashboard",
+    "home-dashboard:widget:widget_home_dashboard_results",
+    "submission:capability:cap_create_submissions",
+    "submission:capability:cap_get_submission",
+    "submission:capability:cap_list_submissions",
+    "submission:doc:submission_journey",
+    "submission:shape:shape_event_submissions_row_select",
+    "submission:widget:widget_submissions_list_results",
+    "submissions:doc:submissions_journey",
+    "submissions:ui:ui_submissions_create",
+    "submissions:ui:ui_submissions_detail",
+    "submissions:ui:ui_submissions_list",
+    "seam_prisma_db_migrations"
+  ],
+  "suppressed_noise_bundles": [],
+  "type": "reconcile_report",
+  "ui_review_groups": [],
+  "workflow_review_groups": [],
+  "workspace": "<repo>/proof/artifacts/step-02-extracted-topogram/topo",
+  "written_canonical_files": []
+}

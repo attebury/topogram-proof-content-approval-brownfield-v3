@@ -1,0 +1,160 @@
+{
+  "errors": [],
+  "extractor": {
+    "candidateKinds": [
+      "screen",
+      "route",
+      "flow",
+      "widget",
+      "shape",
+      "stack"
+    ],
+    "capabilities": {
+      "flows": true,
+      "routes": true,
+      "screens": true,
+      "widgets": true
+    },
+    "compatibleCliRange": "^0.3.85",
+    "compatibleCliSource": "package.json",
+    "currentCliVersion": "0.3.90",
+    "errors": [],
+    "evidenceTypes": [
+      "runtime_source",
+      "parser_config"
+    ],
+    "executesPackageCode": false,
+    "extractCommand": "topogram extract ./react-router-app --out ./imported-topogram --from ui --extractor @topogram/extractor-react-router",
+    "extractors": [
+      "ui.react-router-package"
+    ],
+    "extracts": [
+      "screens",
+      "routes",
+      "flow candidates",
+      "widget evidence",
+      "stack evidence"
+    ],
+    "id": "@topogram/extractor-react-router",
+    "installCommand": "npm install -D @topogram/extractor-react-router",
+    "installed": true,
+    "knownFirstParty": true,
+    "label": "React Router UI",
+    "loadsAdapter": false,
+    "manifestPath": "<repo>/node_modules/@topogram/extractor-react-router/topogram-extractor.json",
+    "manifestVersion": "1",
+    "package": "@topogram/extractor-react-router",
+    "packageRoot": "<repo>/node_modules/@topogram/extractor-react-router",
+    "packageVersion": "0.1.1",
+    "packageVersionStatus": "installed",
+    "policyPin": {
+      "allowed": true,
+      "expectedVersion": "1",
+      "matches": true,
+      "pinCommand": "topogram extractor policy pin @topogram/extractor-react-router@1",
+      "pinnedVersion": "1",
+      "policyExists": true,
+      "policyPath": "<repo>/topogram.extractor-policy.json",
+      "state": "pinned"
+    },
+    "policyPinCommand": "topogram extractor policy pin @topogram/extractor-react-router@1",
+    "reviewWorkflow": {
+      "packageCodeExecution": {
+        "check": true,
+        "extract": true,
+        "list": false,
+        "policy": false,
+        "show": false
+      },
+      "safetyNotes": [
+        "topogram extractor list/show/policy do not load package adapter code.",
+        "topogram extractor check and topogram extract load package adapter code.",
+        "Extractor packages emit review-only candidates; core owns persistence, reconcile, adoption, and canonical topo writes.",
+        "Run dry-run adoption before --write."
+      ],
+      "steps": [
+        {
+          "command": "topogram extractor list",
+          "id": "discover",
+          "packageCodeExecution": false,
+          "purpose": "Find bundled and first-party package-backed extractors by track."
+        },
+        {
+          "command": "topogram extractor show @topogram/extractor-react-router",
+          "id": "inspect",
+          "packageCodeExecution": false,
+          "purpose": "Read manifest purpose, tracks, install command, policy pin command, and extract command."
+        },
+        {
+          "command": "npm install -D @topogram/extractor-react-router",
+          "id": "install",
+          "packageCodeExecution": false,
+          "purpose": "Install the extractor package explicitly; Topogram does not install it during extraction."
+        },
+        {
+          "command": "npm install -D @topogram/extractor-react-router@latest",
+          "id": "upgrade",
+          "packageCodeExecution": false,
+          "purpose": "Upgrade the package if its installed npm package version or compatible CLI range is stale."
+        },
+        {
+          "command": "topogram extractor policy pin @topogram/extractor-react-router@1",
+          "id": "pin_policy",
+          "packageCodeExecution": false,
+          "purpose": "Allow and pin the extractor manifest version before execution."
+        },
+        {
+          "command": "topogram extractor check @topogram/extractor-react-router",
+          "id": "check",
+          "packageCodeExecution": true,
+          "purpose": "Load the adapter and run a minimal smoke extraction against a synthetic fixture."
+        },
+        {
+          "command": "topogram extract ./react-router-app --out ./imported-topogram --from ui --extractor @topogram/extractor-react-router",
+          "id": "extract",
+          "packageCodeExecution": true,
+          "purpose": "Read brownfield source and write review-only candidates plus extraction provenance."
+        },
+        {
+          "command": "topogram extract plan ./imported-topogram",
+          "id": "review_plan",
+          "packageCodeExecution": false,
+          "purpose": "Review bundles, extractor provenance, candidate counts, and safety notes."
+        },
+        {
+          "command": "topogram adopt --list ./imported-topogram",
+          "id": "list_selectors",
+          "packageCodeExecution": false,
+          "purpose": "Choose an explicit adoption selector."
+        },
+        {
+          "command": "topogram adopt <selector> ./imported-topogram --dry-run",
+          "id": "dry_run_adoption",
+          "packageCodeExecution": false,
+          "purpose": "Preview canonical topo writes before changing project-owned records."
+        },
+        {
+          "command": "topogram adopt <selector> ./imported-topogram --write",
+          "id": "write_reviewed_adoption",
+          "packageCodeExecution": false,
+          "purpose": "Write only reviewed canonical records; extractor packages never own adoption semantics."
+        }
+      ],
+      "type": "extractor_review_workflow"
+    },
+    "showCommand": "topogram extractor show @topogram/extractor-react-router",
+    "source": "package",
+    "stack": {
+      "framework": "react-router",
+      "runtime": "browser"
+    },
+    "tracks": [
+      "ui"
+    ],
+    "upgradeCommand": "npm install -D @topogram/extractor-react-router@latest",
+    "useWhen": "Use for React Router route trees, route modules, screen hints, and non-resource UI flows.",
+    "version": "1"
+  },
+  "ok": true,
+  "sourceSpec": "@topogram/extractor-react-router"
+}

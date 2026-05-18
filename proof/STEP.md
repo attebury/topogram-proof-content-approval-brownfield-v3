@@ -1,11 +1,11 @@
-# Step 01: Brownfield Baseline
+# Step 02: Extract With Packages
 
 Repository: `topogram-proof-content-approval-brownfield-v3`
 CLI baseline: `@topogram/cli@0.3.99`
 
 ## Claim
 
-Create a real-ish maintained app with no Topogram workspace.
+Use package-backed extractors to emit review-only candidates and provenance.
 
 ## Verification
 

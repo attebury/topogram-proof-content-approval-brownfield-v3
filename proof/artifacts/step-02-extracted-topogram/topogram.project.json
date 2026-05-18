@@ -1,0 +1,13 @@
+{
+  "outputs": {
+    "maintained_app": {
+      "ownership": "maintained",
+      "path": "./app"
+    }
+  },
+  "topology": {
+    "runtimes": []
+  },
+  "version": "0.1",
+  "workspace": "./topo"
+}

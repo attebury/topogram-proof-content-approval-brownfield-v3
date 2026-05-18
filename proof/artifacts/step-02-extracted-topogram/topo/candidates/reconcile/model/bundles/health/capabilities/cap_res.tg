@@ -1,0 +1,14 @@
+# imported confidence: medium
+# imported source_kind: route_code
+# imported provenance: src/api/app.js#GET /health
+# imported provenance: src/api/app.js#GET /submissions
+# imported provenance: src/api/app.js#GET /submissions/:submissionId
+# imported provenance_more: 3
+capability cap_res {
+  name "GET /health"
+  description "Candidate capability imported from brownfield API evidence"
+
+  reads [entity_health]
+
+  status active
+}

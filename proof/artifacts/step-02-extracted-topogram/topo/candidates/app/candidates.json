@@ -1,0 +1,1198 @@
+{
+  "db": {
+    "entities": [
+      {
+        "kind": "entity",
+        "id_hint": "entity_contentsubmission",
+        "label": "ContentSubmission",
+        "confidence": "high",
+        "source_kind": "schema",
+        "source_of_truth": "imported",
+        "provenance": [
+          "prisma/schema.prisma"
+        ],
+        "track": "db",
+        "table_name": "contentsubmission",
+        "fields": [
+          {
+            "name": "id",
+            "field_type": "string",
+            "required": true,
+            "list": false,
+            "unique": false,
+            "primary_key": true
+          },
+          {
+            "name": "title",
+            "field_type": "string",
+            "required": true,
+            "list": false,
+            "unique": false,
+            "primary_key": false
+          },
+          {
+            "name": "body",
+            "field_type": "string",
+            "required": true,
+            "list": false,
+            "unique": false,
+            "primary_key": false
+          },
+          {
+            "name": "status",
+            "field_type": "string",
+            "required": true,
+            "list": false,
+            "unique": false,
+            "primary_key": false
+          },
+          {
+            "name": "review_priority",
+            "field_type": "string",
+            "required": false,
+            "list": false,
+            "unique": false,
+            "primary_key": false
+          },
+          {
+            "name": "assigned_reviewer",
+            "field_type": "string",
+            "required": false,
+            "list": false,
+            "unique": false,
+            "primary_key": false
+          },
+          {
+            "name": "author_name",
+            "field_type": "string",
+            "required": true,
+            "list": false,
+            "unique": false,
+            "primary_key": false
+          },
+          {
+            "name": "created_at",
+            "field_type": "datetime",
+            "required": true,
+            "list": false,
+            "unique": false,
+            "primary_key": false
+          },
+          {
+            "name": "submitted_at",
+            "field_type": "datetime",
+            "required": true,
+            "list": false,
+            "unique": false,
+            "primary_key": false
+          },
+          {
+            "name": "reviewed_at",
+            "field_type": "datetime",
+            "required": false,
+            "list": false,
+            "unique": false,
+            "primary_key": false
+          },
+          {
+            "name": "reviewer_note",
+            "field_type": "string",
+            "required": false,
+            "list": false,
+            "unique": false,
+            "primary_key": false
+          }
+        ]
+      },
+      {
+        "source": "prisma",
+        "id_hint": "entity_content_submission",
+        "name": "ContentSubmission",
+        "fields": [
+          {
+            "name": "id",
+            "type": "string",
+            "required": true,
+            "unique": false,
+            "primary": true,
+            "evidence": [
+              "field ContentSubmission.id"
+            ]
+          },
+          {
+            "name": "title",
+            "type": "string",
+            "required": true,
+            "unique": false,
+            "primary": false,
+            "evidence": [
+              "field ContentSubmission.title"
+            ]
+          },
+          {
+            "name": "body",
+            "type": "string",
+            "required": true,
+            "unique": false,
+            "primary": false,
+            "evidence": [
+              "field ContentSubmission.body"
+            ]
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "required": true,
+            "unique": false,
+            "primary": false,
+            "evidence": [
+              "field ContentSubmission.status"
+            ]
+          },
+          {
+            "name": "review_priority",
+            "type": "string",
+            "required": false,
+            "unique": false,
+            "primary": false,
+            "evidence": [
+              "field ContentSubmission.review_priority"
+            ]
+          },
+          {
+            "name": "assigned_reviewer",
+            "type": "string",
+            "required": false,
+            "unique": false,
+            "primary": false,
+            "evidence": [
+              "field ContentSubmission.assigned_reviewer"
+            ]
+          },
+          {
+            "name": "author_name",
+            "type": "string",
+            "required": true,
+            "unique": false,
+            "primary": false,
+            "evidence": [
+              "field ContentSubmission.author_name"
+            ]
+          },
+          {
+            "name": "created_at",
+            "type": "datetime",
+            "required": true,
+            "unique": false,
+            "primary": false,
+            "evidence": [
+              "field ContentSubmission.created_at"
+            ]
+          },
+          {
+            "name": "submitted_at",
+            "type": "datetime",
+            "required": true,
+            "unique": false,
+            "primary": false,
+            "evidence": [
+              "field ContentSubmission.submitted_at"
+            ]
+          },
+          {
+            "name": "reviewed_at",
+            "type": "datetime",
+            "required": false,
+            "unique": false,
+            "primary": false,
+            "evidence": [
+              "field ContentSubmission.reviewed_at"
+            ]
+          },
+          {
+            "name": "reviewer_note",
+            "type": "string",
+            "required": false,
+            "unique": false,
+            "primary": false,
+            "evidence": [
+              "field ContentSubmission.reviewer_note"
+            ]
+          }
+        ],
+        "evidence": [
+          "prisma model ContentSubmission"
+        ],
+        "confidence": 0.9,
+        "provenance": []
+      }
+    ],
+    "enums": [],
+    "relations": [],
+    "indexes": [
+      {
+        "kind": "index",
+        "id_hint": "index_contentsubmission-status",
+        "label": "Contentsubmission Status",
+        "confidence": "medium",
+        "source_kind": "schema",
+        "source_of_truth": "imported",
+        "provenance": [
+          "prisma/schema.prisma"
+        ],
+        "track": "db",
+        "entity": "entity_contentsubmission",
+        "fields": [
+          "status"
+        ],
+        "unique": false
+      },
+      {
+        "kind": "index",
+        "id_hint": "index_contentsubmission-review-priority",
+        "label": "Contentsubmission Review Priority",
+        "confidence": "medium",
+        "source_kind": "schema",
+        "source_of_truth": "imported",
+        "provenance": [
+          "prisma/schema.prisma"
+        ],
+        "track": "db",
+        "entity": "entity_contentsubmission",
+        "fields": [
+          "review_priority"
+        ],
+        "unique": false
+      },
+      {
+        "kind": "index",
+        "id_hint": "index_contentsubmission-assigned-reviewer",
+        "label": "Contentsubmission Assigned Reviewer",
+        "confidence": "medium",
+        "source_kind": "schema",
+        "source_of_truth": "imported",
+        "provenance": [
+          "prisma/schema.prisma"
+        ],
+        "track": "db",
+        "entity": "entity_contentsubmission",
+        "fields": [
+          "assigned_reviewer"
+        ],
+        "unique": false
+      },
+      {
+        "kind": "index",
+        "id_hint": "index_contentsubmission-submitted-at",
+        "label": "Contentsubmission Submitted At",
+        "confidence": "medium",
+        "source_kind": "schema",
+        "source_of_truth": "imported",
+        "provenance": [
+          "prisma/schema.prisma"
+        ],
+        "track": "db",
+        "entity": "entity_contentsubmission",
+        "fields": [
+          "submitted_at"
+        ],
+        "unique": false
+      },
+      {
+        "source": "package:@topogram/extractor-prisma-db",
+        "id_hint": "index_content_submission_status",
+        "entity": "entity_content_submission",
+        "fields": [
+          "status"
+        ],
+        "unique": false,
+        "evidence": [
+          "@@index ContentSubmission(status)"
+        ],
+        "confidence": 0.85,
+        "provenance": []
+      },
+      {
+        "source": "package:@topogram/extractor-prisma-db",
+        "id_hint": "index_content_submission_review_priority",
+        "entity": "entity_content_submission",
+        "fields": [
+          "review_priority"
+        ],
+        "unique": false,
+        "evidence": [
+          "@@index ContentSubmission(review_priority)"
+        ],
+        "confidence": 0.85,
+        "provenance": []
+      },
+      {
+        "source": "package:@topogram/extractor-prisma-db",
+        "id_hint": "index_content_submission_assigned_reviewer",
+        "entity": "entity_content_submission",
+        "fields": [
+          "assigned_reviewer"
+        ],
+        "unique": false,
+        "evidence": [
+          "@@index ContentSubmission(assigned_reviewer)"
+        ],
+        "confidence": 0.85,
+        "provenance": []
+      },
+      {
+        "source": "package:@topogram/extractor-prisma-db",
+        "id_hint": "index_content_submission_submitted_at",
+        "entity": "entity_content_submission",
+        "fields": [
+          "submitted_at"
+        ],
+        "unique": false,
+        "evidence": [
+          "@@index ContentSubmission(submitted_at)"
+        ],
+        "confidence": 0.85,
+        "provenance": []
+      }
+    ],
+    "maintained_seams": [
+      {
+        "kind": "maintained_db_migration_seam",
+        "id_hint": "seam_prisma_db_migrations",
+        "label": "PRISMA maintained database migrations",
+        "confidence": "high",
+        "source_kind": "migration_strategy_inference",
+        "source_of_truth": "candidate",
+        "provenance": [
+          "prisma/schema.prisma",
+          "prisma/migrations/20260515010101_init/migration.sql"
+        ],
+        "track": "db",
+        "seam_id": "seam_prisma_db_migrations",
+        "output_id": "maintained_app",
+        "ownership_class": "human_owned",
+        "status": "review_required",
+        "tool": "prisma",
+        "ownership": "maintained",
+        "apply": "never",
+        "schemaPath": "prisma/schema.prisma",
+        "migrationsPath": "prisma/migrations",
+        "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+        "runtime_id_hint": "app_db",
+        "projection_id_hint": "proj_db",
+        "evidence": [
+          "prisma/schema.prisma",
+          "prisma/migrations/20260515010101_init/migration.sql"
+        ],
+        "match_reasons": [
+          "found Prisma schema",
+          "found Prisma migrations directory"
+        ],
+        "missing_decisions": [],
+        "proposed_runtime_migration": {
+          "ownership": "maintained",
+          "tool": "prisma",
+          "apply": "never",
+          "snapshotPath": "topo/state/db/app_db/current.snapshot.json",
+          "schemaPath": "prisma/schema.prisma",
+          "migrationsPath": "prisma/migrations"
+        },
+        "manual_next_steps": [
+          "Review evidence, match_reasons, and missing_decisions before accepting this seam.",
+          "Confirm database runtime 'app_db' and projection 'proj_db' are the right topology targets for the maintained app.",
+          "If accepted, copy proposed_runtime_migration into the matching database runtime's migration block in topogram.project.json.",
+          "Keep ownership 'maintained' and apply 'never'; import must not apply migrations or patch maintained app files.",
+          "After editing topogram.project.json, run topogram check . --json and the maintained app's migration verification."
+        ],
+        "project_config_target": {
+          "file": "topogram.project.json",
+          "path": "topology.runtimes[id=app_db].migration",
+          "runtime_id": "app_db",
+          "projection_id": "proj_db"
+        },
+        "maintained_modules": [
+          "prisma/schema.prisma",
+          "prisma/migrations"
+        ],
+        "emitted_dependencies": [
+          "topo/state/db/app_db/current.snapshot.json",
+          "proj_db"
+        ],
+        "allowed_change_classes": [
+          "proposal_only"
+        ],
+        "drift_signals": [
+          "schema_or_migration_changed",
+          "migration_directory_changed"
+        ]
+      }
+    ]
+  },
+  "api": {
+    "capabilities": [
+      {
+        "kind": "capability",
+        "id_hint": "cap_res",
+        "label": "GET /health",
+        "confidence": "medium",
+        "source_kind": "route_code",
+        "source_of_truth": "imported",
+        "provenance": [
+          "src/api/app.js#GET /health",
+          "src/api/app.js#GET /submissions",
+          "src/api/app.js#GET /submissions/:submissionId",
+          "src/api/app.js#POST /submissions",
+          "src/api/app.js#POST /submissions/:submissionId/approve",
+          "src/api/app.js#POST /submissions/:submissionId/request-changes"
+        ],
+        "track": "api",
+        "endpoint": {
+          "method": "GET",
+          "path": "/health"
+        },
+        "path_params": [],
+        "query_params": [],
+        "header_params": [],
+        "input_fields": [],
+        "output_fields": [],
+        "auth_hint": "unknown"
+      },
+      {
+        "source": "package:@topogram/extractor-express-api",
+        "id_hint": "cap_list_health",
+        "name": "List Health",
+        "method": "GET",
+        "path": "/health",
+        "entity": "entity_health",
+        "inputs": [
+          {
+            "name": "status",
+            "source": "query",
+            "required": false
+          }
+        ],
+        "auth": {
+          "required": false,
+          "elevated": false,
+          "source": "none"
+        },
+        "evidence": [
+          {
+            "file": "src/api/app.js",
+            "appPath": "src/api/app.js",
+            "note": "GET /health"
+          }
+        ],
+        "confidence": 0.82,
+        "provenance": []
+      },
+      {
+        "source": "package:@topogram/extractor-express-api",
+        "id_hint": "cap_list_submissions",
+        "name": "List Submissions",
+        "method": "GET",
+        "path": "/submissions",
+        "entity": "entity_submission",
+        "inputs": [
+          {
+            "name": "status",
+            "source": "query",
+            "required": false
+          }
+        ],
+        "auth": {
+          "required": false,
+          "elevated": false,
+          "source": "none"
+        },
+        "evidence": [
+          {
+            "file": "src/api/app.js",
+            "appPath": "src/api/app.js",
+            "note": "GET /submissions"
+          }
+        ],
+        "confidence": 0.82,
+        "provenance": []
+      },
+      {
+        "source": "package:@topogram/extractor-express-api",
+        "id_hint": "cap_get_submission",
+        "name": "Get Submission",
+        "method": "GET",
+        "path": "/submissions/{submissionId}",
+        "entity": "entity_submission",
+        "inputs": [
+          {
+            "name": "submissionId",
+            "source": "path",
+            "required": true
+          },
+          {
+            "name": "status",
+            "source": "query",
+            "required": false
+          }
+        ],
+        "auth": {
+          "required": false,
+          "elevated": false,
+          "source": "none"
+        },
+        "evidence": [
+          {
+            "file": "src/api/app.js",
+            "appPath": "src/api/app.js",
+            "note": "GET /submissions/{submissionId}"
+          }
+        ],
+        "confidence": 0.82,
+        "provenance": []
+      },
+      {
+        "source": "package:@topogram/extractor-express-api",
+        "id_hint": "cap_create_submissions",
+        "name": "Create Submissions",
+        "method": "POST",
+        "path": "/submissions",
+        "entity": "entity_submission",
+        "inputs": [
+          {
+            "name": "status",
+            "source": "query",
+            "required": false
+          }
+        ],
+        "auth": {
+          "required": false,
+          "elevated": false,
+          "source": "none"
+        },
+        "evidence": [
+          {
+            "file": "src/api/app.js",
+            "appPath": "src/api/app.js",
+            "note": "POST /submissions"
+          }
+        ],
+        "confidence": 0.82,
+        "provenance": []
+      }
+    ],
+    "routes": [
+      {
+        "path": "/health",
+        "method": "GET",
+        "confidence": "medium",
+        "source_kind": "route_code",
+        "provenance": [
+          "src/api/app.js#GET /health"
+        ]
+      },
+      {
+        "path": "/submissions",
+        "method": "GET",
+        "confidence": "medium",
+        "source_kind": "route_code",
+        "provenance": [
+          "src/api/app.js#GET /submissions"
+        ]
+      },
+      {
+        "path": "/submissions/{submissionId}",
+        "method": "GET",
+        "confidence": "medium",
+        "source_kind": "route_code",
+        "provenance": [
+          "src/api/app.js#GET /submissions/:submissionId"
+        ]
+      },
+      {
+        "path": "/submissions",
+        "method": "POST",
+        "confidence": "medium",
+        "source_kind": "route_code",
+        "provenance": [
+          "src/api/app.js#POST /submissions"
+        ]
+      },
+      {
+        "path": "/submissions/{submissionId}/approve",
+        "method": "POST",
+        "confidence": "medium",
+        "source_kind": "route_code",
+        "provenance": [
+          "src/api/app.js#POST /submissions/:submissionId/approve"
+        ]
+      },
+      {
+        "path": "/submissions/{submissionId}/request-changes",
+        "method": "POST",
+        "confidence": "medium",
+        "source_kind": "route_code",
+        "provenance": [
+          "src/api/app.js#POST /submissions/:submissionId/request-changes"
+        ]
+      },
+      {
+        "source": "package:@topogram/extractor-express-api",
+        "method": "GET",
+        "path": "/health",
+        "sourcePath": "src/api/app.js",
+        "capability": "cap_list_health",
+        "entity": "entity_health",
+        "params": [],
+        "query": [
+          "status"
+        ],
+        "auth": {
+          "required": false,
+          "elevated": false,
+          "source": "none"
+        },
+        "evidence": [
+          {
+            "file": "src/api/app.js",
+            "appPath": "src/api/app.js",
+            "note": "GET /health"
+          }
+        ],
+        "confidence": 0.82,
+        "provenance": []
+      },
+      {
+        "source": "package:@topogram/extractor-express-api",
+        "method": "GET",
+        "path": "/submissions",
+        "sourcePath": "src/api/app.js",
+        "capability": "cap_list_submissions",
+        "entity": "entity_submission",
+        "params": [],
+        "query": [
+          "status"
+        ],
+        "auth": {
+          "required": false,
+          "elevated": false,
+          "source": "none"
+        },
+        "evidence": [
+          {
+            "file": "src/api/app.js",
+            "appPath": "src/api/app.js",
+            "note": "GET /submissions"
+          }
+        ],
+        "confidence": 0.82,
+        "provenance": []
+      },
+      {
+        "source": "package:@topogram/extractor-express-api",
+        "method": "GET",
+        "path": "/submissions/{submissionId}",
+        "sourcePath": "src/api/app.js",
+        "capability": "cap_get_submission",
+        "entity": "entity_submission",
+        "params": [
+          "submissionId"
+        ],
+        "query": [
+          "status"
+        ],
+        "auth": {
+          "required": false,
+          "elevated": false,
+          "source": "none"
+        },
+        "evidence": [
+          {
+            "file": "src/api/app.js",
+            "appPath": "src/api/app.js",
+            "note": "GET /submissions/{submissionId}"
+          }
+        ],
+        "confidence": 0.82,
+        "provenance": []
+      },
+      {
+        "source": "package:@topogram/extractor-express-api",
+        "method": "POST",
+        "path": "/submissions",
+        "sourcePath": "src/api/app.js",
+        "capability": "cap_create_submissions",
+        "entity": "entity_submission",
+        "params": [],
+        "query": [
+          "status"
+        ],
+        "auth": {
+          "required": false,
+          "elevated": false,
+          "source": "none"
+        },
+        "evidence": [
+          {
+            "file": "src/api/app.js",
+            "appPath": "src/api/app.js",
+            "note": "POST /submissions"
+          }
+        ],
+        "confidence": 0.82,
+        "provenance": []
+      },
+      {
+        "source": "package:@topogram/extractor-express-api",
+        "method": "POST",
+        "path": "/submissions/{submissionId}/approve",
+        "sourcePath": "src/api/app.js",
+        "capability": "cap_create_submissions",
+        "entity": "entity_submission",
+        "params": [
+          "submissionId"
+        ],
+        "query": [
+          "status"
+        ],
+        "auth": {
+          "required": false,
+          "elevated": false,
+          "source": "none"
+        },
+        "evidence": [
+          {
+            "file": "src/api/app.js",
+            "appPath": "src/api/app.js",
+            "note": "POST /submissions/{submissionId}/approve"
+          }
+        ],
+        "confidence": 0.82,
+        "provenance": []
+      },
+      {
+        "source": "package:@topogram/extractor-express-api",
+        "method": "POST",
+        "path": "/submissions/{submissionId}/request-changes",
+        "sourcePath": "src/api/app.js",
+        "capability": "cap_create_submissions",
+        "entity": "entity_submission",
+        "params": [
+          "submissionId"
+        ],
+        "query": [
+          "status"
+        ],
+        "auth": {
+          "required": false,
+          "elevated": false,
+          "source": "none"
+        },
+        "evidence": [
+          {
+            "file": "src/api/app.js",
+            "appPath": "src/api/app.js",
+            "note": "POST /submissions/{submissionId}/request-changes"
+          }
+        ],
+        "confidence": 0.82,
+        "provenance": []
+      }
+    ],
+    "stacks": [
+      {
+        "source": "package:@topogram/extractor-express-api",
+        "id_hint": "stack_express_api",
+        "name": "Express API",
+        "framework": "express",
+        "runtime": "node",
+        "evidence": [
+          {
+            "file": "src/api/app.js",
+            "appPath": "src/api/app.js",
+            "note": "GET /health"
+          },
+          {
+            "file": "src/api/app.js",
+            "appPath": "src/api/app.js",
+            "note": "GET /submissions"
+          },
+          {
+            "file": "src/api/app.js",
+            "appPath": "src/api/app.js",
+            "note": "GET /submissions/{submissionId}"
+          }
+        ],
+        "confidence": 0.85
+      }
+    ]
+  },
+  "ui": {
+    "screens": [
+      {
+        "id_hint": "home_dashboard",
+        "label": "SubmissionQueueScreen",
+        "confidence": "high",
+        "source_kind": "route_code",
+        "source_of_truth": "candidate",
+        "provenance": [
+          "src/ui/App.jsx#/"
+        ],
+        "track": "ui",
+        "kind": "screen",
+        "entity_id": null,
+        "concept_id": null,
+        "screen_kind": "dashboard",
+        "route_path": "/",
+        "component_names": [
+          "SubmissionQueueScreen"
+        ],
+        "capability_hints": {
+          "load": null,
+          "submit": null,
+          "primary_action": null
+        }
+      },
+      {
+        "id_hint": "submissions_list",
+        "label": "SubmissionQueueScreen",
+        "confidence": "high",
+        "source_kind": "route_code",
+        "source_of_truth": "candidate",
+        "provenance": [
+          "src/ui/App.jsx#/submissions"
+        ],
+        "track": "ui",
+        "kind": "screen",
+        "entity_id": "entity_submissions",
+        "concept_id": "entity_submissions",
+        "screen_kind": "list",
+        "route_path": "/submissions",
+        "component_names": [
+          "SubmissionQueueScreen"
+        ],
+        "capability_hints": {
+          "load": "cap_list_submissionss",
+          "submit": null,
+          "primary_action": "cap_create_submissions"
+        }
+      },
+      {
+        "id_hint": "submissions_detail",
+        "label": "SubmissionDetailScreen",
+        "confidence": "high",
+        "source_kind": "route_code",
+        "source_of_truth": "candidate",
+        "provenance": [
+          "src/ui/App.jsx#/submissions/:submissionId"
+        ],
+        "track": "ui",
+        "kind": "screen",
+        "entity_id": "entity_submissions",
+        "concept_id": "entity_submissions",
+        "screen_kind": "detail",
+        "route_path": "/submissions/:submissionId",
+        "component_names": [
+          "SubmissionDetailScreen"
+        ],
+        "capability_hints": {
+          "load": "cap_get_submissions",
+          "submit": null,
+          "primary_action": "cap_update_submissions"
+        }
+      },
+      {
+        "id_hint": "submissions_create",
+        "label": "NewSubmissionScreen",
+        "confidence": "high",
+        "source_kind": "route_code",
+        "source_of_truth": "candidate",
+        "provenance": [
+          "src/ui/App.jsx#/submissions/new"
+        ],
+        "track": "ui",
+        "kind": "screen",
+        "entity_id": "entity_submissions",
+        "concept_id": "entity_submissions",
+        "screen_kind": "form",
+        "route_path": "/submissions/new",
+        "component_names": [
+          "NewSubmissionScreen"
+        ],
+        "capability_hints": {
+          "load": null,
+          "submit": "cap_create_submissions",
+          "primary_action": "cap_create_submissions"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "id_hint": "home_dashboard_route",
+        "label": "/",
+        "confidence": "high",
+        "source_kind": "route_code",
+        "source_of_truth": "candidate",
+        "provenance": [
+          "src/ui/App.jsx#/"
+        ],
+        "track": "ui",
+        "kind": "ui_route",
+        "screen_id": "home_dashboard",
+        "entity_id": null,
+        "concept_id": null,
+        "path": "/"
+      },
+      {
+        "id_hint": "submissions_list_route",
+        "label": "/submissions",
+        "confidence": "high",
+        "source_kind": "route_code",
+        "source_of_truth": "candidate",
+        "provenance": [
+          "src/ui/App.jsx#/submissions"
+        ],
+        "track": "ui",
+        "kind": "ui_route",
+        "screen_id": "submissions_list",
+        "entity_id": "entity_submissions",
+        "concept_id": "entity_submissions",
+        "path": "/submissions"
+      },
+      {
+        "id_hint": "submissions_detail_route",
+        "label": "/submissions/:submissionId",
+        "confidence": "high",
+        "source_kind": "route_code",
+        "source_of_truth": "candidate",
+        "provenance": [
+          "src/ui/App.jsx#/submissions/:submissionId"
+        ],
+        "track": "ui",
+        "kind": "ui_route",
+        "screen_id": "submissions_detail",
+        "entity_id": "entity_submissions",
+        "concept_id": "entity_submissions",
+        "path": "/submissions/:submissionId"
+      },
+      {
+        "id_hint": "submissions_create_route",
+        "label": "/submissions/new",
+        "confidence": "high",
+        "source_kind": "route_code",
+        "source_of_truth": "candidate",
+        "provenance": [
+          "src/ui/App.jsx#/submissions/new"
+        ],
+        "track": "ui",
+        "kind": "ui_route",
+        "screen_id": "submissions_create",
+        "entity_id": "entity_submissions",
+        "concept_id": "entity_submissions",
+        "path": "/submissions/new"
+      }
+    ],
+    "actions": [
+      {
+        "id_hint": "submissions_list_cap_create_submissions",
+        "label": "cap_create_submissions",
+        "confidence": "low",
+        "source_kind": "route_code",
+        "source_of_truth": "candidate",
+        "provenance": [
+          "src/ui/App.jsx#/submissions"
+        ],
+        "track": "ui",
+        "kind": "ui_action",
+        "screen_id": "submissions_list",
+        "entity_id": "entity_submissions",
+        "capability_hint": "cap_create_submissions",
+        "prominence": "primary"
+      },
+      {
+        "id_hint": "submissions_detail_cap_update_submissions",
+        "label": "cap_update_submissions",
+        "confidence": "low",
+        "source_kind": "route_code",
+        "source_of_truth": "candidate",
+        "provenance": [
+          "src/ui/App.jsx#/submissions/:submissionId"
+        ],
+        "track": "ui",
+        "kind": "ui_action",
+        "screen_id": "submissions_detail",
+        "entity_id": "entity_submissions",
+        "capability_hint": "cap_update_submissions",
+        "prominence": "secondary"
+      },
+      {
+        "id_hint": "submissions_create_cap_create_submissions",
+        "label": "cap_create_submissions",
+        "confidence": "low",
+        "source_kind": "route_code",
+        "source_of_truth": "candidate",
+        "provenance": [
+          "src/ui/App.jsx#/submissions/new"
+        ],
+        "track": "ui",
+        "kind": "ui_action",
+        "screen_id": "submissions_create",
+        "entity_id": "entity_submissions",
+        "capability_hint": "cap_create_submissions",
+        "prominence": "secondary"
+      }
+    ],
+    "flows": [],
+    "widgets": [
+      {
+        "kind": "widget",
+        "id_hint": "widget_home_dashboard_results",
+        "label": "SubmissionQueueScreen results",
+        "confidence": "low",
+        "source_kind": "ui_projection_inference",
+        "source_of_truth": "candidate",
+        "provenance": [
+          "src/ui/App.jsx#/"
+        ],
+        "track": "ui",
+        "screen_id": "home_dashboard",
+        "region": "results",
+        "pattern": "search_results",
+        "data_prop": "rows",
+        "data_source": "cap_get_submission",
+        "inferred_props": [
+          {
+            "name": "rows",
+            "type": "array",
+            "required": true,
+            "source": "cap_get_submission"
+          }
+        ],
+        "inferred_events": [],
+        "inferred_region": "results",
+        "inferred_pattern": "search_results",
+        "evidence": [
+          "src/ui/App.jsx#/"
+        ],
+        "missing_decisions": [
+          "confirm widget reuse boundary",
+          "confirm prop names and data source",
+          "confirm events and behavior",
+          "confirm supported regions and patterns"
+        ],
+        "notes": [
+          "Imported widget candidates are review-only.",
+          "Confirm props, behavior, events, and reuse before adoption."
+        ]
+      },
+      {
+        "kind": "widget",
+        "id_hint": "widget_submissions_list_results",
+        "label": "SubmissionQueueScreen results",
+        "confidence": "low",
+        "source_kind": "ui_projection_inference",
+        "source_of_truth": "candidate",
+        "provenance": [
+          "src/ui/App.jsx#/submissions"
+        ],
+        "track": "ui",
+        "screen_id": "submissions_list",
+        "region": "results",
+        "pattern": "search_results",
+        "data_prop": "rows",
+        "data_source": "cap_list_submissions",
+        "inferred_props": [
+          {
+            "name": "rows",
+            "type": "array",
+            "required": true,
+            "source": "cap_list_submissions"
+          }
+        ],
+        "inferred_events": [
+          {
+            "name": "row_select",
+            "kind": "selection",
+            "action": "navigate",
+            "target_screen": "submissions_detail",
+            "payload_shape": "shape_event_submissions_row_select",
+            "confidence": "medium",
+            "evidence": [
+              "src/ui/App.jsx#/submissions/:submissionId"
+            ],
+            "payload_fields": [
+              {
+                "name": "submissionid",
+                "field_type": "string",
+                "required": true
+              }
+            ],
+            "requires_payload_shape_review": true
+          }
+        ],
+        "inferred_region": "results",
+        "inferred_pattern": "search_results",
+        "evidence": [
+          "src/ui/App.jsx#/submissions",
+          "src/ui/App.jsx#/submissions/:submissionId"
+        ],
+        "missing_decisions": [
+          "confirm widget reuse boundary",
+          "confirm prop names and data source",
+          "confirm events and behavior",
+          "confirm supported regions and patterns"
+        ],
+        "notes": [
+          "Imported widget candidates are review-only.",
+          "Confirm props, behavior, events, and reuse before adoption."
+        ]
+      }
+    ],
+    "shapes": [
+      {
+        "kind": "shape",
+        "id_hint": "shape_event_submissions_row_select",
+        "label": "SubmissionQueueScreen results row_select payload",
+        "confidence": "medium",
+        "source_kind": "ui_widget_event",
+        "source_of_truth": "candidate",
+        "provenance": [
+          "src/ui/App.jsx#/submissions",
+          "src/ui/App.jsx#/submissions/:submissionId"
+        ],
+        "track": "ui",
+        "widget_id": "widget_submissions_list_results",
+        "event_name": "row_select",
+        "fields": [
+          {
+            "name": "submissionid",
+            "field_type": "string",
+            "required": true
+          }
+        ],
+        "missing_decisions": [
+          "confirm selected row identity fields",
+          "confirm event payload shape name"
+        ],
+        "notes": [
+          "Imported widget event payload shapes are review-only.",
+          "Adopt with the widget when the event binding is accepted."
+        ]
+      }
+    ],
+    "stacks": [
+      {
+        "id_hint": "stack_react_router",
+        "label": "React Router",
+        "confidence": "high",
+        "source_kind": "route_code",
+        "source_of_truth": "candidate",
+        "provenance": [
+          "src/ui/App.jsx"
+        ],
+        "track": "ui",
+        "kind": "ui_stack",
+        "framework": "react_router",
+        "runtime": "web"
+      }
+    ]
+  }
+}
