@@ -1,0 +1,10 @@
+shape shape_input_get_submission {
+  name "Get Submission Input"
+  description "Identifier for a single submission."
+
+  fields {
+    submission_id uuid required
+  }
+
+  status active
+}

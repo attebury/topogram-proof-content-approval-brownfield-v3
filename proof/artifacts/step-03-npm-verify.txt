@@ -1,0 +1,33 @@
+$ npm run verify
+exit_code=0
+
+## stdout
+
+> verify
+> npm run check
+
+
+> check
+> npm run check:api && npm run check:web
+
+
+> check:api
+> node ./src/check.js
+
+Brownfield baseline API behavior verified.
+
+> check:web
+> vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 37 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.34 kB │ gzip:  0.24 kB
+dist/assets/index-Br3lmghL.css    1.33 kB │ gzip:  0.64 kB
+dist/assets/index-BtzHtxF9.js   168.15 kB │ gzip: 54.66 kB
+✓ built in 315ms
+
+
+## stderr

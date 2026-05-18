@@ -1,0 +1,36 @@
+projection proj_web_surface {
+  name "Content Approval Web UI"
+  description "Web realization for the content approval proof."
+  type web_surface
+
+  realizes [proj_ui_contract, cap_list_submissions, cap_get_submission, cap_submit_content, cap_approve_submission, cap_request_changes]
+  outputs [ui_contract, web_app]
+
+  screen_routes {
+    screen submission_queue path /submissions
+    screen submission_detail path /submissions/:id
+    screen submission_create path /submissions/new
+  }
+
+  web_hints {
+    screen submission_queue shell topbar
+    screen submission_queue layout responsive_collection
+    screen submission_queue desktop_variant table
+    screen submission_queue mobile_variant cards
+    screen submission_queue collection table
+    screen submission_detail layout detail_page
+    screen submission_create present page
+    action cap_submit_content present button
+    action cap_submit_content placement toolbar
+    action cap_approve_submission present button
+    action cap_request_changes present button
+  }
+
+  generator_defaults {
+    profile sveltekit
+    language typescript
+    styling css
+  }
+
+  status active
+}

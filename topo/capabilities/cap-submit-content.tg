@@ -1,0 +1,11 @@
+capability cap_submit_content {
+  name "Submit Content"
+  description "Submits new content for editorial review."
+
+  actors [actor_operator]
+  creates [entity_content_submission]
+  input [shape_input_submit_content]
+  output [shape_output_submission_detail]
+
+  status active
+}

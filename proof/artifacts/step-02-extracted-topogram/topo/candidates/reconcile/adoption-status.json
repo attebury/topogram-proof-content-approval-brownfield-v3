@@ -1,68 +1,63 @@
 {
-  "adopt_selector": null,
-  "adopt_write_mode": false,
+  "adopt_selector": "from-plan",
+  "adopt_write_mode": true,
   "adoption_plan_path": "candidates/reconcile/adoption-plan.json",
-  "applied_item_count": 0,
+  "applied_item_count": 18,
   "approved_item_count": 0,
   "approved_review_groups": [],
   "blocked_item_count": 0,
   "bootstrapped_topogram_root": false,
   "bundle_blockers": [
     {
-      "applied_items": [],
+      "applied_items": [
+        "entity_content_submission"
+      ],
       "approved_items": [],
       "blocked_items": [],
       "blocking_dependencies": [],
       "bundle": "content-submission",
-      "pending_items": [
-        "entity_content_submission"
-      ],
+      "pending_items": [],
       "skipped_items": []
     },
     {
-      "applied_items": [],
+      "applied_items": [
+        "entity_contentsubmission"
+      ],
       "approved_items": [],
       "blocked_items": [],
       "blocking_dependencies": [],
       "bundle": "contentsubmission",
-      "pending_items": [
-        "entity_contentsubmission"
-      ],
+      "pending_items": [],
       "skipped_items": []
     },
     {
-      "applied_items": [],
-      "approved_items": [],
-      "blocked_items": [],
-      "blocking_dependencies": [],
-      "bundle": "health",
-      "pending_items": [
+      "applied_items": [
         "cap_list_health",
         "cap_res",
         "health_journey"
       ],
-      "skipped_items": []
-    },
-    {
-      "applied_items": [],
       "approved_items": [],
       "blocked_items": [],
       "blocking_dependencies": [],
-      "bundle": "home-dashboard",
-      "pending_items": [
+      "bundle": "health",
+      "pending_items": [],
+      "skipped_items": []
+    },
+    {
+      "applied_items": [
         "home_dashboard_journey",
         "ui_home_dashboard",
         "widget_home_dashboard_results"
       ],
-      "skipped_items": []
-    },
-    {
-      "applied_items": [],
       "approved_items": [],
       "blocked_items": [],
       "blocking_dependencies": [],
-      "bundle": "submission",
-      "pending_items": [
+      "bundle": "home-dashboard",
+      "pending_items": [],
+      "skipped_items": []
+    },
+    {
+      "applied_items": [
         "cap_create_submissions",
         "cap_get_submission",
         "cap_list_submissions",
@@ -70,26 +65,31 @@
         "submission_journey",
         "widget_submissions_list_results"
       ],
-      "skipped_items": []
-    },
-    {
-      "applied_items": [],
       "approved_items": [],
       "blocked_items": [],
       "blocking_dependencies": [],
-      "bundle": "submissions",
-      "pending_items": [
+      "bundle": "submission",
+      "pending_items": [],
+      "skipped_items": []
+    },
+    {
+      "applied_items": [
         "submissions_journey",
         "ui_submissions_create",
         "ui_submissions_detail",
         "ui_submissions_list"
       ],
+      "approved_items": [],
+      "blocked_items": [],
+      "blocking_dependencies": [],
+      "bundle": "submissions",
+      "pending_items": [],
       "skipped_items": []
     }
   ],
   "bundle_priorities": [
     {
-      "applied_items": 0,
+      "applied_items": 6,
       "approved_items": 0,
       "auth_aging_summary": {
         "escalationLevel": "none",
@@ -125,13 +125,13 @@
         "workflows": 0
       },
       "evidence_score": 22,
-      "is_complete": false,
+      "is_complete": true,
       "next_action": {
-        "kind": "adopt_from_plan",
-        "label": "Adopt approved items now",
-        "reason": "0 approved item(s) are ready to promote safely.",
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
         "safe_adopt_now_count": 0,
-        "selector": "from-plan",
+        "selector": null,
         "unlock_review_group_id": null,
         "unlock_review_selector": null
       },
@@ -176,16 +176,16 @@
         ],
         "workflowIds": []
       },
-      "pending_items": 6,
+      "pending_items": 0,
       "recommend_bundle_review_selector": null,
-      "recommend_from_plan": true,
+      "recommend_from_plan": false,
       "recommended_actor_role_actions": [],
       "recommended_doc_drift_actions": [],
       "recommended_doc_link_actions": [],
       "recommended_doc_metadata_patch_actions": []
     },
     {
-      "applied_items": 0,
+      "applied_items": 3,
       "approved_items": 0,
       "auth_aging_summary": {
         "escalationLevel": "none",
@@ -221,13 +221,13 @@
         "workflows": 0
       },
       "evidence_score": 13,
-      "is_complete": false,
+      "is_complete": true,
       "next_action": {
-        "kind": "adopt_from_plan",
-        "label": "Adopt approved items now",
-        "reason": "0 approved item(s) are ready to promote safely.",
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
         "safe_adopt_now_count": 0,
-        "selector": "from-plan",
+        "selector": null,
         "unlock_review_group_id": null,
         "unlock_review_selector": null
       },
@@ -269,16 +269,16 @@
         "widgetIds": [],
         "workflowIds": []
       },
-      "pending_items": 3,
+      "pending_items": 0,
       "recommend_bundle_review_selector": null,
-      "recommend_from_plan": true,
+      "recommend_from_plan": false,
       "recommended_actor_role_actions": [],
       "recommended_doc_drift_actions": [],
       "recommended_doc_link_actions": [],
       "recommended_doc_metadata_patch_actions": []
     },
     {
-      "applied_items": 0,
+      "applied_items": 1,
       "approved_items": 0,
       "auth_aging_summary": {
         "escalationLevel": "none",
@@ -314,13 +314,13 @@
         "workflows": 0
       },
       "evidence_score": 8,
-      "is_complete": false,
+      "is_complete": true,
       "next_action": {
-        "kind": "adopt_from_plan",
-        "label": "Adopt approved items now",
-        "reason": "0 approved item(s) are ready to promote safely.",
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
         "safe_adopt_now_count": 0,
-        "selector": "from-plan",
+        "selector": null,
         "unlock_review_group_id": null,
         "unlock_review_selector": null
       },
@@ -359,16 +359,16 @@
         "widgetIds": [],
         "workflowIds": []
       },
-      "pending_items": 1,
+      "pending_items": 0,
       "recommend_bundle_review_selector": null,
-      "recommend_from_plan": true,
+      "recommend_from_plan": false,
       "recommended_actor_role_actions": [],
       "recommended_doc_drift_actions": [],
       "recommended_doc_link_actions": [],
       "recommended_doc_metadata_patch_actions": []
     },
     {
-      "applied_items": 0,
+      "applied_items": 1,
       "approved_items": 0,
       "auth_aging_summary": {
         "escalationLevel": "none",
@@ -404,13 +404,13 @@
         "workflows": 0
       },
       "evidence_score": 8,
-      "is_complete": false,
+      "is_complete": true,
       "next_action": {
-        "kind": "adopt_from_plan",
-        "label": "Adopt approved items now",
-        "reason": "0 approved item(s) are ready to promote safely.",
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
         "safe_adopt_now_count": 0,
-        "selector": "from-plan",
+        "selector": null,
         "unlock_review_group_id": null,
         "unlock_review_selector": null
       },
@@ -449,16 +449,16 @@
         "widgetIds": [],
         "workflowIds": []
       },
-      "pending_items": 1,
+      "pending_items": 0,
       "recommend_bundle_review_selector": null,
-      "recommend_from_plan": true,
+      "recommend_from_plan": false,
       "recommended_actor_role_actions": [],
       "recommended_doc_drift_actions": [],
       "recommended_doc_link_actions": [],
       "recommended_doc_metadata_patch_actions": []
     },
     {
-      "applied_items": 0,
+      "applied_items": 4,
       "approved_items": 0,
       "auth_aging_summary": {
         "escalationLevel": "none",
@@ -494,13 +494,13 @@
         "workflows": 0
       },
       "evidence_score": 4,
-      "is_complete": false,
+      "is_complete": true,
       "next_action": {
-        "kind": "adopt_from_plan",
-        "label": "Adopt approved items now",
-        "reason": "0 approved item(s) are ready to promote safely.",
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
         "safe_adopt_now_count": 0,
-        "selector": "from-plan",
+        "selector": null,
         "unlock_review_group_id": null,
         "unlock_review_selector": null
       },
@@ -547,16 +547,16 @@
         "widgetIds": [],
         "workflowIds": []
       },
-      "pending_items": 4,
+      "pending_items": 0,
       "recommend_bundle_review_selector": null,
-      "recommend_from_plan": true,
+      "recommend_from_plan": false,
       "recommended_actor_role_actions": [],
       "recommended_doc_drift_actions": [],
       "recommended_doc_link_actions": [],
       "recommended_doc_metadata_patch_actions": []
     },
     {
-      "applied_items": 0,
+      "applied_items": 3,
       "approved_items": 0,
       "auth_aging_summary": {
         "escalationLevel": "none",
@@ -592,13 +592,13 @@
         "workflows": 0
       },
       "evidence_score": 2,
-      "is_complete": false,
+      "is_complete": true,
       "next_action": {
-        "kind": "adopt_from_plan",
-        "label": "Adopt approved items now",
-        "reason": "0 approved item(s) are ready to promote safely.",
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
         "safe_adopt_now_count": 0,
-        "selector": "from-plan",
+        "selector": null,
         "unlock_review_group_id": null,
         "unlock_review_selector": null
       },
@@ -643,114 +643,236 @@
         ],
         "workflowIds": []
       },
-      "pending_items": 3,
+      "pending_items": 0,
       "recommend_bundle_review_selector": null,
-      "recommend_from_plan": true,
+      "recommend_from_plan": false,
       "recommended_actor_role_actions": [],
       "recommended_doc_drift_actions": [],
       "recommended_doc_link_actions": [],
       "recommended_doc_metadata_patch_actions": []
     }
   ],
-  "next_bundle": {
-    "applied_items": 0,
-    "approved_items": 0,
-    "auth_aging_summary": {
-      "escalationLevel": "none",
-      "escalationReason": "This bundle is not currently high risk.",
-      "repeatCount": 0
-    },
-    "auth_claim_hints": [],
-    "auth_closure_summary": {
-      "adopted": 0,
-      "deferred": 0,
-      "label": "no auth hints",
-      "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
-      "status": "no_auth_hints",
-      "total": 0,
-      "unresolved": 0
-    },
-    "auth_ownership_hints": [],
-    "auth_permission_hints": [],
-    "auth_risk_rank": 0,
-    "auth_role_guidance": [],
-    "blocked_items": 0,
-    "bundle": "submission",
-    "evidence": {
-      "actors": 0,
-      "capabilities": 3,
-      "docs": 1,
-      "entities": 0,
-      "enums": 0,
-      "roles": 0,
-      "screens": 0,
-      "shapes": 1,
-      "widgets": 1,
-      "workflows": 0
-    },
-    "evidence_score": 22,
-    "is_complete": false,
-    "next_action": {
-      "kind": "adopt_from_plan",
-      "label": "Adopt approved items now",
-      "reason": "0 approved item(s) are ready to promote safely.",
-      "safe_adopt_now_count": 0,
-      "selector": "from-plan",
-      "unlock_review_group_id": null,
-      "unlock_review_selector": null
-    },
-    "next_review_groups": [],
-    "operator_summary": {
-      "authAging": {
-        "escalationLevel": "none",
-        "escalationReason": "This bundle is not currently high risk.",
-        "repeatCount": 0
-      },
-      "authClaimHints": [],
-      "authClosureSummary": {
-        "adopted": 0,
-        "deferred": 0,
-        "label": "no auth hints",
-        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
-        "status": "no_auth_hints",
-        "total": 0,
-        "unresolved": 0
-      },
-      "authOwnershipHints": [],
-      "authPermissionHints": [],
-      "authRoleGuidance": [],
-      "capabilityIds": [
-        "cap_create_submissions",
-        "cap_get_submission",
-        "cap_list_submissions"
-      ],
-      "cliSurfaceIds": [],
-      "participants": {
-        "actors": [],
-        "label": "_none_",
-        "roles": []
-      },
-      "primaryConcept": "cap_create_submissions",
-      "primaryEntityId": null,
-      "routePaths": [],
-      "screenIds": [],
-      "whyThisBundle": "This bundle exists because API capability evidence, UI widget evidence, doc evidence converges on the same submission concept.",
-      "widgetIds": [
-        "widget_submissions_list_results"
-      ],
-      "workflowIds": []
-    },
-    "pending_items": 6,
-    "recommend_bundle_review_selector": null,
-    "recommend_from_plan": true,
-    "recommended_actor_role_actions": [],
-    "recommended_doc_drift_actions": [],
-    "recommended_doc_link_actions": [],
-    "recommended_doc_metadata_patch_actions": []
-  },
+  "next_bundle": null,
   "preview_followup_guidance": [],
   "projection_review_groups": [],
-  "promoted_canonical_items": [],
+  "promoted_canonical_items": [
+    {
+      "bundle": "content-submission",
+      "canonical_path": "topo/entities/entity-content-submission.tg",
+      "canonical_rel_path": "entities/entity-content-submission.tg",
+      "change_type": "create",
+      "item": "entity_content_submission",
+      "kind": "entity",
+      "selector": "from-plan",
+      "source_path": "candidates/reconcile/model/bundles/content-submission/entities/entity_content_submission.tg",
+      "suggested_action": "promote_entity",
+      "track": "entity"
+    },
+    {
+      "bundle": "contentsubmission",
+      "canonical_path": "topo/entities/entity-contentsubmission.tg",
+      "canonical_rel_path": "entities/entity-contentsubmission.tg",
+      "change_type": "create",
+      "item": "entity_contentsubmission",
+      "kind": "entity",
+      "selector": "from-plan",
+      "source_path": "candidates/reconcile/model/bundles/contentsubmission/entities/entity_contentsubmission.tg",
+      "suggested_action": "promote_entity",
+      "track": "entity"
+    },
+    {
+      "bundle": "health",
+      "canonical_path": "topo/capabilities/cap-list-health.tg",
+      "canonical_rel_path": "capabilities/cap-list-health.tg",
+      "change_type": "create",
+      "item": "cap_list_health",
+      "kind": "capability",
+      "selector": "from-plan",
+      "source_path": "candidates/reconcile/model/bundles/health/capabilities/cap_list_health.tg",
+      "suggested_action": "promote_capability",
+      "track": "capability"
+    },
+    {
+      "bundle": "health",
+      "canonical_path": "topo/capabilities/cap-res.tg",
+      "canonical_rel_path": "capabilities/cap-res.tg",
+      "change_type": "create",
+      "item": "cap_res",
+      "kind": "capability",
+      "selector": "from-plan",
+      "source_path": "candidates/reconcile/model/bundles/health/capabilities/cap_res.tg",
+      "suggested_action": "promote_capability",
+      "track": "capability"
+    },
+    {
+      "bundle": "health",
+      "canonical_path": "topo/docs/journeys/health_journey.md",
+      "canonical_rel_path": "docs/journeys/health_journey.md",
+      "change_type": "create",
+      "item": "health_journey",
+      "kind": "doc",
+      "selector": "from-plan",
+      "source_path": "candidates/reconcile/model/bundles/health/docs/journeys/health_journey.md",
+      "suggested_action": "promote_doc",
+      "track": "docs"
+    },
+    {
+      "bundle": "home-dashboard",
+      "canonical_path": "topo/docs/journeys/home_dashboard_journey.md",
+      "canonical_rel_path": "docs/journeys/home_dashboard_journey.md",
+      "change_type": "create",
+      "item": "home_dashboard_journey",
+      "kind": "doc",
+      "selector": "from-plan",
+      "source_path": "candidates/reconcile/model/bundles/home-dashboard/docs/journeys/home_dashboard_journey.md",
+      "suggested_action": "promote_doc",
+      "track": "docs"
+    },
+    {
+      "bundle": "home-dashboard",
+      "canonical_path": "topo/docs/reports/ui-home_dashboard.md",
+      "canonical_rel_path": "docs/reports/ui-home_dashboard.md",
+      "change_type": "create",
+      "item": "ui_home_dashboard",
+      "kind": "ui",
+      "selector": "from-plan",
+      "source_path": "candidates/reconcile/model/bundles/home-dashboard/docs/reports/ui-home_dashboard.md",
+      "suggested_action": "promote_ui_report",
+      "track": "ui"
+    },
+    {
+      "bundle": "home-dashboard",
+      "canonical_path": "topo/widgets/widget-home-dashboard-results.tg",
+      "canonical_rel_path": "widgets/widget-home-dashboard-results.tg",
+      "change_type": "create",
+      "item": "widget_home_dashboard_results",
+      "kind": "widget",
+      "selector": "from-plan",
+      "source_path": "candidates/reconcile/model/bundles/home-dashboard/widgets/widget_home_dashboard_results.tg",
+      "suggested_action": "promote_widget",
+      "track": "widget"
+    },
+    {
+      "bundle": "submission",
+      "canonical_path": "topo/capabilities/cap-create-submissions.tg",
+      "canonical_rel_path": "capabilities/cap-create-submissions.tg",
+      "change_type": "create",
+      "item": "cap_create_submissions",
+      "kind": "capability",
+      "selector": "from-plan",
+      "source_path": "candidates/reconcile/model/bundles/submission/capabilities/cap_create_submissions.tg",
+      "suggested_action": "promote_capability",
+      "track": "capability"
+    },
+    {
+      "bundle": "submission",
+      "canonical_path": "topo/capabilities/cap-get-submission.tg",
+      "canonical_rel_path": "capabilities/cap-get-submission.tg",
+      "change_type": "create",
+      "item": "cap_get_submission",
+      "kind": "capability",
+      "selector": "from-plan",
+      "source_path": "candidates/reconcile/model/bundles/submission/capabilities/cap_get_submission.tg",
+      "suggested_action": "promote_capability",
+      "track": "capability"
+    },
+    {
+      "bundle": "submission",
+      "canonical_path": "topo/capabilities/cap-list-submissions.tg",
+      "canonical_rel_path": "capabilities/cap-list-submissions.tg",
+      "change_type": "create",
+      "item": "cap_list_submissions",
+      "kind": "capability",
+      "selector": "from-plan",
+      "source_path": "candidates/reconcile/model/bundles/submission/capabilities/cap_list_submissions.tg",
+      "suggested_action": "promote_capability",
+      "track": "capability"
+    },
+    {
+      "bundle": "submission",
+      "canonical_path": "topo/docs/journeys/submission_journey.md",
+      "canonical_rel_path": "docs/journeys/submission_journey.md",
+      "change_type": "create",
+      "item": "submission_journey",
+      "kind": "doc",
+      "selector": "from-plan",
+      "source_path": "candidates/reconcile/model/bundles/submission/docs/journeys/submission_journey.md",
+      "suggested_action": "promote_doc",
+      "track": "docs"
+    },
+    {
+      "bundle": "submission",
+      "canonical_path": "topo/shapes/shape-event-submissions-row-select.tg",
+      "canonical_rel_path": "shapes/shape-event-submissions-row-select.tg",
+      "change_type": "create",
+      "item": "shape_event_submissions_row_select",
+      "kind": "shape",
+      "selector": "from-plan",
+      "source_path": "candidates/reconcile/model/bundles/submission/shapes/shape_event_submissions_row_select.tg",
+      "suggested_action": "promote_shape",
+      "track": "shape"
+    },
+    {
+      "bundle": "submission",
+      "canonical_path": "topo/widgets/widget-submissions-list-results.tg",
+      "canonical_rel_path": "widgets/widget-submissions-list-results.tg",
+      "change_type": "create",
+      "item": "widget_submissions_list_results",
+      "kind": "widget",
+      "selector": "from-plan",
+      "source_path": "candidates/reconcile/model/bundles/submission/widgets/widget_submissions_list_results.tg",
+      "suggested_action": "promote_widget",
+      "track": "widget"
+    },
+    {
+      "bundle": "submissions",
+      "canonical_path": "topo/docs/journeys/submissions_journey.md",
+      "canonical_rel_path": "docs/journeys/submissions_journey.md",
+      "change_type": "create",
+      "item": "submissions_journey",
+      "kind": "doc",
+      "selector": "from-plan",
+      "source_path": "candidates/reconcile/model/bundles/submissions/docs/journeys/submissions_journey.md",
+      "suggested_action": "promote_doc",
+      "track": "docs"
+    },
+    {
+      "bundle": "submissions",
+      "canonical_path": "topo/docs/reports/ui-submissions_create.md",
+      "canonical_rel_path": "docs/reports/ui-submissions_create.md",
+      "change_type": "create",
+      "item": "ui_submissions_create",
+      "kind": "ui",
+      "selector": "from-plan",
+      "source_path": "candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_create.md",
+      "suggested_action": "promote_ui_report",
+      "track": "ui"
+    },
+    {
+      "bundle": "submissions",
+      "canonical_path": "topo/docs/reports/ui-submissions_detail.md",
+      "canonical_rel_path": "docs/reports/ui-submissions_detail.md",
+      "change_type": "create",
+      "item": "ui_submissions_detail",
+      "kind": "ui",
+      "selector": "from-plan",
+      "source_path": "candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_detail.md",
+      "suggested_action": "promote_ui_report",
+      "track": "ui"
+    },
+    {
+      "bundle": "submissions",
+      "canonical_path": "topo/docs/reports/ui-submissions_list.md",
+      "canonical_rel_path": "docs/reports/ui-submissions_list.md",
+      "change_type": "create",
+      "item": "ui_submissions_list",
+      "kind": "ui",
+      "selector": "from-plan",
+      "source_path": "candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_list.md",
+      "suggested_action": "promote_ui_report",
+      "track": "ui"
+    }
+  ],
   "type": "adoption_status",
   "ui_review_groups": [],
   "workflow_review_groups": [],

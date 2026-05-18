@@ -1,0 +1,9 @@
+requirement req_adopt_brownfield_spec {
+  name "Adopt Brownfield Spec"
+  description "The brownfield proof must promote reviewed extraction candidates into canonical Topogram source and enable SDLC for follow-on maintained work."
+  affects [cap_list_submissions, cap_get_submission, cap_submit_content, cap_approve_submission, cap_request_changes]
+  introduces_rules []
+  respects_rules []
+  priority high
+  status approved
+}

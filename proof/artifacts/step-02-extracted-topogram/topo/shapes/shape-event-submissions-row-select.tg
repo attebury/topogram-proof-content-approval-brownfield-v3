@@ -1,0 +1,10 @@
+shape shape_event_submissions_row_select {
+  name "SubmissionQueueScreen results row_select payload"
+  description "Candidate event payload shape imported from brownfield UI interaction evidence"
+
+  fields {
+    submissionid string required
+  }
+
+  status active
+}

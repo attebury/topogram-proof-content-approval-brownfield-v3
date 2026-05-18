@@ -11,13 +11,13 @@
 ## Adoption
 
 - Plan: `candidates/reconcile/adoption-plan.json`
-- Selector: `none`
-- Write mode: no
+- Selector: `from-plan`
+- Write mode: yes
 - Approved items: 0
-- Applied items: 0
+- Applied items: 18
 - Skipped items: 0
 - Blocked items: 0
-- Canonical files: 0
+- Canonical files: 18
 - Refreshed canonical files: 0
 - Approved review groups: 0
 - Projection-dependent items: 0
@@ -25,13 +25,33 @@
 - UI review groups: 0
 - Workflow review groups: 0
 
+## Promoted Canonical Items
+
+- Creates: 18
+- Updates: 0
+
+- [content-submission] `entity_content_submission` `candidates/reconcile/model/bundles/content-submission/entities/entity_content_submission.tg` -> `entities/entity-content-submission.tg` (create)
+- [contentsubmission] `entity_contentsubmission` `candidates/reconcile/model/bundles/contentsubmission/entities/entity_contentsubmission.tg` -> `entities/entity-contentsubmission.tg` (create)
+- [health] `cap_list_health` `candidates/reconcile/model/bundles/health/capabilities/cap_list_health.tg` -> `capabilities/cap-list-health.tg` (create)
+- [health] `cap_res` `candidates/reconcile/model/bundles/health/capabilities/cap_res.tg` -> `capabilities/cap-res.tg` (create)
+- [health] `health_journey` `candidates/reconcile/model/bundles/health/docs/journeys/health_journey.md` -> `docs/journeys/health_journey.md` (create)
+- [home-dashboard] `home_dashboard_journey` `candidates/reconcile/model/bundles/home-dashboard/docs/journeys/home_dashboard_journey.md` -> `docs/journeys/home_dashboard_journey.md` (create)
+- [home-dashboard] `ui_home_dashboard` `candidates/reconcile/model/bundles/home-dashboard/docs/reports/ui-home_dashboard.md` -> `docs/reports/ui-home_dashboard.md` (create)
+- [home-dashboard] `widget_home_dashboard_results` `candidates/reconcile/model/bundles/home-dashboard/widgets/widget_home_dashboard_results.tg` -> `widgets/widget-home-dashboard-results.tg` (create)
+- [submission] `cap_create_submissions` `candidates/reconcile/model/bundles/submission/capabilities/cap_create_submissions.tg` -> `capabilities/cap-create-submissions.tg` (create)
+- [submission] `cap_get_submission` `candidates/reconcile/model/bundles/submission/capabilities/cap_get_submission.tg` -> `capabilities/cap-get-submission.tg` (create)
+- [submission] `cap_list_submissions` `candidates/reconcile/model/bundles/submission/capabilities/cap_list_submissions.tg` -> `capabilities/cap-list-submissions.tg` (create)
+- [submission] `submission_journey` `candidates/reconcile/model/bundles/submission/docs/journeys/submission_journey.md` -> `docs/journeys/submission_journey.md` (create)
+- [submission] `shape_event_submissions_row_select` `candidates/reconcile/model/bundles/submission/shapes/shape_event_submissions_row_select.tg` -> `shapes/shape-event-submissions-row-select.tg` (create)
+- [submission] `widget_submissions_list_results` `candidates/reconcile/model/bundles/submission/widgets/widget_submissions_list_results.tg` -> `widgets/widget-submissions-list-results.tg` (create)
+- [submissions] `submissions_journey` `candidates/reconcile/model/bundles/submissions/docs/journeys/submissions_journey.md` -> `docs/journeys/submissions_journey.md` (create)
+- [submissions] `ui_submissions_create` `candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_create.md` -> `docs/reports/ui-submissions_create.md` (create)
+- [submissions] `ui_submissions_detail` `candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_detail.md` -> `docs/reports/ui-submissions_detail.md` (create)
+- [submissions] `ui_submissions_list` `candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_list.md` -> `docs/reports/ui-submissions_list.md` (create)
+
 ## Next Best Action
 
-- Bundle: `submission`
-- Action: Adopt approved items now
-- Why now: 0 approved item(s) are ready to promote safely.
-- Selector: `from-plan`
-- Safe to adopt now: 0 approved item(s)
+- None
 
 ## Approved Review Groups
 
@@ -51,21 +71,21 @@
 
 ## Bundle Blockers
 
-- `content-submission`: blocked=0, approved=0, applied=0, pending=1, dependencies=_none_
-- `contentsubmission`: blocked=0, approved=0, applied=0, pending=1, dependencies=_none_
-- `health`: blocked=0, approved=0, applied=0, pending=3, dependencies=_none_
-- `home-dashboard`: blocked=0, approved=0, applied=0, pending=3, dependencies=_none_
-- `submission`: blocked=0, approved=0, applied=0, pending=6, dependencies=_none_
-- `submissions`: blocked=0, approved=0, applied=0, pending=4, dependencies=_none_
+- `content-submission`: blocked=0, approved=0, applied=1, pending=0, dependencies=_none_
+- `contentsubmission`: blocked=0, approved=0, applied=1, pending=0, dependencies=_none_
+- `health`: blocked=0, approved=0, applied=3, pending=0, dependencies=_none_
+- `home-dashboard`: blocked=0, approved=0, applied=3, pending=0, dependencies=_none_
+- `submission`: blocked=0, approved=0, applied=6, pending=0, dependencies=_none_
+- `submissions`: blocked=0, approved=0, applied=4, pending=0, dependencies=_none_
 
 ## Bundle Priorities
 
-- `submission`: action=`from-plan`, why=0 approved item(s) are ready to promote safely., safe-now=0
-- `health`: action=`from-plan`, why=0 approved item(s) are ready to promote safely., safe-now=0
-- `content-submission`: action=`from-plan`, why=0 approved item(s) are ready to promote safely., safe-now=0
-- `contentsubmission`: action=`from-plan`, why=0 approved item(s) are ready to promote safely., safe-now=0
-- `submissions`: action=`from-plan`, why=0 approved item(s) are ready to promote safely., safe-now=0
-- `home-dashboard`: action=`from-plan`, why=0 approved item(s) are ready to promote safely., safe-now=0
+- `submission`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0
+- `health`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0
+- `content-submission`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0
+- `contentsubmission`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0
+- `submissions`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0
+- `home-dashboard`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0
 
 ## Suppressed Noise Bundles
 
@@ -176,31 +196,30 @@
 ## Candidate Model Files
 
 - `candidates/reconcile/model/bundles/content-submission/README.md`
-- `candidates/reconcile/model/bundles/content-submission/entities/entity_content_submission.tg`
 - `candidates/reconcile/model/bundles/contentsubmission/README.md`
-- `candidates/reconcile/model/bundles/contentsubmission/entities/entity_contentsubmission.tg`
 - `candidates/reconcile/model/bundles/database/README.md`
 - `candidates/reconcile/model/bundles/health/README.md`
-- `candidates/reconcile/model/bundles/health/capabilities/cap_list_health.tg`
-- `candidates/reconcile/model/bundles/health/capabilities/cap_res.tg`
-- `candidates/reconcile/model/bundles/health/docs/journeys/health_journey.md`
 - `candidates/reconcile/model/bundles/home-dashboard/README.md`
-- `candidates/reconcile/model/bundles/home-dashboard/docs/journeys/home_dashboard_journey.md`
-- `candidates/reconcile/model/bundles/home-dashboard/docs/reports/ui-home_dashboard.md`
-- `candidates/reconcile/model/bundles/home-dashboard/widgets/widget_home_dashboard_results.tg`
 - `candidates/reconcile/model/bundles/submission/README.md`
-- `candidates/reconcile/model/bundles/submission/capabilities/cap_create_submissions.tg`
-- `candidates/reconcile/model/bundles/submission/capabilities/cap_get_submission.tg`
-- `candidates/reconcile/model/bundles/submission/capabilities/cap_list_submissions.tg`
-- `candidates/reconcile/model/bundles/submission/docs/journeys/submission_journey.md`
-- `candidates/reconcile/model/bundles/submission/shapes/shape_event_submissions_row_select.tg`
-- `candidates/reconcile/model/bundles/submission/widgets/widget_submissions_list_results.tg`
 - `candidates/reconcile/model/bundles/submissions/README.md`
-- `candidates/reconcile/model/bundles/submissions/docs/journeys/submissions_journey.md`
-- `candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_create.md`
-- `candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_detail.md`
-- `candidates/reconcile/model/bundles/submissions/docs/reports/ui-submissions_list.md`
 
 ## Canonical Outputs
 
-- None
+- `capabilities/cap-create-submissions.tg`
+- `capabilities/cap-get-submission.tg`
+- `capabilities/cap-list-health.tg`
+- `capabilities/cap-list-submissions.tg`
+- `capabilities/cap-res.tg`
+- `docs/journeys/health_journey.md`
+- `docs/journeys/home_dashboard_journey.md`
+- `docs/journeys/submission_journey.md`
+- `docs/journeys/submissions_journey.md`
+- `docs/reports/ui-home_dashboard.md`
+- `docs/reports/ui-submissions_create.md`
+- `docs/reports/ui-submissions_detail.md`
+- `docs/reports/ui-submissions_list.md`
+- `entities/entity-content-submission.tg`
+- `entities/entity-contentsubmission.tg`
+- `shapes/shape-event-submissions-row-select.tg`
+- `widgets/widget-home-dashboard-results.tg`
+- `widgets/widget-submissions-list-results.tg`

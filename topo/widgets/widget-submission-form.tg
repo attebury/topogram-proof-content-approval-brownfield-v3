@@ -1,0 +1,23 @@
+widget widget_submission_form {
+  name "Submission Form"
+  description "Reusable form widget for creating content submissions."
+  category form
+
+  props {
+    draft object optional
+  }
+
+  events {
+    submit shape_input_submit_content
+  }
+
+  behavior [optimistic_update, keyboard_navigation]
+  behaviors {
+    optimistic_update actions [cap_submit_content] rollback manual
+    keyboard_navigation scope form shortcuts [submit]
+  }
+  patterns [summary_stats]
+  regions [summary]
+  version "1.0"
+  status active
+}

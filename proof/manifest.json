@@ -5,11 +5,12 @@
   "topogramCliVersion": "0.3.99",
   "expectedTags": [
     "proof-01-brownfield-baseline",
-    "proof-02-extract-with-packages"
+    "proof-02-extract-with-packages",
+    "proof-03-adopt-app-map"
   ],
-  "requiresCanonicalTopo": false,
-  "requiresSdlc": false,
-  "forbidsCanonicalTopo": true,
+  "requiresCanonicalTopo": true,
+  "requiresSdlc": true,
+  "forbidsCanonicalTopo": false,
   "requiresRecreatedCompile": false,
   "appCheckScript": "check",
   "requiredArtifacts": [
@@ -56,6 +57,32 @@
       "json": true,
       "keys": [
         "policy"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-03-agent-brief.json",
+      "json": true,
+      "type": "agent_brief"
+    },
+    {
+      "path": "proof/artifacts/step-03-check.json",
+      "json": true,
+      "keys": [
+        "ok"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-03-adopt-list.json",
+      "json": true,
+      "keys": [
+        "broadSelectors"
+      ]
+    },
+    {
+      "path": "proof/artifacts/step-03-adopt-write.json",
+      "json": true,
+      "keys": [
+        "adoption"
       ]
     }
   ]

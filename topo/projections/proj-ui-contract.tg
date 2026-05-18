@@ -1,0 +1,75 @@
+projection proj_ui_contract {
+  name "Content Approval UI Contract"
+  description "Platform-neutral UI semantics for content submission review."
+  type ui_contract
+
+  realizes [cap_list_submissions, cap_get_submission, cap_submit_content, cap_approve_submission, cap_request_changes]
+  outputs [ui_contract]
+
+  app_shell {
+    brand "Content Approval"
+    shell topbar
+    global_search false
+    notifications false
+    account_menu false
+    footer none
+  }
+
+  design_tokens {
+    density compact
+    tone operational
+    radius_scale medium
+    color_role primary accent
+    color_role danger critical
+    typography_role body readable
+    typography_role heading prominent
+    action_role primary prominent
+    action_role destructive danger
+    accessibility contrast aa
+    accessibility focus visible
+  }
+
+  screens {
+    screen submission_queue kind list title "Review Queue" load cap_list_submissions item_shape shape_output_submission_card detail_capability cap_get_submission primary_action cap_submit_content empty_title "No submissions waiting" empty_body "Submit content to start the approval workflow" loading_state skeleton error_state inline
+    screen submission_detail kind detail title "Submission Details" load cap_get_submission view_shape shape_output_submission_detail primary_action cap_approve_submission secondary_action cap_request_changes loading_state skeleton
+    screen submission_create kind form title "Submit Content" input_shape shape_input_submit_content submit cap_submit_content success_navigate submission_detail success_state banner
+  }
+
+  collection_views {
+    screen submission_queue view table
+    screen submission_queue filter status
+    screen submission_queue pagination cursor
+    screen submission_queue sort submitted_at desc
+    screen submission_queue refresh manual
+  }
+
+  screen_actions {
+    screen submission_queue action cap_submit_content prominence primary placement toolbar
+    screen submission_detail action cap_approve_submission prominence primary placement toolbar
+    screen submission_detail action cap_request_changes prominence secondary placement toolbar
+    screen submission_create action cap_submit_content prominence primary placement footer
+  }
+
+  navigation {
+    group review label "Review" placement primary pattern primary
+    screen submission_queue group review label "Queue" order 10 visible true default true sitemap include pattern primary
+    screen submission_create group review label "Submit" order 20 visible true sitemap include pattern primary
+    screen submission_detail group review label "Submission Details" visible false breadcrumb submission_queue sitemap exclude pattern stack_navigation
+  }
+
+  screen_regions {
+    screen submission_queue region hero pattern summary_stats placement primary
+    screen submission_queue region results pattern resource_table placement primary
+    screen submission_detail region summary pattern summary_stats placement primary
+    screen submission_create region summary pattern summary_stats placement primary
+  }
+
+  widget_bindings {
+    screen submission_queue region hero widget widget_submission_summary data rows from cap_list_submissions
+    screen submission_queue region results widget widget_submission_queue data rows from cap_list_submissions event row_select navigate submission_detail
+    screen submission_detail region summary widget widget_review_actions data submission from cap_get_submission event approve action cap_approve_submission event request_changes action cap_request_changes
+    screen submission_create region summary widget widget_submission_form event submit action cap_submit_content
+  }
+
+  status active
+}

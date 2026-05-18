@@ -1,0 +1,11 @@
+capability cap_get_submission {
+  name "Get Submission"
+  description "Fetches one content submission for review."
+
+  actors [actor_operator]
+  reads [entity_content_submission]
+  input [shape_input_get_submission]
+  output [shape_output_submission_detail]
+
+  status active
+}

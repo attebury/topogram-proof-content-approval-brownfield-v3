@@ -1,0 +1,7 @@
+shape shape_output_submission_detail from entity_content_submission {
+  name "Submission Detail Output"
+  description "Detailed submission payload for editorial review."
+  include [id, title, body, status, review_priority, assigned_reviewer, author_name, submitted_at, reviewed_at, reviewer_note]
+
+  status active
+}

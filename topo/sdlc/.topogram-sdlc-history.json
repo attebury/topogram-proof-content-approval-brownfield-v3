@@ -1,0 +1,25 @@
+{
+  "task_adopt_brownfield_spec": [
+    {
+      "from": "unclaimed",
+      "to": "claimed",
+      "at": "2026-05-15T07:29:15.764Z",
+      "by": "actor_operator",
+      "note": "task started"
+    },
+    {
+      "from": "claimed",
+      "to": "in-progress",
+      "at": "2026-05-15T07:29:15.769Z",
+      "by": "actor_operator",
+      "note": "task started"
+    },
+    {
+      "from": "in-progress",
+      "to": "done",
+      "at": "2026-05-15T07:29:18.290Z",
+      "by": "actor_operator",
+      "note": null
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+shape shape_output_submission_card from entity_content_submission {
+  name "Submission Card Output"
+  description "Compact submission payload for review queue cards."
+  include [id, title, status, review_priority, assigned_reviewer, author_name, submitted_at]
+
+  status active
+}

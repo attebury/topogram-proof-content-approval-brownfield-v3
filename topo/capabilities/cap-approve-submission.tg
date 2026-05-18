@@ -1,0 +1,12 @@
+capability cap_approve_submission {
+  name "Approve Submission"
+  description "Approves a content submission."
+
+  actors [actor_operator]
+  reads [entity_content_submission]
+  updates [entity_content_submission]
+  input [shape_input_approve_submission]
+  output [shape_output_submission_detail]
+
+  status active
+}

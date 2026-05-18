@@ -1,0 +1,11 @@
+widget widget_home_dashboard_results {
+  name "SubmissionQueueScreen results"
+  description "Candidate reusable widget inferred from imported UI evidence. Review props, behavior, events, and reuse before adoption."
+  category collection
+  props {
+    rows array required
+  }
+  patterns [search_results]
+  regions [results]
+  status proposed
+}

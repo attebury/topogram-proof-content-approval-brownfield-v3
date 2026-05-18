@@ -1,0 +1,6 @@
+acceptance_criterion ac_adopt_brownfield_spec {
+  name "Adopt Brownfield Spec"
+  description "Given package-backed extraction produced reviewable candidates, when selected candidates are adopted and curated into canonical topo source, then Topogram check, SDLC check, and app verification pass without regenerating or mutating maintained source code."
+  requirement req_adopt_brownfield_spec
+  status approved
+}

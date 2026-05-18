@@ -1,0 +1,846 @@
+{
+  "checks": [],
+  "filters": {
+    "projection": "proj_web_surface",
+    "widget": null
+  },
+  "impact": {
+    "projections": [
+      "proj_ui_contract",
+      "proj_web_surface"
+    ],
+    "widgets": [
+      "widget_review_actions",
+      "widget_submission_form",
+      "widget_submission_queue",
+      "widget_submission_summary"
+    ]
+  },
+  "projection_usages": [
+    {
+      "behavior_realizations": [
+        {
+          "actions": [],
+          "dataDependencies": [
+            {
+              "prop": "rows",
+              "source": {
+                "id": "cap_list_submissions",
+                "kind": "capability"
+              }
+            }
+          ],
+          "directives": {
+            "fields": [
+              "status"
+            ]
+          },
+          "effects": [],
+          "emits": [],
+          "kind": "grouping",
+          "source": "structured",
+          "state": null,
+          "status": "realized"
+        }
+      ],
+      "check_codes": [],
+      "data_bindings": [
+        {
+          "prop": "rows",
+          "source": {
+            "id": "cap_list_submissions",
+            "kind": "capability"
+          }
+        }
+      ],
+      "event_bindings": [],
+      "key": "proj_web_surface:proj_ui_contract:submission_queue:hero:widget_submission_summary:0",
+      "outcome": "pass",
+      "projection": {
+        "id": "proj_web_surface",
+        "name": "Content Approval Web UI",
+        "source_path": "<workspace>/projections/proj-web-surface.tg",
+        "status": "active",
+        "type": "web_surface"
+      },
+      "region": "hero",
+      "screen": {
+        "id": "submission_queue",
+        "kind": "list",
+        "title": "Review Queue"
+      },
+      "source_projection": {
+        "id": "proj_ui_contract",
+        "name": "Content Approval UI Contract",
+        "source_path": "<workspace>/projections/proj-ui-contract.tg",
+        "status": "active",
+        "type": "ui_contract"
+      },
+      "widget": {
+        "category": "display",
+        "id": "widget_submission_summary",
+        "name": "Submission Summary",
+        "source_path": "<workspace>/widgets/widget-submission-summary.tg",
+        "status": "active",
+        "version": "1.0"
+      }
+    },
+    {
+      "behavior_realizations": [
+        {
+          "actions": [],
+          "dataDependencies": [
+            {
+              "prop": "rows",
+              "source": {
+                "id": "cap_list_submissions",
+                "kind": "capability"
+              }
+            }
+          ],
+          "directives": {
+            "emits": "row_select",
+            "mode": "single"
+          },
+          "effects": [
+            {
+              "event": "row_select",
+              "target": {
+                "id": "submission_detail",
+                "kind": "screen"
+              },
+              "type": "navigation"
+            }
+          ],
+          "emits": [
+            {
+              "bindings": [
+                {
+                  "action": "navigate",
+                  "event": "row_select",
+                  "target": {
+                    "id": "submission_detail",
+                    "kind": "screen"
+                  }
+                }
+              ],
+              "bound": true,
+              "effects": [
+                {
+                  "event": "row_select",
+                  "target": {
+                    "id": "submission_detail",
+                    "kind": "screen"
+                  },
+                  "type": "navigation"
+                }
+              ],
+              "event": "row_select"
+            }
+          ],
+          "kind": "selection",
+          "source": "structured",
+          "state": null,
+          "status": "realized"
+        },
+        {
+          "actions": [],
+          "dataDependencies": [
+            {
+              "prop": "rows",
+              "source": {
+                "id": "cap_list_submissions",
+                "kind": "capability"
+              }
+            }
+          ],
+          "directives": {
+            "default": [
+              "submitted_at",
+              "desc"
+            ],
+            "fields": [
+              "submitted_at",
+              "status",
+              "title"
+            ]
+          },
+          "effects": [],
+          "emits": [],
+          "kind": "sorting",
+          "source": "structured",
+          "state": null,
+          "status": "realized"
+        },
+        {
+          "actions": [],
+          "dataDependencies": [
+            {
+              "prop": "rows",
+              "source": {
+                "id": "cap_list_submissions",
+                "kind": "capability"
+              }
+            }
+          ],
+          "directives": {
+            "fields": [
+              "status"
+            ]
+          },
+          "effects": [],
+          "emits": [],
+          "kind": "filtering",
+          "source": "structured",
+          "state": null,
+          "status": "realized"
+        },
+        {
+          "actions": [],
+          "dataDependencies": [
+            {
+              "prop": "rows",
+              "source": {
+                "id": "cap_list_submissions",
+                "kind": "capability"
+              }
+            }
+          ],
+          "directives": {
+            "mode": "cursor",
+            "page_size": 25
+          },
+          "effects": [],
+          "emits": [],
+          "kind": "pagination",
+          "source": "structured",
+          "state": null,
+          "status": "realized"
+        }
+      ],
+      "check_codes": [],
+      "data_bindings": [
+        {
+          "prop": "rows",
+          "source": {
+            "id": "cap_list_submissions",
+            "kind": "capability"
+          }
+        }
+      ],
+      "event_bindings": [
+        {
+          "action": "navigate",
+          "event": "row_select",
+          "target": {
+            "id": "submission_detail",
+            "kind": "screen"
+          }
+        }
+      ],
+      "key": "proj_web_surface:proj_ui_contract:submission_queue:results:widget_submission_queue:1",
+      "outcome": "pass",
+      "projection": {
+        "id": "proj_web_surface",
+        "name": "Content Approval Web UI",
+        "source_path": "<workspace>/projections/proj-web-surface.tg",
+        "status": "active",
+        "type": "web_surface"
+      },
+      "region": "results",
+      "screen": {
+        "id": "submission_queue",
+        "kind": "list",
+        "title": "Review Queue"
+      },
+      "source_projection": {
+        "id": "proj_ui_contract",
+        "name": "Content Approval UI Contract",
+        "source_path": "<workspace>/projections/proj-ui-contract.tg",
+        "status": "active",
+        "type": "ui_contract"
+      },
+      "widget": {
+        "category": "collection",
+        "id": "widget_submission_queue",
+        "name": "Submission Queue",
+        "source_path": "<workspace>/widgets/widget-submission-queue.tg",
+        "status": "active",
+        "version": "1.0"
+      }
+    },
+    {
+      "behavior_realizations": [
+        {
+          "actions": [
+            {
+              "bindings": [
+                {
+                  "action": "action",
+                  "event": "approve",
+                  "target": {
+                    "id": "cap_approve_submission",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "bound": true,
+              "capability": {
+                "id": "cap_approve_submission",
+                "kind": "capability"
+              },
+              "effects": [
+                {
+                  "capability": {
+                    "id": "cap_approve_submission",
+                    "kind": "capability"
+                  },
+                  "event": "approve",
+                  "type": "command"
+                }
+              ],
+              "event": null
+            },
+            {
+              "bindings": [
+                {
+                  "action": "action",
+                  "event": "request_changes",
+                  "target": {
+                    "id": "cap_request_changes",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "bound": true,
+              "capability": {
+                "id": "cap_request_changes",
+                "kind": "capability"
+              },
+              "effects": [
+                {
+                  "capability": {
+                    "id": "cap_request_changes",
+                    "kind": "capability"
+                  },
+                  "event": "request_changes",
+                  "type": "command"
+                }
+              ],
+              "event": null
+            }
+          ],
+          "dataDependencies": [
+            {
+              "prop": "submission",
+              "source": {
+                "id": "cap_get_submission",
+                "kind": "capability"
+              }
+            }
+          ],
+          "directives": {
+            "actions": [
+              "cap_approve_submission",
+              "cap_request_changes"
+            ],
+            "rollback": "manual"
+          },
+          "effects": [
+            {
+              "capability": {
+                "id": "cap_approve_submission",
+                "kind": "capability"
+              },
+              "event": "approve",
+              "type": "command"
+            },
+            {
+              "capability": {
+                "id": "cap_request_changes",
+                "kind": "capability"
+              },
+              "event": "request_changes",
+              "type": "command"
+            }
+          ],
+          "emits": [],
+          "kind": "optimistic_update",
+          "source": "structured",
+          "state": null,
+          "status": "realized"
+        },
+        {
+          "actions": [],
+          "dataDependencies": [
+            {
+              "prop": "submission",
+              "source": {
+                "id": "cap_get_submission",
+                "kind": "capability"
+              }
+            }
+          ],
+          "directives": {
+            "scope": "widget",
+            "shortcuts": [
+              "approve",
+              "request_changes"
+            ]
+          },
+          "effects": [],
+          "emits": [],
+          "kind": "keyboard_navigation",
+          "source": "structured",
+          "state": null,
+          "status": "realized"
+        }
+      ],
+      "check_codes": [],
+      "data_bindings": [
+        {
+          "prop": "submission",
+          "source": {
+            "id": "cap_get_submission",
+            "kind": "capability"
+          }
+        }
+      ],
+      "event_bindings": [
+        {
+          "action": "action",
+          "event": "approve",
+          "target": {
+            "id": "cap_approve_submission",
+            "kind": "capability"
+          }
+        },
+        {
+          "action": "action",
+          "event": "request_changes",
+          "target": {
+            "id": "cap_request_changes",
+            "kind": "capability"
+          }
+        }
+      ],
+      "key": "proj_web_surface:proj_ui_contract:submission_detail:summary:widget_review_actions:2",
+      "outcome": "pass",
+      "projection": {
+        "id": "proj_web_surface",
+        "name": "Content Approval Web UI",
+        "source_path": "<workspace>/projections/proj-web-surface.tg",
+        "status": "active",
+        "type": "web_surface"
+      },
+      "region": "summary",
+      "screen": {
+        "id": "submission_detail",
+        "kind": "detail",
+        "title": "Submission Details"
+      },
+      "source_projection": {
+        "id": "proj_ui_contract",
+        "name": "Content Approval UI Contract",
+        "source_path": "<workspace>/projections/proj-ui-contract.tg",
+        "status": "active",
+        "type": "ui_contract"
+      },
+      "widget": {
+        "category": "feedback",
+        "id": "widget_review_actions",
+        "name": "Review Actions",
+        "source_path": "<workspace>/widgets/widget-review-actions.tg",
+        "status": "active",
+        "version": "1.0"
+      }
+    },
+    {
+      "behavior_realizations": [
+        {
+          "actions": [
+            {
+              "bindings": [
+                {
+                  "action": "action",
+                  "event": "submit",
+                  "target": {
+                    "id": "cap_submit_content",
+                    "kind": "capability"
+                  }
+                }
+              ],
+              "bound": true,
+              "capability": {
+                "id": "cap_submit_content",
+                "kind": "capability"
+              },
+              "effects": [
+                {
+                  "capability": {
+                    "id": "cap_submit_content",
+                    "kind": "capability"
+                  },
+                  "event": "submit",
+                  "type": "command"
+                }
+              ],
+              "event": null
+            }
+          ],
+          "dataDependencies": [],
+          "directives": {
+            "actions": [
+              "cap_submit_content"
+            ],
+            "rollback": "manual"
+          },
+          "effects": [
+            {
+              "capability": {
+                "id": "cap_submit_content",
+                "kind": "capability"
+              },
+              "event": "submit",
+              "type": "command"
+            }
+          ],
+          "emits": [],
+          "kind": "optimistic_update",
+          "source": "structured",
+          "state": null,
+          "status": "realized"
+        },
+        {
+          "actions": [],
+          "dataDependencies": [],
+          "directives": {
+            "scope": "form",
+            "shortcuts": [
+              "submit"
+            ]
+          },
+          "effects": [],
+          "emits": [],
+          "kind": "keyboard_navigation",
+          "source": "structured",
+          "state": null,
+          "status": "realized"
+        }
+      ],
+      "check_codes": [],
+      "data_bindings": [],
+      "event_bindings": [
+        {
+          "action": "action",
+          "event": "submit",
+          "target": {
+            "id": "cap_submit_content",
+            "kind": "capability"
+          }
+        }
+      ],
+      "key": "proj_web_surface:proj_ui_contract:submission_create:summary:widget_submission_form:3",
+      "outcome": "pass",
+      "projection": {
+        "id": "proj_web_surface",
+        "name": "Content Approval Web UI",
+        "source_path": "<workspace>/projections/proj-web-surface.tg",
+        "status": "active",
+        "type": "web_surface"
+      },
+      "region": "summary",
+      "screen": {
+        "id": "submission_create",
+        "kind": "form",
+        "title": "Submit Content"
+      },
+      "source_projection": {
+        "id": "proj_ui_contract",
+        "name": "Content Approval UI Contract",
+        "source_path": "<workspace>/projections/proj-ui-contract.tg",
+        "status": "active",
+        "type": "ui_contract"
+      },
+      "widget": {
+        "category": "form",
+        "id": "widget_submission_form",
+        "name": "Submission Form",
+        "source_path": "<workspace>/widgets/widget-submission-form.tg",
+        "status": "active",
+        "version": "1.0"
+      }
+    }
+  ],
+  "summary": {
+    "affected_projections": [
+      "proj_ui_contract",
+      "proj_web_surface"
+    ],
+    "affected_widgets": [
+      "widget_review_actions",
+      "widget_submission_form",
+      "widget_submission_queue",
+      "widget_submission_summary"
+    ],
+    "error_usages": 0,
+    "errors": 0,
+    "passed_usages": 4,
+    "total_usages": 4,
+    "warning_usages": 0,
+    "warnings": 0
+  },
+  "type": "widget_conformance_report",
+  "widget_contracts": [
+    {
+      "approvals": [],
+      "behavior": [
+        "optimistic_update",
+        "keyboard_navigation"
+      ],
+      "behaviors": [
+        {
+          "directives": {
+            "actions": [
+              "cap_approve_submission",
+              "cap_request_changes"
+            ],
+            "rollback": "manual"
+          },
+          "kind": "optimistic_update",
+          "source": "structured"
+        },
+        {
+          "directives": {
+            "scope": "widget",
+            "shortcuts": [
+              "approve",
+              "request_changes"
+            ]
+          },
+          "kind": "keyboard_navigation",
+          "source": "structured"
+        }
+      ],
+      "category": "feedback",
+      "dependencies": [],
+      "events": [
+        {
+          "id": "approve",
+          "shape": {
+            "id": "shape_input_approve_submission",
+            "kind": "shape"
+          }
+        },
+        {
+          "id": "request_changes",
+          "shape": {
+            "id": "shape_input_request_changes",
+            "kind": "shape"
+          }
+        }
+      ],
+      "id": "widget_review_actions",
+      "name": "Review Actions",
+      "props": [
+        {
+          "defaultValue": null,
+          "name": "submission",
+          "requiredness": "optional",
+          "type": "object"
+        }
+      ],
+      "source_path": "<workspace>/widgets/widget-review-actions.tg",
+      "status": "active",
+      "version": "1.0"
+    },
+    {
+      "approvals": [],
+      "behavior": [
+        "optimistic_update",
+        "keyboard_navigation"
+      ],
+      "behaviors": [
+        {
+          "directives": {
+            "actions": [
+              "cap_submit_content"
+            ],
+            "rollback": "manual"
+          },
+          "kind": "optimistic_update",
+          "source": "structured"
+        },
+        {
+          "directives": {
+            "scope": "form",
+            "shortcuts": [
+              "submit"
+            ]
+          },
+          "kind": "keyboard_navigation",
+          "source": "structured"
+        }
+      ],
+      "category": "form",
+      "dependencies": [],
+      "events": [
+        {
+          "id": "submit",
+          "shape": {
+            "id": "shape_input_submit_content",
+            "kind": "shape"
+          }
+        }
+      ],
+      "id": "widget_submission_form",
+      "name": "Submission Form",
+      "props": [
+        {
+          "defaultValue": null,
+          "name": "draft",
+          "requiredness": "optional",
+          "type": "object"
+        }
+      ],
+      "source_path": "<workspace>/widgets/widget-submission-form.tg",
+      "status": "active",
+      "version": "1.0"
+    },
+    {
+      "approvals": [],
+      "behavior": [
+        "selection",
+        "sorting",
+        "filtering",
+        "pagination"
+      ],
+      "behaviors": [
+        {
+          "directives": {
+            "emits": "row_select",
+            "mode": "single"
+          },
+          "kind": "selection",
+          "source": "structured"
+        },
+        {
+          "directives": {
+            "default": [
+              "submitted_at",
+              "desc"
+            ],
+            "fields": [
+              "submitted_at",
+              "status",
+              "title"
+            ]
+          },
+          "kind": "sorting",
+          "source": "structured"
+        },
+        {
+          "directives": {
+            "fields": [
+              "status"
+            ]
+          },
+          "kind": "filtering",
+          "source": "structured"
+        },
+        {
+          "directives": {
+            "mode": "cursor",
+            "page_size": 25
+          },
+          "kind": "pagination",
+          "source": "structured"
+        }
+      ],
+      "category": "collection",
+      "dependencies": [],
+      "events": [
+        {
+          "id": "row_select",
+          "shape": {
+            "id": "shape_output_submission_card",
+            "kind": "shape"
+          }
+        }
+      ],
+      "id": "widget_submission_queue",
+      "name": "Submission Queue",
+      "props": [
+        {
+          "defaultValue": null,
+          "name": "rows",
+          "requiredness": "required",
+          "type": "array"
+        },
+        {
+          "defaultValue": false,
+          "name": "loading",
+          "requiredness": "optional",
+          "type": "boolean"
+        }
+      ],
+      "source_path": "<workspace>/widgets/widget-submission-queue.tg",
+      "status": "active",
+      "version": "1.0"
+    },
+    {
+      "approvals": [],
+      "behavior": [
+        "grouping"
+      ],
+      "behaviors": [
+        {
+          "directives": {
+            "fields": [
+              "status"
+            ]
+          },
+          "kind": "grouping",
+          "source": "structured"
+        }
+      ],
+      "category": "display",
+      "dependencies": [],
+      "events": [],
+      "id": "widget_submission_summary",
+      "name": "Submission Summary",
+      "props": [
+        {
+          "defaultValue": null,
+          "name": "rows",
+          "requiredness": "required",
+          "type": "array"
+        }
+      ],
+      "source_path": "<workspace>/widgets/widget-submission-summary.tg",
+      "status": "active",
+      "version": "1.0"
+    }
+  ],
+  "write_scope": {
+    "paths": [
+      "<workspace>/projections/proj-ui-contract.tg",
+      "<workspace>/projections/proj-web-surface.tg",
+      "<workspace>/widgets/widget-review-actions.tg",
+      "<workspace>/widgets/widget-submission-form.tg",
+      "<workspace>/widgets/widget-submission-queue.tg",
+      "<workspace>/widgets/widget-submission-summary.tg"
+    ],
+    "projection_files": [
+      "<workspace>/projections/proj-ui-contract.tg",
+      "<workspace>/projections/proj-web-surface.tg"
+    ],
+    "verification_files": [],
+    "widget_files": [
+      "<workspace>/widgets/widget-review-actions.tg",
+      "<workspace>/widgets/widget-submission-form.tg",
+      "<workspace>/widgets/widget-submission-queue.tg",
+      "<workspace>/widgets/widget-submission-summary.tg"
+    ]
+  }
+}

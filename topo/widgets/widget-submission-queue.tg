@@ -1,0 +1,31 @@
+widget widget_submission_queue {
+  name "Submission Queue"
+  description "Reusable review queue widget for content submissions."
+  category collection
+
+  props {
+    rows array required
+    loading boolean optional default false
+  }
+
+  events {
+    row_select shape_output_submission_card
+  }
+
+  slots {
+    toolbar "Review queue actions and filters"
+    empty_state "Empty queue messaging"
+  }
+
+  behavior [selection, sorting, filtering, pagination]
+  behaviors {
+    selection mode single emits row_select
+    sorting fields [submitted_at, status, title] default [submitted_at, desc]
+    filtering fields [status]
+    pagination mode cursor page_size 25
+  }
+  patterns [resource_table, data_grid_view]
+  regions [results]
+  version "1.0"
+  status active
+}

@@ -1,0 +1,131 @@
+{
+  "acceptance_criteria": [
+    {
+      "id": "ac_adopt_brownfield_spec",
+      "kind": "acceptance_criterion",
+      "name": "Adopt Brownfield Spec",
+      "status": "approved"
+    }
+  ],
+  "actor": "actor_operator",
+  "blockers": [],
+  "can_start": true,
+  "decisions": [],
+  "dryRun": false,
+  "next_commands": [
+    "topogram query slice ./topo --task task_adopt_brownfield_spec --json",
+    "topogram query single-agent-plan ./topo --mode implementation --task task_adopt_brownfield_spec --json",
+    "topogram query sdlc-proof-gaps ./topo --task task_adopt_brownfield_spec --json",
+    "topogram query verification-targets ./topo --task task_adopt_brownfield_spec --json",
+    "topogram sdlc complete task_adopt_brownfield_spec . --verification <verification-id> --actor actor_operator --write"
+  ],
+  "ok": true,
+  "plans": [],
+  "proof_gaps": {
+    "errors": [],
+    "missing": {
+      "acceptance_refs": false,
+      "satisfies": false,
+      "verification_refs": false
+    },
+    "ready_for_done": true,
+    "task": {
+      "acceptance_refs": [
+        "ac_adopt_brownfield_spec"
+      ],
+      "blocked_by": [],
+      "claimed_by": [
+        "actor_operator"
+      ],
+      "disposition": "active",
+      "id": "task_adopt_brownfield_spec",
+      "kind": "task",
+      "name": "Adopt Brownfield Spec",
+      "priority": "high",
+      "satisfies": [
+        "req_adopt_brownfield_spec"
+      ],
+      "status": "in-progress",
+      "verification_refs": [
+        "verification_adopt_brownfield_spec"
+      ],
+      "work_type": "implementation"
+    },
+    "warnings": []
+  },
+  "refusal_reasons": [],
+  "requirements": [
+    {
+      "id": "req_adopt_brownfield_spec",
+      "kind": "requirement",
+      "name": "Adopt Brownfield Spec",
+      "status": "approved"
+    }
+  ],
+  "rules": [],
+  "task": {
+    "acceptance_refs": [
+      "ac_adopt_brownfield_spec"
+    ],
+    "blocked_by": [],
+    "claimed_by": [
+      "actor_operator"
+    ],
+    "disposition": "active",
+    "id": "task_adopt_brownfield_spec",
+    "kind": "task",
+    "name": "Adopt Brownfield Spec",
+    "priority": "high",
+    "satisfies": [
+      "req_adopt_brownfield_spec"
+    ],
+    "status": "in-progress",
+    "verification_refs": [
+      "verification_adopt_brownfield_spec"
+    ],
+    "work_type": "implementation"
+  },
+  "transitions": [
+    {
+      "archivable": false,
+      "dod": {
+        "errors": [],
+        "satisfied": true,
+        "warnings": []
+      },
+      "dryRun": false,
+      "file": "<repo>/topo/sdlc/tasks/adopt-brownfield-spec.tg",
+      "from": "unclaimed",
+      "id": "task_adopt_brownfield_spec",
+      "kind": "task",
+      "ok": true,
+      "to": "claimed"
+    },
+    {
+      "archivable": false,
+      "dod": {
+        "errors": [],
+        "satisfied": true,
+        "warnings": []
+      },
+      "dryRun": false,
+      "file": "<repo>/topo/sdlc/tasks/adopt-brownfield-spec.tg",
+      "from": "claimed",
+      "id": "task_adopt_brownfield_spec",
+      "kind": "task",
+      "ok": true,
+      "to": "in-progress"
+    }
+  ],
+  "type": "sdlc_start_packet",
+  "verifications": [
+    {
+      "id": "verification_adopt_brownfield_spec",
+      "kind": "verification",
+      "name": "Adopt Brownfield Spec Verification",
+      "status": "active"
+    }
+  ],
+  "version": 1,
+  "written": true
+}

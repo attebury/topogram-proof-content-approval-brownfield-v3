@@ -1,0 +1,24 @@
+widget widget_review_actions {
+  name "Review Actions"
+  description "Reusable review action widget for approving or requesting changes."
+  category feedback
+
+  props {
+    submission object optional
+  }
+
+  events {
+    approve shape_input_approve_submission
+    request_changes shape_input_request_changes
+  }
+
+  behavior [optimistic_update, keyboard_navigation]
+  behaviors {
+    optimistic_update actions [cap_approve_submission, cap_request_changes] rollback manual
+    keyboard_navigation scope widget shortcuts [approve, request_changes]
+  }
+  patterns [summary_stats]
+  regions [summary, footer_actions]
+  version "1.0"
+  status active
+}

@@ -1,0 +1,29 @@
+{
+  "errors": [],
+  "inputPath": "<repo>/topo",
+  "ok": true,
+  "project": {
+    "compatibility": false,
+    "configPath": "<repo>/topogram.project.json",
+    "resolvedTopology": {
+      "edges": [],
+      "outputs": [
+        {
+          "name": "maintained_app",
+          "ownership": "maintained",
+          "path": "."
+        }
+      ],
+      "runtimes": []
+    },
+    "topology": {
+      "runtimes": []
+    },
+    "valid": true
+  },
+  "topogram": {
+    "files": 26,
+    "statements": 26,
+    "valid": true
+  }
+}

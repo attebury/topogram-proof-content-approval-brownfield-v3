@@ -1,11 +1,11 @@
-# Step 02: Extract With Packages
+# Step 03: Adopt App Map
 
 Repository: `topogram-proof-content-approval-brownfield-v3`
 CLI baseline: `@topogram/cli@0.3.99`
 
 ## Claim
 
-Use package-backed extractors to emit review-only candidates and provenance.
+Promote reviewed candidates into canonical topo source and enable SDLC.
 
 ## Verification
 

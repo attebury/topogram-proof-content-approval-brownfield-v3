@@ -1,0 +1,302 @@
+{
+  "edit_boundaries": {
+    "output_boundaries": [
+      {
+        "ownership": "maintained",
+        "path": ".",
+        "rule": "Maintained output ./ is project-owned; agents may edit it directly after reading the relevant Topogram packets."
+      }
+    ],
+    "rule": "Edit Topogram and policy files first. Avoid generated-owned output paths unless converting them to maintained ownership.",
+    "safe_paths": [
+      "topo/**",
+      "topogram.project.json",
+      "topogram.sdlc-policy.json",
+      "topogram.template-policy.json",
+      "topogram.generator-policy.json"
+    ]
+  },
+  "extract": null,
+  "file_organization": {
+    "large": [
+      "topo/domains/<domain>",
+      "topo/shared",
+      "topo/domains/<domain>/widgets",
+      "topo/domains/<domain>/projections"
+    ],
+    "parserRule": "Folder layout is for humans and agents; Topogram flattens statements into one graph.",
+    "sdlc": [
+      "topo/sdlc/pitches",
+      "topo/sdlc/requirements",
+      "topo/sdlc/acceptance_criteria",
+      "topo/sdlc/tasks",
+      "topo/sdlc/plans",
+      "topo/sdlc/bugs",
+      "topo/sdlc/decisions"
+    ],
+    "small": [
+      "topo/actors",
+      "topo/entities",
+      "topo/shapes",
+      "topo/capabilities",
+      "topo/widgets",
+      "topo/projections",
+      "topo/verifications"
+    ]
+  },
+  "first_commands": [
+    {
+      "command": "npm run agent:brief",
+      "phase": "first-run",
+      "reason": "Machine-readable current onboarding guidance."
+    },
+    {
+      "command": "npm run doctor",
+      "phase": "first-run",
+      "reason": "Check local CLI, package, and catalog setup."
+    },
+    {
+      "command": "npm run source:status",
+      "phase": "first-run",
+      "reason": "See whether template-derived files diverged locally."
+    },
+    {
+      "command": "npm run template:explain",
+      "phase": "first-run",
+      "reason": "Understand whether the project is template-attached or detached."
+    },
+    {
+      "command": "npm run generator:policy:check",
+      "phase": "first-run",
+      "reason": "Validate package-backed generator policy before generation."
+    },
+    {
+      "command": "topogram sdlc policy explain --json",
+      "phase": "sdlc",
+      "reason": "Read current SDLC enforcement mode and protected paths."
+    },
+    {
+      "command": "topogram query sdlc-available ./topo --json",
+      "phase": "sdlc",
+      "reason": "Find unclaimed tasks, unresolved bugs, and approved requirements needing a task."
+    },
+    {
+      "command": "topogram sdlc start <task-id> --actor actor_coding_agent --json",
+      "phase": "sdlc",
+      "reason": "Read blockers, rules, decisions, proof gaps, and verification guidance before implementation."
+    },
+    {
+      "command": "topogram sdlc gate . --require-adopted --json",
+      "phase": "sdlc",
+      "reason": "Verify protected work has SDLC linkage before PR/CI."
+    },
+    {
+      "command": "topogram sdlc explain <task-or-bug-id> --json",
+      "phase": "sdlc",
+      "reason": "Start SDLC-backed implementation from the current task or bug."
+    },
+    {
+      "command": "npm run check",
+      "phase": "first-run",
+      "reason": "Validate Topogram, project config, topology, ownership, trust, and generator policy."
+    },
+    {
+      "command": "npm run query:list",
+      "phase": "first-run",
+      "reason": "Discover focused agent packets."
+    },
+    {
+      "command": "npm run query:show -- widget-behavior",
+      "phase": "focused-context",
+      "reason": "Read a focused UI/widget packet before UI work."
+    },
+    {
+      "command": "npm run generate",
+      "phase": "write",
+      "reason": "Write generated-owned runtime/app outputs after validation."
+    },
+    {
+      "command": "npm run verify",
+      "phase": "verify",
+      "reason": "Run generated output verification."
+    }
+  ],
+  "generator_policy": {
+    "diagnostics": {
+      "errors": 0,
+      "items": [],
+      "warnings": 0
+    },
+    "exists": false,
+    "packageBackedGenerators": 0,
+    "path": "topogram.generator-policy.json"
+  },
+  "project": {
+    "packageJson": "<repo>/package.json",
+    "projectConfigPath": "<repo>/topogram.project.json",
+    "root": "<repo>",
+    "topogram": "<repo>/topo"
+  },
+  "read_order": [
+    {
+      "exists": false,
+      "path": "AGENTS.md",
+      "reason": "Human-readable first-run guidance generated with this project.",
+      "required": false
+    },
+    {
+      "exists": true,
+      "path": "README.md",
+      "reason": "Project workflow and template provenance summary.",
+      "required": true
+    },
+    {
+      "exists": true,
+      "path": "topogram.project.json",
+      "reason": "Topology, outputs, template metadata, generator bindings, and implementation provider settings.",
+      "required": true
+    },
+    {
+      "exists": true,
+      "path": "topogram.sdlc-policy.json",
+      "reason": "SDLC adoption, enforcement mode, protected paths, required item kinds, and exemption policy.",
+      "required": false
+    },
+    {
+      "exists": false,
+      "path": "topogram.template-policy.json",
+      "reason": "Template trust/update policy for attached templates.",
+      "required": false
+    },
+    {
+      "exists": false,
+      "path": "topogram.generator-policy.json",
+      "reason": "Package-backed generator policy and allowed scopes.",
+      "required": false
+    },
+    {
+      "exists": false,
+      "path": ".topogram-template-trust.json",
+      "reason": "Executable implementation trust record, if the template copied implementation code.",
+      "required": false
+    },
+    {
+      "exists": false,
+      "path": ".topogram-extract.json",
+      "reason": "Brownfield extraction provenance and source evidence, if this came from extract.",
+      "required": false
+    },
+    {
+      "exists": true,
+      "path": "topo/",
+      "reason": "Canonical Topogram graph source. Use focused query packets for implementation work.",
+      "required": true
+    }
+  ],
+  "sdlc_policy": {
+    "allowExemptions": true,
+    "diagnostics": [],
+    "exists": true,
+    "gateCommand": "topogram sdlc gate . --require-adopted",
+    "mode": "enforced",
+    "path": "topogram.sdlc-policy.json",
+    "protectedPaths": [
+      "src/**",
+      "prisma/**",
+      "topo/**",
+      "proof/**",
+      "README.md",
+      "package.json",
+      "package-lock.json"
+    ],
+    "requiredItemKinds": [
+      "task",
+      "bug",
+      "requirement",
+      "pitch"
+    ],
+    "status": "adopted"
+  },
+  "template": {
+    "id": null,
+    "includesExecutableImplementation": false,
+    "requested": null,
+    "source": null,
+    "sourceSpec": null,
+    "version": null
+  },
+  "topology": {
+    "outputs": [
+      {
+        "ownership": "maintained",
+        "path": ".",
+        "rule": "Maintained output ./ is project-owned; agents may edit it directly after reading the relevant Topogram packets."
+      }
+    ],
+    "runtimes": []
+  },
+  "trust": {
+    "content": null,
+    "implementation": null,
+    "issues": [],
+    "ok": true,
+    "path": ".topogram-template-trust.json",
+    "requiresTrust": false
+  },
+  "type": "agent_brief",
+  "version": "1",
+  "warnings": [
+    "SDLC is enforced. Protected changes need a valid SDLC item, a topo/sdlc/*.tg record update, or an explicit allowed exemption.",
+    "AGENTS.md is missing. Use this command as the current agent guidance source."
+  ],
+  "workflows": [
+    {
+      "commands": [
+        "topogram query sdlc-available ./topo --json",
+        "topogram sdlc start <task-id> --actor <actor> --json",
+        "topogram sdlc explain <task-or-bug-id> --json",
+        "topogram query slice ./topo --task <task-id> --json",
+        "topogram query sdlc-proof-gaps ./topo --task <task-id> --json",
+        "topogram sdlc plan explain <plan-id> --json",
+        "topogram sdlc plan step complete <plan-id> <step-id> --actor <actor> --write"
+      ],
+      "id": "sdlc-task-plan",
+      "rule": "Start from an SDLC task packet before implementation. Plans are optional; edit plan text directly, but use CLI for status, history, step progress, and archive state.",
+      "title": "SDLC task and plan loop"
+    },
+    {
+      "commands": [
+        "npm run agent:brief",
+        "npm run check",
+        "npm run generate",
+        "npm run verify"
+      ],
+      "id": "greenfield-generated",
+      "rule": "Edit the Topogram first, then regenerate generated-owned outputs.",
+      "title": "Generated project loop"
+    },
+    {
+      "commands": [
+        "topogram query list --json",
+        "topogram query show widget-behavior",
+        "topogram widget check --json",
+        "topogram widget behavior --json",
+        "topogram emit ui-widget-contract --json"
+      ],
+      "id": "widget-first-ui",
+      "rule": "Use focused widget and surface packets before editing UI code.",
+      "title": "Widget-first UI loop"
+    },
+    {
+      "commands": [
+        "npm run source:status",
+        "npm run template:explain",
+        "npm run template:update:recommend",
+        "npm run template:update:check"
+      ],
+      "id": "template-update",
+      "rule": "Local Topogram files are project-owned after edits; review update plans before applying template changes.",
+      "title": "Template update loop"
+    }
+  ]
+}
