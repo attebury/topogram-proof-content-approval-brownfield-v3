@@ -1,0 +1,14 @@
+{
+  "name": "topogram-proof-content-approval-brownfield-v3",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "verify": "node ./scripts/verify-proof.mjs",
+    "proof:check-paths": "node ./scripts/check-no-local-paths.mjs",
+    "proof:audit": "node ./scripts/proof-audit.mjs",
+    "proof:clean": "node ./scripts/check-clean-worktree.mjs"
+  },
+  "devDependencies": {
+    "@topogram/cli": "0.3.99"
+  }
+}

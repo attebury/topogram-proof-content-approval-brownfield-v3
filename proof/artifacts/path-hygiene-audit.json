@@ -1,0 +1,15 @@
+{
+  "type": "proof_path_hygiene_audit",
+  "repository": "topogram-proof-content-approval-brownfield-v3",
+  "topogramCliVersion": "0.3.99",
+  "checks": [
+    {
+      "id": "no_machine_local_paths",
+      "status": "passed"
+    },
+    {
+      "id": "portable_public_artifacts",
+      "status": "passed"
+    }
+  ]
+}
